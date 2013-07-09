@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- NPP-related subtypes for messaging / Chatter -->
+        <record id="mt_npp_overall_status_change" model="mail.message.subtype">
+            <field name="name">Overall Status Change</field>
+            <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+            <field name="description">Overall Status Change</field>
+        </record>
+
+        
+    </data>
+</openerp>

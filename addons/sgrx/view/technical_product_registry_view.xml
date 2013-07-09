@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.technical_product_registry -->
+<!-- sgr.technical_product_registry -->
+<!-- sgr.registry -->
+<openerp>
+    <data>
+
+        <record id="view_sgr_technical_product_registry_graph" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.graph</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Technical Product Registries" type="bar">
+                    <field name="state" />
+                    <field name="number" operator="+"/>                               
+                </graph>
+            </field>
+        </record>
+
+        <record id="sgr.action_sgr_technical_product_registry_technical_products" model="ir.actions.act_window">
+            <field name="view_mode">tree,form,graph</field>
+        </record>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_technical_product_registry_filter" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.select</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <search string="Techinical Products Registries" version="7.0">
+                    <group string="By Attribute">
+                    <field name="technical_product_id" string="Techincal Product"
+                            />
+                    <field name="registry_expiration_date" string="Registry Expiration Date"
+                            />
+                    <field name="free_sale_number" string="Free Sale Number"
+                            />
+                    <field name="free_sale_expiration_date" string="Free Sale Expiration Date"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="registry_category_id" string="Category"
+                            />
+                    <field name="product_in_ret_ids" string="Used RETS"
+                            />
+                    <field name="state"/>
+                    <field name="toxicological_class_id"/>
+                    <field name="emergency_information_id" />
+                    <field name="environmental_class_id" />
+                    <field name="agronomic_class_id" />
+                    <field name="physical_state_id" />
+                    <field name="operative_id" />
+                    </group>
+                    <group expand="1" string="Group By...">
+                        <filter string="Operative" domain="[]" context="{'group_by':'operative_id'}" />
+                        <filter string="Technical Product" domain="[]" context="{'group_by':'technical_product_id'}" />
+                        <filter string="State" domain="[]" context="{'group_by':'state'}" />
+                        <separator />
+                        <filter string="Physical State" domain="[]" context="{'group_by':'physical_state_id'}" />
+                        <separator />
+                        <filter string="Environmental Class" domain="[]" context="{'group_by':'environmental_class_id'}" />
+                        <filter string="Emergency Information" domain="[]" context="{'group_by':'emergency_information_id'}" />
+                        <filter string="Toxicological Class" domain="[]" context="{'group_by':'toxicological_class_id'}" />
+                        <filter string="Agronomic Class" domain="[]" context="{'group_by':'agronomic_class_id'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_technical_product_registry_form" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.form</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="inherit_id" ref="sgr.view_sgr_technical_product_registry_form"/>             
+            <field name="arch" type="xml">
+                <sheet string="Techinical Products Registries" position="replace"/>
+                    <header position="after">
+                    <sheet string="Techinical Products Registries">
+                        <field name="type"
+                        invisible="1"/>        
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="operation"/>
+                                <label string="Modify" attrs="{'invisible':[('operation','in',['new', 'replacement'])]}" class="oe_edit_only"/>
+                                <label string="Replace" attrs="{'invisible':[('operation','in',['new', 'modification'])]}" class="oe_edit_only"/>
+                                <field name="operate_id" domain="[('state','in',('draft','requested','approved')),('id','!=',id)]" attrs="{'invisible':[('operation','in',['new'])], 'required': [('operation','!=','new')]}" nolabel="1" colspan="2"/>
+                                <field name="company_id" groups="base.group_multi_company"/>                                    
+                                <field name="registry_category_id" domain="[('type','=',type),('company_id','=',company_id)]" on_change="onchange_registry_category(registry_category_id)" context="{'default_type': type}"/>
+                            </group>
+                            <group colspan="2" col="2">
+                                <field name="operative_id" />
+                                <field name="proxy_id" />
+                                <field name="project_id" />
+                                <field name="expected_date"/>
+                            </group>
+                            <group colspan="4" col="4">
+<!--                                <field name="name"
+                                    colspan="4"/> SACAMOS EL CAMPO NAME PORQUE USAMOS LA FUNCION GETNAME-->
+                                <field name="technical_product_id"
+                                    />                            
+                            </group>                              
+                        </group> 
+                        <notebook>
+                            <page string="Gral Info">
+                                <group colspan="4" col="4">
+                                    <group colspan="2" col="2">                                
+                                        <field name="environmental_class_id"
+                                            />
+                                        <field name="emergency_information_id"
+                                            />
+                                        <field name="toxicological_class_id"
+                                            />
+                                        <field name="agronomic_class_id"
+                                            />                                                                
+                                    </group>
+                                    <group colspan="2" col="2">
+                                        <field name="is_corrosive"
+                                            />
+
+                                        <field name="physical_state_id"
+                                            /> 
+                                    </group>
+                                </group>                                               
+                                <group colspan="4" col="2">    
+                                    <field name="mode_of_action"/>                            
+                                    <field name="packaging_ids"/>
+                                    <field name="partner_role_in_registry_ids">
+                                    </field>
+                                    <field name="product_in_ret_ids" domain="[('product_id','=',technical_product_id)]">
+                                        <tree>
+                                            <field name="ret_registry_id"/>                                
+                                            <field name="concentration"/>
+                                            <field name="concentration_uom_id"/>
+                                            <field name="amount_requested"/>
+                                            <field name="amount_uom_id"/>
+                                            <field name="amount_released"/>
+                                            <field name="remaining_amount"/>
+                                        </tree>
+                                    </field>
+                                </group>                                                                               
+                            </page>                      
+                            <page string="CQQ">
+                                    <field name="cqq_ids">
+                                        <tree editable="top">
+                                            <field name="ingredient_id"
+                                                />  
+                                            <field name="main_ingredient"/>
+                                            <field name="scientific_name"/>                                                 
+                                            <field name="ingredient_function_id"
+                                                />                                                                                        
+                                            <field name="declared_concentration"
+                                                />
+                                            <field name="uom_id"
+                                                />                                                
+                                            <field name="min_concentration"
+                                                />
+                                            <field name="min_uom_id"
+                                                />                                                
+                                            <field name="max_concentration"
+                                                />
+                                            <field name="max_uom_id"
+                                                />
+                                        </tree>
+                                    </field>
+                            </page>                    
+                            <page string="Informations">
+                                <field name="information_presentation_ids"
+                                    />                            
+                            </page>                                                               
+                            <page string="Documents">
+                                <notebook>
+                                    <page string="Studies">                            
+                                        <field name="study_presentation_ids"/>
+                                    </page>
+                                    <page string="Partner Documents">
+                                        <field name="partner_document_presentation_ids"/>                                     
+                                    </page>                                          
+                                    <page string="Taxes">
+                                        <field name="tax_ids"/>                                    
+                                    </page>       
+                                </notebook>
+                            </page>
+                            <page string="Dossier">
+                                <field name="dossier_document_ids"/>                         
+                            </page>                             
+
+                            <page string="Communications">
+                                <field name="communication_ids"
+                                    />
+                            </page>      
+                            <page string="Processes">
+                                <field name="registry_process_ids"
+                                        />
+                            </page>                                                     
+                            <page string="Results">
+                                    <group colspan="4" col="6">
+                                        <field name="registry_number"/>
+                                        <field name="registry_date"/>                                    
+                                        <field name="registry_expiration_date"/>
+                                    </group>
+                                <group colspan="4" col="1">
+                                    <field name="publications_ids"/>           
+                                    <field name="operated_by_ids" readonly="1"/>                                              
+                                </group>
+                            </page>
+                            <page string="Notes">
+                                <field name="note"/>
+                            </page>                                
+                        </notebook>                         
+                    </sheet>
+                </header>                    
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="sgr.view_sgr_technical_product_registry_tree" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.tree</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <tree string="Techinical Products Registries"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'depreciated', 'approved', 'rejected'); red:state in ()"
+                    >
+                    <field name="operative_id"/>
+                    <field name="technical_product_id"/>
+                    <field name="operation"/>
+                    <field name="registry_category_id"/>
+                    <field name="state" />
+                    <field name="registry_number"/>
+                    <field name="toxicological_class_id" invisible="1"/>
+                    <field name="emergency_information_id" invisible="1"/>
+                    <field name="environmental_class_id" invisible="1"/>
+                    <field name="agronomic_class_id" invisible="1"/>
+                    <field name="physical_state_id" invisible="1"/>
+                    <field name="operative_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

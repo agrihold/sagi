@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.study -->
+<!-- sgr.study -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+        <!-- Workflow -->
+
+        <record id="study_study_wkf" model="workflow">
+            <field name="name">sgr.study.study</field>
+            <field name="osv">sgr.study</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <!-- Activities -->
+
+        <record id="a_1045_1024" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">
+                write({'state':'draft'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_1026" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Contracted</field>
+            <field name="action">
+                write({'state':'contracted'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_1025" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Study Plan Approved</field>
+            <field name="action">
+                write({'state':'sp_approved'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_102A" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Requested</field>
+            <field name="action">
+                write({'state':'requested'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_1033" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Received</field>
+            <field name="action">
+                write({'state':'received'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_1028" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Approved</field>
+            <field name="action">
+                write({'state':'approved'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_102F" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="name">Rejected</field>
+            <field name="action">
+                write({'state':'rejected'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1045_1029" model="workflow.activity">
+            <field name="wkf_id" ref="study_study_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">
+                write({'state':'cancelled'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+
+        <!-- Transitions -->
+
+        <record id="t_1045_1027" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1024"/>
+            <field name="act_to" ref="a_1045_1026"/>
+            <field name="signal">sgn_contract</field>
+            <field name="condition">True and source == 'own'</field>
+        </record>
+        <record id="t_1045_102C" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1026"/>
+            <field name="act_to" ref="a_1045_1025"/>
+            <field name="signal">sgn_approve_study_plan</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_1035" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1033"/>
+            <field name="act_to" ref="a_1045_102F"/>
+            <field name="signal">sgn_reject</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_1036" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1025"/>
+            <field name="act_to" ref="a_1045_1033"/>
+            <field name="signal">sgn_receive</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_103C" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1033"/>
+            <field name="act_to" ref="a_1045_1028"/>
+            <field name="signal">sgn_approve</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_103D" model="workflow.transition">
+            <field name="act_from" ref="a_1045_102A"/>
+            <field name="act_to" ref="a_1045_1033"/>
+            <field name="signal">sgn_receive</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_0F4B" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1026"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_0F4C" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1025"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_0F50" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1029"/>
+            <field name="act_to" ref="a_1045_1024"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_3024" model="workflow.transition">
+            <field name="act_from" ref="a_1045_102A"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_302D" model="workflow.transition">
+            <field name="act_from" ref="a_1045_102F"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_302E" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1033"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_302F" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1028"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_4BE2" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1024"/>
+            <field name="act_to" ref="a_1045_1029"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1045_4BEC" model="workflow.transition">
+            <field name="act_from" ref="a_1045_1024"/>
+            <field name="act_to" ref="a_1045_102A"/>
+            <field name="signal">sgn_request_to_supplier</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

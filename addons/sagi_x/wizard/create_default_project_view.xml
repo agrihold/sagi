@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_create_default_project" model="ir.ui.view">
+            <field name="name">create_default_project.form</field>
+            <field name="model">create_default_project</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Create Project">
+                    <group col="4" colspan="4">
+                        <separator colspan="4" string="Create Project"/>
+                        <newline/>
+                        
+                        <group colspan="4" col="2">
+                            <field name="name"/>
+                            <field name="code" readonly="1"/>
+                            <field name="project_manager_id" readonly="1"/>
+                            <field name="project_template_id"/>
+                            <field name="new_product_project_id" invisible="1"/>
+                        </group>
+                        
+                        <group colspan="4" col="4">
+                            <button string="Cancel" special="cancel" icon="gtk-cancel" />
+                            <button name="generate_project" string="Generate Project" icon="gtk-go-forward" type="object"/>
+                        </group>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="action_create_default_project" model="ir.actions.act_window">
+            <field name="name">create_default_project.action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">create_default_project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="view_create_default_new_product_project_form" model="ir.ui.view">
+            <field name="name">create_default_project.project.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="view_sagi_new_product_project_form"/>
+            <field name="arch" type="xml">
+                <div class="oe_title" position="before">
+                    <div class="oe_right oe_button_box">  
+                <!--<button name="sgn_to_revise" position="before">-->
+                    <button name="%(sagi_x.action_create_default_project)d" string="Generate Project" type="action"
+                            groups="base.group_user"
+                            attrs="{'invisible': [('state','in',('draft_snp',))]}"/>
+                            <!-- pOR SI LO QUEREMOS HACER VISIBLE SOLO EN ALGUNOS ESTADOS
+                             attrs="{'invisible': [('state','not in',('project_charter_draft',))]}"/> -->
+                    </div>
+                </div>
+            </field>
+        </record>-->
+    </data>
+</openerp>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- After installation of the module, open the related menu -->
+        <!--<record id="action_client_sagi_menu" model="ir.actions.client">
+            <field name="name">Open Sagi Menu</field>
+            <field name="tag">reload</field>
+            <field name="params" eval="{'menu_id': ref('base.menu_main_pm')}"/>
+        </record>
+        <record id="base.open_menu" model="ir.actions.todo">
+            <field name="action_id" ref="action_client_project_menu"/>
+            <field name="state">open</field>
+        </record>-->
+    </data>
+    
+    <data>
+        <record id="view_config_settings" model="ir.ui.view">
+            <field name="name">SAGI settings</field>
+            <field name="model">sagi.config_settings</field>
+            <field name="priority" eval="1"/>
+            <field name="arch" type="xml">
+                <form string="Configure SAGI" version="7.0" class="oe_form_configuration">
+                    <header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+                    <separator string="Template Project"/>
+                    <group>
+                        <field name="property_template_project_id"/>
+                    </group>
+                    <separator string="Days Parameters"/>
+                    <group>
+                        <field name="creation_duration"/>
+                        <field name="ca_sc_pred_term"/>
+                        <field name="ca_mkt_pred_term"/>
+                        <field name="ca_dr_pred_term"/>
+                        <field name="ca_result_pred_term"/>
+                        <field name="planning_pred_term"/>
+                        <field name="closing_pred_term"/>
+                    </group>
+                    <separator string="Default Files"/>
+                    <group>
+                        <field name="snp_file"/>
+                        <field name="qnp_file"/>
+                        <field name="CIO_file"/>
+                        <field name="summary_file"/>
+                        <field name="CO_file"/>
+                        <field name="presentation_file"/>
+                        <field name="CIA_file"/>
+                        <field name="charter_file"/>
+                        <field name="kick_off_ac_file"/>
+                        <field name="ca_sc_file"/>
+                        <field name="ca_mkt_file"/>
+                        <field name="ca_dr_file"/>
+                        <field name="ca_result_file"/>
+                        <field name="kick_off_project_file"/>
+                        <field name="closing_report_file"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_config_settings" model="ir.actions.act_window">
+            <field name="name">Configure SAGI</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sagi.config_settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <menuitem id="menu_sagi_config" name="SAGI" parent="base.menu_config"
+            sequence="35" action="action_config_settings"/>
+
+    </data>
+</openerp>

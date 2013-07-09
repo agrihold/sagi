@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.document_category -->
+<!-- sgr.document_category -->
+<!-- sgr.document_category -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_document_category_filter" model="ir.ui.view">
+            <field name="name">sgr.document_category.select</field>
+            <field name="model">sgr.document_category</field>
+            <field name="arch" type="xml">
+                <search string="Document Categories" version="7.0">
+                    <group string="By Attribute">
+                    <field name="type" string="Document Type"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="hierachical_type" string="Type"
+                            />
+                    <field name="experimental_results" string="Experimiental Results"
+                            />
+                    <field name="show_validation_method" string="Show validation method"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="parent_id" string="Parent Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_document_category_form" model="ir.ui.view">
+            <field name="name">sgr.document_category.form</field>
+            <field name="model">sgr.document_category</field>
+            <field name="arch" type="xml">
+                <form string="Document Categories" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Document Categories">
+                     <group>
+                        <field name="type"
+                            />
+                        <field name="name"
+                            />
+                        <field name="hierachical_type"
+                            />
+                        <field name="company_id"
+                            />
+                        <field name="experimental_results"
+                            />
+                        <field name="show_validation_method"
+                            />
+                        <field name="reference"
+                            />
+                    <field name="parent_id"
+                            />
+                    <field name="child_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_document_category_tree" model="ir.ui.view">
+            <field name="name">sgr.document_category.tree</field>
+            <field name="model">sgr.document_category</field>
+            <field name="arch" type="xml">
+                <tree string="Document Categories"
+                    >
+                    <field name="complete_name"/>
+                    <field name="type"
+                        />
+                    <field name="company_id"
+                        />
+                    <field name="experimental_results"
+                        />
+                    <field name="show_validation_method"
+                        />
+                    <field name="reference"
+                        />
+                    <field name="parent_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -1,0 +1,157 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sagi_execution_control
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-27 16:40+0000\n"
+"PO-Revision-Date: 2013-05-27 16:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Projects in Critical Status."
+msgstr "Proyectos en Estado Crítico ."
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,execution_status:0
+msgid "Delay: This New Product Project is not in the status/stage planned for actual date"
+msgstr "Retraso: Este Proyecto de Nuevo Producto no esta en el estado/etapa planeada para la fecha actual."
+
+#. module: sagi_execution_control
+#: field:sagi.new_product_project,project_planning:0
+msgid "Project Planning"
+msgstr "Planificación de Proyectos"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Execution Related Project"
+msgstr "Ejecución de Proyecto Relacionado"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Projects in Ok Status."
+msgstr "Proyectos en Estado OK"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Critical"
+msgstr "Crítico"
+
+#. module: sagi_execution_control
+#: field:sagi.new_product_project,project_overall_status:0
+msgid "Project Overall Status"
+msgstr "Situación general del proyecto "
+
+#. module: sagi_execution_control
+#: field:sagi.new_product_project,overall_status:0
+msgid "Overall Status"
+msgstr "Estado general"
+
+#. module: sagi_execution_control
+#: model:mail.message.subtype,description:sagi_execution_control.mt_npp_overall_status_change
+#: model:mail.message.subtype,name:sagi_execution_control.mt_npp_overall_status_change
+msgid "Overall Status Change"
+msgstr "Cambio general del estado del proyecto"
+
+#. module: sagi_execution_control
+#: field:sagi.new_product_project,execution_status:0
+msgid "Execution Status"
+msgstr "Estado de Ejecución"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,overall_status:0
+msgid "Warning: at least one alarm of this New Product Project is in Warning state"
+msgstr "Advertencia: al menos una alarma de este nuevo proyecto de producto se encuentra en estado de alerta"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,project_planning:0
+msgid "Warning: \"Date to End\" of the related Project is greter than the execution \"Date to End\""
+msgstr "Alerta: La fecha de finalización del proyecto relacionado es mayor que la fecha de finalización de la ejecución."
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "New Product Schedule"
+msgstr "Programación de Nuevo Producto"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+#: selection:sagi.new_product_project,overall_status:0
+#: selection:sagi.new_product_project,project_overall_status:0
+msgid "Ok"
+msgstr "Ok"
+
+#. module: sagi_execution_control
+#: model:ir.model,name:sagi_execution_control.model_sagi_new_product_project
+msgid "new_product_project"
+msgstr "new_product_project"
+
+#. module: sagi_execution_control
+#: help:sagi.new_product_project,execution_status:0
+msgid "Phases: Initiation, Creation, Planning, Execution, Closure. \n"
+"Status/stages: Draft SNP, SNP Presented, Approved by QNP, etc."
+msgstr "Fases: Iniciación, Creacion, Planeamiento, Ejecución, Cierre. \n"
+"Estado/Etapas: Borrador SNP, SNP Presentado, Aprobado por QNP, etc."
+
+#. module: sagi_execution_control
+#: model:ir.model,name:sagi_execution_control.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,overall_status:0
+msgid "Critical: at least one alarm of this New Product Project is in Critical state"
+msgstr "Advertencia: al menos una alarma de este nuevo proyecto de producto se encuentra en estado crítico"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,project_planning:0
+msgid "On Date"
+msgstr "En Fecha"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Control"
+msgstr "Control"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,execution_status:0
+msgid "On Time"
+msgstr "A tiempo"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,project_overall_status:0
+msgid "Warning: Execution Project related to this New Product Project is in Warning State"
+msgstr "Advertencia: El proyecto de ejecución relacionado con este Proyecto de Nuevo producto se encuentra en Estado de Alerta"
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Projects in Warning Status."
+msgstr "Proyectos en Estado de Alerta."
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,execution_status:0
+msgid "Critical delay: This New Product Project is not in the phase planned for actual date"
+msgstr "Retraso crítico: Este nuevo proyecto de producto no se encuentra en la fase prevista para el día actual"
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,project_overall_status:0
+msgid "Critical: Execution Project related to this New Product Project is in Critical State"
+msgstr "Crítico: El proyecto de ejecución relacionado con este Proyecto de Nuevo Producto se encuentra en estado crítico."
+
+#. module: sagi_execution_control
+#: selection:sagi.new_product_project,project_planning:0
+msgid "Critical: The \"Date to End\" of the related Project and/or the execution \"Date to End\", are greater than \"Projected Expected End Date\""
+msgstr "Crítico: La Fecha de Finalización del proyecto relacionado y/o la fecha de finalizacion de la ejecución, son superiores que la fecha esperada de finalización del proyecto."
+
+#. module: sagi_execution_control
+#: view:sagi.new_product_project:0
+msgid "Warning"
+msgstr "Advertencia "
+

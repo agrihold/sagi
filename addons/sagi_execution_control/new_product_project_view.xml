@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- new product project-->                    
+        <record id="view_sagi_new_product_project_filter" model="ir.ui.view">
+            <field name="name">sagi.new_product_project.select</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="sagi.view_sagi_new_product_project_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <filter string="Critical" domain="[('overall_status', '=', 'red')]" help="Projects in Critical Status."/>
+                    <filter string="Warning" domain="[('overall_status', '=', 'yellow')]" help="Projects in Warning Status."/>   
+                    <filter string="Ok" domain="[('overall_status', '=', 'green')]" help="Projects in Ok Status."/>
+                    <separator/>                                     
+                </search>
+            </field>
+        </record> 
+        
+                
+        <record id="view_sagi_new_product_project_form" model="ir.ui.view">
+            <field name="name">sagi_x.new_product_project.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="sagi_x.view_sagi_new_product_project_form"/>
+            <field name="arch" type="xml">
+                <notebook>
+                    <page string="Control">
+                        <group colspan="4" col="4">
+<!--                            <button type="object" name="compute_control_status" string="Compute Control Status" colspan="4"/> -->
+                            <field name="execution_status" string="New Product Schedule" readonly="1" colspan="4"/>
+                            <separator string="Execution Related Project" colspan="4"/>
+                            <field name="project_planning" readonly="1" colspan="4"/>
+                            <field name="project_overall_status" readonly="1" colspan="4"/>
+                            <!--<field name="overall_status" colspan="4"/>-->
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+        <record id="view_sagi_new_product_project_tree" model="ir.ui.view">
+            <field name="name">sagi.new_product_project.tree</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="sagi.view_sagi_new_product_project_tree"/>            
+            <field name="arch" type="xml">        
+                <tree>
+                    <field name="overall_status" invisible="1"/>
+                    <button name="overall_status_green" icon="STOCK_YES" special="cancel" attrs="{'invisible':[('overall_status', '!=', 'green')]}"/>           
+                    <button name="overall_status_yellow" string="Warning" special="cancel" icon="terp-face-plain" attrs="{'invisible':[('overall_status', '!=', 'yellow')]}"/>
+                    <button name="overall_status_red" string="Critical" special="cancel" icon="STOCK_NO" attrs="{'invisible':[('overall_status', '!=', 'red')]}"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

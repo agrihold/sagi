@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.partner_document -->
+<!-- sgr.partner_document -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_partner_document_filter" model="ir.ui.view">
+            <field name="name">sgr.partner_document.select</field>
+            <field name="model">sgr.partner_document</field>
+            <field name="arch" type="xml">
+                <search string="Partner Documents" version="7.0">
+                    <group string="By Attribute">
+                    <field name="partner_id" string="Partner"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_partner_document_form" model="ir.ui.view">
+            <field name="name">sgr.partner_document.form</field>
+            <field name="model">sgr.partner_document</field>
+            <field name="inherit_id" ref="sgr.view_sgr_partner_document_form"/>            
+            <field name="arch" type="xml">
+                <sheet string="Partner Documents" position="replace"/>
+                <header position="after">
+                    <sheet string="Partner Documents">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/>
+                                <field name="document_category_id"
+                                    context="{'default_type':'partner_document'}"
+                                    domain="[('type','=','partner_document')]"/> 
+                                <!--<field name="package_file_id"/>-->
+                                <field name="partner_id"/>
+                            </group>               
+                            <group colspan="2" col="2"> 
+                                <field name="reviser_id"/>
+                                <field name="approval_date"/>
+                                <field name="expiration_date"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Report Info">
+                                <group colspan="4" col="4">
+                                    <field name="consularization_date"/>
+                                    <field name="translation_date"/>
+                                    <field name="authentication_date"/>
+                                    <field name="issue_date"/>
+                                    <field name="number_of_pages"/>
+ 
+                                </group>  
+                                <group colspan="4" col="1">
+                                    <field name="move_ids"/> 
+                                </group>   
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="replaced_by_id"/>
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>
+                                    <field name="replace_ids"/>               
+                                    <field name="partner_document_presentation_ids"/>                                               
+                                </group>                   
+                            </page>                                                         
+                            </page>                                                                                                     
+                        </notebook>                        
+                    </sheet>
+            </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="view_sgr_partner_document_tree" model="ir.ui.view">
+            <field name="name">sgr.partner_document.tree</field>
+            <field name="model">sgr.partner_document</field>
+            <field name="arch" type="xml">
+                <tree string="Partner Documents"
+                    >
+                    <field name="reference"/>
+                    <field name="name"/>
+                    <field name="reviser_id"/>
+                    <field name="approval_date"/>
+                    <field name="expiration_date"/>
+                    <field name="document_category_id"/>
+                    <field name="package_file_id"/>
+                </tree>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

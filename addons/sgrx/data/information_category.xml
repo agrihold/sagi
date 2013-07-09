@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="True">
+        <record model='sgr.information_category' id='sgr_information_category_1'>
+            <field name='company_id' eval='False'/>
+            <field name='name'>Especificación técnica</field>
+        </record> 
+        <record model='sgr.information_category' id='sgr_information_category_2'>
+            <field name='company_id' eval='False'/>
+            <field name='name'>Datos evaluador</field>
+        </record> 
+        <record model='sgr.information_category' id='sgr_information_category_3'>
+            <field name='company_id' eval='False'/>
+            <field name='name'>Información de procedencia</field>
+        </record> 
+        <record model='sgr.information_category' id='sgr_information_category_4'>
+            <field name='company_id' eval='False'/>
+            <field name='name'>Información de radioactividad</field>
+        </record> 
+        <record model='sgr.information_category' id='sgr_information_category_5'>
+            <field name='company_id' eval='False'/>
+            <field name='name'>Información registo PF Brasil</field>
+        </record> 
+    </data>
+</openerp>
+        
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

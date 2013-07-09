@@ -1,0 +1,9 @@
+#
+#        Creo una informacion
+#
+- !record {model: sgr.component_registry, id: component_registry_2}:
+        name: Component Registry 2 from Brasil
+        reference: Testing
+        registry_category_id: sgr_registry_category_1
+        proxy_id: 1
+

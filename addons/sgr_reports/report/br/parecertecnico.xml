@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<openerp>
+<data noupdate="0">
+
+    <record id="parecertecnico" model="ir.actions.report.xml">
+        <field name="name">Parecer Tecnico</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">sgr.formulated_product_registry</field>
+        <field name="report_name">parecertecnico</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
+        <field name="parser_loc">sgr_reports/report/parser.py</field>
+        <field name="report_rml">sgr_reports/report/br/parecertecnico.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+        <!--<field name="company_id" ref="res_company_1"/>        si queremos asignarle compania-->        
+    </record>
+
+    <ir_set>
+        <field eval="'action'" name="key"/>
+        <field eval="'client_print_multi'" name="key2"/>
+        <field eval="['sgr.formulated_product_registry']" name="models"/>
+        <field name="name">Parecer Tecnico</field>
+        <field eval="'ir.actions.report.xml,'+str(parecertecnico)" name="value"/>
+        <field eval="True" name="isobject"/>
+        <field eval="True" name="replace"/>
+    </ir_set>
+
+</data>
+</openerp>
+

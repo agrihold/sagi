@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="project_class_deliverable" model="project.class">
+            <field name="name">Deliverable</field>
+            <field name="parent">must_have</field>
+            <field name="use_duration" eval="True"/>
+            <field name="use_relationships" eval="True"/>
+            <field name="use_tasks" eval="True"/>
+            <field name="use_default_tasks_stages" eval="True"/>
+            
+            <field name="show_wbs" eval="False"/>
+            <field name="use_sequence" eval="False"/>
+            <field name="use_related_partner" eval="False"/>
+        </record>
+        
+        <record id="project_class_project" model="project.class">
+            <field name="name">Project</field>
+            <field name="parent">must_not_have</field>
+            <field name="default_child_project_class" ref="sagi_x.project_class_deliverable"/>
+            <field name="show_wbs" eval="True"/>
+            <field name="use_default_tasks_stages" eval="True"/>
+            
+            <field name="use_duration" eval="False"/>
+            <field name="use_relationships" eval="False"/>
+            <field name="use_tasks" eval="False"/>
+            <field name="use_sequence" eval="False"/>
+            <field name="use_related_partner" eval="False"/>
+        </record>
+    </data>
+</openerp>

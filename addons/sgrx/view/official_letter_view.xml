@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.official_letter -->
+<!-- sgr.official_letter -->
+<!-- sgr.official_letter -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_official_letter_filter" model="ir.ui.view">
+            <field name="name">sgr.official_letter.select</field>
+            <field name="model">sgr.official_letter</field>
+            <field name="arch" type="xml">
+                <search string="Official Letters" version="7.0">
+                    <group string="By Attribute">
+                    <field name="government_agency_id" string="Government Agency"
+                            />
+                    <field name="issue_date" string="Issue Date"
+                            />
+                    <field name="tracking_number" string="Tracking Number"
+                            />
+                    <field name="protocol" string="Protocol"
+                            />
+                    <field name="protocol_date" string="Protocol Date"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="shipping_method_id" string="Shipping Method"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_official_letter_form" model="ir.ui.view">
+            <field name="name">sgr.official_letter.form</field>
+            <field name="model">sgr.official_letter</field>
+            <field name="inherit_id" ref="sgr.view_sgr_official_letter_form"/>            
+            <field name="arch" type="xml">
+                <sheet string="Official Letters" position="replace"/>
+                    <header position="after">
+                        <sheet string="Official Letters">
+                            <group colspan="4" col="4">
+                                <field name="name"/>
+                                <field name="company_id"
+                                    groups="base.group_multi_company"/>                                
+                                <field name="direction"
+                                    />      
+                                <field name="issue_date"
+                                    />
+                                <field name="government_agency_id"
+                                    />
+                                <field name="contact"
+                                    context="{'default_is_company':False,'default_parent_id':government_agency_id}"
+                                    domain="[('parent_id','=',government_agency_id)]"/>                                    
+                                <field name="delivery_date"
+                                    />
+                                <field name="shipping_method_id"/>
+                                <field name="tracking_number"
+                                    />                                   
+                                <field name="protocol"
+                                    />
+                                <field name="protocol_date"
+                                    />   
+                                                                                             
+                             </group>
+                             <group colspan="4" col="1">
+                                 <field name="comunication_ids" widget="many2many"
+                                 context="{'default_government_agency_id': government_agency_id,'default_direction': direction,'form_view_ref': 'sgrx.view_sgr_communication_official_letter_form','tree_view_ref':'sgrx.view_sgr_communication_official_letter_tree'}"
+                                 domain="[('government_agency_id','=',government_agency_id),('direction','=',direction),('state','=','draft')]">
+
+                                 </field>
+                                 
+                                                       
+                             </group>
+                        </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="view_sgr_official_letter_tree" model="ir.ui.view">
+            <field name="name">sgr.official_letter.tree</field>
+            <field name="model">sgr.official_letter</field>
+            <field name="arch" type="xml">
+                <tree string="Official Letters"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('sent',); red:state in ()"
+                    >
+                    <field name="issue_date"/>
+                    <field name="delivery_date"/>
+                    <field name="partner_to"/>
+                    <field name="partner_from"/>
+                    <field name="tracking_number"/>
+                    <field name="protocol_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

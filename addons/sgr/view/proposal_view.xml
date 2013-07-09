@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.proposal -->
+<!-- sgr.proposal -->
+<!-- sgr.proposal -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_proposal_filter" model="ir.ui.view">
+            <field name="name">sgr.proposal.select</field>
+            <field name="model">sgr.proposal</field>
+            <field name="arch" type="xml">
+                <search string="Proposals" version="7.0">
+                    <group string="By Attribute">
+                    <field name="type" string="Type"
+                            />
+                    <field name="laboratory_id" string="Laboratory"
+                            />
+                    <field name="name" string="Reference"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="contract_id" string="Contract"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_proposal_form" model="ir.ui.view">
+            <field name="name">sgr.proposal.form</field>
+            <field name="model">sgr.proposal</field>
+            <field name="arch" type="xml">
+                <form string="Proposals" version="7.0">
+                    <header>
+                        <button name="sgn_request"
+                            states="draft"
+                            string="Request"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_receive"
+                            states="requested"
+                            string="Receive"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_approve"
+                            states="received"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_done"
+                            states="approved"
+                            string="Set Done"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cancel"
+                            states="approved,done,draft,received,requested"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="Proposals">
+                     <group>
+                        <field name="type"
+                            on_change="onchange_contract_id(type, contract_id)"
+                            />
+                        <field name="laboratory_id"
+                            />
+                        <field name="name"
+                            />
+                        <field name="currency_id"
+                            />
+                        <field name="analytic_line_id"
+                            />
+                        <field name="company_id"
+                            />
+                    <field name="contract_id"
+                            on_change="onchange_contract_id(type, contract_id)"
+                            />
+                    <field name="sponsor_ids"
+                            />
+                    <field name="proposal_product_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_proposal_tree" model="ir.ui.view">
+            <field name="name">sgr.proposal.tree</field>
+            <field name="model">sgr.proposal</field>
+            <field name="arch" type="xml">
+                <tree string="Proposals"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'done', 'approved', 'received'); red:state in ()"
+                    >
+                    <field name="type"
+                        />
+                    <field name="laboratory_id"
+                        />
+                    <field name="name"
+                        />
+                    <field name="amount"
+                        />
+                    <field name="currency_id"
+                        />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

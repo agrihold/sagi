@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<openerp>
+    <data>
+  
+
+        <!-- Transitions -->
+
+
+        <record id="sgr.t_0AD2_0F41" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_approve</field>
+        </record>
+        <record id="sgr.t_0AD2_0F42" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_close</field>
+        </record>
+<!--        <record id="sgr.t_0AD2_0F45" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>-->
+        <record id="sgr.t_0AD2_0F46" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+
+        <record id="sgr.t_0AD2_318B" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sgr.t_0AD2_4BD0" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sgr.t_0AD2_4BD1" model="workflow.transition">
+            <field name="group_id" ref="sgr.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

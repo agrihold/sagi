@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.experimental_result -->
+<!-- sgr.experimental_result -->
+<!-- sgr.experimental_result -->
+<openerp>
+    <data>
+
+        <!-- SEARCHVIEW -->
+
+        <!-- FORMVIEW -->
+        <record id="sgr.view_sgr_experimental_result_form" model="ir.ui.view">
+            <field name="name">sgr.experimental_result.form</field>
+            <field name="model">sgr.experimental_result</field>
+            <field name="arch" type="xml">
+                <form string="Experimental Results" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Experimental Results">
+                        <field name="study_experimental_results" invisible="True"/>
+                     <group colspan="4" col="4">
+                        <field name="crop_id"/>
+                        <field name="target_pest_id" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="city"/>
+                        <field name="number_of_applications" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="volume" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="volume_uom_id" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="doses" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="doses_uom_id" attrs="{'invisible': [('study_experimental_results', '=', 'residue')]}"/>
+                        <field name="result" colspan="4" />
+                        <field name="note" colspan="4"/>
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="sgr.view_sgr_experimental_result_tree" model="ir.ui.view">
+            <field name="name">sgr.experimental_result.tree</field>
+            <field name="model">sgr.experimental_result</field>
+            <field name="arch" type="xml">
+                <tree string="Experimental Results">
+                    <field name="crop_id"/>
+                    <field name="target_pest_id"/>                                     
+                    <field name="city"/>
+                    <field name="volume"/>
+                    <field name="volume_uom_id"/>
+                    <field name="number_of_applications"/>
+                    <field name="result"/>
+                </tree>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

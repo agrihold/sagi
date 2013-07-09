@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_contract_filter" model="ir.ui.view">
+            <field name="name">sgr.contract.select</field>
+            <field name="model">sgr.contract</field>
+            <field name="arch" type="xml">
+                <search string="Contracts" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Reference"
+                            />
+                    <field name="laboratory_id" string="Laboratory"/>
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_contract_form" model="ir.ui.view">
+            <field name="name">sgr.contract.form</field>
+            <field name="model">sgr.contract</field>
+            <field name="inherit_id" ref="sgr.view_sgr_contract_form"/>            
+            <field name="arch" type="xml">
+                <sheet string="Contracts" position="replace"/>
+                <header position="after">
+                    <sheet string="Contracts">
+                        <group colspan="4" col="4">
+                            <field name="laboratory_id"
+                                />  
+                            <field name="analytic_account_id"
+                                />                                                      
+                            <field name="name"
+                                />
+                            <field name="date"
+                                />
+                        </group>
+                        <notebook>
+                            <page string="Contract Details">
+                                <group colspan="4" col="4">
+                                    <field name="amount" colspan="2"/>
+                                    <field name="currency_id" colspan="2"/>
+                                    <field name="payment_term_id" colspan="2"/>
+<!--                                    <field name="document_id" colspan="2"/>   -->
+                                </group>
+                                <group colspan="4" col="1">
+                                    <field name="payment_information"/>
+                                </group>
+                            </page>
+                            <page string="Proposals">
+                                <field name="proposal_ids"
+                                            nolabel="1"/>
+                            </page>                                            
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                       
+                                    <field name="company_id"
+                                        groups="base.group_multi_company" colspan="2"/>
+                                </group>
+                                <group colspan="4" col="1">
+                                    <field name="observations"
+                                        />
+                                </group>   
+                            </page>
+                            <page string="Moves">
+                                <field name="line_ids" nolabel="1"/>
+                            </page>
+                        </notebook>                                                        
+
+                    </sheet>
+                </header>                       
+            </field>
+        </record>
+
+     
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

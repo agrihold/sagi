@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+-->
+<openerp>
+    <data>
+    
+    <record model="ir.rule" id="npp_public_members_rule">
+        <field name="name">NPP Public Members</field>
+        <field name="model_id" ref="sagi.model_sagi_new_product_project"/>
+        <field name="groups" eval="[(4,ref('sagi.group_user'))]"/>   
+        <field name="domain_force">['|','|',('user_id','=',user.id),('privacy_visibility','in',[False,'public']),('message_follower_ids','in',[user.partner_id.id])]</field>
+    </record>
+
+    <record model="ir.rule" id="npp_manager">
+        <field name="name">NPP Manager</field>
+        <field name="model_id" ref="sagi.model_sagi_new_product_project"/>
+        <field name="groups" eval="[(4,ref('sagi.group_manager'))]"/>   
+        <field name="domain_force">[(1,'=',1)]</field>
+    </record>    
+
+<!-- EJEMPLO
+	<record model="ir.module.category" id="module_category_sagi">
+	    <field name="name">sagi</field>
+	    <field name="description"></field>
+        <field name="sequence">1</field>
+        <field name="parent_id" ref="base.module_category_hidden"/>
+    </record>
+	<record id="group_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        <field name="category_id" ref="module_category_sagi"/>
+	</record>
+FIN EJEMPLO -->
+    </data>
+
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

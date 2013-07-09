@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+	    <!-- SEARCHVIEW -->
+        <record id="view_res_partner_filter" model="ir.ui.view">
+            <field name="name">res.partner.select</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>            
+            <field name="arch" type="xml">
+                <filter name="supplier" position="after">
+                    <filter string="Laboratories" name="is_laboratory" icon="terp-personal" domain="[('is_laboratory','=',1)]" help="Laboratories Partners"/>                
+                    <filter string="GLP Laboratories" name="is_glp" icon="terp-personal" domain="[('is_glp','=',1)]" help="GLP Laboratories Partners"/>         
+                    <filter string="Gov. Agencies" name="is_gov_agency" icon="terp-personal" domain="[('is_gov_agency','=',1)]" help="Government Agencies Partners"/>                
+                </filter>
+            </field>
+        </record>
+
+
+        <!-- FORMVIEW -->
+        <record id="sgrx.view_sgr_partner_form" model="ir.ui.view">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name="company_id" position="after">
+                    <field name="vat"/> 
+                    <field name="state_registration_code"/>
+                    <field name="state_registration_date"/> 
+                    <field name="state_registration_agency"/>  
+                </field>
+                <field name="customer" position="before">           
+                    <field name="gov_registration_code"/>
+                    <field name="gov_registration_date"/>
+                    <field name="gov_registration_agency"/>
+                    <field name="env_registration_code"/>
+                    <field name="env_registration_date"/>
+                    <field name="env_registration_agency"/>
+                </field>
+
+                <xpath expr="//page[@string='Sales &amp; Purchases']//field[@name='supplier']" position="replace" />
+                <field name="customer" position="replace"/>
+                <xpath expr="//div[@name='buttons']" position="after">
+                    <div class="oe_right oe_button_box" name="partner_type">   
+
+                        <label for="customer"/>
+                        <field name="customer" invisible="False"/>
+                        
+                                    
+                        <label for="supplier"/>
+                        <field name="supplier"/> 
+
+                        <label for="is_gov_agency" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="is_gov_agency" attrs="{'invisible': [('is_company','=', False)]}"/> 
+
+                        <label for="is_laboratory" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        <field name="is_laboratory" attrs="{'invisible': [('is_company','=', False)]}"/>
+                        
+                        <label for="is_glp"  attrs="{'invisible': ['|', ('is_laboratory','=', False), ('is_company','=', False)]}"/>
+                        <field name="is_glp"  attrs="{'invisible': [('is_laboratory','=', False)]}"/>
+
+                    </div>
+                </xpath>
+                    <field name="title" position="after">
+                    <field name="emergency_phone"/>
+                    <field name="gov_type" attrs="{'invisible': [('is_gov_agency','=', False)]}" />
+                </field>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <!--record id="view_res_partner_tree" model="ir.ui.view">
+            <field name="name">res.partner.tree</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <tree string="Partners"
+                    >
+                </tree>
+            </field>
+        </record-->
+
+        <!-- WINDOWACTION -->
+        <!--record id="action_res_partner_form" model="ir.actions.act_window">
+            <field name="name">Partners</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_res_partner_filter"/>
+        </record-->
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

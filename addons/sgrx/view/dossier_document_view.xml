@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.dossier_document -->
+<!-- sgr.dossier_document -->
+<!-- sgr.document -->
+<openerp>
+    <data>     
+    
+        <record id="sgr.view_sgr_dossier_document_filter" model="ir.ui.view">
+            <field name="name">sgr.dossier_document.select</field>
+            <field name="model">sgr.dossier_document</field>
+            <field name="arch" type="xml">
+                <search string="Dossier Reports" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    <field name="registry_id" string="Registry"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+<!-- dossier_document DESDE MENU -->
+        <!-- FORMVIEW -->
+        <record id="view_sgr_dossier_document_form" model="ir.ui.view">
+            <field name="name">sgr.dossier_document.form</field>
+            <field name="model">sgr.dossier_document</field>
+            <field name="priority" eval="90"/>              
+            <field name="inherit_id" ref="sgr.view_sgr_dossier_document_form"/>                     
+            <field name="arch" type="xml">
+                <sheet string="Dossier Reports" position="replace"/>
+                <header position="after">
+                    <sheet string="Dossier Reports">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/>
+                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document')]"/> 
+<!--                                <field name="package_file_id"/>-->
+                                <field name="registry_id"/>                               
+                            </group>               
+                            <group colspan="2" col="2"> 
+                                <field name="reviser_id"/>
+                                <field name="approval_date"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>            
+                                    <field name="communication_ids" readonly="1"/>                                               
+                                </group>                   
+                            </page>      
+                        </notebook>                        
+                    </sheet>
+            </header>
+            </field>
+        </record>
+        
+        <record id="sgr.action_sgr_dossier_document_dossier_documents" model="ir.actions.act_window">
+            <field name="name">Dossier Documents</field>
+            <field name="res_model">sgr.dossier_document</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="sgrx.view_sgr_dossier_document_form"/>
+            <field name="search_view_id" ref="sgr.view_sgr_dossier_document_filter"/>
+        </record>    
+          
+        <record id="act_window_view_dossier_document" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="sgr.action_sgr_dossier_document_dossier_documents"/>
+            <!--<field name="sequence">sgr.dossier_document</field>-->
+            <field name="view_id" ref="sgr.view_sgr_dossier_document_tree"/>
+            <field name="view_mode">tree</field>
+        </record>
+
+<!-- dossier documents DESDE REGISTRIES -->
+        <!-- FORMVIEW -->        
+        <record id="view_sgr_dossier_document_form_registries_form" model="ir.ui.view">
+            <field name="name">sgr.dossier_document_.from_registries.form</field>
+            <field name="model">sgr.dossier_document</field>  
+            <field name="priority" eval="00"/>                     
+            <field name="arch" type="xml">       
+                <form string="Dossier Reports" version="7.0">
+                    <header>
+                        <button name="sgn_approve"
+                            states="draft"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_depreciate"
+                            states="approved"
+                            string="Depreciate"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cancel"
+                            states="approved,depreciated,draft"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar" statusbar_colors='{}' />
+                    </header>                
+                    <sheet string="Dossier Reports">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/>
+                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document')]" /> 
+                                <!--<field name="package_file_id"/>-->                          
+                            </group>               
+                            <group colspan="2" col="2"> 
+                                <field name="reviser_id"/>
+                                <field name="approval_date"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>            
+                                    <field name="communication_ids" readonly="1"/>                                               
+                                </group>                   
+                            </page>      
+                                         
+                        </notebook>                        
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

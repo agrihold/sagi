@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="True">
+	    <record model='res.partner' id='par_AGROTEC'>
+            <field name='is_company'>True</field>
+		    <field name='name'>AGROTEC</field>
+	    </record>
+
+        <record model='res.company' id='com_AGROTEC'>
+            <field name='partner_id' ref='par_AGROTEC'/>
+            <field name='currency_id' ref='base.PYG'/>
+            <field name='name'>AGROTEC</field>
+        </record> 
+
+	    <record model='res.partner' id='par_ALTA'>
+            <field name='is_company'>True</field>
+		    <field name='name'>ALTA</field>
+	    </record>
+
+        <record model='res.company' id='com_ALTA'>
+            <field name='partner_id' ref='par_ALTA'/>
+            <field name='currency_id' ref='base.BRL'/>
+            <field name='name'>ALTA</field>
+        </record> 
+
+	    <record model='res.partner' id='par_MAPA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>MAPA</field>
+	    </record>
+
+	    <record model='res.partner' id='par_IPARA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>IPARA</field>
+	    </record>
+
+	    <record model='res.partner' id='par_IBAMA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>IBAMA</field>
+	    </record>
+
+	    <record model='res.partner' id='par_ANVISA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>ANVISA</field>
+	    </record>
+
+	    <record model='res.partner' id='par_MAPARA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>MAPARA</field>
+	    </record>
+
+	    <record model='res.partner' id='par_MADOSUL'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>MADOSUL</field>
+	    </record>
+
+	    <record model='res.partner' id='par_MASAOPA'>
+            <field name='is_company'>True</field>
+            <field name='is_gov_agency'>True</field>
+		    <field name='name'>MASAOPA</field>
+	    </record>
+
+    </data>
+</openerp>
+        
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

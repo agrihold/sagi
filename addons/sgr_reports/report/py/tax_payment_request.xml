@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+
+    <record id="tax_payment_request" model="ir.actions.report.xml">
+        <field name="name">Tax Payment Request</field>
+        <field name="type">ir.actions.report.xml</field>
+        <field name="model">sgr.formulated_product_registry</field>
+        <field name="report_name">tax_payment_request</field>
+        <field name="report_type">aeroo</field>
+        <field name="in_format">oo-odt</field>
+        <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
+        <field name="parser_loc">sgr_reports/report/parser.py</field>
+        <field name="report_rml">sgr_reports/report/py/tax_payment_request.odt</field>
+        <field name="parser_state">loc</field>
+        <field name="tml_source">file</field>
+    </record>
+
+    <ir_set>
+        <field eval="'action'" name="key"/>
+        <field eval="'client_print_multi'" name="key2"/>
+        <field eval="['sgr.tax_payment_request']" name="models"/>
+        <field name="name">Tax Payment Request</field>
+        <field eval="'ir.actions.report.xml,'+str(tax_payment_request)" name="value"/>
+        <field eval="True" name="isobject"/>
+        <field eval="True" name="replace"/>
+    </ir_set>
+
+</data>
+</openerp>
+

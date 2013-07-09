@@ -1,0 +1,76 @@
+#
+#        Creo un partner que trabaje de proxy
+#
+- !record {model: res.partner, id: par_proxy }:
+
+        is_company: False
+        is_gov_agency: False
+        name: Proxy for testing
+
+#
+#        Creo una RET phase
+#
+- !record {model: sgr.ret_phase, id: ret_phase_1 }:
+        name: RET phase for testing
+
+#
+#        Creo una RET purpose
+#
+- !record {model: sgr.ret_purpose, id: ret_purpose_1 }:
+        name: RET purpose for testing
+
+
+#        
+#        Creo un registro RET
+#
+- !record {model: sgr.ret_registry, id: registry_ret_1 }:
+        type: ret
+        name: RET Registry for testing
+        proxy_id: par_proxy
+        registry_category_id: sgr_registry_category_1
+        ret_phase_id: ret_phase_1
+        ret_purpose_ids:
+                - ret_purpose_1
+
+#
+#       Creo un product
+#
+- !record {model: product.product, id: product_3 }:
+        name: Product for testing
+        uom_id: product.product_uom_gram
+        uom_po_id: product.product_uom_gram
+        
+#
+#       Creo un product in RET
+#
+- !record {model: sgr.product_in_ret, id: product_in_ret_1 }:
+        product_id: product_3
+        amount_requested: 100.0
+        ret_registry_id: registry_ret_1
+        amount_uom_id: product.product_uom_gram
+
+- !assert {model: sgr.product_in_ret, id: product_in_ret_1, 'Checking if amount_uom is defined' }:
+        - amount_uom_id != False
+        - remaining_amount == 0.0
+
+#
+#       Calculo remaining_amount
+#
+
+- !record {model: sgr.sample_request, id: request_1 }:
+        product_id: product_3
+        supplier_id: lab_1
+        amount: 5.0
+        amount_uom_id: product.product_uom_gram
+        product_in_ret_id: product_in_ret_1
+        specific_batch: 'no'
+
+- !assert {model: sgr.product_in_ret, id: product_in_ret_1, string: 'Checking remaining amount' }:
+        - remaining_amount == -5.0
+
+- !record {model: sgr.product_in_ret, id: product_in_ret_1 }:
+        amount_released: 10.0
+
+- !assert {model: sgr.product_in_ret, id: product_in_ret_1, string: 'Checking remainging amount after changing amount_realeased' }:
+        - remaining_amount == 5.0
+

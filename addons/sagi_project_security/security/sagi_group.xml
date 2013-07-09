@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+-->
+<openerp>
+    <data>
+    <!-- proyectos vuelven a ser no multicompany!--> 
+    <record model="ir.rule" id="project.project_comp_rule">
+        <field name="active" eval="False"></field>
+    </record>
+    <record model="ir.rule" id="project.task_comp_rule">
+        <field name="active" eval="False"></field>
+    </record>   
+    <record model="ir.rule" id="analytic.analytic_comp_rule">
+        <field name="active" eval="False"></field>
+    </record>       
+    <record model="ir.rule" id="analytic.analytic_line_comp_rule">
+        <field name="active" eval="False"></field>
+    </record>      
+    <record model="ir.rule" id="account.analytic_journal_comp_rule">
+        <field name="active" eval="False"></field>
+    </record> 
+
+
+
+    <menuitem id="base.menu_main_pm" name="Project" groups="sagi.group_user"/>
+    <menuitem id="project.menu_project_management"  name="Project" sequence="1" parent="base.menu_main_pm" groups="project.group_project_user"/> 
+    <menuitem name="Projects" id="portal.portal_projects" parent="portal.portal_menu" groups="portal.group_portal" sequence="40"/>
+   
+
+    
+    <!-- todo esto se traslado a project_security-->
+    <!-- nuevo grupo project leader
+    <record id="group_project_leader" model="res.groups">
+        <field name="name">Leader</field>
+        <field name="category_id" ref="base.module_category_project_management"/>
+        <field name="implied_ids" eval="[(4, ref('project.group_project_user'))]"/>  
+    </record>
+
+    <record id="project.group_project_manager" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('group_project_leader'))]"/>
+    </record>     
+    --> 
+    <!-- project leader, proyectos hijos de los suyos 
+    
+    <record model="ir.rule" id="project_creation_leader_rule">
+        <field name="name" >Crear o borrar sub proyectos de un proyecto donde sos lider</field>
+        <field name="model_id" ref="project.model_project_project"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">[('project_parent_id.user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('group_project_leader'))]"/>
+        <field name="perm_read" eval='False'/>
+        <field name="perm_write" eval='False'/>
+        <field name="perm_create" eval='True'/>
+        <field name="perm_unlink" eval='True'/>        
+    </record>    -->
+<!--
+    <record model="ir.rule" id="project_modification_leader_rule">
+        <field name="name" >Modificar proyectos donde sos lider o son hijos del tuyo</field>
+        <field name="model_id" ref="project.model_project_project"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('analytic_account_id.user_id','=',user_id),('user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('group_project_leader'))]"/>
+        <field name="perm_read" eval='False'/>
+        <field name="perm_write" eval='True'/>
+        <field name="perm_create" eval='False'/>
+        <field name="perm_unlink" eval='False'/>        
+    </record>      
+-->
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

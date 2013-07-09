@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+	
+<!-- EJEMPLO WORKFLOW -->
+        <!-- Workflow -->
+<!-- 
+        <record id="sagi_wkf" model="workflow">
+            <field name="name">sagi.sagi.sagi</field>
+            <field name="osv">sagi.sagi</field>
+            <field name="on_create">True</field>
+        </record>
+-->
+        <!-- Activities -->
+<!-- 
+        <record id="a_176_197" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">write({'state':'draft'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_187" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="name">On Creation</field>
+            <field name="action">write({'state':'on_creation'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_188" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="name">On Initiation</field>
+            <field name="action">write({'state':'on_initiation'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_189" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="name">On Planning</field>
+            <field name="action">write({'state':'on_planning'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_190" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="name">On Excecution and Control</field>
+            <field name="action">write({'state':'on_excecution_and_control'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_191" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="name">On Closure</field>
+            <field name="action">write({'state':'on_closure'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_193" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Rejected</field>
+            <field name="action">write({'state':'rejected'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_195" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Aborted</field>
+            <field name="action">write({'state':'aborted'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_192" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Closed</field>
+            <field name="action">write({'state':'closed'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_176_194" model="workflow.activity">
+            <field name="wkf_id" ref="sagi_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">write({'state':'cancelled'})</field>
+            <field name="kind">function</field>
+        </record>
+-->
+        <!-- Transitions -->
+<!-- 
+        <record id="t_176_199" model="workflow.transition">
+            <field name="act_from" ref="a_176_189"/>
+            <field name="act_to" ref="a_176_195"/>
+        </record>
+        <record id="t_176_324" model="workflow.transition">
+            <field name="act_from" ref="a_176_187"/>
+            <field name="act_to" ref="a_176_188"/>
+            <field name="signal">sgn_next_stage</field>
+        </record>
+        <record id="t_176_325" model="workflow.transition">
+            <field name="act_from" ref="a_176_188"/>
+            <field name="act_to" ref="a_176_189"/>
+            <field name="signal">sgn_next_stage</field>
+        </record>
+        <record id="t_176_326" model="workflow.transition">
+            <field name="act_from" ref="a_176_189"/>
+            <field name="act_to" ref="a_176_190"/>
+            <field name="signal">sgn_next_stage</field>
+        </record>
+        <record id="t_176_327" model="workflow.transition">
+            <field name="act_from" ref="a_176_190"/>
+            <field name="act_to" ref="a_176_191"/>
+            <field name="signal">sgn_next_stage</field>
+        </record>
+        <record id="t_176_328" model="workflow.transition">
+            <field name="act_from" ref="a_176_191"/>
+            <field name="act_to" ref="a_176_192"/>
+            <field name="signal">sgn_close_project</field>
+        </record>
+        <record id="t_176_329" model="workflow.transition">
+            <field name="act_from" ref="a_176_187"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_330" model="workflow.transition">
+            <field name="act_from" ref="a_176_187"/>
+            <field name="act_to" ref="a_176_193"/>
+            <field name="signal">sgn_reject</field>
+        </record>
+        <record id="t_176_331" model="workflow.transition">
+            <field name="act_from" ref="a_176_188"/>
+            <field name="act_to" ref="a_176_193"/>
+            <field name="signal">sgn_reject</field>
+        </record>
+        <record id="t_176_332" model="workflow.transition">
+            <field name="act_from" ref="a_176_190"/>
+            <field name="act_to" ref="a_176_195"/>
+            <field name="signal">sgn_abort</field>
+        </record>
+        <record id="t_176_333" model="workflow.transition">
+            <field name="act_from" ref="a_176_191"/>
+            <field name="act_to" ref="a_176_195"/>
+            <field name="signal">sgn_abort</field>
+        </record>
+        <record id="t_176_334" model="workflow.transition">
+            <field name="act_from" ref="a_176_192"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_335" model="workflow.transition">
+            <field name="act_from" ref="a_176_191"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_336" model="workflow.transition">
+            <field name="act_from" ref="a_176_190"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_337" model="workflow.transition">
+            <field name="act_from" ref="a_176_189"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_338" model="workflow.transition">
+            <field name="act_from" ref="a_176_188"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_339" model="workflow.transition">
+            <field name="act_from" ref="a_176_194"/>
+            <field name="act_to" ref="a_176_197"/>
+            <field name="signal">sgn_to_draft</field>
+        </record>
+        <record id="t_176_340" model="workflow.transition">
+            <field name="act_from" ref="a_176_193"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_341" model="workflow.transition">
+            <field name="act_from" ref="a_176_195"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+        <record id="t_176_342" model="workflow.transition">
+            <field name="act_from" ref="a_176_197"/>
+            <field name="act_to" ref="a_176_187"/>
+            <field name="signal">sgn_next_stage</field>
+        </record>
+        <record id="t_176_343" model="workflow.transition">
+            <field name="act_from" ref="a_176_197"/>
+            <field name="act_to" ref="a_176_194"/>
+            <field name="signal">sgn_cancel</field>
+        </record>
+-->		
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

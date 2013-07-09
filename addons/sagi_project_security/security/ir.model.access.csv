@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_project_leader,project.project,project.model_project_project,group_project_leader,1,1,1,1
+access_account_analytic_line_project,account.analytic.line project,analytic.model_account_analytic_line,group_project_leader,1,1,1,1
+access_account_analytic_account_user,account.analytic.account,analytic.model_account_analytic_account,group_project_leader,1,1,1,1

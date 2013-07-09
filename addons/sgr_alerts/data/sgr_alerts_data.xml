@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Tax subtypes for messaging / Chatter -->
+        <record id="mt_tax_due_date_soon" model="mail.message.subtype">
+            <field name="name">Tax payment deadline soon</field>
+            <field name="res_model">sgr.tax</field>
+            <field name="default" eval="True"/>
+            <field name="description">Tax payment deadline expired</field>
+        </record>
+        <record id="mt_tax_due_date" model="mail.message.subtype">
+            <field name="name">Tax payment deadline soon</field>
+            <field name="res_model">sgr.tax</field>
+            <field name="default" eval="True"/>
+            <field name="description">Tax payment deadline soon</field>
+        </record>
+
+        <!-- Sample Request subtypes for messaging / Chatter -->
+        <record id="mt_sample_request_deadline_soon" model="mail.message.subtype">
+            <field name="name">Sample delivery deadline soon</field>
+            <field name="res_model">sgr.sample_request</field>
+            <field name="default" eval="True"/>
+            <field name="description">Sample delivery deadline soon</field>
+        </record>
+        <record id="mt_sample_request_due" model="mail.message.subtype">
+            <field name="name">Sample delivery deadline expired</field>
+            <field name="res_model">sgr.sample_request</field>
+            <field name="default" eval="True"/>
+            <field name="description">Sample delivery deadline expired</field>
+        </record>
+
+        <!-- Communication subtypes for messaging / Chatter -->
+        <record id="mt_communication_term_date_soon" model="mail.message.subtype">
+            <field name="name">Official letter reply deadline soon</field>
+            <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+            <field name="description">Official letter reply deadline soon</field>
+        </record>
+        <record id="mt_communication_due" model="mail.message.subtype">
+            <field name="name">Official letter reply deadline expired</field>
+            <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+            <field name="description">Official letter reply deadline expired</field>
+        </record>
+
+        
+    </data>
+</openerp>

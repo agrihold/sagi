@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.product_in_ret -->
+<!-- sgr.product_in_ret -->
+<!-- sgr.product_in_ret -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_product_in_ret_filter" model="ir.ui.view">
+            <field name="name">sgr.product_in_ret.select</field>
+            <field name="model">sgr.product_in_ret</field>
+            <field name="arch" type="xml">
+                <search string="Products in RET" version="7.0">
+                    <group string="By Attribute">
+                    <field name="concentration" string="Concentration"
+                            />
+                    <field name="concentration_uom_id" string="Concentration UOM"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="product_id" string="Product"
+                            />
+                    <field name="ret_registry_id" string="Registry"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_product_in_ret_form" model="ir.ui.view">
+            <field name="name">sgr.product_in_ret.form</field>
+            <field name="model">sgr.product_in_ret</field>
+            <field name="arch" type="xml">
+                <form string="Products in RET" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Products in RET">
+                     <group>
+                        <field name="concentration"
+                            />
+                        <field name="concentration_uom_id"
+                            />
+                        <field name="amount_requested"
+                            />
+                        <field name="amount_uom_id"
+                            />
+                        <field name="amount_released"
+                            />
+                        <field name="remaining_amount"
+                            />
+                    <field name="product_id"
+                            on_change="onchange_product(product_id)"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_product_in_ret_tree" model="ir.ui.view">
+            <field name="name">sgr.product_in_ret.tree</field>
+            <field name="model">sgr.product_in_ret</field>
+            <field name="arch" type="xml">
+                <tree string="Products in RET"
+                    >
+                    <field name="concentration"
+                        />
+                    <field name="concentration_uom_id"
+                        />
+                    <field name="amount_requested"
+                        />
+                    <field name="amount_uom_id"
+                        />
+                    <field name="amount_released"
+                        />
+                    <field name="remaining_amount"
+                        />
+                    <field name="product_id"
+                        />
+                    <field name="ret_registry_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

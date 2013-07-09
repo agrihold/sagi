@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.registry_category -->
+<!-- sgr.registry_category -->
+<!-- sgr.registry_category -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_registry_category_filter" model="ir.ui.view">
+            <field name="name">sgr.registry_category.select</field>
+            <field name="model">sgr.registry_category</field>
+            <field name="arch" type="xml">
+                <search string="Registries Categories" version="7.0">
+                    <group string="By Attribute">
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_registry_category_form" model="ir.ui.view">
+            <field name="name">sgr.registry_category.form</field>
+            <field name="model">sgr.registry_category</field>
+            <field name="arch" type="xml">
+                <form string="Registries Categories" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Registries Categories">
+                     <group>
+                        <field name="type"
+                            />
+                        <field name="name"
+                            />
+                        <field name="company_id"
+                            />
+                    <field name="information_category_ids"
+                            />
+                    <field name="document_category_ids"
+                            />
+                    <field name="goverment_agency_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_registry_category_tree" model="ir.ui.view">
+            <field name="name">sgr.registry_category.tree</field>
+            <field name="model">sgr.registry_category</field>
+            <field name="arch" type="xml">
+                <tree string="Registries Categories"
+                    >
+                    <field name="type"
+                        />
+                    <field name="name"
+                        />
+                    <field name="company_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

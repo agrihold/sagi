@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.related_product_tag -->
+<!-- sagi.related_product_tag -->
+<!-- sagi.related_product_tag -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sagi_related_product_tag_filter" model="ir.ui.view">
+            <field name="name">sagi.related_product_tag.select</field>
+            <field name="model">sagi.related_product_tag</field>
+            <field name="arch" type="xml">
+                <search string="related_product_tag" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Name"
+                            />
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sagi_related_product_tag_form" model="ir.ui.view">
+            <field name="name">sagi.related_product_tag.form</field>
+            <field name="model">sagi.related_product_tag</field>
+            <field name="arch" type="xml">
+                <form string="related_product_tag" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="related_product_tag">
+                     <group>
+                        <field name="name"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sagi_related_product_tag_tree" model="ir.ui.view">
+            <field name="name">sagi.related_product_tag.tree</field>
+            <field name="model">sagi.related_product_tag</field>
+            <field name="arch" type="xml">
+                <tree string="related_product_tag"
+                    >
+                    <field name="name"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

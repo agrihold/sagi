@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.use_recommendation -->
+<!-- sgr.use_recommendation -->
+<!-- sgr.use_recommendation -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_use_recommendation_filter" model="ir.ui.view">
+            <field name="name">sgr.use_recommendation.select</field>
+            <field name="model">sgr.use_recommendation</field>
+            <field name="arch" type="xml">
+                <search string="Use Recommendations" version="7.0">
+                    <group string="By Attribute">
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_use_recommendation_form" model="ir.ui.view">
+            <field name="name">sgr.use_recommendation.form</field>
+            <field name="model">sgr.use_recommendation</field>
+            <field name="arch" type="xml">
+                <form string="Use Recommendations" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Use Recommendations">
+                     <group>
+                        <field name="commecial_product_rate"
+                            />
+                        <field name="active_ingredient_rate"
+                            />
+                        <field name="solution_volume"
+                            />
+                        <field name="solution_volume_uom"
+                            />
+                        <field name="security_interval_in_days"
+                            />
+                        <field name="application_time"
+                            />
+                        <field name="LMR"
+                            />
+                    <field name="application_mode_id"
+                            />
+                    <field name="crop_id"
+                            />
+                    <field name="tarjet_pest_id"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_use_recommendation_tree" model="ir.ui.view">
+            <field name="name">sgr.use_recommendation.tree</field>
+            <field name="model">sgr.use_recommendation</field>
+            <field name="arch" type="xml">
+                <tree string="Use Recommendations"
+                    >
+                    <field name="commecial_product_rate"
+                        />
+                    <field name="active_ingredient_rate"
+                        />
+                    <field name="solution_volume"
+                        />
+                    <field name="solution_volume_uom"
+                        />
+                    <field name="security_interval_in_days"
+                        />
+                    <field name="application_time"
+                        />
+                    <field name="application_mode_id"
+                        />
+                    <field name="crop_id"
+                        />
+                    <field name="tarjet_pest_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

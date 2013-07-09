@@ -1,0 +1,134 @@
+#        
+#        Creo el laboratorio
+#
+- !record {model: res.partner, id: lab_1 }:
+        name: Laboratorio 1
+        is_company: True
+        is_laboratory: True
+
+#        
+#        Creo un producto
+#
+- !record {model: product.product, id: product_1 }:
+        name: Producto 1 de test
+
+- !record {model: product.product, id: product_2 }:
+        name: Producto 2 de test
+
+#        
+#        Creo el contrato con ese laboratorio
+#
+- !record {model: sgr.contract, id: sgr_contract_2 }:
+        name: Mi contrato
+        laboratory_id: lab_1
+        amount: 1000
+        currency_id: base.BRL
+        payment_term_id: account.account_payment_term_immediate
+
+#
+#       Cambio a estado Requested
+#
+- !workflow {model: sgr.contract, action: sgn_request, ref: sgr_contract_2 }
+
+#
+#       Cambio a estado Received
+#
+- !workflow {model: sgr.contract, action: sgn_receive, ref: sgr_contract_2 }
+
+#
+#       Cambio a estado Approved
+#
+- !workflow {model: sgr.contract, action: sgn_approve, ref: sgr_contract_2 }
+
+#
+#       Verifico que exista la cuenta analítica, y que tenga un débito en la misma del monto indicado.
+#
+- !assert {model: sgr.contract, id: sgr_contract_2, string: Approved analytic account. }:
+        - state == "approved"
+        - analytic_account_id.parent_id.name == "Laboratory Contracts Analytic Account"
+        - analytic_account_id.name == name
+        - analytic_account_id.debit == 1000
+        - analytic_account_id.credit == 0
+
+#
+#       Creo un proposal
+#
+- !record {model: sgr.proposal, id: sgr_proposal_1 }:
+        name: Proposal testing
+        laboratory_id: lab_1
+        type: by_contract
+        contract_id: sgr_contract_2
+        proposal_product_ids:
+                - product_id: product_1
+                  product_study_ids:
+                        - amount: 100.0
+                          term_days: 10
+                          study_category_id: sgr_document_category_2
+                - product_id: product_2
+                  product_study_ids:
+                        - amount: 80.0
+                          term_days: 5
+                          study_category_id: sgr_document_category_2
+                        - amount: 5.0
+                          term_days: 100
+                          study_category_id: sgr_document_category_2
+   
+#
+#  Pruebo el total de la proposal
+#
+- !assert {model: sgr.proposal, id: sgr_proposal_1, string: Total Proposal. }:
+        - state == "draft"
+        - amount == 185.0
+        - proposal_product_ids[0].sub_total == 100.
+        - proposal_product_ids[1].sub_total == 85.
+        - currency_id.id == ref('base.BRL')
+
+#
+#       Cambio a estado Requested
+#
+- !workflow {model: sgr.proposal, action: sgn_request, ref: sgr_proposal_1 }
+
+#
+#       Cambio a estado Recive
+#
+- !workflow {model: sgr.proposal, action: sgn_receive, ref: sgr_proposal_1 }
+
+#
+#       Cambio a estado Approve
+#
+- !workflow {model: sgr.proposal, action: sgn_approve, ref: sgr_proposal_1 }
+
+#
+#       Verifico que se aprobó el proposal.
+#
+- !assert {model: sgr.proposal, id: sgr_proposal_1, string: Approved proposal. }:
+        - state == "approved"
+
+#
+#       Verifico que hayan ocurrido cambios en la cuenta analítica.
+#
+- !assert {model: sgr.contract, id: sgr_contract_2, string: Approved analytic account. }:
+        - state == "approved"
+        - analytic_account_id.debit == 1000
+        - analytic_account_id.credit == 185
+        - analytic_account_id.balance == 815 
+
+#
+#       Verifico que se hayan creado los estudios.
+#
+- !assert {model: sgr.proposal, id: sgr_proposal_1 }:
+        - proposal_product_ids[0].product_study_ids[0].study_id.name == u'Estudio de factibilidad técnica'
+        - proposal_product_ids[0].product_study_ids[0].study_id.document_category_id.id == ref('sgr_document_category_2')
+        - proposal_product_ids[0].product_study_ids[0].study_id.source == 'own'
+        - proposal_product_ids[0].product_study_ids[0].study_id.state == 'contracted'
+        - proposal_product_ids[0].product_study_ids[0].study_id.laboratory_id.id == ref('lab_1')
+        - proposal_product_ids[0].product_study_ids[0].study_id.product_id.id == ref('product_1')
+
+#
+#       Intento cancelar el contrato con la proposal dentro.
+# - !workflow {model: sgr.contract, action: sgn_cancel, ref: sgr_contract_2 }
+
+#
+#       Verifico que no se haya cancelado.
+# - !assert {model: sgr.contract, id: sgr_contract_1, string: Canceled analytic account. }: - state == "approved"
+

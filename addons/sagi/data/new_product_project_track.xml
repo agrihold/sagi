@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+        <record id="sagi.new_product_project_draft_snp" model="mail.message.subtype">
+	    <field name="name">Draft SNP</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Draft SNP</field>
+        </record>
+        <record id="sagi.new_product_project_snp_presented" model="mail.message.subtype">
+	    <field name="name">SNP Presented</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">SNP Presented</field>
+        </record>
+        <record id="sagi.new_product_project_approved_by_qnp" model="mail.message.subtype">
+	    <field name="name">Approved by QNP</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Approved by QNP</field>
+        </record>
+        <record id="sagi.new_product_project_approved_by_cio" model="mail.message.subtype">
+	    <field name="name">Approved by CIO</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Approved by CIO</field>
+        </record>
+        <record id="sagi.new_product_project_summary_ready" model="mail.message.subtype">
+	    <field name="name">Summary Ready</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Summary Ready</field>
+        </record>
+        <record id="sagi.new_product_project_approved_by_co" model="mail.message.subtype">
+	    <field name="name">Approved by CO</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Approved by CO</field>
+        </record>
+        <record id="sagi.new_product_project_presentation_ready" model="mail.message.subtype">
+	    <field name="name">Presentation Ready</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Presentation Ready</field>
+        </record>
+        <record id="sagi.new_product_project_project_charter_draft" model="mail.message.subtype">
+	    <field name="name">Project Charter Draft</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Charter Draft</field>
+        </record>
+        <record id="sagi.new_product_project_preliminary_project_planning" model="mail.message.subtype">
+	    <field name="name">Preliminary Project Planning</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Preliminary Project Planning</field>
+        </record>
+        <record id="sagi.new_product_project_supply_chain_ca_ongoing" model="mail.message.subtype">
+	    <field name="name">Supply Chain CA ongoing</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Supply Chain CA ongoing</field>
+        </record>
+        <record id="sagi.new_product_project_marketing_ca_ongoing" model="mail.message.subtype">
+	    <field name="name">Marketing CA ongoing</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Marketing CA ongoing</field>
+        </record>
+        <record id="sagi.new_product_project_dr_ca_ongoing" model="mail.message.subtype">
+	    <field name="name">DR CA ongoing</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">DR CA ongoing</field>
+        </record>
+        <record id="sagi.new_product_project_ca_evaluation" model="mail.message.subtype">
+	    <field name="name">CA Evaluation</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">CA Evaluation</field>
+        </record>
+        <record id="sagi.new_product_project_project_planning" model="mail.message.subtype">
+	    <field name="name">Project Planning</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Planning</field>
+        </record>
+        <record id="sagi.new_product_project_project_ongoing" model="mail.message.subtype">
+	    <field name="name">Project Ongoing</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Ongoing</field>
+        </record>
+        <record id="sagi.new_product_project_project_review_ongoing" model="mail.message.subtype">
+	    <field name="name">Project Review Ongoing</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Review Ongoing</field>
+        </record>
+        <record id="sagi.new_product_project_project_closure" model="mail.message.subtype">
+	    <field name="name">Project Closure</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Closure</field>
+        </record>
+        <record id="sagi.new_product_project_project_closed" model="mail.message.subtype">
+	    <field name="name">Project Closed</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Project Closed</field>
+        </record>
+        <record id="sagi.new_product_project_revise" model="mail.message.subtype">
+	    <field name="name">Revise</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Revise</field>
+        </record>
+        <record id="sagi.new_product_project_qnp_rejected" model="mail.message.subtype">
+	    <field name="name">QNP Rejected</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">QNP Rejected</field>
+        </record>
+        <record id="sagi.new_product_project_cancelled" model="mail.message.subtype">
+	    <field name="name">Cancelled</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Cancelled</field>
+        </record>
+        <record id="sagi.new_product_project_rejected_by_cio" model="mail.message.subtype">
+	    <field name="name">Rejected by CIO</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Rejected by CIO</field>
+        </record>
+        <record id="sagi.new_product_project_rejected_by_co" model="mail.message.subtype">
+	    <field name="name">Rejected by CO</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Rejected by CO</field>
+        </record>
+        <record id="sagi.new_product_project_rejected_by_cia" model="mail.message.subtype">
+	    <field name="name">Rejected by CIA</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Rejected by CIA</field>
+        </record>
+        <record id="sagi.new_product_project_rejected_by_ca" model="mail.message.subtype">
+	    <field name="name">Rejected by CA</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Rejected by CA</field>
+        </record>
+        <record id="sagi.new_product_project_aborted" model="mail.message.subtype">
+	    <field name="name">Aborted</field>
+	    <field name="res_model">sagi.new_product_project</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Aborted</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

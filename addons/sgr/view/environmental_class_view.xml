@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.environmental_class -->
+<!-- sgr.environmental_class -->
+<!-- sgr.environmental_class -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_environmental_class_filter" model="ir.ui.view">
+            <field name="name">sgr.environmental_class.select</field>
+            <field name="model">sgr.environmental_class</field>
+            <field name="arch" type="xml">
+                <search string="Environmental Classes" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Name"
+                            />
+                    <field name="description" string="Description"
+                            />
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_environmental_class_form" model="ir.ui.view">
+            <field name="name">sgr.environmental_class.form</field>
+            <field name="model">sgr.environmental_class</field>
+            <field name="arch" type="xml">
+                <form string="Environmental Classes" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Environmental Classes">
+                     <group>
+                        <field name="name"
+                            />
+                        <field name="description"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_environmental_class_tree" model="ir.ui.view">
+            <field name="name">sgr.environmental_class.tree</field>
+            <field name="model">sgr.environmental_class</field>
+            <field name="arch" type="xml">
+                <tree string="Environmental Classes"
+                    >
+                    <field name="name"
+                        />
+                    <field name="description"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

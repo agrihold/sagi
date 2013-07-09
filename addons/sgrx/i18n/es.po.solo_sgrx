@@ -1,0 +1,762 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sgrx
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-27 16:29+0000\n"
+"PO-Revision-Date: 2013-05-27 16:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sgrx
+#: view:sgr.proposal_product:0
+msgid "Proposal Products"
+msgstr "Productos Propuestos"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "\"[('usage','!=','view')]\""
+msgstr "\"[('usage','!=','view')]\""
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_registry
+msgid "sgr.registry"
+msgstr "sgr.registry"
+
+#. module: sgrx
+#: field:product.product,product_in_ret_ids:0
+msgid "RETs"
+msgstr "RETs"
+
+#. module: sgrx
+#: view:stock.production.lot:0
+msgid "\"base.group_no_one\""
+msgstr "\"base.group_no_one\""
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "GLP Laboratories"
+msgstr "GLP Laboratorios"
+
+#. module: sgrx
+#: field:stock.move,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_ingredient
+msgid "ingredient"
+msgstr "sustancia"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+msgid "Modify"
+msgstr "Modificar"
+
+#. module: sgrx
+#: model:mail.message.subtype,description:sgrx.mt_move_change
+msgid "Stock Move Status Change"
+msgstr "Cambio de Estado en Movimiento de Stock"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_laboratory_registry
+msgid "laboratory_registry"
+msgstr "registro_laboratorio"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.partner_document:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Partner Documents"
+msgstr "Documentos de Empresas"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_sample_request
+msgid "sample_request"
+msgstr "sample_request"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.sample_request:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+#: view:stock.move:0
+msgid "Notes"
+msgstr "Notas"
+
+#. module: sgrx
+#: field:stock.move,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.tax:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: sgrx
+#: view:sgr.ret_registry:0
+msgid "Products"
+msgstr "Productos"
+
+#. module: sgrx
+#: view:product.product:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+msgid "Components"
+msgstr "Componentes"
+
+#. module: sgrx
+#: view:sgr.component_registry_detail:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.technical_product_registry:0
+msgid "CQQ"
+msgstr "CQQ"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Laboratories"
+msgstr "Laboratorios"
+
+#. module: sgrx
+#: view:sgr.study:0
+#: field:sgr.study,document_category_experimental_results:0
+msgid "Experimental Results"
+msgstr "Resultados experimentales"
+
+#. module: sgrx
+#: help:stock.move,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención."
+
+#. module: sgrx
+#: view:sgr.technical_product_registry:0
+msgid "Techinical Products Registries"
+msgstr "Registro Productos Técnicos"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "Formulated"
+msgstr "Formulado"
+
+#. module: sgrx
+#: view:sgr.study:0
+msgid "Validation Method"
+msgstr "Método de validación"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: sgrx
+#: help:stock.move,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Contiene el resumen del Chatter (número de mensajes , ...) . Este resumen está directamente en formato html para ser insertado en las vistas kanban ."
+
+#. module: sgrx
+#: view:sgr.contract:0
+msgid "Contract Details"
+msgstr "Detalles del contrato"
+
+#. module: sgrx
+#: model:ir.ui.menu,name:sgrx.menu_sample_request
+#: view:sgr.sample_request:0
+#: field:stock.move,sample_request_id:0
+msgid "Sample Request"
+msgstr "Requerir Muestra"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Formulated Product Registries"
+msgstr "Registros de Productos Formulados"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: sgrx
+#: view:sgr.ingredient:0
+msgid "Other Names"
+msgstr "Otros nombres"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: sgrx
+#: view:sgr.study_presentation:0
+msgid "Study Presentation"
+msgstr "Estudio de Presentación "
+
+#. module: sgrx
+#: view:sgr.ret_registry:0
+msgid "RET Registries"
+msgstr "Registros RET"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_crop
+msgid "crop"
+msgstr "cultivo"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_state_registry
+msgid "state_registry"
+msgstr "estado_registro"
+
+#. module: sgrx
+#: field:stock.move,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sgrx
+#: view:sgr.state_registry:0
+msgid "State Registries"
+msgstr "Registros Provinciales"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_target_pests
+msgid "target_pests"
+msgstr "pest_objetivo"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Capacities"
+msgstr "Capacidades"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Material"
+msgstr "Material"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "Formulated Products"
+msgstr "Productos Formulados"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "GLP Laboratories Partners"
+msgstr "GLP Laboratorios Asociados"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "External"
+msgstr "Externo"
+
+#. module: sgrx
+#: view:product.product:0
+#: field:product.product,component_registry_detail_ids:0
+#: field:product.product,formulated_product_registry_ids:0
+#: field:product.product,technical_product_registry_ids:0
+msgid "Registries"
+msgstr "Registros"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "True"
+msgstr "Verdadero"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Expiration Date"
+msgstr "Fecha de vencimiento"
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "To be Pay (deadline)"
+msgstr "Para ser pagado (fecha límite)"
+
+#. module: sgrx
+#: view:sgr.document_move:0
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.study:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Studies"
+msgstr "Estudios"
+
+#. module: sgrx
+#: view:sgr.dossier_document:0
+msgid "Dossier Reports"
+msgstr "Informes Expediente"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_study
+msgid "study"
+msgstr "estudio"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_contract
+msgid "contract"
+msgstr "contrato"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+msgid "Replace"
+msgstr "Reemplazar"
+
+#. module: sgrx
+#: view:sgr.sample_request:0
+msgid "Packaging"
+msgstr "Embalaje"
+
+#. module: sgrx
+#: view:sgr.study:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: sgrx
+#: field:sgr.contract,line_ids:0
+msgid "line_ids"
+msgstr "line_ids"
+
+#. module: sgrx
+#: view:sgr.sample_request:0
+msgid "Stock Moves"
+msgstr "Movimientos de Stock"
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "Set to Pay"
+msgstr "Establecer a pagar"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Internal"
+msgstr "Interno"
+
+#. module: sgrx
+#: model:ir.ui.menu,name:sgrx.menu_samples
+msgid "Samples"
+msgstr "Muestras"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Government Agencies Partners"
+msgstr "Agencias de Gobierno"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_proposal_product
+msgid "proposal_product"
+msgstr "proposal_product"
+
+#. module: sgrx
+#: view:sgr.contract:0
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: sgrx
+#: field:sgr.study,document_category_show_validation_method:0
+msgid "Show validation method"
+msgstr "Mostrar metodo de validación"
+
+#. module: sgrx
+#: view:sgr.component_registry_detail:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.study:0
+#: view:sgr.tax:0
+#: view:sgr.technical_product_registry:0
+msgid "Gral Info"
+msgstr "Información Gral"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Use Recomm."
+msgstr "Utilizar Recom."
+
+#. module: sgrx
+#: field:stock.move,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es un seguidor"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sgrx
+#: view:sgr.component_registry_detail:0
+msgid "Uses"
+msgstr "Usos"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_proposal
+msgid "proposal"
+msgstr "propuesta"
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You must assign a serial number for this product."
+msgstr "Debe asignar un nº de serie para este producto."
+
+#. module: sgrx
+#: view:sgr.state_registry:0
+msgid "Restrictions"
+msgstr "Restricciones"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Processes"
+msgstr "Procesos"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Dossier"
+msgstr "Expediente"
+
+#. module: sgrx
+#: view:sgr.dossier_document:0
+#: view:sgr.tax:0
+msgid "To Draft"
+msgstr "A borrador"
+
+#. module: sgrx
+#: view:sgr.contract:0
+#: view:sgr.proposal:0
+msgid "Proposals"
+msgstr "Propuestas"
+
+#. module: sgrx
+#: view:sgr.study:0
+msgid "Contract"
+msgstr "Contrato"
+
+#. module: sgrx
+#: view:sgr.document_move:0
+msgid "Document Moves"
+msgstr "Movimientos de Documento"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Packagings"
+msgstr "Embalajes"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.information:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Informations"
+msgstr "Información"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "Traceability"
+msgstr "Trazabilidad"
+
+#. module: sgrx
+#: view:sgr.ingredient:0
+msgid "LMR"
+msgstr "LMR"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Gov. Agencies"
+msgstr "Agencias Gob"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_product_in_ret
+msgid "product_in_ret"
+msgstr "product_in_ret"
+
+#. module: sgrx
+#: view:sgr.dossier_document:0
+#: view:sgr.tax:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sgrx
+#: view:sgr.contract:0
+msgid "Moves"
+msgstr "Movimientos"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "Information"
+msgstr "Información"
+
+#. module: sgrx
+#: view:sgr.ingredient:0
+msgid "Ingredients"
+msgstr "Sustancias"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.contract:0
+#: view:sgr.dossier_document:0
+#: view:sgr.ingredient:0
+#: view:sgr.partner_document:0
+#: view:sgr.proposal:0
+#: view:sgr.study:0
+#: view:sgr.tax:0
+msgid "Other Info"
+msgstr "Otra información"
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "Set Pay"
+msgstr "Establecer Pago"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_technical_product_registry
+msgid "technical_product_registry"
+msgstr "registro_técnico_producto"
+
+#. module: sgrx
+#: view:sgr.registry_process:0
+msgid "Registry Processes"
+msgstr "Procesos de Registro"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Composition"
+msgstr "Composición"
+
+#. module: sgrx
+#: view:sgr.dossier_document:0
+msgid "Depreciate"
+msgstr "Depreciar"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_information
+msgid "information"
+msgstr "información"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product."
+msgstr "Está intentando asignar un lote que no es del mismo producto."
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Laboratories Partners"
+msgstr "Empresas Laboratorios "
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_sgr_formulated_product_registry
+msgid "formulated_product_registry"
+msgstr "registro_producto_formulado"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "\"True\""
+msgstr "\"Verdadero\""
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You cannot move products from or to a location of the type view."
+msgstr "No puede mover productos desde o hacia una ubicación de tipo vista."
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "Set Expire"
+msgstr "Marcar como vencido"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "Technical"
+msgstr "Técnico"
+
+#. module: sgrx
+#: view:sgr.official_letter:0
+msgid "Official Letters"
+msgstr "Cartas Documento"
+
+#. module: sgrx
+#: view:sgr.product_study:0
+msgid "Sample Quantity"
+msgstr "Cantidad de muestra"
+
+#. module: sgrx
+#: view:sgr.proposal:0
+msgid "Lines"
+msgstr "Lineas"
+
+#. module: sgrx
+#: view:sgr.communication:0
+msgid "Dossier Documents"
+msgstr "Expedientes"
+
+#. module: sgrx
+#: view:sgr.communication:0
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Communications"
+msgstr "Comunicaciones"
+
+#. module: sgrx
+#: model:account.account.type,name:sgrx.account_type
+msgid "Laboratory Contract"
+msgstr "Contrato de Laboratorio"
+
+#. module: sgrx
+#: view:sgr.publication:0
+msgid "Publications"
+msgstr "Publicaciones"
+
+#. module: sgrx
+#: view:sgr.component_registry_detail:0
+msgid "Component Registry Detail"
+msgstr "Detalles de Registro de Componente"
+
+#. module: sgrx
+#: view:sgr.trademark_registry:0
+msgid "Trademark Registrations"
+msgstr "Registros de Marca"
+
+#. module: sgrx
+#: view:sgr.study:0
+#: field:stock.move,message_summary:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: sgrx
+#: view:sgr.dossier_document:0
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: sgrx
+#: help:stock.move,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensajes e historial de comunicación"
+
+#. module: sgrx
+#: view:sgr.partner_document:0
+#: view:sgr.study:0
+msgid "Report Info"
+msgstr "Informacion de Reporte"
+
+#. module: sgrx
+#: view:sgr.laboratory_registry:0
+msgid "Laboratories Registries"
+msgstr "Registros de laboratorios"
+
+#. module: sgrx
+#: view:product.product:0
+#: view:sgr.formulated_product_registry:0
+msgid "Technical Products"
+msgstr "Productos Técnicos"
+
+#. module: sgrx
+#: view:sgr.information_presentation:0
+msgid "Informations Presentation"
+msgstr "Información Presentación"
+
+#. module: sgrx
+#: model:mail.message.subtype,name:sgrx.mt_move_change
+msgid "Status Change"
+msgstr "Cambio de estado"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+msgid "Components Registries"
+msgstr "Registros de Componentes"
+
+#. module: sgrx
+#: view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0
+#: view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Results"
+msgstr "Resultados"
+
+#. module: sgrx
+#: view:sgr.use_recommendation:0
+msgid "Use Recommendations"
+msgstr "Recomendaciones de Uso"
+
+#. module: sgrx
+#: view:sgr.partner_document_presentation:0
+msgid "Partner Document presentation"
+msgstr "Presentación de Documentación de Empresa"
+

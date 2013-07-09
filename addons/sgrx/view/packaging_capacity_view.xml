@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+
+        <!-- FORMVIEW -->
+        <record id="sgr.view_sgr_packaging_capacity_form" model="ir.ui.view">
+            <field name="name">sgr.packaging_capacity.form</field>
+            <field name="model">sgr.packaging_capacity</field>
+            <field name="arch" type="xml">
+                <form string="Packaging Capacities" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Packaging Capacities">
+                     <group>
+                        <field name="name"
+                            />
+                        <field name="uom_id"
+                            readonly="True"/>
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

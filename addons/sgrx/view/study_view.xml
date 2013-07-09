@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.study -->
+<!-- sgr.study -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+
+        <record id="view_sgr_study_filter" model="ir.ui.view">
+            <field name="name">sgr.study.select</field>
+            <field name="model">sgr.study</field>
+            <field name="arch" type="xml">
+                <search string="Studies" version="7.0">
+                    <group string="By Attribute">
+                    <field name="product_id" string="Product"
+                            />
+                    <field name="laboratory_id" string="Laboratory"
+                            />
+                    <field name="supplier_id" string="Supplier"
+                            />
+                    <field name="glp" string="GLP"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_study_form" model="ir.ui.view">
+            <field name="name">sgr.study.form</field>
+            <field name="model">sgr.study</field>
+            <field name="inherit_id" ref="sgr.view_sgr_study_form"/>                 
+            <field name="arch" type="xml">
+                <button name="sgn_contract" position="replace">
+                    <div attrs="{'invisible':[('source','=','supplier')]}">
+                    <button name="sgn_contract"
+                                states="draft"
+                                string="Contract"
+                                class="oe_highlight"
+                                />
+                    </div>
+                </button>
+                <sheet string="Studies" position="replace"/>
+                <header position="after">
+                        <field name="document_category_experimental_results" invisible="True"/>
+                        <field name="document_category_show_validation_method" invisible="True"/>                
+                    <sheet string="Studies">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/> 
+                                <field name="document_category_id"
+                                    context="{'default_type':'study'}"
+                                    domain="[('type','=','study')]"
+                                    attrs="{'readonly': [('source', '=', 'own')]}"/> 
+                                <field name="study_purpose_ids" widget="many2many_tags"/>                                    
+                                <!--<field name="package_file_id"/>-->
+                                <field name="report_other_study"/>
+                                <field name="study_id" domain="[('id','!=',id)]" attrs="{'invisible': [('report_other_study','=',False)],'required': [('report_other_study','=',True)]}"/>                             
+                            </group>               
+                            <group colspan="2" col="2"> 
+                                <field name="lang_ids" widget="many2many_tags"/> 
+                                <field name="reviser_id"/>
+                                <field name="approval_date"/>
+                                <field name="expiration_date"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Gral Info">
+                                <group colspan="4" col="4">
+                                    <group colspan="2" col="2">
+                                        <field name="product_id" attrs="{'readonly': [('source', '=', 'own')]}"/> 
+                                        <field name="supplier_id"/>  
+                                        <field name="laboratory_id" attrs="{'readonly': [('source', '=', 'own')]}"/>  
+                                        <field name="glp"/>                                              
+                                    </group>                                
+                                    <group colspan="2" col="2">
+                                        <field name="source"/>
+                                        <field name="proposal_id" readonly="1" attrs="{'invisible': [('source', '!=', 'own')]}"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>                                      
+                                    </group>
+                                </group>                            
+                                <group colspan="4" col="4">
+                                    <group colspan="2" col="1">
+                                        <field name="study_method_ids"/> 
+                                    </group>                                    
+                                    <group colspan="2" col="3">                           
+                                        <field name="concentration" colspan="2"/>
+                                        <field name="concentration_uom_id" nolabel="1"/>                        
+                                        <field name="director_author_id" colspan="3"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Summary">
+                                <notebook>
+                                    <page string="English">
+                                        <field name="summary"/>
+                                    </page>
+                                    <page string="Portuguese">
+                                        <field name="summary_pt"/>
+                                    </page>
+                                    <page string="Spanish">
+                                        <field name="summary_es"/>
+                                    </page>
+                                </notebook>
+                            </page>
+                            <page string="Result">
+                                <notebook>
+                                    <page string="English">
+                                        <field name="result"/>
+                                    </page>
+                                    <page string="Portuguese">
+                                        <field name="result_pt"/>
+                                    </page>
+                                    <page string="Spanish">
+                                        <field name="result_es"/>
+                                    </page>
+                                </notebook>
+                            </page>
+                            <page string="Validation Method" on_change="onchange_duration(validation_method)"
+                                attrs="{'invisible': [('document_category_show_validation_method', '=', False)]}">
+                                <notebook>
+                                    <page string="English">
+                                        <field name="validation_method"/>
+                                    </page>
+                                    <page string="Portuguese">
+                                        <field name="validation_method_pt"/>
+                                    </page>
+                                    <page string="Spanish">
+                                        <field name="validation_method_es"/>
+                                    </page>
+                                </notebook>
+                            </page>    
+                            <page string="Experimental Results" on_change="onchange_duration(experimental_result_ids)"
+                                attrs="{'invisible': [('document_category_experimental_results', '=', False)]}">
+                                <field name="experimental_result_ids"
+                                    context="{'default_study_experimental_results': document_category_experimental_results}">                             
+                                    <!--<tree editable="top">
+                                        <field name="crop_id"/>
+                                        <field name="target_pest_id"/>                                     
+                                        <field name="city"/>
+                                        <field name="volume"/>
+                                        <field name="volume_uom_id"/>
+                                        <field name="number_of_applications"/>
+                                        <field name="result"/>
+                                        <field name="note"/>
+                                    </tree>-->
+                                </field>
+                            </page>                                    
+                            <page string="Report Info">
+                                <group colspan="4" col="4">
+                                    <field name="consularization_date"/>
+                                    <field name="translation_date"/>
+                                    <field name="authentication_date"/>
+                                    <field name="number_of_pages"/> 
+                                </group>  
+                                <group colspan="4" col="1">
+                                    <field name="move_ids"/> 
+                                </group>                          
+                            </page>   
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="replaced_by_id"/>
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>
+                                    <field name="replace_ids"/>               
+                                    <field name="study_presentation_ids"/>                                              
+                                </group>                   
+                            </page>                                                                                                    
+                        </notebook>                        
+                        
+                  
+                    </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="view_sgr_study_tree" model="ir.ui.view">
+            <field name="name">sgr.study.tree</field>
+            <field name="model">sgr.study</field>
+            <field name="arch" type="xml">
+                <tree string="Studies"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'sp_approved', 'received', 'contracted', 'rejected', 'approved'); red:state in ()"
+                    >
+                    <field name="product_id"/>
+                    <field name="source"/>
+                    <field name="laboratory_id"/>
+                    <field name="manufacturing_id"/>
+                    <field name="type"/>
+                    <field name="reference"/>
+                    <field name="name"/>
+                    <field name="reviser_id"/>
+                    <field name="approval_date"/>
+                    <field name="expiration_date"/>
+                    <field name="document_category_id"/>
+                    <field name="package_file_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

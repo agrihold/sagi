@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+<!-- TODO:-->
+
+<!-- tree
+        <record id="view_competitiveness_management_price_record_tree" model="ir.ui.view">
+            <field name="name">competitiveness_management_x.price_record.tree</field>
+            <field name="model">competitiveness_management.price_record</field>
+            <field name="inherit_id" ref="competitiveness_management.view_competitiveness_management_price_record_tree"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="product" position="replace"/>                    
+                    <field name="information_date" position="before"> 
+                        <field name="product"/>  
+                    </field>     
+                    <field name="price_type_id" position="replace"/>
+                    <field name="operative" position="before">
+                        <field name="price_type_id"/>
+                    </field>
+
+                </data>
+            </field>
+        </record>
+-->
+         <record id="view_sagi_new_product_project_gantt" model="ir.ui.view">
+            <field name="name">sagi.npp_gantt_view</field>
+            <field name="model">sagi.npp_gantt_view</field>
+            <field name="type">gantt</field>
+            <field name="arch" type="xml">
+                <gantt date_start="date_start" date_stop="date_stop" string="New Product Projects" default_group_by="new_product_project_id"
+                    mode="week" color="new_product_project_id">
+                   
+                    <!--<level object="sagi.new_product_project" link="project_id" domain="[]">
+                        <field name="name"/>
+                    </level>-->
+                </gantt>
+            </field>
+        </record>
+        
+        <record id="action_sagi_new_product_project_new_products" model="ir.actions.act_window">
+            <field name="name">New Products Gantt</field>
+            <field name="res_model">sagi.npp_gantt_view</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">gantt</field>
+<!--            <field name="search_view_id" ref="sagi.view_sagi_new_product_project_filter"/>-->
+        </record>
+        <menuitem
+            name="New Products Gantt"
+            id="menu_new_products"
+            sequence="100"
+            action="action_sagi_new_product_project_new_products"
+            parent="sagi.menu_pm_lifecycle"
+            />
+        
+
+        
+        <record id="view_sagi_new_product_project_form" model="ir.ui.view">
+            <field name="name">sagi_x.new_product_project.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="type">form</field>
+            <field name="priority" eval="2"/>
+            <field name="arch" type="xml">
+                <form string="New Product Project" version="7.0">
+                    <header>
+                        <button name="action_wfk_set_draft_snp"
+                            type="object"
+                            states="rejected_by_cia,qnp_rejected,aborted,cancelled,rejected_by_ca,rejected_by_co,rejected_by_cio"
+                            string="To Draft"
+                            />
+                        <button name="sgn_cia_approval"
+                            states="presentation_ready"
+                            string="CIA Approval"
+                            class="oe_highlight"
+                            />                         
+
+                        <button name="sgn_set_presentation_ready"
+                            states="approved_by_co"
+                            string="Set Presentation Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_co_approval"
+                            states="summary_ready"
+                            string="CO Approval"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_approve_qnp"
+                            states="snp_presented"
+                            string="Approve QNP"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_summary_ready"
+                            states="approved_by_cio"
+                            string="Set Summary Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_kick_off_ca"
+                            states="preliminary_project_planning"
+                            string="Kick Off CA"
+                            class="oe_highlight"
+                            />
+
+                        <button name="sgn_present"
+                            states="draft_snp"
+                            string="Present"
+                            class="oe_highlight"
+                            />
+
+                        <button name="sgn_kick_off"
+                            states="project_planning"
+                            string="Kick Off"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_project_finished"
+                            states="project_ongoing"
+                            string="Project Finished"
+                            class="oe_highlight"
+                            />
+
+                        <button name="sgn_cio_approval"
+                            states="approved_by_qnp,revise"
+                            string="CIO Approval"
+                            class="oe_highlight"
+                            />
+
+                        <button name="sgn_approve"
+                            states="ca_evaluation,project_charter_draft"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_ready"
+                            states="marketing_ca_ongoing,dr_ca_ongoing,supply_chain_ca_ongoing,project_review_ongoing"
+                            string="Set Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_to_revise"
+                            states="summary_ready,presentation_ready"
+                            string="To Revise"
+                            />
+                        <button name="sgn_co_rejection"
+                            states="summary_ready"
+                            string="CO Rejection"
+                            />    
+                        <button name="sgn_reject"
+                            states="ca_evaluation"
+                            string="Reject"
+                            />       
+                        <button name="sgn_reject_by_qnp"
+                            states="snp_presented"
+                            string="Reject by QNP"
+                            />
+                        <button name="sgn_cio_rejection"
+                            states="approved_by_qnp"
+                            string="CIO Rejection"
+                            />                                                                            
+                        <button name="sgn_close_project"
+                            states="project_closure"
+                            string="Close Project"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cia_rejection"
+                            states="presentation_ready"
+                            string="CIA Rejection"
+                            />       
+                        <button name="sgn_abort"
+                            states="project_ongoing,project_planning"
+                            string="Abort"
+                            />                                                 
+                        <button name="sgn_cancel"
+                            states="preliminary_project_planning,project_closed,project_review_ongoing,draft_snp,approved_by_cio,presentation_ready,aborted,approved_by_qnp,supply_chain_ca_ongoing,summary_ready,project_ongoing,rejected_by_cio,rejected_by_cia,project_charter_draft,rejected_by_co,project_planning,qnp_rejected,approved_by_co,ca_evaluation,project_closure,rejected_by_ca,marketing_ca_ongoing,snp_presented"
+                            string="Cancel"
+                            />
+
+                        <field name="state"  statusbar_visible="draft_snp,snp_presented,approved_by_qnp,approved_by_cio,summary_ready,approved_by_co,presentation_ready,project_charter_draft,preliminary_project_planning,supply_chain_ca_ongoing,marketing_ca_ongoing,dr_ca_ongoing,ca_evaluation,project_planning,project_ongoing,project_review_ongoing,project_closure,project_closed" widget="statusbar" statusbar_colors='{"draft_snp":"red","snp_presented":"red"}'/>
+                    
+
+                    <!--    <field name="state" states='draft_snp,snp_presented,approved_by_qnp,approved_by_cio,summary_ready,approved_by_co, presentation_ready' statusbar_visible="draft_snp,snp_presented,approved_by_qnp,approved_by_cio,summary_ready,approved_by_co,presentation_ready,project_charter_draft,preliminary_project_planning,supply_chain_ca_ongoing,marketing_ca_ongoing,d_r_ca_ongoing,ca_evaluation,project_planning,project_ongoing,project_review_ongoing,project_closure,project_closed" widget="statusbar" statusbar_colors='{"cancelled":"red","rejected_by_cio":"red"}'/> 
+                        
+                        <field name="state" states="project_charter_draft,preliminary_project_planning,supply_chain_ca_ongoing,marketing_ca_ongoing,d_r_ca_ongoing,ca_evaluation" statusbar_visible="project_charter_draft,preliminary_project_planning,supply_chain_ca_ongoing,marketing_ca_ongoing,d_r_ca_ongoing,ca_evaluation" widget="statusbar"/>-->
+
+                    </header>
+                    <sheet string="New Product Project">
+
+                            <div class="oe_title">
+                         
+                                <h1>
+                                    <label string="NPP  " attrs="{'invisible': [('state','in',('draft_snp',))]}"/>
+                                    <label string="Draft NPP " attrs="{'invisible': [('state','not in',('draft_snp'))]}"/>
+                                    <field name="reference" readonly="1" class="oe_inline"/>
+                                    <label string ="- Phase: " class="oe_inline"/>
+                                    <field name="phase" nolabel="1" class="oe_inline"/>
+                                </h1> 
+                                <label for="name" class="oe_edit_only"/>                   
+                                <h2>
+                                    <field name="name" nolabel="1"/>
+                                </h2>
+
+                            </div>
+                            <group colspan="4" col="2">
+                                <group colspan="1" col="2">
+                                    <field name="agronomic_class"/>
+                                    <field name="project" 
+                                           attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+                                    <field name="privacy_visibility" invisible="1"/> <!-- esta funcionalidad no la usamos por ahora-->
+                                </group>
+                                <group colspan="1" col="4"> 
+                                    <h3 colspan="4"> <label string="Next Action" colspan="4"/> </h3>
+                                        <field name="next_action_date"/>   
+                                        <field name="next_action_responsible"/>    
+                                        <field name="next_action_description" colspan="4"/>
+                                </group>
+                            </group>
+
+                        <notebook>
+                            <page string="Other info">
+                                <group colspan="4" col="2">
+                                    <field name="planning_pred_term"
+                                           attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing'])]}"/>
+                                    <field name="execution_pred_term"
+                                           attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing'])]}"/>
+                                    <field name="closing_pred_term"
+                                           attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing'])]}"/>
+                                </group>
+                                
+                                <group colspan="4" col="2">
+                                    <group colspan="1" col="1">
+                                        <field name="related_product_ids">
+                                            <tree string="Related products"  editable="top">
+                                                <field name="product_id"/>
+                                                <field name="related_product_tag_ids" widget="many2many_tags" placeholder="Tags..."/>
+                                            </tree>
+                                       </field>
+                                    </group>    
+                                    <group colspan="1" col="1">    
+                                        <field name="status_report_ids"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Creation">
+                                <group colspan="4" col="5">
+                                    <group string="Creation" colspan="3" col="2">
+                                        <field name="SNP_file"
+                                            attrs="{'readonly':[('state', '!=', 'draft_snp')]}"/>
+                                        <field name="snp_file_attachment_file"/>
+                                        
+                                        <field name="QNP_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented'])]}"/>
+                                        <field name="qnp_file_attachment_file"/>
+                                        
+                                        <field name="CIO_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected'])]}"/>
+                                        <field name="cio_file_attachment_file"/>
+                                        
+                                        <field name="summary_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio'])]}"/>
+                                        <field name="summary_file_attachment_file"/>
+                                        
+                                        <field name="CO_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready'])]}"/>
+                                        <field name="co_file_attachment_file"/>
+                                        
+                                        <field name="presentation_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co'])]}"/>
+                                        <field name="presentation_file_attachment_file"/>
+                                        
+                                        <field name="CIA_file"
+                                            attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready'])]}"/>
+                                        <field name="cia_file_attachment_file"/>
+                                    </group>
+                                    <group string="Dates" colspan="2" col="2">
+                                        <field name="creation_date_to_start"
+                                            readonly="1"/>
+                                        <field name="creation_date_to_end"
+                                            readonly="1"/>
+                                        <field name="creation_started_date"
+                                            readonly="1"/>
+                                        <field name="creation_end_date"
+                                            readonly="1"/>
+                                    </group>
+                                    <group string='Result' colspan='3' col='2'>
+                                        <field name="date_to_end"
+                                               attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready'])]}"/>
+                                        <field name="budget" attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready'])]}"/>
+                                        <field name="project_leader"
+                                               attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready'])]}"/>
+                                        <field name="project_sponsor"
+                                               attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready'])]}"/>
+                                        <field name="interested_operative_ids"
+                                                                    widget="many2many_tags"/>                                               
+                                    </group>
+                                    
+                                 </group>
+                            </page>
+                            <page string="Inititation">
+                                 <group colspan="4" col="5">
+                                    <group colspan="3" col="2">
+                                        <group string="Project Charter" colspan="3" col="2">
+                                            <field name="charter_file"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia'])]}"/>
+                                            <field name="charter_file_attachment_file"/>
+                                        </group>
+                                        <group string="Critical Analysis" colspan="3" col="2">
+                                            <field name="kick_off_ac_file" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+                                            <field name="kick_off_ac_file_attachment_file" colspan="2"/>
+                                            
+                                            <separator colspan="2"/>
+                                            <field name="ca_sc_file" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing'])]}"/>
+                                            <field name="ca_sc_file_attachment_file" colspan="2"/>
+                                            
+                                            <field name="ca_sc_end_date" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+                                            
+                                            <separator colspan="2"/>
+                                            <field name="ca_mtk_file" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing'])]}"/>
+                                            <field name="ca_mkt_file_attachment_file" colspan="2"/>
+                                            
+                                            <field name="ca_mtk_end_date" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+
+                                            <separator colspan="2"/>
+                                            <field name="ca_dr_file"  colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing'])]}"/>
+                                            <field name="ca_dr_file_attachment_file" colspan="2"/>
+                                            
+                                            <field name="ca_dr_end_date" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+                                            
+                                            <separator colspan="2"/>
+                                            <field name="ca_result_file" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing','ca_evaluation'])]}"/>
+                                            <field name="ca_result_file_attachment_file" colspan="2"/>
+                                            
+                                            <field name="ca_result_end_date" colspan="2"
+                                                   attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning'])]}"/>
+
+                                        </group> 
+                                    </group>
+                                    <group string="Dates" colspan="2" col="2">
+                                        <field name="initiation_date_to_start"
+                                            readonly="1"/>
+                                        <field name="initiation_date_to_end"
+                                            readonly="1"/>
+                                        <field name="initiation_started_date"
+                                            readonly="1"/>
+                                        <field name="initiation_end_date"
+                                            readonly="1"/>
+                                        
+                                    </group>
+                                 </group>
+                                 
+                            </page>
+                            <page string="Planning">
+                                 <group colspan="4" col="5">
+                                    <group colspan="3" col="2">
+                                    </group>
+                                     <group string="Dates" colspan="2" col="2">
+                                        <field name="planning_date_to_start"
+                                            readonly="1"/>
+                                        <field name="planning_date_to_end"
+                                            readonly="1"/>
+                                        <field name="planning_started_date"
+                                            readonly="1"/>
+                                        <field name="planning_end_date"
+                                            readonly="1"/>
+                                      </group>
+                                </group>
+                            </page>
+                            <page string="Excecution">
+                                <group colspan="4" col="5">
+                                    <group string="Kick Off" colspan="3" col="2">
+                                        <field name="kick_off_project_file"
+                                               attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing','marketing_ca_ongoing','dr_ca_ongoing','ca_evaluation','project_planning'])]}"/>
+                                        <field name="kick_off_project_file_attachment_file"/>
+                                    </group> 
+                                        
+                                    <group string="Dates" colspan="2" col="2">
+                                        <field name="excecution_date_to_start"/>
+                                        <field name="excecution_date_to_end"/>
+                                        <field name="excecution_started_date"/>
+                                        <field name="excecution_end_date"/>
+                                    </group>
+                                    
+                                    <group string="Related Project" colspan="2" col="2">
+                                        <field name="related_project_date_to_start"/>
+                                        <field name="related_project_date_to_finish"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Closure">
+                                <group colspan="4" col="5">
+                                    <group string="Closing Report" colspan="3" col="2">
+                                        <field name="closing_report_file"
+                                               attrs="{'readonly':[('state', 'not in', ['draft_snp', 'snp_presented', 'approved_by_qnp', 'qnp_rejected', 'approved_by_cio', 'rejected_by_cio', 'summary_ready', 'approved_by_co', 'rejected_by_co', 'presentation_ready', 'project_charter_draft', 'rejected_by_cia', 'preliminary_project_planning', 'supply_chain_ca_ongoing', 'marketing_ca_ongoing', 'dr_ca_ongoing', 'ca_evaluation', 'project_planning', 'project_ongoing', 'project_review_ongoing', 'project_closure'])]}"/>
+                                        <field name="closing_report_file_attachment_file"/>
+                                    </group>
+                                    
+                                    <group string="Dates" colspan="2" col="2">
+                                        <field name="closure_date_to_start" readonly="1"/>
+                                        <field name="closure_date_to_end" readonly="1"/>
+                                        <field name="closure_started_date" readonly="1"/>
+                                        <field name="closure_end_date" readonly="1"/>
+                                    </group>
+                                </group>
+                                 
+                                          
+                            </page>                
+                        </notebook>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+        
+        <record id="open_view_deliverable_all" model="ir.actions.act_window">
+            <field name="name">Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('project_class_id.name','=','Deliverable')]</field>
+            <field name="view_mode">kanban,tree,form,gantt</field>
+            <field name="view_id" ref="project.view_project_kanban"/>
+            <field name="search_view_id" ref="project.view_project_project_filter"/>
+            <field name="context">{'search_default_Current': 1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to start a new deliverable.
+                </p>
+            </field>
+        </record>
+
+        <menuitem action="open_view_deliverable_all" id="menu_projects" name="Deliverable"
+                  parent="project.menu_project_management" sequence="2"/>
+                  
+                          
+        <record id="project.open_view_project_all" model="ir.actions.act_window">
+            <field name="name">Projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="domain">[('project_class_id.name','=','Project')]</field>
+            <field name="view_mode">kanban,tree,form,gantt</field>
+            <field name="view_id" ref="project.view_project_kanban"/>
+            <field name="search_view_id" ref="project.view_project_project_filter"/>
+            <field name="context">{'search_default_Current': 1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                  Click to start a new project.
+                </p><p>
+                  Projects are used to organize your activities; plan
+                  tasks, track issues, invoice timesheets. You can define
+                  internal projects (R&amp;D, Improve Sales Process),
+                  private projects (My Todos) or customer ones.
+                </p><p>
+                  You will be able collaborate with internal users on
+                  projects or invite customers to share your activities.
+                </p>
+            </field>
+        </record>
+	</data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

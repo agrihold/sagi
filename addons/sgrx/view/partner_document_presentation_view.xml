@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.study_presentation -->
+<!-- sgr.study_presentation -->
+<!-- sgr.study_presentation -->
+<openerp>
+    <data>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_partner_document_presentation_form" model="ir.ui.view">
+            <field name="name">sgr.partner_document_presentation.form</field>
+            <field name="model">sgr.partner_document_presentation</field>
+            <field name="inherit_id" ref="sgr.view_sgr_partner_document_presentation_form"/>            
+            <field name="arch" type="xml">
+                <sheet position="replace"/>
+                <header position="after">
+                    <sheet string="Partner Document presentation">
+                     <group>
+                        <field name="document_category_id" domain="[('type','=','partner_document')]" context="{'default_type':'partner_document'}"/>
+                        <field name="partner_document_id" domain="[('document_category_id','=',document_category_id)]" context="{'default_document_category_id':document_category_id}"/>
+                        <field name="communication_ids" widget="many2many_tags"/>
+                     </group>
+                    </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="sgr.view_sgr_partner_document_presentation_tree" model="ir.ui.view">
+            <field name="name">sgr.partner_document_presentation.tree</field>
+            <field name="model">sgr.partner_document_presentation</field>
+            <field name="arch" type="xml">
+                <tree editable="top" string="Documents presentation"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in (); red:state in ()">
+                    <field name="document_category_id" domain="[('type','=','partner_document')]" context="{'default_type':'partner_document'}"/>
+                    <field name="partner_document_id" domain="[('document_category_id','=',document_category_id)]" context="{'default_document_category_id':document_category_id}"/>
+                    <field name="communication_ids" widget="many2many_tags"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

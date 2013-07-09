@@ -1,0 +1,28 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-05 18:03+0000\n"
+"PO-Revision-Date: 2013-04-05 18:03+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_partner_document_presentation
+msgid "partner_document_presentation"
+msgstr "cliente_documentación_presentacion"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_formulation_type_formulation_types
+#: model:ir.ui.menu,name:sgr.menu_formulation_types
+msgid "Formulation Types"
+msgstr "Tipos de Formularios"
+

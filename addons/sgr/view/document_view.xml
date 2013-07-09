@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.document -->
+<!-- sgr.document -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_document_filter" model="ir.ui.view">
+            <field name="name">sgr.document.select</field>
+            <field name="model">sgr.document</field>
+            <field name="arch" type="xml">
+                <search string="Documents" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_document_form" model="ir.ui.view">
+            <field name="name">sgr.document.form</field>
+            <field name="model">sgr.document</field>
+            <field name="arch" type="xml">
+                <form string="Documents" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Documents">
+                     <group>
+                        <field name="name"
+                            />
+                        <field name="reference"
+                            />
+                        <field name="reviser_id"
+                            />
+                        <field name="approval_date"
+                            />
+                        <field name="expiration_date"
+                            />
+                        <field name="note"
+                            />
+                        <field name="company_id"
+                            />
+                        <field name="number_of_pages"
+                            />
+                        <field name="consularization_date"
+                            />
+                        <field name="translation_date"
+                            />
+                        <field name="authentication_date"
+                            />
+                        <field name="issue_date"
+                            />
+                    <field name="document_category_id"
+                            />
+                    <field name="move_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_document_tree" model="ir.ui.view">
+            <field name="name">sgr.document.tree</field>
+            <field name="model">sgr.document</field>
+            <field name="arch" type="xml">
+                <tree string="Documents"
+                    >
+                    <field name="name"
+                        />
+                    <field name="reference"
+                        />
+                    <field name="expiration_date"
+                        />
+                    <field name="number_of_pages"
+                        />
+                    <field name="document_category_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

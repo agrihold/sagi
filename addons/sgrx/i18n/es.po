@@ -1,0 +1,3771 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* sgr
+# 	* sgrx
+# Gonzalo <gruzafa@ingenieriaadhoc.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-27 19:33+0000\n"
+"PO-Revision-Date: 2013-05-27 16:43-0300\n"
+"Last-Translator: Gonzalo <gruzafa@ingenieriaadhoc.com>\n"
+"Language-Team: Spanish; Castilian <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_partner_document_presentation
+msgid "partner_document_presentation"
+msgstr "cliente_documentación_presentacion"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_formulation_type_formulation_types
+#: model:ir.ui.menu,name:sgr.menu_formulation_types
+msgid "Formulation Types"
+msgstr "Tipos de Formulación"
+
+#. module: sgr
+#: field:sgr.ingredient,density:0
+msgid "Density"
+msgstr "Densidad"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "\"[('usage','!=','view')]\""
+msgstr "\"[('usage','!=','view')]\""
+
+#. module: sgr
+#: view:sgr.ingredient:0 field:sgr.ingredient,cas:0
+msgid "CAS Number"
+msgstr "Número de CAS"
+
+#. module: sgrx
+#: field:product.product,product_in_ret_ids:0
+msgid "RETs"
+msgstr "RETs"
+
+#. module: sgr
+#: field:sgr.study,product_studies:0
+msgid "product_studies"
+msgstr "estudios_producto"
+
+#. module: sgr
+#: constraint:sgr.communication_type:0
+msgid "Error ! You cannot create recursive communication_type."
+msgstr "Error ! Usted no puede crear tipo de comunicación recursiva"
+
+#. module: sgr
+#: field:sgr.agronomic_class,formulated_product_registry_ids:0
+msgid "formulated_product_registry_ids"
+msgstr "formulated_product_registry_ids"
+
+#. module: sgr
+#: field:sgr.registry,free_sale_date:0
+msgid "Free Sale Date"
+msgstr "Fecha de Venta Libre"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_technical_product_registry
+#: model:ir.model,name:sgrx.model_sgr_technical_product_registry
+msgid "technical_product_registry"
+msgstr "registro_técnico_producto"
+
+#. module: sgr
+#: field:sgr.registry_process,open_date:0
+msgid "Open Date"
+msgstr "Fecha de Apertura"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.tax_to_pay
+#: model:mail.message.subtype,name:sgr.tax_to_pay selection:sgr.tax,state:0
+msgid "To Pay"
+msgstr "A pagar"
+
+#. module: sgr
+#: field:sgr.component_registry_detail,component_registry_finality_ids:0
+msgid "Finality"
+msgstr "Finalidad"
+
+#. module: sgr
+#: field:sgr.communication,registry_id:0 view:sgr.dossier_document:0
+#: field:sgr.dossier_document,registry_id:0
+#: field:sgr.product_in_ret,ret_registry_id:0 view:sgr.tax:0
+#: field:sgr.tax,registry_id:0
+msgid "Registry"
+msgstr "Registro"
+
+#. module: sgr
+#: view:sgr.official_letter:0 field:sgr.official_letter,shipping_method_id:0
+#: view:sgr.shipping_method:0
+msgid "Shipping Method"
+msgstr "Metodo de Despacho"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_component_registry_finality
+msgid "component_registry_finality"
+msgstr "component_registry_finality"
+
+#. module: sgr
+#: field:sgr.study,report_other_study:0
+msgid "Report in another study?"
+msgstr "Reporte en otro estudio ?"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_ingredient
+#: model:ir.model,name:sgrx.model_sgr_ingredient
+msgid "ingredient"
+msgstr "sustancia"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_laboratory_registry
+#: model:ir.model,name:sgrx.model_sgr_laboratory_registry
+msgid "laboratory_registry"
+msgstr "registro_laboratorio"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_partner_document_partner_documents
+#: model:ir.ui.menu,name:sgr.menu_partner_documents
+#: view:sgr.partner_document:0
+#: field:sgr.registry,partner_document_presentation_ids:0
+#: view:sgr.communication:0 view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Partner Documents"
+msgstr "Documentos de Empresas"
+
+#. module: sgr
+#: field:sgr.product_study,amount:0 field:sgr.proposal,amount:0
+#: field:sgr.sample_request,amount:0 field:sgr.tax,amount:0
+msgid "Amount"
+msgstr "Monto"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_formulation_type
+msgid "formulation_type"
+msgstr "Tipo_Formulación"
+
+#. module: sgr
+#: field:sgr.registry,sgr_laboratory_registry_id:0
+msgid "sgr.laboratory_registry_id"
+msgstr "sgr.id_registro_laboratorio"
+
+#. modules: sgr, sgrx
+#: help:sgr.communication,message_unread:0
+#: help:sgr.component_registry,message_unread:0
+#: help:sgr.contract,message_unread:0 help:sgr.document_move,message_unread:0
+#: help:sgr.dossier_document,message_unread:0
+#: help:sgr.formulated_product_registry,message_unread:0
+#: help:sgr.information,message_unread:0
+#: help:sgr.laboratory_registry,message_unread:0
+#: help:sgr.official_letter,message_unread:0
+#: help:sgr.partner_document,message_unread:0
+#: help:sgr.proposal,message_unread:0
+#: help:sgr.registry_process,message_unread:0
+#: help:sgr.ret_registry,message_unread:0
+#: help:sgr.sample_request,message_unread:0
+#: help:sgr.state_registry,message_unread:0 help:sgr.study,message_unread:0
+#: help:sgr.tax,message_unread:0
+#: help:sgr.technical_product_registry,message_unread:0
+#: help:sgr.trademark_registry,message_unread:0
+#: help:stock.move,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención."
+
+#. module: sgr
+#: field:res.partner,gov_type:0
+msgid "Government Type"
+msgstr "Tipo de Gobierno"
+
+#. module: sgr
+#: view:sgr.official_letter:0 field:sgr.official_letter,protocol:0
+msgid "Protocol"
+msgstr "Protocolo"
+
+#. module: sgr
+#: view:sgr.contract:0 field:sgr.contract,name:0 view:sgr.document:0
+#: field:sgr.document,reference:0 view:sgr.document_category:0
+#: field:sgr.document_category,reference:0 view:sgr.dossier_document:0
+#: field:sgr.official_letter,name:0 view:sgr.partner_document:0
+#: view:sgr.proposal:0 field:sgr.proposal,name:0 view:sgr.sample_request:0
+#: field:sgr.sample_request,name:0 view:sgr.study:0 view:sgr.tax:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sgr
+#: field:sgr.information_category,information_presentation_ids:0
+msgid "Inf. Presentation"
+msgstr "Inf . presentación"
+
+#. modules: sgr, sgrx
+#: selection:sgr.document_category,type:0 view:sgr.tax:0
+msgid "Tax"
+msgstr "Impuesto"
+
+#. module: sgr
+#: field:sgr.contract,analytic_account_id:0
+msgid "Analytic Account"
+msgstr "Cuenta Analítica"
+
+#. modules: sgr, sgrx
+#: help:sgr.communication,message_summary:0
+#: help:sgr.component_registry,message_summary:0
+#: help:sgr.contract,message_summary:0
+#: help:sgr.document_move,message_summary:0
+#: help:sgr.dossier_document,message_summary:0
+#: help:sgr.formulated_product_registry,message_summary:0
+#: help:sgr.information,message_summary:0
+#: help:sgr.laboratory_registry,message_summary:0
+#: help:sgr.official_letter,message_summary:0
+#: help:sgr.partner_document,message_summary:0
+#: help:sgr.proposal,message_summary:0
+#: help:sgr.registry_process,message_summary:0
+#: help:sgr.ret_registry,message_summary:0
+#: help:sgr.sample_request,message_summary:0
+#: help:sgr.state_registry,message_summary:0 help:sgr.study,message_summary:0
+#: help:sgr.tax,message_summary:0
+#: help:sgr.technical_product_registry,message_summary:0
+#: help:sgr.trademark_registry,message_summary:0
+#: help:stock.move,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Contiene el resumen del Chatter (número de mensajes , ...) . Este resumen "
+"está directamente en formato html para ser insertado en las vistas kanban ."
+
+#. module: sgr
+#: field:sgr.information,text:0 field:sgr.information_presentation,text:0
+msgid "Text"
+msgstr "Texto"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_res_partner view:sgr.information:0
+#: field:sgr.information,partner_id:0 view:sgr.partner_document:0
+#: field:sgr.partner_document,partner_id:0
+#: field:sgr.partner_role_in_registry,partner_id:0
+#: model:ir.model,name:sgrx.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: sgrx
+#: view:sgr.ingredient:0
+msgid "Other Names"
+msgstr "Otros nombres"
+
+#. module: sgr
+#: selection:sgr.document_category,experimental_results:0
+msgid "Residue"
+msgstr "Residue"
+
+#. module: sgr
+#: selection:sgr.ingredient,type:0 selection:sgr.ingredient_group,type:0
+msgid "Active Chemical"
+msgstr "Químico activo"
+
+#. modules: sgr, sgrx
+#: view:sgr.study_presentation:0
+msgid "Study Presentation"
+msgstr "Estudio de Presentación "
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_shipping_method_shipping_methods
+#: model:ir.ui.menu,name:sgr.menu_shipping_methods
+msgid "Shipping Methods"
+msgstr "Métodos de Envío"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_crop
+#: model:ir.model,name:sgrx.model_sgr_crop
+msgid "crop"
+msgstr "cultivo"
+
+#. module: sgr
+#: selection:res.partner,gov_type:0 field:sgr.communication,state:0
+#: field:sgr.component_registry,state:0 field:sgr.contract,state:0
+#: field:sgr.document_move,state:0 field:sgr.dossier_document,state:0
+#: field:sgr.formulated_product_registry,state:0 field:sgr.information,state:0
+#: field:sgr.information_presentation,state:0
+#: field:sgr.laboratory_registry,state:0 field:sgr.official_letter,state:0
+#: field:sgr.partner_document,state:0
+#: field:sgr.partner_document_presentation,state:0 field:sgr.proposal,state:0
+#: field:sgr.registry,state:0 selection:sgr.registry,type:0
+#: selection:sgr.registry_category,type:0 field:sgr.registry_process,state:0
+#: field:sgr.ret_registry,state:0 field:sgr.sample_request,state:0
+#: field:sgr.state_registry,state:0 field:sgr.study,state:0
+#: field:sgr.study_presentation,state:0 field:sgr.tax,state:0
+#: field:sgr.technical_product_registry,state:0
+#: field:sgr.trademark_registry,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: sgr
+#: field:sgr.cqq,max_uom_id:0 field:sgr.cqq,min_uom_id:0
+#: field:sgr.cqq,uom_id:0 field:sgr.packaging,uom_id:0
+#: field:sgr.packaging_capacity,uom_id:0 view:sgr.sample_request:0
+#: field:sgr.sample_request,amount_uom_id:0
+#: field:sgr.sample_request,concentration_uom_id:0
+msgid "UOM"
+msgstr "UDM"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_misc_conf
+msgid "Misc Conf"
+msgstr "Conf Misc"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_target_pests
+#: model:ir.model,name:sgrx.model_sgr_target_pests
+msgid "target_pests"
+msgstr "pest_objetivo"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_publication_type_publications_types
+#: model:ir.ui.menu,name:sgr.menu_publications_types
+msgid "Publications Types"
+msgstr "Tipos de Publicación"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_environmental_class
+msgid "environmental_class"
+msgstr "clase_ambiental"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.component_registry_rejected
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_rejected
+#: model:mail.message.subtype,description:sgr.laboratory_registry_rejected
+#: model:mail.message.subtype,description:sgr.registry_process_rejected
+#: model:mail.message.subtype,description:sgr.ret_registry_rejected
+#: model:mail.message.subtype,description:sgr.state_registry_rejected
+#: model:mail.message.subtype,description:sgr.study_rejected
+#: model:mail.message.subtype,description:sgr.technical_product_registry_rejected
+#: model:mail.message.subtype,description:sgr.trademark_registry_rejected
+#: model:mail.message.subtype,name:sgr.component_registry_rejected
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_rejected
+#: model:mail.message.subtype,name:sgr.laboratory_registry_rejected
+#: model:mail.message.subtype,name:sgr.registry_process_rejected
+#: model:mail.message.subtype,name:sgr.ret_registry_rejected
+#: model:mail.message.subtype,name:sgr.state_registry_rejected
+#: model:mail.message.subtype,name:sgr.study_rejected
+#: model:mail.message.subtype,name:sgr.technical_product_registry_rejected
+#: model:mail.message.subtype,name:sgr.trademark_registry_rejected
+#: selection:sgr.component_registry,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.laboratory_registry,state:0 selection:sgr.registry,state:0
+#: selection:sgr.registry_process,state:0 selection:sgr.ret_registry,state:0
+#: selection:sgr.state_registry,state:0 selection:sgr.study,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,environmental_class_id:0
+#: field:sgr.technical_product_registry,environmental_class_id:0
+msgid "Environmental Class"
+msgstr "Clase Ambiental"
+
+#. module: sgr
+#: field:sgr.product_in_ret,amount_released:0
+msgid "Released"
+msgstr "Publicado "
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_mode_of_action
+msgid "mode_of_action"
+msgstr "modo_de_acción"
+
+#. module: sgr
+#: field:sgr.state_registry_restriction,state_registry_id:0
+msgid "state_registry_id"
+msgstr "id_registro_estado"
+
+#. module: sgr
+#: field:sgr.proposal_product,proposal_id:0
+msgid "proposal_id"
+msgstr "id_propuesta"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_packaging_material_packaging_materials
+#: model:ir.ui.menu,name:sgr.menu_packaging_materials
+#: view:sgr.packaging_material:0
+msgid "Packaging Materials"
+msgstr "Materiales de embalaje"
+
+#. module: sgr
+#: help:res.partner,analytic_account_id:0
+msgid ""
+"Este campo debe ser solo para partners del tipo laboratorios. Se debe crear "
+"automáticamente al crear un laboratorio una cuenta analitica del tipo &quot;"
+"view&quot;. Si se destilda el campo &quot;laboratorio&quot; al partner, "
+"borramos la cuenta?"
+msgstr ""
+"Este campo debe ser solo para Empresas del tipo laboratorios. Se debe crear "
+"automáticamente al crear un laboratorio una cuenta analitica del tipo &quot;"
+"view&quot;. Si se destilda el campo &quot;laboratorio&quot; a la Empresa, "
+"borramos la cuenta?"
+
+#. module: sgr
+#: field:sgr.packaging,external_packaging_type_id:0
+msgid "Ext. Type"
+msgstr "Tipo Ext"
+
+#. module: sgr
+#: view:sgr.document_category:0 field:sgr.document_category,parent_id:0
+#: view:sgr.information_category:0 field:sgr.information_category,parent_id:0
+msgid "Parent Category"
+msgstr "Categoría Padre"
+
+#. module: sgr
+#: field:sgr.proposal,proposal_product_ids:0
+msgid "Items"
+msgstr "Artículos"
+
+#. module: sgr
+#: view:sgr.tax:0 field:sgr.tax,is_urgent:0
+msgid "Is Urgent?"
+msgstr "Es urgente ?"
+
+#. module: sgr
+#: selection:sgr.study_presentation,state:0
+msgid "cancelled"
+msgstr "cancelado"
+
+#. modules: sgr, sgrx
+#: field:sgr.document_move,from_contact:0 field:sgr.document_move,to_contact:0
+#: field:sgr.official_letter,contact:0 view:sgr.document_move:0
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_package_file
+msgid "package_file"
+msgstr "archivo_embalaje"
+
+#. module: sgr
+#: view:sgr.publication_type:0
+msgid "Publicaction Types"
+msgstr "Tipos Publicación"
+
+#. module: sgr
+#: view:sgr.formulated_product_registry:0
+#: field:sgr.formulated_product_registry,formulated_product_id:0
+#: selection:sgr.registry,type:0 selection:sgr.registry_category,type:0
+msgid "Formulated Product"
+msgstr "Producto Formulado"
+
+#. module: sgr
+#: view:sgr.component_registry:0
+#: field:sgr.component_registry,component_registry_detail_ids:0
+msgid "Component Products"
+msgstr "Productos componentes"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_study
+#: model:ir.model,name:sgrx.model_sgr_study
+msgid "study"
+msgstr "estudio"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_master_data
+msgid "Master Data"
+msgstr "Datos Maestros"
+
+#. modules: sgr, sgrx
+#: field:sgr.component_registry_detail,packaging_ids:0
+#: view:sgr.sample_request:0
+msgid "Packaging"
+msgstr "Embalaje"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,message_unread:0
+#: field:sgr.component_registry,message_unread:0
+#: field:sgr.contract,message_unread:0
+#: field:sgr.document_move,message_unread:0
+#: field:sgr.dossier_document,message_unread:0
+#: field:sgr.formulated_product_registry,message_unread:0
+#: field:sgr.information,message_unread:0
+#: field:sgr.laboratory_registry,message_unread:0
+#: field:sgr.official_letter,message_unread:0
+#: field:sgr.partner_document,message_unread:0
+#: field:sgr.proposal,message_unread:0
+#: field:sgr.registry_process,message_unread:0
+#: field:sgr.ret_registry,message_unread:0
+#: field:sgr.sample_request,message_unread:0
+#: field:sgr.state_registry,message_unread:0 field:sgr.study,message_unread:0
+#: field:sgr.tax,message_unread:0
+#: field:sgr.technical_product_registry,message_unread:0
+#: field:sgr.trademark_registry,message_unread:0
+#: field:stock.move,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_document_presentation
+msgid "document_presentation"
+msgstr "presentación_documento"
+
+#. module: sgr
+#: field:sgr.use_recommendation,commecial_product_rate:0
+msgid "Commercial Product Rate"
+msgstr "Ratio Producto Comercial"
+
+#. module: sgr
+#: view:sgr.component_registry:0 field:sgr.component_registry,name:0
+msgid "Petition number/Reference"
+msgstr "Número de petición/Referencia"
+
+#. module: sgr
+#: selection:sgr.communication,direction:0
+#: selection:sgr.official_letter,direction:0
+msgid "Out"
+msgstr "Salida"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.document:0
+#: field:sgr.document,document_category_id:0 view:sgr.dossier_document:0
+#: view:sgr.formulated_product_registry:0 view:sgr.information:0
+#: field:sgr.information,information_category_id:0
+#: view:sgr.information_presentation:0
+#: field:sgr.information_presentation,information_category_id:0
+#: field:sgr.ingredient_other_name,ingredient_name_category_id:0
+#: view:sgr.laboratory_registry:0 view:sgr.partner_document:0
+#: view:sgr.partner_document_presentation:0
+#: field:sgr.partner_document_presentation,document_category_id:0
+#: view:sgr.product_study:0 field:sgr.product_study,study_category_id:0
+#: view:sgr.registry:0 field:sgr.registry,registry_category_id:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0 view:sgr.study:0
+#: view:sgr.study_presentation:0
+#: field:sgr.study_presentation,document_category_id:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Category"
+msgstr "Categoría"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_trademark_type
+msgid "trademark_type"
+msgstr "trademark_type"
+
+#. module: sgr
+#: selection:sgr.registry,type:0 selection:sgr.registry_category,type:0
+msgid "Trademark"
+msgstr "Registro de Marca"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ret_registry_ret
+#: model:ir.ui.menu,name:sgr.menu_ret selection:sgr.registry,type:0
+#: selection:sgr.registry_category,type:0
+#: field:sgr.sample_request,product_in_ret_id:0
+msgid "RET"
+msgstr "RET"
+
+#. module: sgr
+#: field:sgr.product_study,lang_id:0 field:sgr.study,lang_ids:0
+msgid "Languages"
+msgstr "Idiomas"
+
+#. module: sgr
+#: view:sgr.study:0 field:sgr.study,glp:0
+msgid "GLP"
+msgstr "GLP"
+
+#. module: sgr
+#: field:sgr.sample_request,specific_batch:0
+msgid "Specific Batch"
+msgstr "Lote Específico"
+
+#. module: sgr
+#: field:sgr.product_in_ret,amount_uom_id:0
+msgid "Amount UOM"
+msgstr "Monto UDM"
+
+#. module: sgr
+#: help:sgr.laboratory_registry,laboratory_id:0
+msgid "Filtrar por partners del tipo laboratorio"
+msgstr "Filtrar por Empresas del tipo laboratorio"
+
+#. module: sgr
+#: field:sgr.crop,experimental_result_ids:0
+#: field:sgr.target_pests,experimental_result_ids:0
+msgid "experimental_result_ids"
+msgstr "ids_resultados_experimentales"
+
+#. module: sgr
+#: field:res.partner,env_registration_agency:0
+msgid "Env. Reg Agency"
+msgstr "Agencia Reg. Ambiental"
+
+#. module: sgr
+#: view:sgr.mode_of_action:0
+msgid "Modes of Action"
+msgstr "Modos de Acción"
+
+#. module: sgr
+#: view:sgr.tax:0 field:sgr.tax,payment_date:0
+msgid "Payment Date"
+msgstr "Fecha de Pago"
+
+#. module: sgr
+#: field:sgr.sample_request,location_id:0
+msgid "Final Destination"
+msgstr "Destino Final"
+
+#. module: sgr
+#: field:sgr.document,sgr_dossier_document_id:0
+msgid "sgr.dossier_document_id"
+msgstr "sgr.dossier_documento_id"
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You must assign a serial number for this product."
+msgstr "Debe asignar un nº de serie para este producto."
+
+#. modules: sgr, sgrx
+#: field:sgr.registry,registry_process_ids:0
+#: field:sgr.registry_category,goverment_agency_ids:0
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Processes"
+msgstr "Procesos"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_component_registry_finality_components_finalities
+#: model:ir.ui.menu,name:sgr.menu_components_finalities
+msgid "Components Finalities"
+msgstr "Finalidades de Componentes"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_proposal_proposals
+#: model:ir.ui.menu,name:sgr.menu_proposals field:sgr.contract,proposal_ids:0
+#: view:sgr.proposal:0 view:sgr.contract:0
+msgid "Proposals"
+msgstr "Propuestas"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,message_summary:0
+#: field:sgr.component_registry,message_summary:0
+#: field:sgr.contract,message_summary:0
+#: field:sgr.document_move,message_summary:0
+#: field:sgr.dossier_document,message_summary:0
+#: field:sgr.formulated_product_registry,message_summary:0
+#: field:sgr.information,message_summary:0
+#: field:sgr.laboratory_registry,message_summary:0
+#: field:sgr.official_letter,message_summary:0
+#: field:sgr.partner_document,message_summary:0
+#: field:sgr.proposal,message_summary:0
+#: field:sgr.registry_process,message_summary:0
+#: field:sgr.ret_registry,message_summary:0
+#: field:sgr.sample_request,message_summary:0
+#: field:sgr.state_registry,message_summary:0
+#: field:sgr.study,message_summary:0 field:sgr.study,summary:0
+#: field:sgr.tax,message_summary:0
+#: field:sgr.technical_product_registry,message_summary:0
+#: field:sgr.trademark_registry,message_summary:0 view:sgr.study:0
+#: field:stock.move,message_summary:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: sgr
+#: field:sgr.registry,proxy_id:0
+msgid "Legal Representative"
+msgstr "Representante Legal"
+
+#. module: sgr
+#: field:sgr.contract,payment_information:0
+msgid "Payment information"
+msgstr "Información de pago"
+
+#. module: sgr
+#: view:sgr.crop:0 field:sgr.crop,common_name:0 view:sgr.ingredient:0
+#: field:sgr.ingredient,name:0 view:sgr.target_pests:0
+#: field:sgr.target_pests,common_name:0
+msgid "Common Name"
+msgstr "Nombre Común"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_emergency_information_emergency_information
+#: model:ir.ui.menu,name:sgr.menu_emergency_information
+#: field:sgr.component_registry_detail,emergency_information_id:0
+#: view:sgr.emergency_information:0
+#: field:sgr.formulated_product_registry,emergency_information_id:0
+#: field:sgr.technical_product_registry,emergency_information_id:0
+msgid "Emergency Information"
+msgstr "Información de Emergencia"
+
+#. module: sgr
+#: field:sgr.packaging_capacity,name:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_information_informations
+#: model:ir.ui.menu,name:sgr.menu_informations view:sgr.information:0
+#: field:sgr.registry,information_presentation_ids:0
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Informations"
+msgstr "Información"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_use_recommendation
+msgid "use_recommendation"
+msgstr "recomendación_uso"
+
+#. module: sgr
+#: field:sgr.registry_process,close_official_letter_id:0
+msgid "Close Oficial Letter"
+msgstr "Carta Documento de Cierre"
+
+#. modules: sgr, sgrx
+#: field:sgr.ingredient,lmr_ids:0 view:sgr.lmr:0
+#: field:sgr.use_recommendation,LMR:0 view:sgr.ingredient:0
+msgid "LMR"
+msgstr "LMR"
+
+#. module: sgr
+#: field:sgr.information_category,header:0
+msgid "Header"
+msgstr "Cabecera"
+
+#. module: sgr
+#: field:sgr.ingredient,mol_weight_uom_id:0
+msgid "Molecular Weight UOM"
+msgstr "UDM Peso Molecular"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_study_purpose_study_purposes
+#: model:ir.ui.menu,name:sgr.menu_study_purposes view:sgr.study_purpose:0
+msgid "Study Purposes"
+msgstr "Propósitos del estudio"
+
+#. module: sgr
+#: field:sgr.document,translation_date:0
+msgid "Translation Date"
+msgstr "Fecha de Traduccion"
+
+#. module: sgr
+#: view:sgr.ingredient:0 field:sgr.ingredient,synonymy:0
+msgid "Synonymy"
+msgstr "Sinónimo"
+
+#. module: sgrx
+#: model:mail.message.subtype,description:sgrx.mt_move_change
+msgid "Stock Move Status Change"
+msgstr "Cambio de Estado en Movimiento de Stock"
+
+#. module: sgr
+#: field:sgr.registry,registry_number:0
+msgid "Registry Number"
+msgstr "Número de registro"
+
+#. module: sgr
+#: field:sgr.document_move,received_date:0
+msgid "Received Date"
+msgstr "Fecha Recepción"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_ingredient_ingredients
+#: model:ir.ui.menu,name:sgr.menu_ingredients view:sgr.ingredient:0
+msgid "Ingredients"
+msgstr "Sustancias"
+
+#. module: sgr
+#: selection:res.partner,gov_type:0
+msgid "Federal"
+msgstr "Federal"
+
+#. module: sgr
+#: selection:sgr.study_presentation,state:0
+msgid "approved"
+msgstr "aprobado"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_tax
+msgid "tax"
+msgstr "impuesto"
+
+#. modules: sgr, sgrx
+#: view:sgr.tax:0
+msgid "Set Pay"
+msgstr "Establecer Pago"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_packaging_type
+msgid "packaging_type"
+msgstr "tipo_embalaje"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_ret_config
+msgid "RET Config"
+msgstr "Config RET"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ret_registry
+msgid "ret_registry"
+msgstr "ret_registro"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+msgid "Replace"
+msgstr "Reemplazar"
+
+#. modules: sgr, sgrx
+#: view:sgr.registry_process:0
+msgid "Registry Processes"
+msgstr "Procesos de Registro"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Composition"
+msgstr "Composición"
+
+#. modules: sgr, sgrx
+#: view:sgr.component_registry:0 view:sgr.dossier_document:0
+#: view:sgr.formulated_product_registry:0 view:sgr.information:0
+#: view:sgr.laboratory_registry:0 view:sgr.partner_document:0
+#: view:sgr.registry:0 view:sgr.registry_process:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Depreciate"
+msgstr "Depreciar"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_information
+#: model:ir.model,name:sgrx.model_sgr_information
+msgid "information"
+msgstr "información"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_agronomic_class
+msgid "agronomic_class"
+msgstr "clase_agronomica"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_formulated_product_registry
+#: model:ir.model,name:sgrx.model_sgr_formulated_product_registry
+msgid "formulated_product_registry"
+msgstr "registro_producto_formulado"
+
+#. module: sgr
+#: field:sgr.tax,my_currency_id:0
+msgid "Company Currency"
+msgstr "Moneda de Compañía"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ingredient_group_ingredient_groups
+#: model:ir.ui.menu,name:sgr.menu_ingredient_groups
+#: view:sgr.ingredient_group:0
+msgid "Ingredient Groups"
+msgstr "Grupos de Sustancias"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.tax_expired
+#: model:mail.message.subtype,name:sgr.tax_expired selection:sgr.tax,state:0
+msgid "Expired"
+msgstr "Vencido"
+
+#. modules: sgr, sgrx
+#: view:sgr.tax:0
+msgid "Set Expire"
+msgstr "Marcar como vencido"
+
+#. modules: sgr, sgrx
+#: selection:product.product,function_type:0 view:product.product:0
+msgid "Technical"
+msgstr "Técnico"
+
+#. module: sgr
+#: selection:sgr.registry,type:0 selection:sgr.registry_category,type:0
+msgid "Technical Product"
+msgstr "Producto técnico"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.contract:0 view:sgr.document_move:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.proposal:0 view:sgr.registry:0 view:sgr.registry_process:0
+#: view:sgr.ret_registry:0 view:sgr.sample_request:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Request"
+msgstr "Requerir"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,physical_state_id:0
+#: field:sgr.technical_product_registry,physical_state_id:0
+msgid "Phyisical State"
+msgstr "Estado Físico"
+
+#. module: sgr
+#: view:sgr.crop:0 field:sgr.crop,name:0 view:sgr.target_pests:0
+#: field:sgr.target_pests,name:0
+msgid "Scientific Name"
+msgstr "Nombre Científico"
+
+#. module: sgrx
+#: model:account.account.type,name:sgrx.account_type
+msgid "Laboratory Contract"
+msgstr "Contrato de Laboratorio"
+
+#. module: sgr
+#: field:sgr.information,information_presentation_ids:0
+msgid "information_presentation_ids"
+msgstr "ids_información_presentación"
+
+#. module: sgrx
+#: field:sgr.contract,line_ids:0
+msgid "line_ids"
+msgstr "line_ids"
+
+#. module: sgr
+#: view:sgr.trademark_registry:0
+#: field:sgr.trademark_registry,trademark_type_id:0 view:sgr.trademark_type:0
+msgid "Trademark Type"
+msgstr "Tipo de Registro de Marca"
+
+#. module: sgr
+#: selection:sgr.communication_type,hierachical_type:0
+#: selection:sgr.document_category,hierachical_type:0
+#: selection:sgr.information_category,hierachical_type:0
+msgid "View"
+msgstr "Ver"
+
+#. modules: sgr, sgrx
+#: view:sgr.laboratory_registry:0
+msgid "Laboratories Registries"
+msgstr "Registros de laboratorios"
+
+#. module: sgr
+#: field:sgr.use_recommendation,application_time:0
+msgid "Application Time"
+msgstr "Tiempo de aplicación"
+
+#. modules: sgr, sgrx
+#: view:sgr.component_registry:0
+msgid "Components Registries"
+msgstr "Registros de Componentes"
+
+#. module: sgrx
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Results"
+msgstr "Resultados"
+
+#. module: sgr
+#: field:sgr.experimental_result,study_id:0 field:sgr.product_study,study_id:0
+msgid "study_id"
+msgstr "estudio_id"
+
+#. modules: sgr, sgrx
+#: field:sgr.formulated_product_registry,use_recommendation_ids:0
+#: view:sgr.use_recommendation:0
+msgid "Use Recommendations"
+msgstr "Recomendaciones de Uso"
+
+#. modules: sgr, sgrx
+#: view:sgr.partner_document_presentation:0
+msgid "Partner Document presentation"
+msgstr "Presentación de Documentación de Empresa"
+
+#. modules: sgr, sgrx
+#: field:sgr.sample_request,move_ids:0 view:sgr.sample_request:0
+msgid "Stock Moves"
+msgstr "Movimientos de Stock"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_document_category
+msgid "document_category"
+msgstr "categoría_documento"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,agronomic_class_id:0
+#: field:sgr.ingredient,agronomic_class_id:0
+#: field:sgr.technical_product_registry,agronomic_class_id:0
+msgid "Agronomic Class"
+msgstr "Clase Agronómica"
+
+#. modules: sgr, sgrx
+#: view:sgr.proposal_product:0
+msgid "Proposal Products"
+msgstr "Productos Propuestos"
+
+#. module: sgr
+#: field:res.partner,gov_registration_agency:0
+msgid "Gov. Reg Agency"
+msgstr "Agencia de Registro Gob."
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_ingredients_conf
+msgid "Ingredients Conf"
+msgstr "Conf Sustancias"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_registry
+#: model:ir.model,name:sgrx.model_sgr_registry
+msgid "sgr.registry"
+msgstr "sgr.registry"
+
+#. module: sgr
+#: selection:sgr.partner_role_in_registry,type:0
+msgid "Requestor"
+msgstr "Solicitante"
+
+#. module: sgr
+#: selection:sgr.partner_role_in_registry,type:0
+msgid "Importer"
+msgstr "Importador"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_application_mode_application_modes
+#: model:ir.ui.menu,name:sgr.menu_application_modes
+#: view:sgr.application_mode:0
+msgid "Application Modes"
+msgstr "Modos de Aplicación"
+
+#. module: sgrx
+#: view:product.product:0
+msgid "\"True\""
+msgstr "\"Verdadero\""
+
+#. module: sgr
+#: selection:sgr.formulated_product_registry,operation:0
+#: selection:sgr.laboratory_registry,operation:0
+#: selection:sgr.state_registry,operation:0
+#: selection:sgr.technical_product_registry,operation:0
+msgid "Modification"
+msgstr "Modificación"
+
+#. module: sgr
+#: field:res.partner,analytic_account_id:0
+msgid "Account and Contracts"
+msgstr "Cuenta y Contratos"
+
+#. module: sgr
+#: field:sgr.document,reviser_id:0
+msgid "Reviser"
+msgstr "Revisor"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ret_phase_ret_phases
+#: model:ir.ui.menu,name:sgr.menu_ret_phases view:sgr.ret_phase:0
+msgid "RET Phases"
+msgstr "Fases RET"
+
+#. module: sgr
+#: field:sgr.communication,direction:0 field:sgr.official_letter,direction:0
+msgid "Direction"
+msgstr "Dirección"
+
+#. module: sgr
+#: field:sgr.product_study,term_days:0
+msgid "Term (days)"
+msgstr "Plazo (días)"
+
+#. module: sgr
+#: view:sgr.agronomic_class:0 view:sgr.application_mode:0
+#: view:sgr.communication:0 view:sgr.communication_type:0
+#: view:sgr.component_registry:0 view:sgr.component_registry_detail:0
+#: view:sgr.component_registry_finality:0 view:sgr.contract:0 view:sgr.cqq:0
+#: view:sgr.crop:0 view:sgr.document:0 view:sgr.document_category:0
+#: view:sgr.document_move:0 view:sgr.dossier_document:0
+#: view:sgr.emergency_information:0 view:sgr.environmental_class:0
+#: view:sgr.experimental_result:0 view:sgr.formulated_product_registry:0
+#: view:sgr.formulation_type:0 view:sgr.information:0
+#: view:sgr.information_category:0 view:sgr.information_presentation:0
+#: view:sgr.ingredient:0 view:sgr.ingredient_function:0
+#: view:sgr.ingredient_group:0 view:sgr.ingredient_name_category:0
+#: view:sgr.ingredient_other_name:0 view:sgr.laboratory_registry:0
+#: view:sgr.lmr:0 view:sgr.mode_of_action:0 view:sgr.official_letter:0
+#: view:sgr.packaging:0 view:sgr.packaging_capacity:0
+#: view:sgr.packaging_material:0 view:sgr.packaging_type:0
+#: view:sgr.partner_document:0 view:sgr.partner_document_presentation:0
+#: view:sgr.partner_role_in_registry:0 view:sgr.physical_state:0
+#: view:sgr.product_in_ret:0 view:sgr.product_study:0 view:sgr.proposal:0
+#: view:sgr.proposal_product:0 view:sgr.publication:0
+#: view:sgr.publication_type:0 view:sgr.registry:0
+#: view:sgr.registry_category:0 view:sgr.registry_process:0
+#: view:sgr.ret_phase:0 view:sgr.ret_purpose:0 view:sgr.ret_registry:0
+#: view:sgr.sample_request:0 view:sgr.shipping_method:0
+#: view:sgr.state_registry:0 view:sgr.state_registry_restriction:0
+#: view:sgr.study:0 view:sgr.study_method:0 view:sgr.study_presentation:0
+#: view:sgr.study_purpose:0 view:sgr.target_pests:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0 view:sgr.toxicological_class:0
+#: view:sgr.trademark_registry:0 view:sgr.trademark_type:0
+#: view:sgr.use_recommendation:0
+msgid "By object"
+msgstr "Por objeto"
+
+#. module: sgr
+#: selection:sgr.sample_request,specific_batch:0
+msgid "No"
+msgstr "No"
+
+#. module: sgr
+#: field:sgr.component_registry_detail,component_registry_name:0
+msgid "component_registry_name"
+msgstr "component_registry_name"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_study_purpose
+msgid "study_purpose"
+msgstr "proposito_estudio"
+
+#. module: sgr
+#: field:sgr.proposal_product,sub_total:0
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: sgr
+#: view:res.partner:0 field:res.partner,is_gov_agency:0
+msgid "Is Government Agency?"
+msgstr "Es Agencia Gubernamental?"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_received
+#: model:mail.message.subtype,description:sgr.contract_received
+#: model:mail.message.subtype,description:sgr.document_move_received
+#: model:mail.message.subtype,description:sgr.official_letter_received
+#: model:mail.message.subtype,description:sgr.proposal_received
+#: model:mail.message.subtype,description:sgr.study_received
+#: model:mail.message.subtype,name:sgr.communication_received
+#: model:mail.message.subtype,name:sgr.contract_received
+#: model:mail.message.subtype,name:sgr.document_move_received
+#: model:mail.message.subtype,name:sgr.official_letter_received
+#: model:mail.message.subtype,name:sgr.proposal_received
+#: model:mail.message.subtype,name:sgr.study_received
+#: selection:sgr.communication,state:0 selection:sgr.contract,state:0
+#: selection:sgr.document_move,state:0 selection:sgr.official_letter,state:0
+#: selection:sgr.proposal,state:0 selection:sgr.study,state:0
+msgid "Received"
+msgstr "Recibido"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_crop_crops
+#: model:ir.ui.menu,name:sgr.menu_crops view:sgr.crop:0
+#: field:sgr.experimental_result,crop_id:0 field:sgr.ret_registry,crop_ids:0
+msgid "Crops"
+msgstr "Cultivos"
+
+#. module: sgr
+#: view:sgr.document_move:0 field:sgr.document_move,tracking_id:0
+#: view:sgr.official_letter:0 field:sgr.official_letter,tracking_number:0
+msgid "Tracking Number"
+msgstr "Número de seguimiento"
+
+#. module: sgr
+#: field:sgr.component_registry_detail,supplier_ids:0
+#: field:sgr.ret_registry,supplier_ids:0
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_official_letter_official_letters
+#: model:ir.ui.menu,name:sgr.menu_official_letters view:sgr.official_letter:0
+msgid "Official Letters"
+msgstr "Cartas Documento"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_registrations
+msgid "Registrations"
+msgstr "Registrations"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_information_category_information_categories
+#: model:ir.ui.menu,name:sgr.menu_information_categories
+#: view:sgr.information_category:0
+#: field:sgr.registry_category,information_category_ids:0
+msgid "Information Categories"
+msgstr "Categorías Información "
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_environmental_class_environmental_classes
+#: model:ir.ui.menu,name:sgr.menu_environmental_classes
+#: view:sgr.environmental_class:0
+msgid "Environmental Classes"
+msgstr "Clases Ambientales"
+
+#. modules: sgr, sgrx
+#: model:ir.ui.menu,name:sgr.menu_laboratories
+#: field:sgr.ret_registry,laboratory_ids:0 view:res.partner:0
+msgid "Laboratories"
+msgstr "Laboratorios"
+
+#. module: sgr
+#: field:sgr.cqq,formulated_product_registry_id:0
+#: field:sgr.emergency_information,formulated_product_registry_id:0
+#: field:sgr.environmental_class,formulated_product_registry_id:0
+#: field:sgr.formulation_type,formulated_product_registry_id:0
+#: field:sgr.packaging,formulated_product_registry_id:0
+#: field:sgr.partner_role_in_registry,formulated_product_registry_id:0
+#: field:sgr.physical_state,formulated_product_registry_id:0
+#: field:sgr.toxicological_class,formulated_product_registry_id:0
+#: field:sgr.use_recommendation,formulated_product_registry_id:0
+msgid "formulated_product_registry_id"
+msgstr "registro_producto_formulado_id"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,partner_role_in_registry_ids:0
+msgid "Partners Roles"
+msgstr "Roles de empresas"
+
+#. module: sgr
+#: constraint:sgr.document_category:0
+msgid "Error ! You cannot create recursive document_category."
+msgstr "Error ! Usted no puede crear tipo de comunicación recursiva"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_document_move
+msgid "document_move"
+msgstr "movimiento_documento"
+
+#. module: sgr
+#: field:sgr.document,approval_date:0
+msgid "Approval Date"
+msgstr "Fecha de aprobación"
+
+#. module: sgr
+#: view:sgr.formulation_type:0 field:sgr.formulation_type,abbreviation:0
+msgid "Abbreviation"
+msgstr "Abreviación"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Internal"
+msgstr "Interno"
+
+#. module: sgr
+#: field:sgr.sample_request,deadline:0
+msgid "Deadline"
+msgstr "Fecha límite"
+
+#. module: sgr
+#: field:sgr.experimental_result,doses:0
+msgid "Doses"
+msgstr "Doses"
+
+#. module: sgr
+#: field:sgr.document_category,study_presentation_ids:0
+msgid "study_presentation_ids"
+msgstr "ids_presentación_estudios"
+
+#. module: sgr
+#: field:sgr.information_presentation,registry_id:0
+#: field:sgr.partner_document_presentation,registry_id:0
+#: field:sgr.publication,registry_id:0
+#: field:sgr.registry_process,registry_id:0
+#: field:sgr.study_presentation,registry_id:0
+msgid "registry_id"
+msgstr "registro_id"
+
+#. module: sgr
+#: field:sgr.study,director_author_id:0
+msgid "Director/Author"
+msgstr "Director / Autor"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ret_purpose
+msgid "ret_purpose"
+msgstr "ret_propósito"
+
+#. module: sgr
+#: selection:sgr.partner_role_in_registry,type:0
+msgid "Manipulator"
+msgstr "Manipulador"
+
+#. module: sgr
+#: view:sgr.document_move:0 field:sgr.document_move,from_partner:0
+msgid "From"
+msgstr "De"
+
+#. module: sgr
+#: field:sgr.experimental_result,number_of_applications:0
+msgid "Number of Applications"
+msgstr "Número de Aplicaciones"
+
+#. module: sgr
+#: field:sgr.study,end_date:0
+msgid "End Date"
+msgstr "Fecha finalización"
+
+#. module: sgr
+#: field:res.partner,component_registry_detail_id:0
+#: field:sgr.application_mode,use_recommendation_id:0
+#: field:sgr.communication_type,communication_id:0
+#: field:sgr.component_registry,component_registry_detail_id:0
+#: field:sgr.component_registry_detail,component_registry_id:0
+#: field:sgr.component_registry_finality,component_registry_detail_id:0
+#: field:sgr.crop,state_registry_restriction_id:0
+#: field:sgr.crop,use_recommendation_id:0
+#: field:sgr.emergency_information,component_registry_detail_id:0
+#: field:sgr.formulated_product_registry,registry_id:0
+#: field:sgr.ingredient,cqq_id:0 field:sgr.packaging_material,packaging_id:0
+#: field:sgr.packaging_type,packaging_id:0
+#: field:sgr.publication_type,publication_id:0
+#: field:sgr.registry,formulated_product_registry_id:0
+#: field:sgr.registry_category,registry_id:0
+#: field:sgr.shipping_method,official_letter_id:0
+#: field:sgr.target_pests,state_registry_restriction_id:0
+#: field:sgr.target_pests,use_recommendation_id:0
+msgid "&lt;no label&gt;"
+msgstr "&lt;no label&gt;"
+
+#. modules: sgr, sgrx
+#: view:sgr.ret_registry:0
+msgid "RET Registries"
+msgstr "Registros RET"
+
+#. module: sgr
+#: field:sgr.document_category,child_ids:0
+#: field:sgr.information_category,child_ids:0
+msgid "Child Categories"
+msgstr "Categorías Hijo"
+
+#. module: sgr
+#: help:sgr.product_study,study_category_id:0
+msgid "Filtrar por categorías que sean del tipo de documento &quot;study&quot;"
+msgstr ""
+"Filtrar por categorías que sean del tipo de documento &quot;study&quot;"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_packaging_type_packaging_types
+#: model:ir.ui.menu,name:sgr.menu_packaging_types view:sgr.packaging_type:0
+msgid "Packaging Types"
+msgstr "Tipos de embalaje"
+
+#. modules: sgr, sgrx
+#: field:product.product,function_type:0 view:sgr.communication:0
+#: field:sgr.communication,communication_type_id:0
+#: view:sgr.communication_type:0
+#: field:sgr.communication_type,hierachical_type:0
+#: view:sgr.document_category:0 field:sgr.document_category,hierachical_type:0
+#: view:sgr.information_category:0
+#: field:sgr.information_category,hierachical_type:0
+#: field:sgr.partner_role_in_registry,type:0 view:sgr.proposal:0
+#: field:sgr.proposal,type:0 field:sgr.publication,publication_type_id:0
+#: field:sgr.registry,type:0 field:sgr.registry_category,type:0
+#: view:sgr.packaging:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_publication_type
+msgid "publication_type"
+msgstr "tipo_publicación"
+
+#. module: sgr
+#: field:sgr.ingredient_name_category,ingredient_other_name_ids:0
+msgid "ingredient_other_name_ids"
+msgstr "ingrediente_otros_nombres_ids"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_trademark_registry_trademark_registrations
+#: model:ir.ui.menu,name:sgr.menu_trademark_registrations
+#: view:sgr.trademark_registry:0
+msgid "Trademark Registrations"
+msgstr "Registros de Marca"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Capacities"
+msgstr "Capacidades"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "Material"
+msgstr "Material"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_miscellaneous
+msgid "Miscellaneous"
+msgstr "Varios"
+
+#. module: sgr
+#: field:res.partner,ret_registry_lab_ids:0
+msgid "ret_registry_lab_ids"
+msgstr "ret_registro_lab_ids"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_experimental_result
+msgid "experimental_result"
+msgstr "experimental_resultado"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_dossier_document
+msgid "dossier_document"
+msgstr "dossier_documento"
+
+#. module: sgr
+#: field:sgr.ingredient,molecular_formula:0
+msgid "Molecular Formula"
+msgstr "Fórmula Molecular"
+
+#. module: sgr
+#: field:sgr.registry,information_category_ids:0
+msgid "information_category_ids"
+msgstr "informacion_categoría_ids"
+
+#. module: sgr
+#: view:sgr.communication:0 field:sgr.communication,term_date:0
+msgid "Term Date"
+msgstr "Fecha plazos"
+
+#. module: sgr
+#: view:sgr.communication:0 view:sgr.contract:0 view:sgr.document_move:0
+#: view:sgr.official_letter:0 view:sgr.proposal:0 view:sgr.study:0
+msgid "Receive"
+msgstr "Recibir"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_lmr
+msgid "lmr"
+msgstr "lmr"
+
+#. module: sgr
+#: field:sgr.partner_document,partner_document_presentation_ids:0
+#: field:sgr.study,study_presentation_ids:0
+msgid "Presentations"
+msgstr "Presentaciones"
+
+#. module: sgr
+#: selection:sgr.proposal,type:0
+msgid "By Contract"
+msgstr "Por Contrato"
+
+#. module: sgr
+#: field:res.partner,env_registration_code:0
+msgid "Env. Reg Code"
+msgstr "Código Reg Ambiental"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_study_studies
+#: model:ir.ui.menu,name:sgr.menu_studies
+#: field:sgr.communication,study_presentation_ids:0
+#: field:sgr.proposal,study_ids:0 field:sgr.registry,study_presentation_ids:0
+#: view:sgr.study:0 view:sgr.communication:0 view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Studies"
+msgstr "Estudios"
+
+#. module: sgr
+#: field:sgr.contract,document_id:0
+msgid "Contract File"
+msgstr "Archivo Contrato"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_publication
+msgid "publication"
+msgstr "publicación"
+
+#. module: sgr
+#: view:sgr.ingredient:0 field:sgr.ingredient,common_international_name:0
+msgid "Common International Name"
+msgstr "Nombre Común Internacional"
+
+#. modules: sgr, sgrx
+#: view:sgr.dossier_document:0
+msgid "Dossier Reports"
+msgstr "Informes Expediente"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_emergency_information
+msgid "emergency_information"
+msgstr "información_emergencia"
+
+#. module: sgr
+#: field:sgr.contract,currency_id:0 field:sgr.proposal,currency_id:0
+#: field:sgr.tax,currency_id:0
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: sgr
+#: field:sgr.use_recommendation,solution_volume:0
+msgid "Solution Volume"
+msgstr "Volumen de solución"
+
+#. module: sgr
+#: view:sgr.communication_type:0 field:sgr.communication_type,parent_id:0
+msgid "Parent Type"
+msgstr "Padre"
+
+#. module: sgr
+#: field:sgr.ingredient,density_uom_id:0
+msgid "Density UOM"
+msgstr "UDM Densidad"
+
+#. module: sgr
+#: field:sgr.contract,amount:0
+msgid "Values"
+msgstr "Valores"
+
+#. module: sgr
+#: field:sgr.ingredient,cqq_ids:0 field:sgr.ingredient_function,cqq_ids:0
+msgid "cqq_ids"
+msgstr "cqq_ids"
+
+#. module: sgr
+#: field:sgr.document,consularization_date:0
+msgid "Consularization Date"
+msgstr "Fecha Consularización "
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ingredient_other_name
+msgid "ingredient_other_name"
+msgstr "ingrediente_otro_nombre"
+
+#. module: sgr
+#: view:sgr.partner_role_in_registry:0
+msgid "Partner Roles In registry"
+msgstr "Roles Empresa en registro"
+
+#. module: sgr
+#: view:sgr.state_registry:0 field:sgr.state_registry,federal_registry_id:0
+msgid "Federal PF Registry"
+msgstr "Registro Federal de PF"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,operated_by_ids:0
+#: field:sgr.laboratory_registry,operated_by_ids:0
+#: field:sgr.state_registry,operated_by_ids:0
+#: field:sgr.technical_product_registry,operated_by_ids:0
+msgid "Modified By"
+msgstr "Modificado por"
+
+#. module: sgr
+#: selection:sgr.proposal,type:0
+msgid "On Demand"
+msgstr "A Demanda"
+
+#. module: sgr
+#: field:sgr.proposal,analytic_line_id:0
+msgid "Analytic Line"
+msgstr "Línea Analítica"
+
+#. module: sgr
+#: field:sgr.experimental_result,volume_uom_id:0
+msgid "Volume UOM"
+msgstr "UDM Volumen"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_contract_contracts
+#: model:ir.ui.menu,name:sgr.menu_contracts view:sgr.contract:0
+msgid "Contracts"
+msgstr "Contratos"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_communication_type_communication_types
+#: model:ir.ui.menu,name:sgr.menu_communication_types
+#: view:sgr.communication_type:0
+msgid "Communication Types"
+msgstr "Tipos de Comunicación"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_resolving_request
+#: model:mail.message.subtype,name:sgr.communication_resolving_request
+#: selection:sgr.communication,state:0
+msgid "Resolving Request"
+msgstr "Resolución de Petición"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,message_is_follower:0
+#: field:sgr.component_registry,message_is_follower:0
+#: field:sgr.contract,message_is_follower:0
+#: field:sgr.document_move,message_is_follower:0
+#: field:sgr.dossier_document,message_is_follower:0
+#: field:sgr.formulated_product_registry,message_is_follower:0
+#: field:sgr.information,message_is_follower:0
+#: field:sgr.laboratory_registry,message_is_follower:0
+#: field:sgr.official_letter,message_is_follower:0
+#: field:sgr.partner_document,message_is_follower:0
+#: field:sgr.proposal,message_is_follower:0
+#: field:sgr.registry_process,message_is_follower:0
+#: field:sgr.ret_registry,message_is_follower:0
+#: field:sgr.sample_request,message_is_follower:0
+#: field:sgr.state_registry,message_is_follower:0
+#: field:sgr.study,message_is_follower:0 field:sgr.tax,message_is_follower:0
+#: field:sgr.technical_product_registry,message_is_follower:0
+#: field:sgr.trademark_registry,message_is_follower:0
+#: field:stock.move,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es un seguidor"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,date:0 field:sgr.contract,date:0
+#: view:sgr.formulated_product_registry:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sgr
+#: selection:sgr.study_presentation,state:0
+msgid "draft"
+msgstr "borrador"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_study_method
+msgid "study_method"
+msgstr "método_estudio"
+
+#. module: sgrx
+#: view:sgr.state_registry:0
+msgid "Restrictions"
+msgstr "Restricciones"
+
+#. module: sgrx
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Dossier"
+msgstr "Expediente"
+
+#. modules: sgr, sgrx
+#: view:sgr.communication:0 view:sgr.component_registry:0 view:sgr.contract:0
+#: view:sgr.document_move:0 view:sgr.dossier_document:0
+#: view:sgr.formulated_product_registry:0 view:sgr.information:0
+#: view:sgr.information_presentation:0 view:sgr.laboratory_registry:0
+#: view:sgr.official_letter:0 view:sgr.partner_document:0
+#: view:sgr.partner_document_presentation:0 view:sgr.proposal:0
+#: view:sgr.registry:0 view:sgr.registry_process:0 view:sgr.ret_registry:0
+#: view:sgr.sample_request:0 view:sgr.state_registry:0 view:sgr.study:0
+#: view:sgr.study_presentation:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "To Draft"
+msgstr "A borrador"
+
+#. modules: sgr, sgrx
+#: model:ir.ui.menu,name:sgr.menu_packagings
+#: field:sgr.formulated_product_registry,packaging_ids:0 view:sgr.packaging:0
+#: field:sgr.sample_request,packaging_ids:0
+#: field:sgr.technical_product_registry,packaging_ids:0
+msgid "Packagings"
+msgstr "Embalajes"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_registry_process
+msgid "Son las presentaciones que se deben hacer para conseguir el regi"
+msgstr "Son las presentaciones que se deben hacer para conseguir el regi"
+
+#. module: sgr
+#: field:sgr.ingredient,ingredient_other_name_ids:0
+#: view:sgr.ingredient_other_name:0
+msgid "Ingredient Others Names"
+msgstr "Otras denominaciones para la Sustancia"
+
+#. module: sgr
+#: field:sgr.document,authentication_date:0
+msgid "Authentication Date"
+msgstr "Fecha Autenticación"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ret_purpose_ret_purposes
+#: model:ir.ui.menu,name:sgr.menu_ret_purposes view:sgr.ret_purpose:0
+msgid "RET Purposes"
+msgstr "Propósitos RET"
+
+#. module: sgr
+#: selection:sgr.formulated_product_registry,operation:0
+#: selection:sgr.laboratory_registry,operation:0
+#: selection:sgr.state_registry,operation:0
+#: selection:sgr.technical_product_registry,operation:0
+msgid "Replacement"
+msgstr "Reemplazo"
+
+#. module: sgr
+#: field:sgr.document,number_of_pages:0
+msgid "Number of Pages"
+msgstr "Número de páginas"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_state_registry
+#: model:ir.model,name:sgrx.model_sgr_state_registry
+msgid "state_registry"
+msgstr "estado_registro"
+
+#. module: sgr
+#: field:sgr.communication_type,child_ids:0
+msgid "Child Types"
+msgstr "Hijos"
+
+#. module: sgr
+#: field:sgr.registry,sgr_formulated_product_registry_id:0
+msgid "sgr.formulated_product_registry_id"
+msgstr "sgr.id_registro_tecnico_formulado"
+
+#. module: sgr
+#: field:sgr.ingredient_other_name,ingredient_id:0
+#: field:sgr.lmr,ingredient_id:0
+msgid "ingredient_id"
+msgstr "ingrediente_id"
+
+#. module: sgr
+#: view:sgr.document_category:0
+#: field:sgr.document_category,experimental_results:0
+msgid "Experimiental Results"
+msgstr "Experimiental Results"
+
+#. modules: sgr, sgrx
+#: view:sgr.communication:0 view:sgr.component_registry:0 view:sgr.contract:0
+#: view:sgr.document_move:0 view:sgr.dossier_document:0
+#: view:sgr.formulated_product_registry:0 view:sgr.information:0
+#: view:sgr.information_presentation:0 view:sgr.laboratory_registry:0
+#: view:sgr.official_letter:0 view:sgr.partner_document:0
+#: view:sgr.partner_document_presentation:0 view:sgr.proposal:0
+#: view:sgr.registry:0 view:sgr.registry_process:0 view:sgr.ret_registry:0
+#: view:sgr.sample_request:0 view:sgr.state_registry:0 view:sgr.study:0
+#: view:sgr.study_presentation:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sgr
+#: view:sgr.product_in_ret:0 field:sgr.product_in_ret,concentration:0
+#: view:sgr.sample_request:0 field:sgr.sample_request,concentration:0
+#: field:sgr.study,concentration:0
+msgid "Concentration"
+msgstr "Concentración"
+
+#. module: sgr
+#: field:sgr.proposal_product,product_study_ids:0
+msgid "Studies Required"
+msgstr "Estudios Requeridos"
+
+#. modules: sgr, sgrx
+#: field:sgr.information_presentation,parent_information_id:0
+#: view:product.product:0
+msgid "Information"
+msgstr "Información"
+
+#. module: sgrx
+#: view:sgr.communication:0 view:sgr.contract:0 view:sgr.dossier_document:0
+#: view:sgr.ingredient:0 view:sgr.partner_document:0 view:sgr.proposal:0
+#: view:sgr.study:0 view:sgr.tax:0
+msgid "Other Info"
+msgstr "Otra información"
+
+#. module: sgr
+#: field:sgr.ingredient,ingredient_group_id:0
+msgid "Ingredient Group"
+msgstr "Grupo Sustancia"
+
+#. module: sgr
+#: field:sgr.ingredient,solubility_uom_id:0
+msgid "Solubility UOM"
+msgstr "UDM Solubilidad"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,inert_quantity:0
+msgid "Inert Quantity"
+msgstr "Cantidad de Inerte"
+
+#. module: sgrx
+#: view:sgr.tax:0
+msgid "To be Pay (deadline)"
+msgstr "Para ser pagado (fecha límite)"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ingredient_name_category_ingredient_name_categories
+#: model:ir.ui.menu,name:sgr.menu_ingredient_name_categories
+msgid "Ingredient Name Categories"
+msgstr "Categorías de Nombres de Sustancias"
+
+#. module: sgr
+#: field:res.partner,gov_registration_code:0
+msgid "Gov. Reg Code"
+msgstr "Cód. Reg Gob."
+
+#. module: sgr
+#: field:sgr.cqq,ingredient_id:0
+msgid "Ingredient"
+msgstr "Sustancia"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.component_registry_requested
+#: model:mail.message.subtype,description:sgr.contract_requested
+#: model:mail.message.subtype,description:sgr.document_move_requested
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_requested
+#: model:mail.message.subtype,description:sgr.laboratory_registry_requested
+#: model:mail.message.subtype,description:sgr.proposal_requested
+#: model:mail.message.subtype,description:sgr.registry_process_requested
+#: model:mail.message.subtype,description:sgr.ret_registry_requested
+#: model:mail.message.subtype,description:sgr.sample_request_requested
+#: model:mail.message.subtype,description:sgr.state_registry_requested
+#: model:mail.message.subtype,description:sgr.study_requested
+#: model:mail.message.subtype,description:sgr.technical_product_registry_requested
+#: model:mail.message.subtype,description:sgr.trademark_registry_requested
+#: model:mail.message.subtype,name:sgr.component_registry_requested
+#: model:mail.message.subtype,name:sgr.contract_requested
+#: model:mail.message.subtype,name:sgr.document_move_requested
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_requested
+#: model:mail.message.subtype,name:sgr.laboratory_registry_requested
+#: model:mail.message.subtype,name:sgr.proposal_requested
+#: model:mail.message.subtype,name:sgr.registry_process_requested
+#: model:mail.message.subtype,name:sgr.ret_registry_requested
+#: model:mail.message.subtype,name:sgr.sample_request_requested
+#: model:mail.message.subtype,name:sgr.state_registry_requested
+#: model:mail.message.subtype,name:sgr.study_requested
+#: model:mail.message.subtype,name:sgr.technical_product_registry_requested
+#: model:mail.message.subtype,name:sgr.trademark_registry_requested
+#: selection:sgr.component_registry,state:0 selection:sgr.contract,state:0
+#: selection:sgr.document_move,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.laboratory_registry,state:0
+#: field:sgr.product_in_ret,amount_requested:0 selection:sgr.proposal,state:0
+#: selection:sgr.registry,state:0 selection:sgr.registry_process,state:0
+#: selection:sgr.ret_registry,state:0 selection:sgr.sample_request,state:0
+#: selection:sgr.state_registry,state:0 selection:sgr.study,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Requested"
+msgstr "Requerido"
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You try to assign a lot which is not from the same product."
+msgstr "Está intentando asignar un lote que no es del mismo producto."
+
+#. module: sgr
+#: field:sgr.packaging,external_quantity:0
+msgid "External Quantity"
+msgstr "Cantidad externa"
+
+#. module: sgr
+#: selection:product.product,function_type:0
+#: field:sgr.component_registry_detail,component_id:0
+#: selection:sgr.registry,type:0 selection:sgr.registry_category,type:0
+msgid "Component"
+msgstr "Componente"
+
+#. module: sgr
+#: model:res.groups,name:sgr.group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: sgr
+#: constraint:sgr.information_category:0
+msgid "Error ! You cannot create recursive information_category."
+msgstr "Error ! Usted no puede crear categoría de informacion recursiva"
+
+#. module: sgr
+#: field:sgr.crop,ret_registry_ids:0 field:sgr.ret_phase,ret_registry_ids:0
+#: field:sgr.ret_purpose,ret_registry_ids:0
+#: field:sgr.target_pests,ret_registry_ids:0
+msgid "ret_registry_ids"
+msgstr "ret_registro_ids"
+
+#. module: sgr
+#: field:sgr.experimental_result,doses_uom_id:0
+msgid "Doses UOM"
+msgstr "Doses UOM"
+
+#. module: sgr
+#: help:sgr.formulated_product_registry,component_registry_detail_ids:0
+msgid ""
+"Se debería dejar elegir solo component_Registr_detail donde exista algun "
+"formulated_product_ids igual al formulated_product de formulated "
+"product_Registry"
+msgstr ""
+"Se debería dejar elegir solo component_Registr_detail donde exista algun "
+"formulated_product_ids igual al formulated_product de formulated "
+"product_Registry"
+
+#. module: sgr
+#: view:sgr.target_pests:0
+msgid "Target Pests"
+msgstr "Plagas Objetivo"
+
+#. module: sgr
+#: view:sgr.agronomic_class:0 field:sgr.agronomic_class,name:0
+#: view:sgr.application_mode:0 field:sgr.application_mode,name:0
+#: view:sgr.communication:0 field:sgr.communication,name:0
+#: view:sgr.communication_type:0 field:sgr.communication_type,complete_name:0
+#: field:sgr.communication_type,name:0 view:sgr.component_registry_finality:0
+#: field:sgr.component_registry_finality,name:0 view:sgr.document:0
+#: field:sgr.document,name:0 view:sgr.document_category:0
+#: field:sgr.document_category,complete_name:0
+#: field:sgr.document_category,name:0 view:sgr.dossier_document:0
+#: field:sgr.emergency_information,name:0 view:sgr.environmental_class:0
+#: field:sgr.environmental_class,name:0 view:sgr.formulation_type:0
+#: field:sgr.formulation_type,name:0 field:sgr.information,name:0
+#: field:sgr.information_category,complete_name:0
+#: field:sgr.information_category,name:0 view:sgr.ingredient_function:0
+#: field:sgr.ingredient_function,name:0 view:sgr.ingredient_group:0
+#: field:sgr.ingredient_group,name:0 view:sgr.ingredient_name_category:0
+#: field:sgr.ingredient_name_category,name:0
+#: field:sgr.ingredient_other_name,name:0 view:sgr.mode_of_action:0
+#: field:sgr.mode_of_action,name:0 view:sgr.packaging_material:0
+#: field:sgr.packaging_material,name:0 view:sgr.packaging_type:0
+#: field:sgr.packaging_type,name:0 view:sgr.partner_document:0
+#: view:sgr.physical_state:0 field:sgr.physical_state,name:0
+#: view:sgr.publication:0 field:sgr.publication,name:0
+#: view:sgr.publication_type:0 field:sgr.publication_type,name:0
+#: field:sgr.registry_category,name:0 view:sgr.ret_phase:0
+#: field:sgr.ret_phase,name:0 view:sgr.shipping_method:0
+#: field:sgr.shipping_method,name:0 view:sgr.study:0 view:sgr.study_method:0
+#: field:sgr.study_method,name:0 view:sgr.study_purpose:0
+#: field:sgr.study_purpose,name:0 view:sgr.tax:0
+#: view:sgr.toxicological_class:0 field:sgr.toxicological_class,name:0
+#: view:sgr.trademark_registry:0 field:sgr.trademark_registry,name:0
+#: view:sgr.trademark_type:0 field:sgr.trademark_type,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_dossier_document_dossier_documents
+#: model:ir.ui.menu,name:sgr.menu_dossier_documents
+#: field:sgr.communication,dossier_document_ids:0
+#: field:sgr.registry,dossier_document_ids:0 view:sgr.communication:0
+msgid "Dossier Documents"
+msgstr "Expedientes"
+
+#. modules: sgr, sgrx
+#: view:sgr.communication:0 field:sgr.dossier_document,communication_ids:0
+#: field:sgr.official_letter,comunication_ids:0
+#: field:sgr.partner_document_presentation,communication_ids:0
+#: field:sgr.registry,communication_ids:0
+#: field:sgr.study_presentation,communication_ids:0
+#: field:sgr.tax,communication_ids:0 view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Communications"
+msgstr "Comunicaciones"
+
+#. modules: sgr, sgrx
+#: view:sgr.component_registry_detail:0
+msgid "Component Registry Detail"
+msgstr "Detalles de Registro de Componente"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_component_registry_detail
+msgid "component_registry_detail"
+msgstr "componente_registro_detalle"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.registry:0
+#: field:sgr.registry,free_sale_expiration_date:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Free Sale Expiration Date"
+msgstr "Fecha de vencimiento Libre Venta "
+
+#. modules: sgr, sgrx
+#: help:sgr.communication,message_ids:0
+#: help:sgr.component_registry,message_ids:0 help:sgr.contract,message_ids:0
+#: help:sgr.document_move,message_ids:0
+#: help:sgr.dossier_document,message_ids:0
+#: help:sgr.formulated_product_registry,message_ids:0
+#: help:sgr.information,message_ids:0
+#: help:sgr.laboratory_registry,message_ids:0
+#: help:sgr.official_letter,message_ids:0
+#: help:sgr.partner_document,message_ids:0 help:sgr.proposal,message_ids:0
+#: help:sgr.registry_process,message_ids:0 help:sgr.ret_registry,message_ids:0
+#: help:sgr.sample_request,message_ids:0 help:sgr.state_registry,message_ids:0
+#: help:sgr.study,message_ids:0 help:sgr.tax,message_ids:0
+#: help:sgr.technical_product_registry,message_ids:0
+#: help:sgr.trademark_registry,message_ids:0 help:stock.move,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensajes e historial de comunicación"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_technical_product_registry_technical_products
+#: model:ir.ui.menu,name:sgr.menu_technical_products
+#: field:sgr.formulated_product_registry,techincal_product_ids:0
+#: view:product.product:0 view:sgr.formulated_product_registry:0
+msgid "Technical Products"
+msgstr "Productos Técnicos"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.registry:0
+#: field:sgr.registry,registry_expiration_date:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Registry Expiration Date"
+msgstr "Registro Fecha de Vencimiento"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_state_registry_restriction
+msgid "state_registry_restriction"
+msgstr "estado_registro_restricción"
+
+#. module: sgr
+#: field:sgr.state_registry_restriction,crop_id:0
+#: field:sgr.use_recommendation,crop_id:0
+msgid "Crop"
+msgstr "Cultivo"
+
+#. module: sgr
+#: field:sgr.cqq,component_registry_detail_id:0
+#: field:sgr.packaging,component_registry_detail_id:0
+msgid "component_registry_detail_id"
+msgstr "component_registry_detail_id"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ingredient_name_category
+msgid "ingredient_name_category"
+msgstr "ingrediente_nombre_categoría"
+
+#. module: sgr
+#: field:sgr.registry,sgr_component_registry_id:0
+msgid "sgr.component_registry_id"
+msgstr "sgr.componente_registro_id"
+
+#. module: sgr
+#: field:sgr.experimental_result,country_id:0
+msgid "country_id"
+msgstr "país_id"
+
+#. module: sgr
+#: field:res.partner,env_registration_date:0
+msgid "Env. Reg Date"
+msgstr "Reg. Fecha Ambiental"
+
+#. module: sgr
+#: view:sgr.communication:0
+msgid "Need Answer"
+msgstr "Necesita respuesta"
+
+#. module: sgrx
+#: view:stock.production.lot:0
+msgid "\"base.group_no_one\""
+msgstr "\"base.group_no_one\""
+
+#. module: sgr
+#: field:sgr.sample_request,date_of_import_license:0
+msgid "Date of import license"
+msgstr "Fecha de la licencia de importación"
+
+#. module: sgr
+#: field:sgr.document_category,product_study_ids:0
+msgid "product_study_ids"
+msgstr "producto_estudio_ids"
+
+#. module: sgr
+#: field:sgr.sample_request,expiration_date_of_import:0
+msgid "Expiration date of import license"
+msgstr "Fecha de vencimiento de la licencia de importación"
+
+#. module: sgr
+#: view:sgr.ingredient:0 field:sgr.ingredient,type:0
+#: view:sgr.ingredient_group:0 field:sgr.ingredient_group,type:0
+msgid "Ingredient Type"
+msgstr "Tipo de Sustancia"
+
+#. modules: sgr, sgrx
+#: field:sgr.formulated_product_registry,operate_id:0
+#: field:sgr.laboratory_registry,operate_id:0
+#: field:sgr.state_registry,operate_id:0
+#: field:sgr.technical_product_registry,operate_id:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+msgid "Modify"
+msgstr "Modificar"
+
+#. module: sgr
+#: selection:sgr.ingredient,type:0 selection:sgr.ingredient_group,type:0
+msgid "Active Biological"
+msgstr "Biológico Activo"
+
+#. module: sgr
+#: field:sgr.registry,registry_date:0
+msgid "Registry Date"
+msgstr "Fecha de registro"
+
+#. module: sgr
+#: selection:sgr.ingredient,type:0 selection:sgr.ingredient_group,type:0
+msgid "Others"
+msgstr "Otros"
+
+#. module: sgr
+#: field:sgr.ingredient,molecular_weight:0
+msgid "Molecular Weight"
+msgstr "Peso Molecular"
+
+#. module: sgrx
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.ret_registry:0
+#: view:sgr.sample_request:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+#: view:stock.move:0
+msgid "Notes"
+msgstr "Notas"
+
+#. module: sgr
+#: field:sgr.sample_request,batch:0
+msgid "Batch"
+msgstr "Batch"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_tax_taxes
+#: model:ir.ui.menu,name:sgr.menu_taxes model:res.groups,name:sgr.group_taxes
+#: field:sgr.communication,tax_ids:0 field:sgr.registry,tax_ids:0
+#: view:sgr.tax:0 view:sgr.communication:0 view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. modules: sgr, sgrx
+#: model:ir.ui.menu,name:sgr.menu_products view:sgr.ret_registry:0
+#: field:sgr.ret_registry,product_in_ret_ids:0
+msgid "Products"
+msgstr "Productos"
+
+#. module: sgr
+#: field:sgr.registry,sgr_state_registry_id:0
+msgid "sgr.state_registry_id"
+msgstr "sgr.estado_registro_id"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_toxicological_class_toxicologial_classes
+#: model:ir.ui.menu,name:sgr.menu_toxicologial_classes
+msgid "Toxicologial Classes"
+msgstr "Clases Toxicológicas"
+
+#. modules: sgr, sgrx
+#: view:sgr.technical_product_registry:0
+msgid "Techinical Products Registries"
+msgstr "Registro Productos Técnicos"
+
+#. modules: sgr, sgrx
+#: selection:product.product,function_type:0 view:product.product:0
+msgid "Formulated"
+msgstr "Formulado"
+
+#. module: sgrx
+#: model:ir.model,name:sgrx.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "True"
+msgstr "Verdadero"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_laboratory_registry_laboratory_registrations
+#: model:ir.ui.menu,name:sgr.menu_laboratory_registrations
+msgid "Laboratory Registrations"
+msgstr "Regitros de Laboratorio"
+
+#. module: sgrx
+#: view:sgr.contract:0
+msgid "Contract Details"
+msgstr "Detalles del contrato"
+
+#. modules: sgr, sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Formulated Product Registries"
+msgstr "Registros de Productos Formulados"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,inert_quantity_uom:0
+msgid "Inert Quantity UOM"
+msgstr "UDM Cantidad inerte"
+
+#. module: sgr
+#: view:sgr.cqq:0 field:sgr.cqq,scientific_name:0
+#: field:sgr.ingredient,scientific_name:0
+msgid "IUPAC/Scientific Name"
+msgstr "IUPAC/Nombre Científico"
+
+#. module: sgr
+#: view:sgr.technical_product_registry:0
+#: field:sgr.technical_product_registry,technical_product_id:0
+msgid "Techincal Product"
+msgstr "Producto Técnico"
+
+#. module: sgr
+#: view:sgr.study:0
+msgid "Request to Supplier"
+msgstr "Solicitar al Proveedor"
+
+#. module: sgr
+#: view:sgr.communication:0 view:sgr.document_move:0
+#: view:sgr.official_letter:0
+msgid "Send"
+msgstr "Enviar"
+
+#. module: sgr
+#: field:sgr.product_study,proposal_product_id:0
+msgid "proposal_product_id"
+msgstr "proposal_product_id"
+
+#. module: sgr
+#: field:sgr.study,source:0
+msgid "Source"
+msgstr "Fuente"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_sent
+#: model:mail.message.subtype,description:sgr.document_move_sent
+#: model:mail.message.subtype,description:sgr.official_letter_sent
+#: model:mail.message.subtype,name:sgr.communication_sent
+#: model:mail.message.subtype,name:sgr.document_move_sent
+#: model:mail.message.subtype,name:sgr.official_letter_sent
+#: selection:sgr.communication,state:0 selection:sgr.document_move,state:0
+#: selection:sgr.official_letter,state:0
+msgid "Sent"
+msgstr "Enviado"
+
+#. modules: sgr, sgrx
+#: field:sgr.formulated_product_registry,state_registry_ids:0
+#: view:sgr.state_registry:0
+msgid "State Registries"
+msgstr "Registros Provinciales"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.study_sp_approved
+#: model:mail.message.subtype,name:sgr.study_sp_approved
+#: selection:sgr.study,state:0
+msgid "Study Plan Approved"
+msgstr "Plan de Estudio aprobado"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,formulation_type_id:0
+msgid "Formulation Type"
+msgstr "Tipo de formulación"
+
+#. module: sgr
+#: field:sgr.contract,property_journal_id:0
+msgid "journal_id"
+msgstr "journal_id"
+
+#. module: sgr
+#: selection:sgr.document_category,type:0
+#: field:sgr.partner_document_presentation,partner_document_id:0
+msgid "Partner Document"
+msgstr "Documento de Empresa"
+
+#. module: sgr
+#: view:sgr.ingredient_name_category:0
+msgid "Ingredient Names Categories"
+msgstr " Categorías de Nombres de Sustancia"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "GLP Laboratories"
+msgstr "GLP Laboratorios"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_partner_role_in_registry
+msgid "partner_role_in_registry"
+msgstr "partner_role_in_registry"
+
+#. module: sgr
+#: field:res.partner,proposal_as_sponsor_ids:0
+msgid "proposal_as_sponsor_ids"
+msgstr "proposal_as_sponsor_ids"
+
+#. module: sgr
+#: field:sgr.product_study,is_pretest:0
+msgid "Is Pretest?"
+msgstr "Es Prueba Preliminar?"
+
+#. modules: sgr, sgrx
+#: field:sgr.document,expiration_date:0 view:sgr.formulated_product_registry:0
+msgid "Expiration Date"
+msgstr "Fecha de vencimiento"
+
+#. module: sgr
+#: field:res.partner,state_registration_code:0
+msgid "State Registration Code"
+msgstr "State Registration Code"
+
+#. module: sgr
+#: view:sgr.formulation_type:0
+msgid "Forumlation Types"
+msgstr "Tipos de Formulación"
+
+#. module: sgr
+#: field:sgr.product_study,is_gpl:0
+msgid "Is GPL?"
+msgstr "Es GPL?"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_registry_category_registry_category
+#: model:ir.ui.menu,name:sgr.menu_registry_category
+msgid "Registry Category"
+msgstr "Categorías Registro "
+
+#. module: sgr
+#: field:sgr.sample_request,departure:0
+msgid "Departure"
+msgstr "Partida"
+
+#. module: sgr
+#: view:res.partner:0 field:res.partner,is_laboratory:0
+msgid "Is Laboratory?"
+msgstr "Es Laboratorio?"
+
+#. module: sgr
+#: field:sgr.experimental_result,state_id:0
+msgid "state_id"
+msgstr "state_id"
+
+#. module: sgr
+#: view:sgr.tax:0 field:sgr.tax,ticket_id:0
+msgid "Ticket N"
+msgstr "Ticket N"
+
+#. module: sgr
+#: field:sgr.document,sgr_partner_document_id:0
+msgid "sgr.partner_document_id"
+msgstr "sgr.partner_document_id"
+
+#. module: sgr
+#: view:sgr.component_registry_finality:0
+msgid "Component Registry Finality"
+msgstr "Finalidad del Registro de Componente"
+
+#. module: sgr
+#: field:sgr.partner_document,replaced_by_id:0
+#: field:sgr.study,replaced_by_id:0
+msgid "Replaced By"
+msgstr "Sustituido por"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_state_registry_state_registrations
+#: model:ir.ui.menu,name:sgr.menu_state_registrations
+msgid "State Registrations"
+msgstr "Registros Provinciales"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_contract
+#: model:ir.model,name:sgrx.model_sgr_contract
+msgid "contract"
+msgstr "contrato"
+
+#. modules: sgr, sgrx
+#: field:sgr.experimental_result,result:0 field:sgr.study,result:0
+#: view:sgr.study:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: sgr
+#: field:sgr.packaging,internal_packaging_material_id:0
+msgid "Int. Material"
+msgstr "Material Int"
+
+#. module: sgr
+#: view:sgr.contract:0 field:sgr.contract,laboratory_id:0
+#: view:sgr.laboratory_registry:0
+#: field:sgr.laboratory_registry,laboratory_id:0 view:sgr.proposal:0
+#: field:sgr.proposal,laboratory_id:0 selection:sgr.registry,type:0
+#: selection:sgr.registry_category,type:0 view:sgr.study:0
+#: field:sgr.study,laboratory_id:0
+msgid "Laboratory"
+msgstr "Laboratorio"
+
+#. module: sgr
+#: field:sgr.study,start_date:0
+msgid "Start Date"
+msgstr "Fecha de inicio"
+
+#. modules: sgr, sgrx
+#: view:sgr.tax:0
+msgid "Set to Pay"
+msgstr "Establecer a pagar"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.study_contracted
+#: model:mail.message.subtype,name:sgr.study_contracted
+#: selection:sgr.study,state:0
+msgid "Contracted"
+msgstr "Contratado"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,mode_of_action:0
+#: field:sgr.technical_product_registry,mode_of_action:0
+msgid "Mode of Action"
+msgstr "Modo de acción"
+
+#. module: sgr
+#: field:sgr.communication,note:0 field:sgr.document,note:0
+#: field:sgr.experimental_result,note:0 field:sgr.product_study,note:0
+#: field:sgr.registry,note:0 field:sgr.sample_request,note:0
+#: field:sgr.state_registry_restriction,note:0
+msgid "Note"
+msgstr "Nota"
+
+#. module: sgrx
+#: model:ir.ui.menu,name:sgrx.menu_samples
+msgid "Samples"
+msgstr "Muestras"
+
+#. module: sgr
+#: selection:sgr.partner_role_in_registry,type:0
+msgid "Formulator"
+msgstr "Formulador"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ret_phase
+msgid "ret_phase"
+msgstr "ret_phase"
+
+#. module: sgr
+#: field:sgr.document_category,registry_category_ids:0
+#: field:sgr.information_category,registry_category_ids:0
+msgid "registry_category_ids"
+msgstr "registry_category_ids"
+
+#. modules: sgr, sgrx
+#: field:sgr.component_registry,sgr_registry_id:0
+#: field:sgr.formulated_product_registry,sgr_registry_id:0
+#: field:sgr.laboratory_registry,sgr_registry_id:0 view:sgr.registry:0
+#: field:sgr.ret_registry,sgr_registry_id:0
+#: field:sgr.state_registry,sgr_registry_id:0
+#: field:sgr.technical_product_registry,sgr_registry_id:0
+#: field:sgr.trademark_registry,sgr_registry_id:0 view:product.product:0
+#: field:product.product,component_registry_detail_ids:0
+#: field:product.product,formulated_product_registry_ids:0
+#: field:product.product,technical_product_registry_ids:0
+msgid "Registries"
+msgstr "Registros"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_study_method_study_methods
+#: model:ir.ui.menu,name:sgr.menu_study_methods
+#: field:sgr.study,study_method_ids:0 view:sgr.study_method:0
+msgid "Study Methods"
+msgstr "Métodos de Estudio"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_products___registries
+msgid "Products & Registries"
+msgstr "Productos & Registros"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.tax_paid
+#: model:mail.message.subtype,name:sgr.tax_paid selection:sgr.tax,state:0
+msgid "Paid"
+msgstr "Pagado"
+
+#. module: sgr
+#: view:sgr.product_in_ret:0
+msgid "Products in RET"
+msgstr "Productos en RET"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_cqq
+msgid "cqq"
+msgstr "cqq"
+
+#. module: sgr
+#: field:sgr.ingredient,chemical_structure:0
+msgid "Chemical Structure"
+msgstr "Estructura Química"
+
+#. module: sgr
+#: field:res.partner,commercial_partner_id:0
+msgid "Commercial Entity"
+msgstr "Entidad Comercial"
+
+#. module: sgr
+#: field:sgr.information_category,footer:0
+msgid "Footer"
+msgstr "Pie"
+
+#. module: sgr
+#: field:sgr.publication,published_on_page:0
+msgid "Published on Page"
+msgstr "Publicado en la página"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_ingredient_function_ingredient_functions
+#: model:ir.ui.menu,name:sgr.menu_ingredient_functions
+#: view:sgr.ingredient_function:0
+msgid "Ingredient Functions"
+msgstr "Funciones de la Sustancia"
+
+#. module: sgr
+#: field:sgr.communication,government_agency_id:0 view:sgr.official_letter:0
+#: field:sgr.official_letter,government_agency_id:0
+#: view:sgr.registry_process:0
+#: field:sgr.registry_process,government_agency_id:0 view:sgr.tax:0
+#: field:sgr.tax,government_agency_id:0
+msgid "Government Agency"
+msgstr "Agencia Gubernamental"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_partner_document
+msgid "partner_document"
+msgstr "partner_document"
+
+#. module: sgr
+#: view:sgr.publication:0 field:sgr.publication,number:0
+#: view:sgr.registry_process:0 field:sgr.registry_process,name:0
+msgid "Number"
+msgstr "Número"
+
+#. module: sgr
+#: field:sgr.document_category,partner_document_presentation_ids:0
+msgid "Doc. Presentation"
+msgstr "Presentación Doc."
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.proposal_done
+#: model:mail.message.subtype,description:sgr.sample_request_done
+#: model:mail.message.subtype,name:sgr.proposal_done
+#: model:mail.message.subtype,name:sgr.sample_request_done
+#: selection:sgr.proposal,state:0 selection:sgr.sample_request,state:0
+msgid "Done"
+msgstr "Realizado"
+
+#. module: sgr
+#: view:sgr.proposal:0 view:sgr.sample_request:0
+msgid "Set Done"
+msgstr "Marcar Realizado"
+
+#. module: sgr
+#: field:sgr.tax,my_amount:0
+msgid "Company Currency Amount"
+msgstr "Monto monetario de Compañía "
+
+#. module: sgr
+#: view:sgr.official_letter:0 field:sgr.official_letter,issue_date:0
+msgid "Issue Date"
+msgstr "Fecha de emisión"
+
+#. module: sgr
+#: view:sgr.experimental_result:0 field:sgr.experimental_result,city:0
+msgid "City"
+msgstr "Ciudad"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_partner_role
+msgid "partner_role"
+msgstr "partner_role"
+
+#. module: sgr
+#: view:sgr.formulated_product_registry:0
+#: field:sgr.formulated_product_registry,commercial_name:0
+#: field:sgr.technical_product_registry,comercial_name:0
+msgid "Commercial Name"
+msgstr "Nombre Comercial"
+
+#. module: sgr
+#: field:sgr.registry,sgr_ret_registry_id:0
+msgid "sgr.ret_registry_id"
+msgstr "sgr.ret_registry_id"
+
+#. module: sgr
+#: view:sgr.registry_category:0
+msgid "Registries Categories"
+msgstr "Categorías de Registros"
+
+#. module: sgr
+#: field:sgr.document,sgr_study_id:0
+msgid "sgr.study_id"
+msgstr "sgr.study_id"
+
+#. module: sgr
+#: field:sgr.study,study_purpose_ids:0
+msgid "Study Purpose"
+msgstr "Propósito del Estudio"
+
+#. module: sgr
+#: field:sgr.document_category,document_ids:0
+msgid "document_ids"
+msgstr "document_ids"
+
+#. module: sgr
+#: field:sgr.state_registry_restriction,tarjet_pest_id:0
+#: field:sgr.use_recommendation,tarjet_pest_id:0
+msgid "Tarjet Pest"
+msgstr "Plagas Objetivo"
+
+#. module: sgr
+#: field:sgr.study,proposal_id:0
+msgid "Proposal"
+msgstr "Propuesta"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_product_product view:sgr.information:0
+#: field:sgr.information,product_id:0 view:sgr.product_in_ret:0
+#: field:sgr.product_in_ret,product_id:0 view:sgr.proposal_product:0
+#: field:sgr.proposal_product,product_id:0
+#: field:sgr.sample_request,product_id:0 view:sgr.study:0
+#: field:sgr.study,product_id:0 view:sgr.trademark_registry:0
+#: field:sgr.trademark_registry,product_id:0
+#: model:ir.model,name:sgrx.model_product_product
+msgid "Product"
+msgstr "Producto"
+
+#. module: sgr
+#: field:sgr.use_recommendation,solution_volume_uom:0
+msgid "Solution Volume UOM"
+msgstr "Volumen Solución UDM "
+
+#. module: sgr
+#: selection:sgr.document_category,experimental_results:0
+msgid "Efficacy"
+msgstr "Efficacy"
+
+#. module: sgr
+#: field:sgr.partner_document,replace_ids:0 field:sgr.study,replace_ids:0
+msgid "Replacing"
+msgstr "Sustitución"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,active_ingredient_rate_uom:0
+msgid "Active Ingredient Rate UOM"
+msgstr "UDM Tasa Sustancia Activa "
+
+#. module: sgr
+#: view:sgr.ret_registry:0 field:sgr.ret_registry,name:0
+msgid "SISRET/Reference"
+msgstr "SISRET/Reference"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "GLP Laboratories Partners"
+msgstr "GLP Laboratorios Asociados"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_document
+msgid "document"
+msgstr "documento"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_packaging_capacity_packaging_capacities
+#: model:ir.ui.menu,name:sgr.menu_packaging_capacities
+#: view:sgr.packaging_capacity:0
+msgid "Packaging Capacities"
+msgstr "Capacidades de embalaje"
+
+#. module: sgr
+#: field:sgr.cqq,ingredient_function_id:0
+msgid "Function"
+msgstr "Función"
+
+#. modules: sgr, sgrx
+#: view:sgr.product_study:0 field:sgr.product_study,sample_quantity:0
+msgid "Sample Quantity"
+msgstr "Cantidad de muestra"
+
+#. module: sgrx
+#: view:sgr.proposal:0
+msgid "Lines"
+msgstr "Lineas"
+
+#. module: sgr
+#: field:sgr.document_move,sent_date:0
+msgid "Sent Date"
+msgstr "Fecha de envío"
+
+#. module: sgr
+#: view:sgr.toxicological_class:0
+msgid "Toxicological Classes"
+msgstr "Clases toxicológicas"
+
+#. modules: sgr, sgrx
+#: view:sgr.publication:0 field:sgr.registry,publications_ids:0
+msgid "Publications"
+msgstr "Publicaciones"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_information_presentation
+msgid "information_presentation"
+msgstr "information_presentation"
+
+#. modules: sgr, sgrx
+#: view:sgr.component_registry:0 view:sgr.contract:0
+#: view:sgr.dossier_document:0 view:sgr.formulated_product_registry:0
+#: view:sgr.information:0 view:sgr.information_presentation:0
+#: view:sgr.laboratory_registry:0 view:sgr.partner_document:0
+#: view:sgr.partner_document_presentation:0 view:sgr.proposal:0
+#: view:sgr.registry:0 view:sgr.registry_process:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.study:0 view:sgr.study_presentation:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: sgr
+#: field:sgr.cqq,min_concentration:0
+msgid "Minimum Conc."
+msgstr "Conc. minima"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Laboratories Partners"
+msgstr "Empresas Laboratorios "
+
+#. module: sgrx
+#: view:sgr.partner_document:0 view:sgr.study:0
+msgid "Report Info"
+msgstr "Informacion de Reporte"
+
+#. module: sgr
+#: selection:sgr.study,source:0
+msgid "Own"
+msgstr "Propia"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_agronomic_class_agronomic_classes
+#: model:ir.ui.menu,name:sgr.menu_agronomic_classes view:sgr.agronomic_class:0
+msgid "Agronomic Classes"
+msgstr "Clases Agronómicas"
+
+#. module: sgr
+#: field:sgr.product_study,sample_uom:0
+msgid "Sample UOM"
+msgstr "UDM Muestra"
+
+#. module: sgr
+#: field:sgr.packaging,external_packaging_material_id:0
+msgid "Ext. Material"
+msgstr "Material Ext."
+
+#. modules: sgr, sgrx
+#: view:sgr.information_presentation:0
+msgid "Informations Presentation"
+msgstr "Información Presentación"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_product_study
+msgid "product_study"
+msgstr "product_study"
+
+#. module: sgr
+#: field:sgr.tax,currency_rate:0
+msgid "Rate"
+msgstr "Ratio"
+
+#. module: sgr
+#: selection:sgr.sample_request,specific_batch:0
+msgid "Yes"
+msgstr "Si"
+
+#. module: sgr
+#: selection:sgr.communication,direction:0
+#: selection:sgr.official_letter,direction:0
+msgid "In"
+msgstr "Entrada"
+
+#. module: sgr
+#: view:sgr.document_category:0 field:sgr.document_category,type:0
+msgid "Document Type"
+msgstr "Tipo de documento"
+
+#. module: sgr
+#: field:sgr.registry,operative_id:0
+msgid "Operative"
+msgstr "Operativa"
+
+#. module: sgr
+#: help:sgr.component_registry,sgr_registry_id:0
+#: help:sgr.formulated_product_registry,sgr_registry_id:0
+#: help:sgr.laboratory_registry,sgr_registry_id:0
+#: help:sgr.ret_registry,sgr_registry_id:0
+#: help:sgr.state_registry,sgr_registry_id:0
+#: help:sgr.technical_product_registry,sgr_registry_id:0
+#: help:sgr.trademark_registry,sgr_registry_id:0
+msgid ""
+"Si el registro es una modificación entonces se debe seleccionar un &quot;"
+"operate_id&quot;\n"
+"Si un registro es del tipo operation &quot;replacement&quot;, también se "
+"debe seleccionar un registro &quot;operate_id&quot; pero para validar el "
+"segundo registor el primero debe estar en estado expirado"
+msgstr ""
+"Si el registro es una modificación entonces se debe seleccionar un &quot;"
+"operate_id&quot;\n"
+"Si un registro es del tipo operation &quot;replacement&quot;, también se "
+"debe seleccionar un registro &quot;operate_id&quot; pero para validar el "
+"segundo registor el primero debe estar en estado expirado"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_shipping_method
+msgid "shipping_method"
+msgstr "shipping_method"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_toxicological_class
+msgid "toxicological_class"
+msgstr "toxicological_class"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_document_category_document_categories
+#: model:ir.ui.menu,name:sgr.menu_document_categories
+#: view:sgr.document_category:0
+#: field:sgr.registry_category,document_category_ids:0
+msgid "Document Categories"
+msgstr "Categorías de Documentos"
+
+#. module: sgr
+#: view:sgr.official_letter:0 field:sgr.official_letter,protocol_date:0
+msgid "Protocol Date"
+msgstr "Fecha Protocolo"
+
+#. module: sgr
+#: field:sgr.product_in_ret,remaining_amount:0
+msgid "Remaining"
+msgstr "Restante"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_files
+msgid "Files"
+msgstr "Archivos"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,is_corrosive:0
+#: field:sgr.technical_product_registry,is_corrosive:0
+msgid "Is Corrosive?"
+msgstr "Es corrosivo ?"
+
+#. module: sgr
+#: view:sgr.tax:0 field:sgr.tax,voucher_id:0
+msgid "Voucher N"
+msgstr "Vale N"
+
+#. module: sgr
+#: field:sgr.communication,company_id:0 field:sgr.contract,company_id:0
+#: field:sgr.document,company_id:0 field:sgr.document_category,company_id:0
+#: field:sgr.information,company_id:0
+#: field:sgr.information_category,company_id:0
+#: field:sgr.official_letter,company_id:0 field:sgr.proposal,company_id:0
+#: field:sgr.publication,company_id:0 field:sgr.publication_type,company:0
+#: field:sgr.registry,company_id:0 field:sgr.registry_category,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ingredient_group
+msgid "ingredient_group"
+msgstr "ingredient_group"
+
+#. module: sgr
+#: field:sgr.publication,act_date:0
+msgid "Act Date"
+msgstr "Fecha Act."
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.component_registry_approved
+#: model:mail.message.subtype,description:sgr.contract_approved
+#: model:mail.message.subtype,description:sgr.dossier_document_approved
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_approved
+#: model:mail.message.subtype,description:sgr.information_approved
+#: model:mail.message.subtype,description:sgr.laboratory_registry_approved
+#: model:mail.message.subtype,description:sgr.partner_document_approved
+#: model:mail.message.subtype,description:sgr.proposal_approved
+#: model:mail.message.subtype,description:sgr.registry_process_approved
+#: model:mail.message.subtype,description:sgr.ret_registry_approved
+#: model:mail.message.subtype,description:sgr.state_registry_approved
+#: model:mail.message.subtype,description:sgr.study_approved
+#: model:mail.message.subtype,description:sgr.technical_product_registry_approved
+#: model:mail.message.subtype,description:sgr.trademark_registry_approved
+#: model:mail.message.subtype,name:sgr.component_registry_approved
+#: model:mail.message.subtype,name:sgr.contract_approved
+#: model:mail.message.subtype,name:sgr.dossier_document_approved
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_approved
+#: model:mail.message.subtype,name:sgr.information_approved
+#: model:mail.message.subtype,name:sgr.laboratory_registry_approved
+#: model:mail.message.subtype,name:sgr.partner_document_approved
+#: model:mail.message.subtype,name:sgr.proposal_approved
+#: model:mail.message.subtype,name:sgr.registry_process_approved
+#: model:mail.message.subtype,name:sgr.ret_registry_approved
+#: model:mail.message.subtype,name:sgr.state_registry_approved
+#: model:mail.message.subtype,name:sgr.study_approved
+#: model:mail.message.subtype,name:sgr.technical_product_registry_approved
+#: model:mail.message.subtype,name:sgr.trademark_registry_approved
+#: selection:sgr.component_registry,state:0 selection:sgr.contract,state:0
+#: selection:sgr.dossier_document,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.information,state:0
+#: selection:sgr.information_presentation,state:0
+#: selection:sgr.laboratory_registry,state:0
+#: selection:sgr.partner_document,state:0
+#: selection:sgr.partner_document_presentation,state:0
+#: selection:sgr.proposal,state:0 selection:sgr.registry,state:0
+#: selection:sgr.registry_process,state:0 selection:sgr.ret_registry,state:0
+#: selection:sgr.state_registry,state:0 selection:sgr.study,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Approved"
+msgstr "Aprobado"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_sample_request
+#: model:ir.model,name:sgrx.model_sgr_sample_request
+msgid "sample_request"
+msgstr "sample_request"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,message_ids:0
+#: field:sgr.component_registry,message_ids:0 field:sgr.contract,message_ids:0
+#: field:sgr.document_move,message_ids:0
+#: field:sgr.dossier_document,message_ids:0
+#: field:sgr.formulated_product_registry,message_ids:0
+#: field:sgr.information,message_ids:0
+#: field:sgr.laboratory_registry,message_ids:0
+#: field:sgr.official_letter,message_ids:0
+#: field:sgr.partner_document,message_ids:0 field:sgr.proposal,message_ids:0
+#: field:sgr.registry_process,message_ids:0
+#: field:sgr.ret_registry,message_ids:0 field:sgr.sample_request,message_ids:0
+#: field:sgr.state_registry,message_ids:0 field:sgr.study,message_ids:0
+#: field:sgr.tax,message_ids:0
+#: field:sgr.technical_product_registry,message_ids:0
+#: field:sgr.trademark_registry,message_ids:0 field:stock.move,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sgr
+#: field:sgr.product_study,batch_number_id:0
+msgid "Batchs Numbers"
+msgstr "Número de lotes"
+
+#. module: sgr
+#: field:sgr.registry,project_id:0
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: sgr
+#: field:sgr.study,study_ids:0 field:sgr.study_method,study_ids:0
+#: field:sgr.study_purpose,study_ids:0
+msgid "study_ids"
+msgstr "study_ids"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,toxicological_class_id:0
+#: field:sgr.technical_product_registry,toxicological_class_id:0
+msgid "Toxicological Class"
+msgstr "Clase Toxicológica"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_information_category
+msgid "information_category"
+msgstr "informacion_categoría"
+
+#. module: sgr
+#: help:sgr.tax,government_agency_id:0
+msgid "Filtrar por partners tipo government agency"
+msgstr "Filtrar por empresas del tipo government agency"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_component_registry_components
+#: model:ir.ui.menu,name:sgr.menu_components view:product.product:0
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+msgid "Components"
+msgstr "Componentes"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_cancelled
+#: model:mail.message.subtype,description:sgr.component_registry_cancelled
+#: model:mail.message.subtype,description:sgr.contract_cancelled
+#: model:mail.message.subtype,description:sgr.document_move_cancelled
+#: model:mail.message.subtype,description:sgr.dossier_document_cancelled
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_cancelled
+#: model:mail.message.subtype,description:sgr.information_cancelled
+#: model:mail.message.subtype,description:sgr.laboratory_registry_cancelled
+#: model:mail.message.subtype,description:sgr.official_letter_cancelled
+#: model:mail.message.subtype,description:sgr.partner_document_cancelled
+#: model:mail.message.subtype,description:sgr.proposal_cancelled
+#: model:mail.message.subtype,description:sgr.registry_process_cancelled
+#: model:mail.message.subtype,description:sgr.ret_registry_cancelled
+#: model:mail.message.subtype,description:sgr.sample_request_cancelled
+#: model:mail.message.subtype,description:sgr.state_registry_cancelled
+#: model:mail.message.subtype,description:sgr.study_cancelled
+#: model:mail.message.subtype,description:sgr.tax_cancelled
+#: model:mail.message.subtype,description:sgr.technical_product_registry_cancelled
+#: model:mail.message.subtype,description:sgr.trademark_registry_cancelled
+#: model:mail.message.subtype,name:sgr.communication_cancelled
+#: model:mail.message.subtype,name:sgr.component_registry_cancelled
+#: model:mail.message.subtype,name:sgr.contract_cancelled
+#: model:mail.message.subtype,name:sgr.document_move_cancelled
+#: model:mail.message.subtype,name:sgr.dossier_document_cancelled
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_cancelled
+#: model:mail.message.subtype,name:sgr.information_cancelled
+#: model:mail.message.subtype,name:sgr.laboratory_registry_cancelled
+#: model:mail.message.subtype,name:sgr.official_letter_cancelled
+#: model:mail.message.subtype,name:sgr.partner_document_cancelled
+#: model:mail.message.subtype,name:sgr.proposal_cancelled
+#: model:mail.message.subtype,name:sgr.registry_process_cancelled
+#: model:mail.message.subtype,name:sgr.ret_registry_cancelled
+#: model:mail.message.subtype,name:sgr.sample_request_cancelled
+#: model:mail.message.subtype,name:sgr.state_registry_cancelled
+#: model:mail.message.subtype,name:sgr.study_cancelled
+#: model:mail.message.subtype,name:sgr.tax_cancelled
+#: model:mail.message.subtype,name:sgr.technical_product_registry_cancelled
+#: model:mail.message.subtype,name:sgr.trademark_registry_cancelled
+#: selection:sgr.communication,state:0
+#: selection:sgr.component_registry,state:0 selection:sgr.contract,state:0
+#: selection:sgr.document_move,state:0 selection:sgr.dossier_document,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.information,state:0
+#: selection:sgr.information_presentation,state:0
+#: selection:sgr.laboratory_registry,state:0
+#: selection:sgr.official_letter,state:0
+#: selection:sgr.partner_document,state:0
+#: selection:sgr.partner_document_presentation,state:0
+#: selection:sgr.proposal,state:0 selection:sgr.registry,state:0
+#: selection:sgr.registry_process,state:0 selection:sgr.ret_registry,state:0
+#: selection:sgr.sample_request,state:0 selection:sgr.state_registry,state:0
+#: selection:sgr.study,state:0 selection:sgr.tax,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. modules: sgr, sgrx
+#: field:sgr.component_registry_detail,cqq_ids:0 view:sgr.cqq:0
+#: field:sgr.formulated_product_registry,cqq_ids:0
+#: field:sgr.technical_product_registry,cqq_ids:0
+#: view:sgr.component_registry_detail:0 view:sgr.formulated_product_registry:0
+#: view:sgr.technical_product_registry:0
+msgid "CQQ"
+msgstr "CQQ"
+
+#. modules: sgr, sgrx
+#: view:sgr.experimental_result:0
+#: field:sgr.experimental_result,study_experimental_results:0
+#: field:sgr.study,experimental_result_ids:0 view:sgr.study:0
+#: field:sgr.study,document_category_experimental_results:0
+msgid "Experimental Results"
+msgstr "Resultados experimentales"
+
+#. module: sgr
+#: field:sgr.document_move,document_id:0 field:sgr.information,document_id:0
+msgid "document_id"
+msgstr "document_id"
+
+#. modules: sgr, sgrx
+#: field:sgr.study,validation_method:0 view:sgr.study:0
+msgid "Validation Method"
+msgstr "Método de validación"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_packaging
+msgid "packaging"
+msgstr "embalaje"
+
+#. module: sgr
+#: field:sgr.registry_process,close_date:0
+msgid "Close Date"
+msgstr "Fecha de Cierre"
+
+#. module: sgr
+#: field:sgr.sample_request,supplier_id:0 view:sgr.study:0
+#: selection:sgr.study,source:0 field:sgr.study,supplier_id:0
+msgid "Supplier"
+msgstr "Proveedor"
+
+#. module: sgr
+#: field:sgr.technical_product_registry,partner_role_in_registry_ids:0
+msgid "Partner Roles"
+msgstr "Roles de empresa"
+
+#. module: sgr
+#: field:sgr.packaging_capacity,packaging_ids:0
+msgid "packaging_ids"
+msgstr "packaging_ids"
+
+#. module: sgrx
+#: view:sgr.packaging:0
+msgid "External"
+msgstr "Externo"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_studies_conf
+msgid "Studies Conf"
+msgstr "Estudios Conf"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,operation:0
+#: field:sgr.laboratory_registry,operation:0
+#: field:sgr.state_registry,operation:0
+#: field:sgr.technical_product_registry,operation:0
+msgid "Operation"
+msgstr "Operación"
+
+#. module: sgr
+#: field:sgr.packaging,internal_packaging_type_id:0
+msgid "Int. Type"
+msgstr "Tipo Int."
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,commecial_product_rate_uom:0
+msgid "Commercial Product Rate UOM"
+msgstr "UDM Ratio Producto Comercial"
+
+#. module: sgr
+#: field:sgr.use_recommendation,security_interval_in_days:0
+msgid "Security Interval (Days)"
+msgstr "Intervalo de Seguridad (días)"
+
+#. modules: sgr, sgrx
+#: model:ir.ui.menu,name:sgr.menu_documents
+#: field:sgr.communication,partner_document_presentation_ids:0
+#: view:sgr.document:0 field:sgr.dossier_document,sgr_document_id:0
+#: field:sgr.partner_document,sgr_document_id:0
+#: field:sgr.study,sgr_document_id:0 field:sgr.tax,sgr_document_id:0
+#: view:sgr.communication:0 view:sgr.component_registry:0
+#: view:sgr.formulated_product_registry:0 view:sgr.laboratory_registry:0
+#: view:sgr.ret_registry:0 view:sgr.state_registry:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Documents"
+msgstr "Documentos"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_study_presentation
+msgid "study_presentation"
+msgstr "study_presentation"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.registry:0
+#: view:sgr.registry_process:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.study:0
+#: view:sgr.technical_product_registry:0 view:sgr.trademark_registry:0
+msgid "Reject"
+msgstr "Rechazar"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.component_registry_depreciated
+#: model:mail.message.subtype,description:sgr.dossier_document_depreciated
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_depreciated
+#: model:mail.message.subtype,description:sgr.information_depreciated
+#: model:mail.message.subtype,description:sgr.laboratory_registry_depreciated
+#: model:mail.message.subtype,description:sgr.partner_document_depreciated
+#: model:mail.message.subtype,description:sgr.registry_process_depreciated
+#: model:mail.message.subtype,description:sgr.ret_registry_depreciated
+#: model:mail.message.subtype,description:sgr.state_registry_depreciated
+#: model:mail.message.subtype,description:sgr.technical_product_registry_depreciated
+#: model:mail.message.subtype,description:sgr.trademark_registry_depreciated
+#: model:mail.message.subtype,name:sgr.component_registry_depreciated
+#: model:mail.message.subtype,name:sgr.dossier_document_depreciated
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_depreciated
+#: model:mail.message.subtype,name:sgr.information_depreciated
+#: model:mail.message.subtype,name:sgr.laboratory_registry_depreciated
+#: model:mail.message.subtype,name:sgr.partner_document_depreciated
+#: model:mail.message.subtype,name:sgr.registry_process_depreciated
+#: model:mail.message.subtype,name:sgr.ret_registry_depreciated
+#: model:mail.message.subtype,name:sgr.state_registry_depreciated
+#: model:mail.message.subtype,name:sgr.technical_product_registry_depreciated
+#: model:mail.message.subtype,name:sgr.trademark_registry_depreciated
+#: selection:sgr.component_registry,state:0
+#: selection:sgr.dossier_document,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.information,state:0 selection:sgr.laboratory_registry,state:0
+#: selection:sgr.partner_document,state:0 selection:sgr.registry,state:0
+#: selection:sgr.registry_process,state:0 selection:sgr.ret_registry,state:0
+#: selection:sgr.state_registry,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Depreciated"
+msgstr "Depreciado"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_physical_state
+msgid "physical_state"
+msgstr "physical_state"
+
+#. module: sgr
+#: field:sgr.registry,sgr_technical_product_registry_id:0
+msgid "sgr.technical_product_registry_id"
+msgstr "sgr.id_registro_tecnico_producto"
+
+#. modules: sgr, sgrx
+#: field:sgr.communication,message_follower_ids:0
+#: field:sgr.component_registry,message_follower_ids:0
+#: field:sgr.contract,message_follower_ids:0
+#: field:sgr.document_move,message_follower_ids:0
+#: field:sgr.dossier_document,message_follower_ids:0
+#: field:sgr.formulated_product_registry,message_follower_ids:0
+#: field:sgr.information,message_follower_ids:0
+#: field:sgr.laboratory_registry,message_follower_ids:0
+#: field:sgr.official_letter,message_follower_ids:0
+#: field:sgr.partner_document,message_follower_ids:0
+#: field:sgr.proposal,message_follower_ids:0
+#: field:sgr.registry_process,message_follower_ids:0
+#: field:sgr.ret_registry,message_follower_ids:0
+#: field:sgr.sample_request,message_follower_ids:0
+#: field:sgr.state_registry,message_follower_ids:0
+#: field:sgr.study,message_follower_ids:0 field:sgr.tax,message_follower_ids:0
+#: field:sgr.technical_product_registry,message_follower_ids:0
+#: field:sgr.trademark_registry,message_follower_ids:0
+#: field:stock.move,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sgr
+#: selection:sgr.document_category,type:0 field:sgr.study,study_id:0
+#: field:sgr.study_presentation,study_id:0
+msgid "Study"
+msgstr "Estudio"
+
+#. module: sgr
+#: selection:sgr.formulated_product_registry,operation:0
+#: selection:sgr.laboratory_registry,operation:0
+#: selection:sgr.state_registry,operation:0
+#: selection:sgr.technical_product_registry,operation:0
+msgid "New"
+msgstr "Nuevo"
+
+#. module: sgr
+#: view:sgr.product_in_ret:0 field:sgr.product_in_ret,concentration_uom_id:0
+#: field:sgr.study,concentration_uom_id:0
+msgid "Concentration UOM"
+msgstr "UOM Concentración"
+
+#. module: sgr
+#: view:res.partner:0 field:res.partner,is_glp:0
+msgid "Is GLP?"
+msgstr "Es GLP ?"
+
+#. module: sgr
+#: field:sgr.cqq,max_concentration:0
+msgid "Maximum Conc."
+msgstr "Concentración máxima"
+
+#. module: sgr
+#: field:sgr.proposal,sponsor_ids:0
+msgid "Sponsors"
+msgstr "Patrocinadores"
+
+#. module: sgr
+#: field:sgr.ingredient,solubility:0
+msgid "Solubility"
+msgstr "Solubilidad"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_formulated_product_registry_formulated_products
+#: model:ir.ui.menu,name:sgr.menu_formulated_products
+#: view:sgr.component_registry:0
+#: field:sgr.component_registry,formulated_product_ids:0
+#: view:sgr.component_registry_detail:0
+#: field:sgr.component_registry_detail,formulated_product_ids:0
+#: view:product.product:0
+msgid "Formulated Products"
+msgstr "Productos Formulados"
+
+#. module: sgr
+#: field:sgr.state_registry,state_registry_restriction_ids:0
+#: view:sgr.state_registry_restriction:0
+msgid "State Registry Restrictions"
+msgstr "Restricciones estatales del Registro"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_communication_type
+msgid "communication_type"
+msgstr "communication_type"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: sgr
+#: field:sgr.packaging,sample_request_id:0
+msgid "sample_request_id"
+msgstr "sample_request_id"
+
+#. modules: sgr, sgrx
+#: model:ir.actions.act_window,name:sgr.action_sgr_sample_request_sample_request
+#: model:ir.ui.menu,name:sgr.menu_sample_request
+#: field:sgr.product_in_ret,sample_request_ids:0 view:sgr.sample_request:0
+#: model:ir.ui.menu,name:sgrx.menu_sample_request
+#: field:stock.move,sample_request_id:0
+msgid "Sample Request"
+msgstr "Requerir Muestra"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.contract_solved
+#: model:mail.message.subtype,name:sgr.contract_solved
+#: selection:sgr.contract,state:0
+msgid "Solved"
+msgstr "Resuelto"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_packaging_capacity
+msgid "packaging_capacity"
+msgstr "packaging_capacity"
+
+#. module: sgr
+#: view:sgr.component_registry:0 view:sgr.formulated_product_registry:0
+#: view:sgr.laboratory_registry:0 view:sgr.registry:0
+#: field:sgr.registry,free_sale_number:0 view:sgr.ret_registry:0
+#: view:sgr.state_registry:0 view:sgr.technical_product_registry:0
+#: view:sgr.trademark_registry:0
+msgid "Free Sale Number"
+msgstr "Número de venta libre"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_component_registry
+msgid "component_registry"
+msgstr "component_registry"
+
+#. module: sgr
+#: field:sgr.state_registry_restriction,restriction:0
+msgid "Restriction"
+msgstr "Restricción"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_application_mode
+msgid "application_mode"
+msgstr "application_mode"
+
+#. module: sgr
+#: field:sgr.official_letter,delivery_date:0
+msgid "Delivery Date"
+msgstr "Fecha de Entrega"
+
+#. module: sgr
+#: view:sgr.study:0
+msgid "Approve Study Plan"
+msgstr "Aprobar el Plan de Estudios"
+
+#. module: sgr
+#: field:sgr.packaging,packaging_capacity_ids:0
+msgid "Capacity"
+msgstr "Capacidad"
+
+#. module: sgr
+#: selection:sgr.ingredient,type:0 selection:sgr.ingredient_group,type:0
+msgid "Impurity"
+msgstr "Impureza"
+
+#. module: sgr
+#: model:ir.ui.menu,name:sgr.menu_contacts
+msgid "Contacts"
+msgstr "Contactos"
+
+#. module: sgr
+#: field:res.partner,ret_registry_sup_ids:0
+msgid "ret_registry_sup_ids"
+msgstr "ret_registry_sup_ids"
+
+#. module: sgr
+#: view:sgr.agronomic_class:0 view:sgr.application_mode:0
+#: view:sgr.communication:0 view:sgr.communication_type:0
+#: view:sgr.component_registry:0 view:sgr.component_registry_detail:0
+#: view:sgr.component_registry_finality:0 view:sgr.contract:0 view:sgr.cqq:0
+#: view:sgr.crop:0 view:sgr.document:0 view:sgr.document_category:0
+#: view:sgr.document_move:0 view:sgr.dossier_document:0
+#: view:sgr.emergency_information:0 view:sgr.environmental_class:0
+#: view:sgr.experimental_result:0 view:sgr.formulated_product_registry:0
+#: view:sgr.formulation_type:0 view:sgr.information:0
+#: view:sgr.information_category:0 view:sgr.information_presentation:0
+#: view:sgr.ingredient:0 view:sgr.ingredient_function:0
+#: view:sgr.ingredient_group:0 view:sgr.ingredient_name_category:0
+#: view:sgr.ingredient_other_name:0 view:sgr.laboratory_registry:0
+#: view:sgr.lmr:0 view:sgr.mode_of_action:0 view:sgr.official_letter:0
+#: view:sgr.packaging:0 view:sgr.packaging_capacity:0
+#: view:sgr.packaging_material:0 view:sgr.packaging_type:0
+#: view:sgr.partner_document:0 view:sgr.partner_document_presentation:0
+#: view:sgr.partner_role_in_registry:0 view:sgr.physical_state:0
+#: view:sgr.product_in_ret:0 view:sgr.product_study:0 view:sgr.proposal:0
+#: view:sgr.proposal_product:0 view:sgr.publication:0
+#: view:sgr.publication_type:0 view:sgr.registry:0
+#: view:sgr.registry_category:0 view:sgr.registry_process:0
+#: view:sgr.ret_phase:0 view:sgr.ret_purpose:0 view:sgr.ret_registry:0
+#: view:sgr.sample_request:0 view:sgr.shipping_method:0
+#: view:sgr.state_registry:0 view:sgr.state_registry_restriction:0
+#: view:sgr.study:0 view:sgr.study_method:0 view:sgr.study_presentation:0
+#: view:sgr.study_purpose:0 view:sgr.target_pests:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0 view:sgr.toxicological_class:0
+#: view:sgr.trademark_registry:0 view:sgr.trademark_type:0
+#: view:sgr.use_recommendation:0
+msgid "By Attribute"
+msgstr "Por atributo"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_draft
+#: model:mail.message.subtype,description:sgr.component_registry_draft
+#: model:mail.message.subtype,description:sgr.contract_draft
+#: model:mail.message.subtype,description:sgr.document_move_draft
+#: model:mail.message.subtype,description:sgr.dossier_document_draft
+#: model:mail.message.subtype,description:sgr.formulated_product_registry_draft
+#: model:mail.message.subtype,description:sgr.information_draft
+#: model:mail.message.subtype,description:sgr.laboratory_registry_draft
+#: model:mail.message.subtype,description:sgr.official_letter_draft
+#: model:mail.message.subtype,description:sgr.partner_document_draft
+#: model:mail.message.subtype,description:sgr.proposal_draft
+#: model:mail.message.subtype,description:sgr.registry_process_draft
+#: model:mail.message.subtype,description:sgr.ret_registry_draft
+#: model:mail.message.subtype,description:sgr.sample_request_draft
+#: model:mail.message.subtype,description:sgr.state_registry_draft
+#: model:mail.message.subtype,description:sgr.study_draft
+#: model:mail.message.subtype,description:sgr.tax_draft
+#: model:mail.message.subtype,description:sgr.technical_product_registry_draft
+#: model:mail.message.subtype,description:sgr.trademark_registry_draft
+#: model:mail.message.subtype,name:sgr.communication_draft
+#: model:mail.message.subtype,name:sgr.component_registry_draft
+#: model:mail.message.subtype,name:sgr.contract_draft
+#: model:mail.message.subtype,name:sgr.document_move_draft
+#: model:mail.message.subtype,name:sgr.dossier_document_draft
+#: model:mail.message.subtype,name:sgr.formulated_product_registry_draft
+#: model:mail.message.subtype,name:sgr.information_draft
+#: model:mail.message.subtype,name:sgr.laboratory_registry_draft
+#: model:mail.message.subtype,name:sgr.official_letter_draft
+#: model:mail.message.subtype,name:sgr.partner_document_draft
+#: model:mail.message.subtype,name:sgr.proposal_draft
+#: model:mail.message.subtype,name:sgr.registry_process_draft
+#: model:mail.message.subtype,name:sgr.ret_registry_draft
+#: model:mail.message.subtype,name:sgr.sample_request_draft
+#: model:mail.message.subtype,name:sgr.state_registry_draft
+#: model:mail.message.subtype,name:sgr.study_draft
+#: model:mail.message.subtype,name:sgr.tax_draft
+#: model:mail.message.subtype,name:sgr.technical_product_registry_draft
+#: model:mail.message.subtype,name:sgr.trademark_registry_draft
+#: selection:sgr.communication,state:0
+#: selection:sgr.component_registry,state:0 selection:sgr.contract,state:0
+#: selection:sgr.document_move,state:0 selection:sgr.dossier_document,state:0
+#: selection:sgr.formulated_product_registry,state:0
+#: selection:sgr.information,state:0
+#: selection:sgr.information_presentation,state:0
+#: selection:sgr.laboratory_registry,state:0
+#: selection:sgr.official_letter,state:0
+#: selection:sgr.partner_document,state:0
+#: selection:sgr.partner_document_presentation,state:0
+#: selection:sgr.proposal,state:0 selection:sgr.registry,state:0
+#: selection:sgr.registry_process,state:0 selection:sgr.ret_registry,state:0
+#: selection:sgr.sample_request,state:0 selection:sgr.state_registry,state:0
+#: selection:sgr.study,state:0 selection:sgr.tax,state:0
+#: selection:sgr.technical_product_registry,state:0
+#: selection:sgr.trademark_registry,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: sgr
+#: field:sgr.document_move,requested_date:0
+msgid "Requested Date"
+msgstr "Fecha solicitada"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Government Agencies Partners"
+msgstr "Agencias de Gobierno"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_ingredient_function
+msgid "ingredient_function"
+msgstr "ingredient_function"
+
+#. module: sgr
+#: field:sgr.registry,sgr_trademark_registry_id:0
+msgid "sgr.trademark_registry_id"
+msgstr "sgr.trademark_registry_id"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_proposal_product
+#: model:ir.model,name:sgrx.model_sgr_proposal_product
+msgid "proposal_product"
+msgstr "proposal_product"
+
+#. module: sgr
+#: selection:sgr.communication_type,hierachical_type:0
+#: selection:sgr.document_category,hierachical_type:0
+#: selection:sgr.information_category,hierachical_type:0
+msgid "Normal"
+msgstr "Normal"
+
+#. modules: sgr, sgrx
+#: view:sgr.document_category:0
+#: field:sgr.document_category,show_validation_method:0
+#: field:sgr.study,document_category_show_validation_method:0
+msgid "Show validation method"
+msgstr "Mostrar metodo de validación"
+
+#. module: sgr
+#: field:sgr.use_recommendation,application_mode_id:0
+msgid "Application Mode"
+msgstr "Modo de aplicación"
+
+#. module: sgr
+#: field:sgr.cqq,declared_concentration:0
+msgid "Declared Concentration"
+msgstr "Concentración declarada"
+
+#. module: sgrx
+#: view:sgr.formulated_product_registry:0
+msgid "Use Recomm."
+msgstr "Utilizar Recom."
+
+#. modules: sgr, sgrx
+#: field:sgr.component_registry_detail,uses_ids:0
+#: view:sgr.component_registry_detail:0
+msgid "Uses"
+msgstr "Usos"
+
+#. module: sgr
+#: model:res.groups,name:sgr.group_user field:sgr.official_letter,user:0
+msgid "User"
+msgstr "Usuario"
+
+#. module: sgr
+#: selection:sgr.partner_role_in_registry,type:0
+msgid "Manufacturer"
+msgstr "Manufacturador"
+
+#. module: sgr
+#: field:sgr.agronomic_class,ingredient_ids:0
+#: field:sgr.ingredient_group,ingredient_ids:0
+#: field:sgr.mode_of_action,ingredient_ids:0
+msgid "ingredient_ids"
+msgstr "ingredient_ids"
+
+#. module: sgrx
+#: constraint:stock.move:0
+msgid "You cannot move products from or to a location of the type view."
+msgstr "No puede mover productos desde o hacia una ubicación de tipo vista."
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_communication
+msgid "dentro de un registro existen comunicaciones entre los organismo"
+msgstr "dentro de un registro existen comunicaciones entre los organismo"
+
+#. modules: sgr, sgrx
+#: view:sgr.proposal:0 field:sgr.proposal,contract_id:0 view:sgr.study:0
+msgid "Contract"
+msgstr "Contrato"
+
+#. modules: sgr, sgrx
+#: view:sgr.document_move:0
+msgid "Document Moves"
+msgstr "Movimientos de Documento"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_trademark_type_trademark_types
+#: model:ir.ui.menu,name:sgr.menu_trademark_types
+msgid "Trademark Types"
+msgstr "Tipos de Registro de Marca"
+
+#. module: sgr
+#: field:sgr.use_recommendation,active_ingredient_rate:0
+msgid "Active Ingredient Rate"
+msgstr "Ratio de Sustancia Activo"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_proposal
+#: model:ir.model,name:sgrx.model_sgr_proposal
+msgid "proposal"
+msgstr "propuesta"
+
+#. module: sgr
+#: field:sgr.publication,publication_date:0
+msgid "Publication Date"
+msgstr "Fecha de publicación"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_packaging_material
+msgid "packaging_material"
+msgstr "packaging_material"
+
+#. module: sgrx
+#: view:stock.move:0
+msgid "Traceability"
+msgstr "Trazabilidad"
+
+#. module: sgr
+#: field:sgr.document,sgr_tax_id:0
+msgid "sgr.tax_id"
+msgstr "sgr.tax_id"
+
+#. module: sgrx
+#: view:res.partner:0
+msgid "Gov. Agencies"
+msgstr "Agencias Gob"
+
+#. modules: sgr, sgrx
+#: model:ir.model,name:sgr.model_sgr_product_in_ret
+#: model:ir.model,name:sgrx.model_sgr_product_in_ret
+msgid "product_in_ret"
+msgstr "product_in_ret"
+
+#. module: sgr
+#: selection:sgr.document_category,type:0
+msgid "Dossier Document"
+msgstr "Documento Expediente"
+
+#. module: sgr
+#: view:sgr.communication:0 view:sgr.contract:0
+msgid "Close"
+msgstr "Cerrar"
+
+#. modules: sgr, sgrx
+#: field:sgr.document,move_ids:0 view:sgr.contract:0
+msgid "Moves"
+msgstr "Movimientos"
+
+#. module: sgrx
+#: view:sgr.component_registry_detail:0 view:sgr.formulated_product_registry:0
+#: view:sgr.ret_registry:0 view:sgr.study:0 view:sgr.tax:0
+#: view:sgr.technical_product_registry:0
+msgid "Gral Info"
+msgstr "Información Gral"
+
+#. module: sgr
+#: view:sgr.document_move:0 field:sgr.document_move,to_partner:0
+msgid "To"
+msgstr "A"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_mode_of_action_modes_of_action
+#: model:ir.ui.menu,name:sgr.menu_modes_of_action
+#: field:sgr.ingredient,mode_of_action_ids:0
+#: field:sgr.technical_product_registry,mode_of_action_ids:0
+msgid "Modes Of Action"
+msgstr "Modos de Acción"
+
+#. module: sgr
+#: field:sgr.contract,observations:0
+msgid "Observations"
+msgstr "Observaciones"
+
+#. module: sgr
+#: field:sgr.agronomic_class,technical_product_registry_id:0
+#: field:sgr.cqq,technical_product_registry_id:0
+#: field:sgr.emergency_information,technical_product_registry_id:0
+#: field:sgr.environmental_class,technical_product_registry_id:0
+#: field:sgr.mode_of_action,technical_product_registry_id:0
+#: field:sgr.packaging,technical_product_registry_id:0
+#: field:sgr.partner_role_in_registry,technical_product_registry_id:0
+#: field:sgr.physical_state,technical_product_registry_id:0
+#: field:sgr.toxicological_class,technical_product_registry_id:0
+msgid "technical_product_registry_id"
+msgstr "technical_product_registry_id"
+
+#. module: sgr
+#: model:mail.message.subtype,description:sgr.communication_resolved
+#: model:mail.message.subtype,name:sgr.communication_resolved
+#: selection:sgr.communication,state:0
+msgid "Resolved"
+msgstr "Resuelto "
+
+#. module: sgr
+#: view:sgr.environmental_class:0 field:sgr.environmental_class,description:0
+#: field:sgr.lmr,description:0 field:sgr.publication,description:0
+#: field:sgr.study_method,description:0 view:sgr.toxicological_class:0
+#: field:sgr.toxicological_class,description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: sgr
+#: field:sgr.communication,official_letter_id:0
+msgid "Official Letter"
+msgstr "Carta Documento"
+
+#. module: sgr
+#: model:ir.module.category,description:sgr.module_category_sgr
+#: model:ir.module.category,name:sgr.module_category_sgr
+#: model:ir.ui.menu,name:sgr.menu_sgr
+msgid "SGR"
+msgstr "SGR"
+
+#. module: sgr
+#: field:sgr.experimental_result,volume:0
+msgid "Volume"
+msgstr "Volumen"
+
+#. module: sgr
+#: view:sgr.ret_purpose:0 field:sgr.ret_purpose,name:0 view:sgr.ret_registry:0
+#: field:sgr.ret_registry,ret_purpose_ids:0
+msgid "Purpose"
+msgstr "Propósito"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_target_pests_tarjet_pests
+#: model:ir.ui.menu,name:sgr.menu_tarjet_pests
+#: field:sgr.experimental_result,target_pest_id:0
+#: field:sgr.ret_registry,tarjet_pest_ids:0
+msgid "Tarjet Pests"
+msgstr "Plagas Objetivo"
+
+#. module: sgr
+#: view:sgr.ret_registry:0 field:sgr.ret_registry,ret_phase_id:0
+msgid "Phase"
+msgstr "Fase"
+
+#. module: sgr
+#: field:sgr.contract,property_general_account_id:0
+msgid "general_account_id"
+msgstr "general_account_id"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_registry_category
+msgid "registry_category"
+msgstr "registry_category"
+
+#. module: sgr
+#: field:sgr.lmr,country_id:0
+msgid "Country"
+msgstr "País"
+
+#. module: sgr
+#: field:sgr.document,information_ids:0
+#: field:sgr.information_category,information_ids:0
+msgid "information_ids"
+msgstr "information_ids"
+
+#. module: sgr
+#: field:sgr.publication,act:0
+msgid "Act"
+msgstr "Act"
+
+#. module: sgr
+#: field:sgr.contract,property_analytic_account_root_id:0
+msgid "analytic_account_root_id"
+msgstr "analytic_account_root_id"
+
+#. module: sgr
+#: help:sgr.component_registry_detail,component_id:0
+msgid "Filtrar por productos del tipo component"
+msgstr "Filtrar por productos del tipo component"
+
+#. module: sgr
+#: field:res.partner,gov_registration_date:0
+msgid "Gov. Reg Date"
+msgstr "Fecha Registro Gob."
+
+#. module: sgrx
+#: model:mail.message.subtype,name:sgrx.mt_move_change
+msgid "Status Change"
+msgstr "Cambio de estado"
+
+#. module: sgr
+#: field:sgr.contract,payment_term_id:0
+msgid "Payment Term"
+msgstr "Plazo de pago"
+
+#. module: sgr
+#: field:sgr.sample_request,import_license:0
+msgid "Import License"
+msgstr "Licencia Importación"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_official_letter
+msgid "official_letter"
+msgstr "official_letter"
+
+#. module: sgr
+#: field:sgr.registry_process,open_official_letter_id:0
+msgid "Open Official Letter"
+msgstr "Carta Documento de Apertura"
+
+#. module: sgr
+#: model:ir.actions.act_window,name:sgr.action_sgr_physical_state_physical_states
+#: model:ir.ui.menu,name:sgr.menu_physical_states view:sgr.physical_state:0
+msgid "Physical States"
+msgstr "Estados físicos"
+
+#. module: sgr
+#: field:sgr.formulated_product_registry,component_registry_detail_ids:0
+msgid "Component Registries"
+msgstr "Registros de componentes"
+
+#. module: sgr
+#: model:ir.model,name:sgr.model_sgr_trademark_registry
+msgid "trademark_registry"
+msgstr "trademark_registry"

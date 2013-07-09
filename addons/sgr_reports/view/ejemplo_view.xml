@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+
+<!-- EKEMPLO DEFINICION VISTA -->
+        <!-- SEARCHVIEW -->
+<!--
+        <record id="view_sagi_sagi_filter" model="ir.ui.view">
+            <field name="name">sagi.sagi.select</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <search string="sagi" version="7.0">
+                        <field name="agronomic_class"
+                            />
+                </search>
+            </field>
+        </record>
+-->
+        <!-- FORMVIEW -->
+<!--
+        <record id="view_sagi_sagi_form" model="ir.ui.view">
+            <field name="name">sagi.sagi.form</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <form string="sagi" version="7.0">
+                    <header>
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_close_project"
+                            states="on_closure"
+                            string="Close Project"
+                            />
+                        <button name="sgn_abort"
+                            states="on_excecution_and_control,on_closure"
+                            string="Abort"
+                            />
+                        <button name="sgn_reject"
+                            states="on_creation,on_initiation"
+                            string="Reject"
+                            />
+                        <button name="sgn_cancel"
+                            states="on_excecution_and_control,on_closure,draft,aborted,on_creation,on_planning,on_initiation,rejected,closed"
+                            string="Cancel"
+                            />
+                        <button name="sgn_next_stage"
+                            states="on_creation,on_excecution_and_control,draft,on_initiation,on_planning"
+                            string="Next Stage"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="sagi">
+                     <group>
+                        <field name="agronomic_class"
+                            />
+                        <field name="create_date"
+                            />
+                        <field name="created_by"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+-->
+        <!-- TREEVIEW -->
+<!--
+        <record id="view_sagi_sagi_tree" model="ir.ui.view">
+            <field name="name">sagi.sagi.tree</field>
+            <field name="model">sagi.sagi</field>
+            <field name="arch" type="xml">
+                <tree string="sagi"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('on_creation', 'on_closure', 'on_excecution_and_control', 'on_planning', 'on_initiation'); red:state in ()"
+                    >
+                    <field name="agronomic_class"/>
+                    <field name="create_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+-->
+        <!-- WINDOWACTION -->
+<!--
+        <record id="action_sagi_sagi_form" model="ir.actions.act_window">
+            <field name="name">sagi</field>
+            <field name="res_model">sagi.sagi</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_sagi_sagi_filter"/>
+        </record>
+-->
+<!--FIN EJEMPLO-->
+    
+	</data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

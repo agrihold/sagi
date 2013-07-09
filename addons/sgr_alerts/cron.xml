@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<openerp>
+    <data noupdate="1">
+        <record model="ir.cron" id="sgr_alert_upcoming_taxs_cron">
+            <field name="name">Alert of Upcoming Taxs</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">work_days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'sgr.tax'"/>
+            <field name="function" eval="'send_alerts_with_upcoming_days'"/>
+            <field name="args" eval="'(2,)'" />
+        </record>
+        <record model="ir.cron" id="sgr_alert_upcoming_sample_request_cron">
+            <field name="name">Alert of Upcoming Sample Requests</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">work_days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'sgr.sample_request'"/>
+            <field name="function" eval="'send_alerts_with_upcoming_days'"/>
+            <field name="args" eval="'(2,)'" />
+        </record>
+        <record model="ir.cron" id="sgr_alert_upcoming_communication_cron">
+            <field name="name">Alert of Upcoming Communications</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">work_days</field>
+            <field name="numbercall">-1</field>
+            <field name="active" eval="True"/>
+            <field name="doall" eval="False"/>
+            <field name="model" eval="'sgr.communication'"/>
+            <field name="function" eval="'send_alerts_with_upcoming_days'"/>
+            <field name="args" eval="'(2,)'" />
+        </record>
+    </data>
+</openerp>

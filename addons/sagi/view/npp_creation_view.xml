@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.npp_creation -->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sagi_npp_creation_filter" model="ir.ui.view">
+            <field name="name">sagi.npp_creation.select</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <search string="npp_creation" version="7.0">
+                    <group string="By Attribute">
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="agronomic_class" string="Agronomic Class"
+                            />
+                    <field name="next_action_responsible" string="Responsible"
+                            />
+                    <field name="project" string="Project"
+                            />
+                    <field name="phase" string="Phase"
+                            />
+                    <field name="operative_id" string="Operative"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="related_product_ids" string="Related Products"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sagi_npp_creation_form" model="ir.ui.view">
+            <field name="name">sagi.npp_creation.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <form string="npp_creation" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="npp_creation">
+                     <group>
+                        <field name="creation_date_to_start"
+                            />
+                        <field name="creation_date_to_end"
+                            />
+                        <field name="creation_started_date"
+                            />
+                        <field name="creation_end_date"
+                            />
+                        <field name="SNP_file"
+                            />
+                        <field name="QNP_file"
+                            />
+                        <field name="CIO_file"
+                            />
+                        <field name="summary_file"
+                            />
+                        <field name="CO_file"
+                            />
+                        <field name="presentation_file"
+                            />
+                        <field name="CIA_file"
+                            />
+                        <field name="date_to_end"
+                            />
+                        <field name="budget"
+                            />
+                        <field name="project_leader"
+                            />
+                        <field name="project_sponsor"
+                            />
+                        <field name="reference"
+                            />
+                        <field name="name"
+                            />
+                        <field name="agronomic_class"
+                            />
+                        <field name="next_action_description"
+                            />
+                        <field name="next_action_date"
+                            />
+                        <field name="next_action_responsible"
+                            />
+                        <field name="project"
+                            />
+                        <field name="phase"
+                            />
+                        <field name="abort_file"
+                            />
+                        <field name="privacy_visibility"
+                            />
+                        <field name="operative_id"
+                            />
+                    <field name="status_report_ids"
+                            />
+                    <field name="interested_operative_ids"
+                            />
+                    <field name="related_product_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sagi_npp_creation_tree" model="ir.ui.view">
+            <field name="name">sagi.npp_creation.tree</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <tree string="npp_creation"
+                    >
+                    <field name="reference"
+                        />
+                    <field name="name"
+                        />
+                    <field name="agronomic_class"
+                        />
+                    <field name="next_action_responsible"
+                        />
+                    <field name="phase"
+                        />
+                    <field name="operative_id"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

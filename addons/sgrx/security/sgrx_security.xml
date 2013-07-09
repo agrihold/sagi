@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+-->
+<openerp>
+    <data>
+    
+    <!--COMMUNICATION-->
+    <record id="communication_mcompany_rule" model="ir.rule">
+        <field name="name">Communication</field>
+        <field name="model_id" ref="sgr.model_sgr_communication"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>
+
+    <!--contract-->
+    <record id="contract_mcompany_rule" model="ir.rule">
+        <field name="name">Contract</field>
+        <field name="model_id" ref="sgr.model_sgr_contract"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>    
+
+    <!--document-->
+    <record id="document_mcompany_rule" model="ir.rule">
+        <field name="name">Document</field>
+        <field name="model_id" ref="sgr.model_sgr_document"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>    
+            
+    <!--document_category-->
+    <record id="document_category_mcompany_rule" model="ir.rule">
+        <field name="name">Document Category</field>
+        <field name="model_id" ref="sgr.model_sgr_document_category"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>   
+
+    <!--information-->
+    <record id="information_mcompany_rule" model="ir.rule">
+        <field name="name">Information</field>
+        <field name="model_id" ref="sgr.model_sgr_information"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>  
+    
+    <!--information_category-->
+    <record id="information_category_mcompany_rule" model="ir.rule">
+        <field name="name">Information Category</field>
+        <field name="model_id" ref="sgr.model_sgr_information_category"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>  
+
+    <!--official_letter-->
+    <record id="official_letter_mcompany_rule" model="ir.rule">
+        <field name="name">Official Letter</field>
+        <field name="model_id" ref="sgr.model_sgr_official_letter"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>          
+    
+    <!--package_file
+    <record id="package_file_letter_mcompany_rule" model="ir.rule">
+        <field name="name">Package File</field>
+        <field name="model_id" ref="sgr.model_sgr_package_file"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>    -->
+
+    
+    <!--proposal-->
+    <record id="proposal_file_letter_mcompany_rule" model="ir.rule">
+        <field name="name">Proposal</field>
+        <field name="model_id" ref="sgr.model_sgr_proposal"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>   
+    
+    <!--publication-->
+    <record id="publication_file_letter_mcompany_rule" model="ir.rule">
+        <field name="name">Publication</field>
+        <field name="model_id" ref="sgr.model_sgr_publication"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>            
+                     
+    <!--registry-->
+    <record id="registry_mcompany_rule" model="ir.rule">
+        <field name="name">Registry</field>
+        <field name="model_id" ref="sgr.model_sgr_registry"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>  
+    
+    <!--registry_category-->
+    <record id="registry_category_mcompany_rule" model="ir.rule">
+        <field name="name">Registry Category</field>
+        <field name="model_id" ref="sgr.model_sgr_registry_category"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+    </record>      
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -1,0 +1,70 @@
+##############################################################################
+#
+#    
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+
+Resumen de reportes y demás en https://docs.google.com/spreadsheet/ccc?key=0ArPGShFjQ-ZLdDVXbWUzSGw4c2gyNTc5OU8yei1uRFE#gid=0
+Todos los reportes están definidos en la carpeta reports
+En el archivo:
+    __openerp__.py se definen que archivos .xml se deben levantar para que open instale automaticamente el modulo
+    en la carpeta repots/templates dejamos templates de reportes y xml. En estos últimos habría que cambiar:
+        en definición de reporte
+            id --> unico por reporte (utilizamos mismo nombre del archivo)
+            name --> nombre que va a ver el usuario
+            model --> clase a la cual se vincula el reporte
+            report_name --> usar mismo que id. (es el nombre del servicio)
+            in_format --> a priori no se cambia
+            report_rml --> plantilla del reporte
+        en definición action
+            el eval de "models" --> mismo model de arriba 
+            name --> mismo name de arriba
+            el eval de "value" --> mismo id de arriba a lo que esta entre paréntesis
+
+Servidor openerp
+    sudo service openerp-pegaso-test70 start
+    sudo service openerp-pegaso-test70 stop
+    sudo service openerp-pegaso-test70 restart
+
+Hacer commit (todo desde la carpeta "sagi")
+    Primero hacer
+        git pull
+    Luego
+        git commit -am 'Mensaje'
+        git push
+
+Procedimiento
+
+1 - Descargar el reporte original
+2 - Generar ODT y xlm en carpeta correspondiente del servidor
+3 - Modificar openerp.py agregando el reporte
+4 - Armar reporte nuevo
+5 - Hacer commit en git y push
+6 - Testear reporte
+
+
+
+
+ 
+
+
+
+
+
+

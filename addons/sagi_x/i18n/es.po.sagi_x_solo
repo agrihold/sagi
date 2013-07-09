@@ -1,0 +1,1767 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* sagi_x
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-27 16:16+0000\n"
+"PO-Revision-Date: 2013-05-27 16:16+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sagi_x
+#: model:ir.ui.menu,name:sagi_x.menu_sagi_config
+msgid "SAGI"
+msgstr "SAGI"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:317
+#, python-format
+msgid "Cannot move Product to next stage, a QNP file should be provided first."
+msgstr "Cannot move Product to next stage, a QNP file should be provided first."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Set Summary Ready"
+msgstr "Dejar sumario listo"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,co_file_attachment_file:0
+msgid "Operational Committee Template"
+msgstr "Plantilla Comité Operativo"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:356
+#: code:addons/sagi_x/new_product_project.py:379
+#, python-format
+msgid "Agrihold Innovation Committee file not found."
+msgstr "Archivo de comite de innovación de Agrihold no encontrado."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CIA Rejection"
+msgstr "Rechazo CIA"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CIA Approval"
+msgstr "Aprobación CIA"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:359
+#, python-format
+msgid "Project Expected End Date not specified."
+msgstr "Fecha de Fin esperado no esta especificada"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Reject by QNP"
+msgstr "Rechazo por QNP"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:279
+#, python-format
+msgid "SNP file not found."
+msgstr "Archiv de SNP no encontrado"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Excecution"
+msgstr "Ejecución"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,kick_off_ac_file_attachment_file:0
+msgid "Kick Off Critical Analysis Template"
+msgstr "Plantilla Análisis Critico Lanzamiento"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,snp_file_attachment_file:0
+msgid "SNP Template"
+msgstr "Plantilla SNP"
+
+#. module: sagi_x
+#: view:sagi.config_settings:0
+msgid "Days Parameters"
+msgstr "Parámetros de Días"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:450
+#, python-format
+msgid "Marketing file not found."
+msgstr "Archivo de Marketing no encontrado."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:431
+#: code:addons/sagi_x/new_product_project.py:483
+#: code:addons/sagi_x/new_product_project.py:500
+#, python-format
+msgid "Project not specified."
+msgstr "Proyecto no especificado."
+
+#. module: sagi_x
+#: code:addons/sagi_x/res_config.py:54
+#: code:addons/sagi_x/res_config.py:152
+#, python-format
+msgid "Field not found"
+msgstr "Campo no encontrado"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_sc_file_attachment_file:0
+msgid "Supply Chain Template"
+msgstr "Plantilla de Supply Chain"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,charter_file_attachment:0
+msgid "Project Charter Attachment"
+msgstr "Adjunto de Charter de Proyecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/wizard/create_default_project.py:100
+#, python-format
+msgid "There is already another project defined for this New Product Project."
+msgstr "Ya existe otro Proyecto definido para este Proyecto de Nuevo Producto."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Present"
+msgstr "Presentar"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CIO Approval"
+msgstr "Aprobación CIO"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,qnp_file_attachment_file:0
+msgid "QNP Template"
+msgstr "QNP Plantilla"
+
+#. module: sagi_x
+#: view:create_default_project:0
+msgid "Create Project"
+msgstr "Crear Proyecto"
+
+#. module: sagi_x
+#: model:ir.model,name:sagi_x.model_project_project
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,planning_pred_term:0
+msgid "Planning term (days)"
+msgstr "Plazo de Planificación (Días)"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:362
+#, python-format
+msgid "Project Leader not specified."
+msgstr "Lider de proyecto no especificado."
+
+#. module: sagi_x
+#: view:sagi.config_settings:0
+#: field:sagi.config_settings,property_template_project_id:0
+msgid "Template Project"
+msgstr "Plantilla de Proyecto"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Critical Analysis"
+msgstr "Análisis crítico"
+
+#. module: sagi_x
+#: model:ir.actions.act_window,name:sagi_x.action_config_settings
+#: view:sagi.config_settings:0
+msgid "Configure SAGI"
+msgstr "Configurar SAGI"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:718
+#: code:addons/sagi_x/new_product_project.py:732
+#: code:addons/sagi_x/new_product_project.py:746
+#, python-format
+msgid "Inconsistency in Dates to End."
+msgstr "Inconsistencia en las fechas de fin"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Next Action"
+msgstr "Próxima Acción"
+
+#. module: sagi_x
+#: model:ir.actions.act_window,help:sagi_x.open_view_deliverable_all
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"                  Click to start a new deliverable.\n"
+"                </p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"                  Click to start a new deliverable.\n"
+"                </p>\n"
+"            "
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,planning_gantt_id:0
+msgid "Planning"
+msgstr "Planeamiento"
+
+#. module: sagi_x
+#: code:addons/sagi_x/wizard/create_default_project.py:35
+#: field:create_default_project,new_product_project_id:0
+#: view:sagi.new_product_project:0
+#, python-format
+msgid "New Product Project"
+msgstr "Proyecto de Nuevo Producto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:503
+#, python-format
+msgid "Project not closed."
+msgstr "Proyecto no cerrado."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,summary_file_attachment:0
+msgid "Summary Attachment"
+msgstr "Adjunto de Resumen"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "To Revise"
+msgstr "Para Revisar"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,closing_report_file_attachment:0
+msgid "Closing Report Attachment"
+msgstr "Adjunto de Informe de Cierre"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Draft NPP "
+msgstr "Borrador NPP"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,closing_pred_term:0
+msgid "Closing term (days)"
+msgstr "Plazo de cierre ( días )"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:435
+#, python-format
+msgid "Cannot move Product to next stage, a Kick Off Critical Analysis file should be provided first."
+msgstr "Cannot move Product to next stage, a Kick Off Critical Analysis file should be provided first."
+
+#. module: sagi_x
+#: code:addons/sagi_x/res_config.py:152
+#, python-format
+msgid "Field  not found in the Database"
+msgstr "Archivo no encontrado en la base de datos"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:518
+#, python-format
+msgid "Cannot move Product to next stage, a Closing Report file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un Reporte de Cierre debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Related products"
+msgstr "Productos relacionados"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,initiation_gantt_id:0
+msgid "Initiation"
+msgstr "Iniciacion"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:426
+#, python-format
+msgid "Cannot move Product to next stage, a Develp. and Registration Date to End should be specified first."
+msgstr "No es posible mover el producto a la siguiente etapa, una fecha de Desarrollo y Registro debe ser especificada primeramente."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:360
+#, python-format
+msgid "Cannot move Product to next stage, a Project Expected End Date should be provided first."
+msgstr "El producto no puede ser movido a la siguiente etapa, una Fecha esperada de finalizacion del proyecto debe ser provista primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Tags..."
+msgstr "Etiquetas..."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:428
+#, python-format
+msgid "Result Date to End not specified."
+msgstr "Fecha de Fin de Resultado no especificada."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:466
+#, python-format
+msgid "Result file not found."
+msgstr "Archivo de resultado no encontrado."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,cio_file_attachment_file:0
+msgid "Operative Innovation Committee Template"
+msgstr "Plantilla Comité de Innovación Operativo"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:733
+#, python-format
+msgid "Develp. and Registration Date to End cannot before Marketing Date to End."
+msgstr "La Fecha de finalizacion de Desarrollo y Registro no puede ser anterior a la Fecha de Fin de Marketing."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,co_file_attachment:0
+msgid "Operational Committee Attachment"
+msgstr "Adjunto Comité Operativo"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_result_file_attachment:0
+msgid "Result Attachment"
+msgstr "Adjunto Resultado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:434
+#, python-format
+msgid "Kick Off Critical Analysis file not found."
+msgstr "Archivo de Analisis de Kick Off no encontrado"
+
+#. module: sagi_x
+#: model:ir.actions.act_window,name:sagi_x.open_view_deliverable_all
+msgid "Projects"
+msgstr "Proyectos"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Dates"
+msgstr "Fechas"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Approve QNP"
+msgstr "Aprobar QNP"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:280
+#, python-format
+msgid "Cannot move Product to next stage, an SPN file should be provided first."
+msgstr "No es posible mover el producto a la siguiente Etapa, un archivo de SNP debe ser provisto primeramente."
+
+#. module: sagi_x
+#: model:ir.model,name:sagi_x.model_sagi_new_product_project
+msgid "new_product_project"
+msgstr "new_product_project"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_mkt_file_attachment_file:0
+msgid "Marketing Template"
+msgstr "Plantilla de Marketing"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:451
+#, python-format
+msgid "Cannot move Product to next stage, a Marketing file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un archivo de Marketing debe ser provisto previo a esto."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:486
+#, python-format
+msgid "Project not In Progress."
+msgstr "Proyecto no se encuentra En progreso"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:340
+#, python-format
+msgid "CO file not found."
+msgstr "Archivo CO no fue encontrado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:423
+#, python-format
+msgid "Cannot move Product to next stage, a Marketing Date to End should be specified first."
+msgstr "No es posible mover el Producto a la siguiente Etapa, una fecha de Marketing debe ser especificada primeramente."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:349
+#, python-format
+msgid "Cannot move Product to next stage, a Presentation file should be provided first."
+msgstr "Imposible mover el producto a la siguiente etapa, un archivo de Preasentacion debe ser provisto primeramente."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:504
+#, python-format
+msgid "Cannot move Product to next stage, the associated Project must be closed first."
+msgstr "No es posible mover el producto a la siguiente etapa, el proyecto asociado debe ser cerrado primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Other info"
+msgstr "Otra info"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:532
+#, python-format
+msgid "Cannot move Product to next stage, an Abort file should be provided first."
+msgstr "No es posible mover el producto a la proxima etapa, un archivo de Abortar debe ser provisto previo a esto."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:531
+#, python-format
+msgid "Abort file not found."
+msgstr "Archivo de Abortaje no encontrado"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "- Phase: "
+msgstr "- Fase: "
+
+#. module: sagi_x
+#: field:sagi.new_product_project,summary_file_attachment_file:0
+msgid "Summary Template"
+msgstr "Plantilla de Resumen"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,execution_pred_term:0
+msgid "Execution term (days)"
+msgstr "Plazo de ejecución ( días )"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Kick Off CA"
+msgstr "Lanzamiento CA"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:458
+#, python-format
+msgid "Develp. and Registration file not found."
+msgstr "El Archivo de Desarrollo y Registro no fue encontrado."
+
+#. module: sagi_x
+#: view:sagi.config_settings:0
+msgid "or"
+msgstr "o"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,kick_off_project_file_attachment_file:0
+msgid "Project Kick Off Template"
+msgstr "Plantilla Lanzamiento de Proyecto"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CO Approval"
+msgstr "Aprobación CO"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:348
+#, python-format
+msgid "Presentation file not found."
+msgstr "Archivo de Presentación no encontrado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/wizard/create_default_project.py:99
+#, python-format
+msgid "Project already defined"
+msgstr "Proyecto ya definido"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:480
+#, python-format
+msgid "Project Kick Off file not found."
+msgstr "Archivo de Kick Off no encontrado."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Close Project"
+msgstr "Cerrar Proyecto"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,cia_file_attachment:0
+msgid "Agrihold Innovation Committee Attachment"
+msgstr "Adjunto de Comité de Innovación Agrihold"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Project Charter"
+msgstr "Charter del Proyecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/wizard/create_default_project.py:32
+#: field:create_default_project,project_manager_id:0
+#, python-format
+msgid "Project Manager"
+msgstr "Gerente de Proyecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:365
+#, python-format
+msgid "Project Sponsor not specified."
+msgstr "Patrocinador de proyecto no especificado."
+
+#. module: sagi_x
+#: view:create_default_project:0
+#: view:sagi.new_product_project:0
+msgid "Generate Project"
+msgstr "Generar Proyecto"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,closing_report_file_attachment_file:0
+msgid "Closing Report Template"
+msgstr "Plantilla Reporte de Cierre"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "NPP  "
+msgstr "NPP  "
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:487
+#, python-format
+msgid "Cannot move Product to next stage, the associated Project should be In Progress."
+msgstr "No es posible mover al producto a la siguiente etapa, el proyecto asociado debe estar En Progreso"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:481
+#, python-format
+msgid "Cannot move Product to next stage, a Project Kick Off file should be provided first."
+msgstr "No es posible avanzar el producto a la siguiente etapa, un archivo de Kick Off debe ser provisto primeramente."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,qnp_file_attachment:0
+msgid "QNP Attachment"
+msgstr "Adjuntos QNP "
+
+#. module: sagi_x
+#: model:ir.actions.act_window,name:sagi_x.action_create_default_project
+msgid "create_default_project.action"
+msgstr "create_default_project.action"
+
+#. module: sagi_x
+#: view:sagi.npp_gantt_view:0
+msgid "Gantt View"
+msgstr "Vista Gantt"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:324
+#, python-format
+msgid "CIO file not found."
+msgstr "CIO file not found."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,execution_gantt_id:0
+msgid "Execution"
+msgstr "Ejecución."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_dr_file_attachment:0
+msgid "Develp. and Registration Attachment"
+msgstr "Adjunto Desarrollos y Registro"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,closure_gantt_id:0
+msgid "Closure"
+msgstr "Cierre"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,cio_file_attachment:0
+msgid "Operative Innovation Committee Attachment"
+msgstr "Adjunto de Comité de Innovación de Operativa"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:425
+#, python-format
+msgid "Develp. and Registration Date to End not specified."
+msgstr "Fecha de Desarrollo y Registro no están especificadas."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "To Draft"
+msgstr "A borrador"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CIO Rejection"
+msgstr "Rechazo CIO "
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_result_file_attachment_file:0
+msgid "Result Template"
+msgstr "Plantilla Resultados"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:366
+#, python-format
+msgid "Cannot move Product to next stage, a Project Sponsor should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un Patrocinador del Proyecto debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "CO Rejection"
+msgstr "Rechazo CO"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Kick Off"
+msgstr "Lanzamiento"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:332
+#, python-format
+msgid "Summary file not found."
+msgstr "No se encuentra archivo de resumen."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:747
+#, python-format
+msgid "Result Date to End cannot before Develp. and Registration Date to End."
+msgstr "Fecha de Fin de Resultado no puede ser anterior a la fecha de fin de registro."
+
+#. module: sagi_x
+#: view:sagi.npp_gantt_view:0
+msgid "New Product Projects"
+msgstr "Proyectos de nuevos productos"
+
+#. module: sagi_x
+#: field:create_default_project,code:0
+#: field:sgr.agronomic_class,code:0
+msgid "Code"
+msgstr "Código"
+
+#. module: sagi_x
+#: model:ir.model,name:sagi_x.model_create_default_project
+msgid "Wizard to create default project"
+msgstr "Asistente para crear proyecto predeterminado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:459
+#, python-format
+msgid "Cannot move Product to next stage, a Develp. and Registration file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un archivo de Desarrollo y Registro debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.config_settings:0
+msgid "Default Files"
+msgstr "Archivos por defecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:467
+#, python-format
+msgid "Cannot move Product to next stage, a Result file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un archivo de resultados deber ser provisto primeramente."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_sc_file_attachment:0
+msgid "Supply Chain Attachment"
+msgstr "Adjuntos Supply Chain "
+
+#. module: sagi_x
+#: code:addons/sagi_x/wizard/create_default_project.py:33
+#: field:create_default_project,project_template_id:0
+#, python-format
+msgid "Project Template"
+msgstr "Plantilla de proyecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:419
+#, python-format
+msgid "Supply Chain Date to End not specified."
+msgstr "La fecha de fin de la Supply Chain no está especificada."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Abort"
+msgstr "Abortar"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Set Ready"
+msgstr "Marcar como listo"
+
+#. module: sagi_x
+#: view:create_default_project:0
+#: view:sagi.config_settings:0
+#: view:sagi.new_product_project:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:517
+#, python-format
+msgid "Closing Report file not found."
+msgstr "Archivo de Cierre del Reporte no fue encontrado."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:719
+#, python-format
+msgid "Marketing Date to End cannot before Supply Chain Date to End."
+msgstr "La fecha de fin de Marketing no puede ser anterior a la fecha de fin de la Supply Chain."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,related_project_date_to_start:0
+msgid "Date to Start"
+msgstr "Fecha de inicio"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:442
+#, python-format
+msgid "Supply Chain file not found."
+msgstr "Archivo de Supply Chain no encontrado."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:387
+#, python-format
+msgid "Project Charter file not found."
+msgstr "El Acta de proyecot no fue encontrada."
+
+#. module: sagi_x
+#: code:addons/sagi_x/res_config.py:54
+#, python-format
+msgid "Field property_template_project_id not found in the Database"
+msgstr "El campo property_template_project_id no fue encontrado en la base de datos"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:432
+#: code:addons/sagi_x/new_product_project.py:484
+#: code:addons/sagi_x/new_product_project.py:501
+#, python-format
+msgid "Cannot move Product to next stage, a Project should be specified first."
+msgstr "No es posible mover al producto a la siguiente etapa, un proyecto debe ser especificado primero."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,kick_off_project_file_attachment:0
+msgid "Project Kick Off Attachment"
+msgstr "Adjunto Lanzamiento de Proyecto"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:420
+#, python-format
+msgid "Cannot move Product to next stage, a Supply Chain Date to End should be specified first."
+msgstr "No se puede mover el producto a la siguiente etapa, una fecha de finalización para la Supply Chain debe ser provista primeramente."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:341
+#, python-format
+msgid "Cannot move Product to next stage, a CO file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un archivo de CO debe ser provisto primeramente."
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:388
+#, python-format
+msgid "Cannot move Product to next stage, a Project Charter file should be provided first."
+msgstr "No es posible pasar al producto a la siguiente etapa, un Archivo de Acta de proyecto debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Inititation"
+msgstr "Iniciacion"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,presentation_file_attachment:0
+msgid "Presentation Attachment"
+msgstr "Adjunto Presentación"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:357
+#: code:addons/sagi_x/new_product_project.py:380
+#, python-format
+msgid "Cannot move Product to next stage, a Agrihold Innovation Committee file should be provided first."
+msgstr "No es posible mover al producto a la siguiente etapa, un Archivo del Comite de innovación debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Reject"
+msgstr "Rechazar"
+
+#. module: sagi_x
+#: model:ir.model,name:sagi_x.model_sgr_agronomic_class
+msgid "agronomic_class"
+msgstr "clase_agronomica"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Set Presentation Ready"
+msgstr "Establecer Presentation Lista"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:333
+#, python-format
+msgid "Cannot move Product to next stage, a Summary file should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un archivo de Resumen debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Project Finished"
+msgstr "Proyecto Terminado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:422
+#, python-format
+msgid "Marketing Date to End not specified."
+msgstr "Fecha de fin de Marketing no especificada."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,snp_file_attachment:0
+msgid "SNP Attachment"
+msgstr "Adjunto SNP "
+
+#. module: sagi_x
+#: field:sagi.new_product_project,charter_file_attachment_file:0
+msgid "Project Charter Template"
+msgstr "Plantilla Acta de Proyecto"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_mkt_file_attachment:0
+msgid "Marketing Attachment"
+msgstr "Adjunto de Marketing"
+
+#. module: sagi_x
+#: field:create_default_project,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:443
+#, python-format
+msgid "Cannot move Product to next stage, a Supply Chain file should be provided first."
+msgstr "No es posible mover al producto a la siguiente etapa, un archivo de Supply Chain debe ser provisto primeramente."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,kick_off_ac_file_attachment:0
+msgid "Kick Off Critical Analysis Attachment"
+msgstr "Adjunto Análisis Crítico de Lanzamiento"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:325
+#, python-format
+msgid "Cannot move Product to next stage, a CIO file should be provided first."
+msgstr "No es posible mover al producto a la siguiente etapa, un archivo CIO debe ser provisto primeramente."
+
+#. module: sagi_x
+#: field:sagi.new_product_project,cia_file_attachment_file:0
+msgid "Agrihold Innovation Committee Template"
+msgstr "Plantilla Comité de Innovación Agrihold"
+
+#. module: sagi_x
+#: model:ir.ui.menu,name:sagi_x.menu_projects
+msgid "Deliverable"
+msgstr "Entregable"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Closing Report"
+msgstr "Informe de Cierre"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,presentation_file_attachment_file:0
+msgid "Presentation Template"
+msgstr "Plantilla de presentación"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Related Project"
+msgstr "Proyecto Relacionado"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:429
+#, python-format
+msgid "Cannot move Product to next stage, a Result Date to End should be specified first."
+msgstr "No es posible mover el producto a la siguiente etapa, una fecha de fin de resultado debe ser especificada primeramente."
+
+#. module: sagi_x
+#: model:ir.model,name:sagi_x.model_sagi_config_settings
+msgid "config_settings"
+msgstr "config_settings"
+
+#. module: sagi_x
+#: model:ir.actions.act_window,name:sagi_x.action_sagi_new_product_project_new_products
+#: model:ir.ui.menu,name:sagi_x.menu_new_products
+msgid "New Products Gantt"
+msgstr "Gantt Nuevos Productos"
+
+#. module: sagi_x
+#: field:sgr.agronomic_class,sequence_id:0
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:363
+#, python-format
+msgid "Cannot move Product to next stage, a Project Leader should be provided first."
+msgstr "No es posible mover el producto a la siguiente etapa, un Lider de proyecto debe ser provisto primeramente."
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,creation_gantt_id:0
+msgid "Creation"
+msgstr "Creación"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,ca_dr_file_attachment_file:0
+msgid "Develp. and Registration Template"
+msgstr "Plantilla Desarrollos y Registro"
+
+#. module: sagi_x
+#: code:addons/sagi_x/new_product_project.py:316
+#, python-format
+msgid "QNP file not found."
+msgstr "QNP file not found."
+
+#. module: sagi_x
+#: view:sagi.config_settings:0
+msgid "Apply"
+msgstr "Aplicar"
+
+#. module: sagi_x
+#: view:sagi.new_product_project:0
+msgid "Date to Execution End"
+msgstr "Fecha de fin de ejecución"
+
+#. module: sagi_x
+#: field:sagi.new_product_project,related_project_date_to_finish:0
+msgid "Date to End"
+msgstr "Fecha para finalizar"
+
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-05 16:37+0000\n"
+"PO-Revision-Date: 2013-04-05 15:40-0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.5\n"
+
+#. module: sagi
+#: model:ir.module.category,description:sagi.module_category_sagi
+#: model:ir.module.category,name:sagi.module_category_sagi
+#: view:sagi.config_settings:0
+msgid "SAGI"
+msgstr "SAGI"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,agronomic_class:0
+msgid "Agronomic Class"
+msgstr "Clase Agronómica"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Set Summary Ready"
+msgstr "Dejar sumario listo"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CIA Rejection"
+msgstr "Rechazo CIA"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CIA Approval"
+msgstr "Aprobación CIA"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_closure
+#: model:mail.message.subtype,name:sagi.new_product_project_project_closure
+#: selection:sagi.new_product_project,state:0
+msgid "Project Closure"
+msgstr "Cierre del Proyecto"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Reject by QNP"
+msgstr "Rechazar por QNP"
+
+#. module: sagi
+#: selection:sagi.new_product_project,privacy_visibility:0
+msgid "Public"
+msgstr "Publico"
+
+#. module: sagi
+#: field:sagi.new_product_project,date_to_end:0
+msgid "Project Expected End Date"
+msgstr "Fecha prevista de finalización del proyecto"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_qnp_rejected
+#: model:mail.message.subtype,name:sagi.new_product_project_qnp_rejected
+#: selection:sagi.new_product_project,state:0
+msgid "QNP Rejected"
+msgstr "QNP Rechazado"
+
+#. module: sagi
+#: view:sagi.config_settings:0 view:sagi.new_product_project:0
+#: view:sagi.npp_gantt_view:0 view:sagi.related_product:0
+#: view:sagi.related_product_tag:0 view:sagi.status_report:0
+msgid "By object"
+msgstr "Por objeto"
+
+#. module: sagi
+#: field:sagi.new_product_project,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_approved_by_qnp
+#: model:mail.message.subtype,name:sagi.new_product_project_approved_by_qnp
+#: selection:sagi.new_product_project,state:0
+msgid "Approved by QNP"
+msgstr "Aprobado por QNP"
+
+#. module: sagi
+#: field:sagi.npp_gantt_view,new_product_project_id:0
+msgid "new_product_project_id"
+msgstr "new_product_project_id"
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_related_product
+msgid "related_product"
+msgstr "related_product"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_aborted
+#: model:mail.message.subtype,name:sagi.new_product_project_aborted
+#: selection:sagi.new_product_project,state:0
+msgid "Aborted"
+msgstr "Abortado"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_draft_snp
+#: model:mail.message.subtype,name:sagi.new_product_project_draft_snp
+#: selection:sagi.new_product_project,state:0
+msgid "Draft SNP"
+msgstr "Borrador de SNP"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_snp_presented
+#: model:mail.message.subtype,name:sagi.new_product_project_snp_presented
+#: selection:sagi.new_product_project,state:0
+msgid "SNP Presented"
+msgstr "Presentado SNP"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Present"
+msgstr "Presentar"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CIO Approval"
+msgstr "Aprobación CIO"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_sc_file:0
+#: field:sagi.new_product_project,ca_sc_file:0
+msgid "Supply Chain"
+msgstr "Cadena de suministro"
+
+#. module: sagi
+#: field:sagi.new_product_project,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: sagi
+#: view:sagi.new_product_project:0 field:sagi.new_product_project,project:0
+msgid "Project"
+msgstr "Proyecto"
+
+#. module: sagi
+#: help:sagi.new_product_project,reference:0
+msgid ""
+"Completar automáticamente cuando se pasa a estado &quot;on creation&quot;. "
+"Se crea con la siguiente sequencia &quot;yyaa000&quot; donde yy son los dos "
+"dígitos del año, aa son dos dígitos que representan la clase agronomica "
+"(deberíamos heredar clase agroniomica en este modulo y poner un campo &quot;"
+"code&quot;) y 000 es la secuencia dentro de esa clase agronomica y dentor "
+"lde año. Tal vez también agregar a clase agronomica un m2o a una secuencia."
+msgstr "Completar automáticamente cuando se pasa a estado &quot;on creation&quot;. Se crea con la siguiente sequencia &quot;yyaa000&quot; donde yy son los dos dígitos del año, aa son dos dígitos que representan la clase agronomica (deberíamos heredar clase agroniomica en este modulo y poner un campo &quot;code&quot;) y 000 es la secuencia dentro de esa clase agronomica y dentor lde año. Tal vez también agregar a clase agronomica un m2o a una secuencia."
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_cancelled
+#: model:mail.message.subtype,name:sagi.new_product_project_cancelled
+#: selection:sagi.new_product_project,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: sagi
+#: field:sagi.config_settings,qnp_file:0
+#: field:sagi.new_product_project,QNP_file:0
+msgid "QNP"
+msgstr "QNP"
+
+#. module: sagi
+#: help:sagi.new_product_project,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si se marca, nuevos mensajes requieren su atención."
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_status_report
+msgid "status_report"
+msgstr "status_report"
+
+#. module: sagi
+#: field:sagi.new_product_project,npp_gantt_view_ids:0
+msgid "npp_gantt_view_ids"
+msgstr "npp_gantt_view_ids"
+
+#. module: sagi
+#: view:sagi.new_product_project:0 field:sagi.new_product_project,reference:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_dr_file:0
+#: field:sagi.new_product_project,ca_dr_file:0
+msgid "Develp. and Registration"
+msgstr "Desarrollo y registro"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "npp_excecution"
+msgstr "npp_excecution"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_sc_pred_term:0
+msgid "Supply Chain default term (days)"
+msgstr "Plazo por defecto Cadena de Suministro  (días)"
+
+#. module: sagi
+#: help:sagi.new_product_project,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr "Contiene el resumen Chateador (número de mensajes , ...). Este sumario está directamente en formato html para insertar en las vistas kanban."
+
+#. module: sagi
+#: selection:sagi.new_product_project,phase:0
+msgid "Planning"
+msgstr "Planeamiento"
+
+#. module: sagi
+#: field:sagi.config_settings,snp_file:0
+#: field:sagi.new_product_project,SNP_file:0
+msgid "SNP"
+msgstr "SNP"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_closed
+#: model:mail.message.subtype,name:sagi.new_product_project_project_closed
+#: selection:sagi.new_product_project,state:0
+msgid "Project Closed"
+msgstr "Proyecto Cerrado"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "To Revise"
+msgstr "Para Revisar"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "npp_initiation"
+msgstr "npp_initiation"
+
+#. module: sagi
+#: field:sagi.npp_gantt_view,date_stop:0
+msgid "date_stop"
+msgstr "date_stop"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Close Project"
+msgstr "Cierre del Proyecto"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_mkt_pred_term:0
+msgid "Marketing default term (days)"
+msgstr "Plazo predeterminado de Marketing (días)"
+
+#. module: sagi
+#: field:sagi.npp_gantt_view,sequence:0
+msgid "sequence"
+msgstr "secuencia"
+
+#. module: sagi
+#: field:sagi.related_product,new_product_project_id:0
+#: field:sagi.related_product_tag,related_product_id:0
+#: field:sagi.status_report,new_product_project_id:0
+msgid "&lt;no label&gt;"
+msgstr "&lt;no label&gt;"
+
+#. module: sagi
+#: help:sagi.new_product_project,SNP_file:0
+msgid "Exigido para pasar a etapa &quot;snp presented&quot;"
+msgstr "Exigido para pasar a etapa &quot;snp presented&quot;"
+
+#. module: sagi
+#: field:sagi.new_product_project,closure_started_date:0
+#: field:sagi.new_product_project,creation_started_date:0
+#: field:sagi.new_product_project,excecution_started_date:0
+#: field:sagi.new_product_project,initiation_started_date:0
+#: field:sagi.new_product_project,planning_started_date:0
+msgid "Started Date"
+msgstr "Fecha de inicio"
+
+#. module: sagi
+#: field:sagi.config_settings,CO_file:0
+#: field:sagi.new_product_project,CO_file:0
+msgid "Operational Committee"
+msgstr "Comité Operativo"
+
+#. module: sagi
+#: field:sagi.new_product_project,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: sagi
+#: field:sagi.new_product_project,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_related_product_tag
+#: view:sagi.related_product_tag:0
+msgid "related_product_tag"
+msgstr "related_product_tag"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_summary_ready
+#: model:mail.message.subtype,name:sagi.new_product_project_summary_ready
+#: selection:sagi.new_product_project,state:0
+msgid "Summary Ready"
+msgstr "Resumen Listo"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_ongoing
+#: model:mail.message.subtype,name:sagi.new_product_project_project_ongoing
+#: selection:sagi.new_product_project,state:0
+msgid "Project Ongoing"
+msgstr "Proyecto en curso"
+
+#. module: sagi
+#: field:sagi.new_product_project,status_report_ids:0
+#: view:sagi.status_report:0
+msgid "Status Reports"
+msgstr "Informes de estado"
+
+#. module: sagi
+#: field:sagi.new_product_project,project_sponsor:0
+msgid "Project Sponsor"
+msgstr "Patrocinador del Proyecto"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_preliminary_project_planning
+#: model:mail.message.subtype,name:sagi.new_product_project_preliminary_project_planning
+#: selection:sagi.new_product_project,state:0
+msgid "Preliminary Project Planning"
+msgstr "Planificación preliminar del proyecto"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,related_product_ids:0
+#: view:sagi.related_product:0
+msgid "Related Products"
+msgstr "Productos relacionados"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "npp_creation"
+msgstr "npp_creation"
+
+#. module: sagi
+#: field:sagi.status_report,report:0
+msgid "Report"
+msgstr "Reporte"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_supply_chain_ca_ongoing
+#: model:mail.message.subtype,name:sagi.new_product_project_supply_chain_ca_ongoing
+#: selection:sagi.new_product_project,state:0
+msgid "Supply Chain CA ongoing"
+msgstr "Cadena de suministro CA en curso"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Approve QNP"
+msgstr "Aprobar QNP"
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_new_product_project
+msgid "new_product_project"
+msgstr "new_product_project"
+
+#. module: sagi
+#: field:sagi.new_product_project,privacy_visibility:0
+msgid "Privacy / Visibility"
+msgstr "Privacidad / Visibilidad"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_result_pred_term:0
+msgid "Result default term (days)"
+msgstr "Plazo Predeterminado para Resultado  (días)"
+
+#. module: sagi
+#: field:sagi.config_settings,CIA_file:0
+msgid "CIA_file"
+msgstr "CIA_file"
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_npp_gantt_view
+msgid "npp_gantt_view"
+msgstr "npp_gantt_view"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CO Rejection"
+msgstr "Rechazo CO"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_rejected_by_ca
+#: model:mail.message.subtype,name:sagi.new_product_project_rejected_by_ca
+#: selection:sagi.new_product_project,state:0
+msgid "Rejected by CA"
+msgstr "Rechazado por CA"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_rejected_by_co
+#: model:mail.message.subtype,name:sagi.new_product_project_rejected_by_co
+#: selection:sagi.new_product_project,state:0
+msgid "Rejected by CO"
+msgstr "Rechazado por CO"
+
+#. module: sagi
+#: model:ir.actions.act_window,name:sagi.action_sagi_related_product_tag_related_products_tags
+#: model:ir.ui.menu,name:sagi.menu_related_products_tags
+msgid "Related Products Tags"
+msgstr "Etiquetas de Productos Relacionados"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_approved_by_co
+#: model:mail.message.subtype,name:sagi.new_product_project_approved_by_co
+#: selection:sagi.new_product_project,state:0
+msgid "Approved by CO"
+msgstr "Aprobado por el CO"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_result_file:0
+#: field:sagi.new_product_project,ca_result_file:0
+msgid "Result"
+msgstr "Resultado"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Kick Off CA"
+msgstr "Lanzamiento CA"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Set Presentation Ready"
+msgstr "Establecer Presentation Lista"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_presentation_ready
+#: model:mail.message.subtype,name:sagi.new_product_project_presentation_ready
+#: selection:sagi.new_product_project,state:0
+msgid "Presentation Ready"
+msgstr "Presentacion Lista"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_ca_evaluation
+#: model:mail.message.subtype,name:sagi.new_product_project_ca_evaluation
+#: selection:sagi.new_product_project,state:0
+msgid "CA Evaluation"
+msgstr "Evaluación CA"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CO Approval"
+msgstr "Aprobación CO"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_planning
+#: model:mail.message.subtype,name:sagi.new_product_project_project_planning
+#: selection:sagi.new_product_project,state:0
+msgid "Project Planning"
+msgstr "Planificación de Proyectos"
+
+#. module: sagi
+#: field:sagi.config_settings,kick_off_project_file:0
+#: field:sagi.new_product_project,kick_off_project_file:0
+msgid "Project Kick Off"
+msgstr "Lanzamiento de Proyecto"
+
+#. module: sagi
+#: field:sagi.new_product_project,project_leader:0
+msgid "Project Leader"
+msgstr "Líder de Proyecto"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_dr_pred_term:0
+msgid "Develp. and Registration default term (days)"
+msgstr "Desarr . y Registro plazo predeterminado (días)"
+
+#. module: sagi
+#: view:sagi.config_settings:0 view:sagi.new_product_project:0
+#: view:sagi.npp_gantt_view:0 view:sagi.related_product:0
+#: view:sagi.related_product_tag:0 view:sagi.status_report:0
+msgid "By Attribute"
+msgstr "Por atributo"
+
+#. module: sagi
+#: model:ir.actions.act_window,name:sagi.action_sagi_new_product_project_new_products
+#: model:ir.ui.menu,name:sagi.menu_new_products
+msgid "New Products"
+msgstr "Nuevos Productos"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Reject"
+msgstr "Rechazarj"
+
+#. module: sagi
+#: field:sagi.config_settings,charter_file:0
+#: field:sagi.new_product_project,charter_file:0
+msgid "Project Charter"
+msgstr "Charter del Proyecto"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_marketing_ca_ongoing
+#: model:mail.message.subtype,name:sagi.new_product_project_marketing_ca_ongoing
+#: selection:sagi.new_product_project,state:0
+msgid "Marketing CA ongoing"
+msgstr "Marketing de CA en marcha"
+
+#. module: sagi
+#: field:sagi.new_product_project,kick_off_ac_file:0
+msgid "Kick Off Critical Analysis"
+msgstr "Lanzamiento Análisis Critico"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_rejected_by_cia
+#: model:mail.message.subtype,name:sagi.new_product_project_rejected_by_cia
+#: selection:sagi.new_product_project,state:0
+msgid "Rejected by CIA"
+msgstr "Rechazado por la CIA"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_rejected_by_cio
+#: model:mail.message.subtype,name:sagi.new_product_project_rejected_by_cio
+#: selection:sagi.new_product_project,state:0
+msgid "Rejected by CIO"
+msgstr "Rechazado por CIO"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "New Products Projects"
+msgstr "Proyectos Nuevos Productos"
+
+#. module: sagi
+#: view:sagi.npp_gantt_view:0
+msgid "Gantt View"
+msgstr "Vista Gantt"
+
+#. module: sagi
+#: field:sagi.new_product_project,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es un seguidor"
+
+#. module: sagi
+#: model:res.groups,name:sagi.group_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: sagi
+#: field:sagi.new_product_project,next_action_date:0 view:sagi.status_report:0
+#: field:sagi.status_report,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: sagi
+#: selection:sagi.new_product_project,phase:0
+msgid "Execution"
+msgstr "Ejecución."
+
+#. module: sagi
+#: selection:sagi.new_product_project,phase:0
+msgid "Closure"
+msgstr "Cierre"
+
+#. module: sagi
+#: view:sagi.related_product:0
+#: field:sagi.related_product,related_product_tag_ids:0
+msgid "Tags"
+msgstr "Etiquetas"
+
+#. module: sagi
+#: field:sagi.config_settings,kick_off_ac_file:0
+msgid "Critical Analysis Kick Off"
+msgstr "Analisis critico de lanzamiento"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "To Draft"
+msgstr "A borrador"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "CIO Rejection"
+msgstr "CIO Rechazo"
+
+#. module: sagi
+#: field:sagi.config_settings,summary_file:0
+#: field:sagi.new_product_project,message_summary:0
+#: field:sagi.new_product_project,summary_file:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: sagi
+#: field:sagi.config_settings,planning_pred_term:0
+msgid "Planning default term (days)"
+msgstr "Termino de planeamiento por defecto (días)"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Kick Off"
+msgstr "Puntapie inicial"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_revise
+#: model:mail.message.subtype,name:sagi.new_product_project_revise
+#: selection:sagi.new_product_project,state:0
+msgid "Revise"
+msgstr "Revisar"
+
+#. module: sagi
+#: field:sagi.config_settings,closing_pred_term:0
+msgid "Closing default term (days)"
+msgstr "Plazo de cierre por defecto (días)"
+
+#. module: sagi
+#: model:ir.ui.menu,name:sagi.menu_pm_lifecycle
+msgid "PM Lifecycle"
+msgstr "PM ciclo de vida"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_charter_draft
+#: model:mail.message.subtype,name:sagi.new_product_project_project_charter_draft
+#: selection:sagi.new_product_project,state:0
+msgid "Project Charter Draft"
+msgstr "Borrador Charter de Proyecto"
+
+#. module: sagi
+#: view:sagi.new_product_project:0 field:sagi.new_product_project,abort_file:0
+msgid "Abort"
+msgstr "Abortar"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Set Ready"
+msgstr "Marcar como listo"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: sagi
+#: selection:sagi.new_product_project,phase:0
+msgid "Initiation"
+msgstr "Iniciacion"
+
+#. module: sagi
+#: field:sagi.config_settings,creation_duration:0
+msgid "Creation Term (days)"
+msgstr "Plazo Creación ( días)"
+
+#. module: sagi
+#: help:sagi.new_product_project,phase:0
+msgid "Lo debemos poner automaticamente y debe ser readonly en la vista"
+msgstr "Lo debemos poner automaticamente y debe ser readonly en la vista"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+#: field:sagi.new_product_project,next_action_responsible:0
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: sagi
+#: field:sagi.new_product_project,interested_operative_ids:0
+msgid "Interested Operatives"
+msgstr "Los operativos interesados"
+
+#. module: sagi
+#: field:sagi.config_settings,presentation_file:0
+#: field:sagi.new_product_project,presentation_file:0
+msgid "Presentation"
+msgstr "Presentacion"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_project_review_ongoing
+#: model:mail.message.subtype,name:sagi.new_product_project_project_review_ongoing
+#: selection:sagi.new_product_project,state:0
+msgid "Project Review Ongoing"
+msgstr "Revisión de Proyectos en curso"
+
+#. module: sagi
+#: view:sagi.related_product:0 field:sagi.related_product,product_id:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: sagi
+#: field:sagi.new_product_project,next_action_description:0
+msgid "Description"
+msgstr "Descripcion"
+
+#. module: sagi
+#: field:sagi.config_settings,ca_mkt_file:0
+#: field:sagi.new_product_project,ca_mtk_file:0
+msgid "Marketing"
+msgstr "Marketing"
+
+#. module: sagi
+#: field:sagi.npp_gantt_view,date_start:0
+msgid "date_start"
+msgstr "date_start"
+
+#. module: sagi
+#: field:sagi.config_settings,CIO_file:0
+#: field:sagi.new_product_project,CIO_file:0
+msgid "Operative Innovation Committee"
+msgstr "Comité de Innovación operativo"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Project Finished"
+msgstr "Proyecto Terminado"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_approved_by_cio
+#: model:mail.message.subtype,name:sagi.new_product_project_approved_by_cio
+#: selection:sagi.new_product_project,state:0
+msgid "Approved by CIO"
+msgstr "Aprobado por el CIO"
+
+#. module: sagi
+#: view:sagi.new_product_project:0 field:sagi.new_product_project,phase:0
+msgid "Phase"
+msgstr "Fase"
+
+#. module: sagi
+#: field:sagi.new_product_project,CIA_file:0
+msgid "Agrihold Innovation Committee"
+msgstr "Agrihold Comisión de Innovación"
+
+#. module: sagi
+#: field:sagi.new_product_project,closure_end_date:0
+#: field:sagi.new_product_project,creation_end_date:0
+#: field:sagi.new_product_project,excecution_end_date:0
+#: field:sagi.new_product_project,initiation_end_date:0
+#: field:sagi.new_product_project,planning_end_date:0
+msgid "End Date"
+msgstr "Fecha de finalización"
+
+#. module: sagi
+#: field:sagi.new_product_project,budget:0
+msgid "Budjet (USD)"
+msgstr "Presupuesto (USD)"
+
+#. module: sagi
+#: view:sagi.new_product_project:0 field:sagi.new_product_project,name:0
+#: field:sagi.npp_gantt_view,name:0 view:sagi.related_product_tag:0
+#: field:sagi.related_product_tag,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sagi
+#: model:mail.message.subtype,description:sagi.new_product_project_dr_ca_ongoing
+#: model:mail.message.subtype,name:sagi.new_product_project_dr_ca_ongoing
+#: selection:sagi.new_product_project,state:0
+msgid "DR CA ongoing"
+msgstr "DR CA en curso"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "npp_planning"
+msgstr "npp_planning"
+
+#. module: sagi
+#: field:sagi.config_settings,closing_report_file:0
+#: field:sagi.new_product_project,closing_report_file:0
+msgid "Closing Report"
+msgstr "Informe de Cierre"
+
+#. module: sagi
+#: view:sagi.new_product_project:0
+msgid "Approve"
+msgstr "Aprobar"
+
+#. module: sagi
+#: help:sagi.new_product_project,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensajes e historial de comunicación"
+
+#. module: sagi
+#: selection:sagi.new_product_project,privacy_visibility:0
+msgid "Followers Only"
+msgstr "Sólo los seguidores"
+
+#. module: sagi
+#: model:ir.model,name:sagi.model_sagi_config_settings
+msgid "config_settings"
+msgstr "config_settings"
+
+#. module: sagi
+#: field:sagi.new_product_project,closure_date_to_start:0
+#: field:sagi.new_product_project,creation_date_to_start:0
+#: field:sagi.new_product_project,excecution_date_to_start:0
+#: field:sagi.new_product_project,initiation_date_to_start:0
+#: field:sagi.new_product_project,planning_date_to_start:0
+msgid "Date to Start"
+msgstr "Fecha para iniciar"
+
+#. module: sagi
+#: selection:sagi.new_product_project,phase:0
+msgid "Creation"
+msgstr "Creación"
+
+#. module: sagi
+#: model:res.groups,name:sagi.group_manager
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: sagi
+#: field:sagi.new_product_project,ca_dr_end_date:0
+#: field:sagi.new_product_project,ca_mtk_end_date:0
+#: field:sagi.new_product_project,ca_result_end_date:0
+#: field:sagi.new_product_project,ca_sc_end_date:0
+#: field:sagi.new_product_project,closure_date_to_end:0
+#: field:sagi.new_product_project,creation_date_to_end:0
+#: field:sagi.new_product_project,excecution_date_to_end:0
+#: field:sagi.new_product_project,initiation_date_to_end:0
+#: field:sagi.new_product_project,planning_date_to_end:0
+msgid "Date to End"
+msgstr "Fecha para finalizar"
+

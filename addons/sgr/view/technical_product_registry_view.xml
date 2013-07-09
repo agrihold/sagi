@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.technical_product_registry -->
+<!-- sgr.technical_product_registry -->
+<!-- sgr.registry -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_technical_product_registry_filter" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.select</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <search string="Techinical Products Registries" version="7.0">
+                    <group string="By Attribute">
+                    <field name="technical_product_id" string="Techincal Product"
+                            />
+                    <field name="registry_expiration_date" string="Registry Expiration Date"
+                            />
+                    <field name="free_sale_number" string="Free Sale Number"
+                            />
+                    <field name="free_sale_expiration_date" string="Free Sale Expiration Date"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="registry_category_id" string="Category"
+                            />
+                    <field name="product_in_ret_ids" string="Used RETS"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_technical_product_registry_form" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.form</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <form string="Techinical Products Registries" version="7.0">
+                    <header>
+                        <button name="sgn_request"
+                            states="draft"
+                            string="Request"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_approve"
+                            states="requested"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_reject"
+                            states="requested"
+                            string="Reject"
+                            />
+                        <button name="sgn_depreciate"
+                            states="approved"
+                            string="Depreciate"
+                            />
+                        <button name="sgn_cancel"
+                            states="approved,depreciated,rejected,requested"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="Techinical Products Registries">
+                     <group>
+                        <field name="operation"
+                            />
+                        <field name="technical_product_id"
+                            />
+                        <field name="is_corrosive"
+                            />
+                        <field name="mode_of_action"
+                            />
+                        <field name="type"
+                            />
+                        <field name="registry_number"
+                            />
+                        <field name="operative_id"
+                            />
+                        <field name="proxy_id"
+                            />
+                        <field name="project_id"
+                            />
+                        <field name="company_id"
+                            />
+                        <field name="registry_date"
+                            />
+                        <field name="registry_expiration_date"
+                            />
+                        <field name="free_sale_number"
+                            />
+                        <field name="free_sale_date"
+                            />
+                        <field name="free_sale_expiration_date"
+                            />
+                        <field name="note"
+                            />
+                        <field name="expected_date"
+                            />
+                    <field name="agronomic_class_id"
+                            />
+                    <field name="communication_ids"
+                            />
+                    <field name="partner_document_presentation_ids"
+                            />
+                    <field name="registry_process_ids"
+                            />
+                    <field name="packaging_ids"
+                            />
+                    <field name="cqq_ids"
+                            />
+                    <field name="publications_ids"
+                            />
+                    <field name="registry_category_id"
+                            domain="[('type','=',type),('company_id','=',company_id)]"
+                            on_change="onchange_registry_category(cr, uid, ids, registry_category_id)"
+                            />
+                    <field name="dossier_document_ids"
+                            />
+                    <field name="tax_ids"
+                            />
+                    <field name="study_presentation_ids"
+                            />
+                    <field name="operated_by_ids"
+                            />
+                    <field name="operate_id"
+                            />
+                    <field name="product_in_ret_ids"
+                            />
+                    <field name="environmental_class_id"
+                            />
+                    <field name="toxicological_class_id"
+                            />
+                    <field name="mode_of_action_ids"
+                            />
+                    <field name="emergency_information_id"
+                            />
+                    <field name="partner_role_in_registry_ids"
+                            />
+                    <field name="information_presentation_ids"
+                            />
+                    <field name="physical_state_id"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_technical_product_registry_tree" model="ir.ui.view">
+            <field name="name">sgr.technical_product_registry.tree</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <tree string="Techinical Products Registries"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'depreciated', 'approved', 'rejected'); red:state in ()"
+                    >
+                    <field name="operation"
+                        />
+                    <field name="technical_product_id"
+                        />
+                    <field name="operative_id"
+                        />
+                    <field name="expected_date"
+                        />
+                    <field name="registry_category_id"
+                        />
+                    <field name="product_in_ret_ids"
+                        />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

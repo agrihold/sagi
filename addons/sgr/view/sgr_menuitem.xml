@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+
+-->
+<openerp>
+    <data>
+
+        <menuitem
+            name="SGR"
+            id="menu_sgr"
+            sequence="100"
+            groups="group_taxes"
+            />
+
+
+        <menuitem
+            name="Configuration"
+            id="menu_configuration"
+            sequence="35"
+            parent="menu_sgr"
+            groups="group_manager"
+            />
+
+
+        <menuitem
+            name="Documents"
+            id="menu_documents"
+            sequence="20"
+            parent="menu_sgr"
+            groups="group_taxes"
+            />
+
+
+        <menuitem
+            name="Laboratories"
+            id="menu_laboratories"
+            sequence="15"
+            parent="menu_sgr"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Master Data"
+            id="menu_master_data"
+            sequence="30"
+            parent="menu_sgr"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Miscellaneous"
+            id="menu_miscellaneous"
+            sequence="25"
+            parent="menu_sgr"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Registrations"
+            id="menu_registrations"
+            sequence="10"
+            parent="menu_sgr"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_component_registry_components" model="ir.actions.act_window">
+            <field name="name">Components</field>
+            <field name="res_model">sgr.component_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_component_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_component_registry_filter"/>
+            <field name="context">{'type':'component'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Components"
+            id="menu_components"
+            sequence="20"
+            action="action_sgr_component_registry_components"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Contacts"
+            id="menu_contacts"
+            sequence="10"
+            action="contacts.action_contacts"
+            parent="menu_master_data"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_contract_contracts" model="ir.actions.act_window">
+            <field name="name">Contracts</field>
+            <field name="res_model">sgr.contract</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_contract_tree"/>
+            <field name="search_view_id" ref="view_sgr_contract_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Contracts"
+            id="menu_contracts"
+            sequence="10"
+            action="action_sgr_contract_contracts"
+            parent="menu_laboratories"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_crop_crops" model="ir.actions.act_window">
+            <field name="name">Crops</field>
+            <field name="res_model">sgr.crop</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_crop_tree"/>
+            <field name="search_view_id" ref="view_sgr_crop_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Crops"
+            id="menu_crops"
+            sequence="20"
+            action="action_sgr_crop_crops"
+            parent="menu_master_data"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_dossier_document_dossier_documents" model="ir.actions.act_window">
+            <field name="name">Dossier Documents</field>
+            <field name="res_model">sgr.dossier_document</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_dossier_document_tree"/>
+            <field name="search_view_id" ref="view_sgr_dossier_document_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Dossier Documents"
+            id="menu_dossier_documents"
+            sequence="25"
+            action="action_sgr_dossier_document_dossier_documents"
+            parent="menu_documents"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Files"
+            id="menu_files"
+            sequence="30"
+            parent="menu_documents"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_formulated_product_registry_formulated_products" model="ir.actions.act_window">
+            <field name="name">Formulated Products</field>
+            <field name="res_model">sgr.formulated_product_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_formulated_product_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_formulated_product_registry_filter"/>
+            <field name="context">{'type':'formulated_product'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Formulated Products"
+            id="menu_formulated_products"
+            sequence="10"
+            action="action_sgr_formulated_product_registry_formulated_products"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_information_informations" model="ir.actions.act_window">
+            <field name="name">Informations</field>
+            <field name="res_model">sgr.information</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_information_tree"/>
+            <field name="search_view_id" ref="view_sgr_information_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Informations"
+            id="menu_informations"
+            sequence="20"
+            action="action_sgr_information_informations"
+            parent="menu_miscellaneous"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_ingredient_ingredients" model="ir.actions.act_window">
+            <field name="name">Ingredients</field>
+            <field name="res_model">sgr.ingredient</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ingredient_tree"/>
+            <field name="search_view_id" ref="view_sgr_ingredient_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Ingredients"
+            id="menu_ingredients"
+            sequence="25"
+            action="action_sgr_ingredient_ingredients"
+            parent="menu_master_data"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Ingredients Conf"
+            id="menu_ingredients_conf"
+            sequence="15"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_laboratory_registry_laboratory_registrations" model="ir.actions.act_window">
+            <field name="name">Laboratory Registrations</field>
+            <field name="res_model">sgr.laboratory_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_laboratory_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_laboratory_registry_filter"/>
+            <field name="context">{'type':'laboratory'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Laboratory Registrations"
+            id="menu_laboratory_registrations"
+            sequence="35"
+            action="action_sgr_laboratory_registry_laboratory_registrations"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Misc Conf"
+            id="menu_misc_conf"
+            sequence="35"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_official_letter_official_letters" model="ir.actions.act_window">
+            <field name="name">Official Letters</field>
+            <field name="res_model">sgr.official_letter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_official_letter_tree"/>
+            <field name="search_view_id" ref="view_sgr_official_letter_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Official Letters"
+            id="menu_official_letters"
+            sequence="10"
+            action="action_sgr_official_letter_official_letters"
+            parent="menu_miscellaneous"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Packagings"
+            id="menu_packagings"
+            sequence="20"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_partner_document_partner_documents" model="ir.actions.act_window">
+            <field name="name">Partner Documents</field>
+            <field name="res_model">sgr.partner_document</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_partner_document_tree"/>
+            <field name="search_view_id" ref="view_sgr_partner_document_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Partner Documents"
+            id="menu_partner_documents"
+            sequence="15"
+            action="action_sgr_partner_document_partner_documents"
+            parent="menu_documents"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Products"
+            id="menu_products"
+            sequence="30"
+            action="product.product_normal_action"
+            parent="menu_master_data"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Products &amp; Registries"
+            id="menu_products___registries"
+            sequence="10"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_proposal_proposals" model="ir.actions.act_window">
+            <field name="name">Proposals</field>
+            <field name="res_model">sgr.proposal</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_proposal_tree"/>
+            <field name="search_view_id" ref="view_sgr_proposal_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Proposals"
+            id="menu_proposals"
+            sequence="15"
+            action="action_sgr_proposal_proposals"
+            parent="menu_laboratories"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_ret_registry_ret" model="ir.actions.act_window">
+            <field name="name">RET</field>
+            <field name="res_model">sgr.ret_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ret_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_ret_registry_filter"/>
+            <field name="context">{'type':'ret'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="RET"
+            id="menu_ret"
+            sequence="30"
+            action="action_sgr_ret_registry_ret"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="RET Config"
+            id="menu_ret_config"
+            sequence="25"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_sample_request_sample_request" model="ir.actions.act_window">
+            <field name="name">Sample Request</field>
+            <field name="res_model">sgr.sample_request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_sample_request_tree"/>
+            <field name="search_view_id" ref="view_sgr_sample_request_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Sample Request"
+            id="menu_sample_request"
+            sequence="30"
+            action="action_sgr_sample_request_sample_request"
+            parent="menu_miscellaneous"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_state_registry_state_registrations" model="ir.actions.act_window">
+            <field name="name">State Registrations</field>
+            <field name="res_model">sgr.state_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_state_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_state_registry_filter"/>
+            <field name="context">{'type':'state'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="State Registrations"
+            id="menu_state_registrations"
+            sequence="25"
+            action="action_sgr_state_registry_state_registrations"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_study_studies" model="ir.actions.act_window">
+            <field name="name">Studies</field>
+            <field name="res_model">sgr.study</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_study_tree"/>
+            <field name="search_view_id" ref="view_sgr_study_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Studies"
+            id="menu_studies"
+            sequence="10"
+            action="action_sgr_study_studies"
+            parent="menu_documents"
+            groups="group_user"
+            />
+
+
+        <menuitem
+            name="Studies Conf"
+            id="menu_studies_conf"
+            sequence="30"
+            parent="menu_configuration"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_target_pests_target_pests" model="ir.actions.act_window">
+            <field name="name">Target Pests</field>
+            <field name="res_model">sgr.target_pests</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_target_pests_tree"/>
+            <field name="search_view_id" ref="view_sgr_target_pests_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Target Pests"
+            id="menu_target_pests"
+            sequence="15"
+            action="action_sgr_target_pests_target_pests"
+            parent="menu_master_data"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_tax_taxes" model="ir.actions.act_window">
+            <field name="name">Taxes</field>
+            <field name="res_model">sgr.tax</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_tax_tree"/>
+            <field name="search_view_id" ref="view_sgr_tax_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Taxes"
+            id="menu_taxes"
+            sequence="20"
+            action="action_sgr_tax_taxes"
+            parent="menu_documents"
+            groups="group_taxes"
+            />
+
+        <record id="action_sgr_technical_product_registry_technical_products" model="ir.actions.act_window">
+            <field name="name">Technical Products</field>
+            <field name="res_model">sgr.technical_product_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_technical_product_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_technical_product_registry_filter"/>
+            <field name="context">{'type':'technical_product'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Technical Products"
+            id="menu_technical_products"
+            sequence="15"
+            action="action_sgr_technical_product_registry_technical_products"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_trademark_registry_trademark_registrations" model="ir.actions.act_window">
+            <field name="name">Trademark Registrations</field>
+            <field name="res_model">sgr.trademark_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_trademark_registry_tree"/>
+            <field name="search_view_id" ref="view_sgr_trademark_registry_filter"/>
+            <field name="context">{'type':'trademark'}</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Trademark Registrations"
+            id="menu_trademark_registrations"
+            sequence="50"
+            action="action_sgr_trademark_registry_trademark_registrations"
+            parent="menu_registrations"
+            groups="group_user"
+            />
+
+        <record id="action_sgr_agronomic_class_agronomic_classes" model="ir.actions.act_window">
+            <field name="name">Agronomic Classes</field>
+            <field name="res_model">sgr.agronomic_class</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_agronomic_class_tree"/>
+            <field name="search_view_id" ref="view_sgr_agronomic_class_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Agronomic Classes"
+            id="menu_agronomic_classes"
+            sequence="30"
+            action="action_sgr_agronomic_class_agronomic_classes"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_application_mode_application_modes" model="ir.actions.act_window">
+            <field name="name">Application Modes</field>
+            <field name="res_model">sgr.application_mode</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_application_mode_tree"/>
+            <field name="search_view_id" ref="view_sgr_application_mode_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Application Modes"
+            id="menu_application_modes"
+            sequence="25"
+            action="action_sgr_application_mode_application_modes"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_communication_type_communication_types" model="ir.actions.act_window">
+            <field name="name">Communication Types</field>
+            <field name="res_model">sgr.communication_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_communication_type_tree"/>
+            <field name="search_view_id" ref="view_sgr_communication_type_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Communication Types"
+            id="menu_communication_types"
+            sequence="25"
+            action="action_sgr_communication_type_communication_types"
+            parent="menu_misc_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_component_registry_finality_components_finalities" model="ir.actions.act_window">
+            <field name="name">Components Finalities</field>
+            <field name="res_model">sgr.component_registry_finality</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_component_registry_finality_tree"/>
+            <field name="search_view_id" ref="view_sgr_component_registry_finality_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Components Finalities"
+            id="menu_components_finalities"
+            sequence="80"
+            action="action_sgr_component_registry_finality_components_finalities"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_document_category_document_categories" model="ir.actions.act_window">
+            <field name="name">Document Categories</field>
+            <field name="res_model">sgr.document_category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_document_category_tree"/>
+            <field name="search_view_id" ref="view_sgr_document_category_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Document Categories"
+            id="menu_document_categories"
+            sequence="10"
+            action="action_sgr_document_category_document_categories"
+            parent="menu_misc_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_emergency_information_emergency_information" model="ir.actions.act_window">
+            <field name="name">Emergency Information</field>
+            <field name="res_model">sgr.emergency_information</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_emergency_information_tree"/>
+            <field name="search_view_id" ref="view_sgr_emergency_information_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Emergency Information"
+            id="menu_emergency_information"
+            sequence="10"
+            action="action_sgr_emergency_information_emergency_information"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_environmental_class_environmental_classes" model="ir.actions.act_window">
+            <field name="name">Environmental Classes</field>
+            <field name="res_model">sgr.environmental_class</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_environmental_class_tree"/>
+            <field name="search_view_id" ref="view_sgr_environmental_class_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Environmental Classes"
+            id="menu_environmental_classes"
+            sequence="35"
+            action="action_sgr_environmental_class_environmental_classes"
+            parent="menu_products___registries"
+            groups="group_user,group_manager,group_manager"
+            />
+
+        <record id="action_sgr_formulation_type_formulation_types" model="ir.actions.act_window">
+            <field name="name">Formulation Types</field>
+            <field name="res_model">sgr.formulation_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_formulation_type_tree"/>
+            <field name="search_view_id" ref="view_sgr_formulation_type_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Formulation Types"
+            id="menu_formulation_types"
+            sequence="15"
+            action="action_sgr_formulation_type_formulation_types"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_information_category_information_categories" model="ir.actions.act_window">
+            <field name="name">Information Categories</field>
+            <field name="res_model">sgr.information_category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_information_category_tree"/>
+            <field name="search_view_id" ref="view_sgr_information_category_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Information Categories"
+            id="menu_information_categories"
+            sequence="15"
+            action="action_sgr_information_category_information_categories"
+            parent="menu_misc_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_ingredient_function_ingredient_functions" model="ir.actions.act_window">
+            <field name="name">Ingredient Functions</field>
+            <field name="res_model">sgr.ingredient_function</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ingredient_function_tree"/>
+            <field name="search_view_id" ref="view_sgr_ingredient_function_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Ingredient Functions"
+            id="menu_ingredient_functions"
+            sequence="10"
+            action="action_sgr_ingredient_function_ingredient_functions"
+            parent="menu_ingredients_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_ingredient_group_ingredient_groups" model="ir.actions.act_window">
+            <field name="name">Ingredient Groups</field>
+            <field name="res_model">sgr.ingredient_group</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ingredient_group_tree"/>
+            <field name="search_view_id" ref="view_sgr_ingredient_group_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Ingredient Groups"
+            id="menu_ingredient_groups"
+            sequence="20"
+            action="action_sgr_ingredient_group_ingredient_groups"
+            parent="menu_ingredients_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_ingredient_name_category_ingredient_name_categories" model="ir.actions.act_window">
+            <field name="name">Ingredient Name Categories</field>
+            <field name="res_model">sgr.ingredient_name_category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ingredient_name_category_tree"/>
+            <field name="search_view_id" ref="view_sgr_ingredient_name_category_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Ingredient Name Categories"
+            id="menu_ingredient_name_categories"
+            sequence="15"
+            action="action_sgr_ingredient_name_category_ingredient_name_categories"
+            parent="menu_ingredients_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_mode_of_action_modes_of_action" model="ir.actions.act_window">
+            <field name="name">Modes Of Action</field>
+            <field name="res_model">sgr.mode_of_action</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_mode_of_action_tree"/>
+            <field name="search_view_id" ref="view_sgr_mode_of_action_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Modes Of Action"
+            id="menu_modes_of_action"
+            sequence="25"
+            action="action_sgr_mode_of_action_modes_of_action"
+            parent="menu_ingredients_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_packaging_capacity_packaging_capacities" model="ir.actions.act_window">
+            <field name="name">Packaging Capacities</field>
+            <field name="res_model">sgr.packaging_capacity</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_packaging_capacity_tree"/>
+            <field name="search_view_id" ref="view_sgr_packaging_capacity_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Packaging Capacities"
+            id="menu_packaging_capacities"
+            sequence="10"
+            action="action_sgr_packaging_capacity_packaging_capacities"
+            parent="menu_packagings"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_packaging_material_packaging_materials" model="ir.actions.act_window">
+            <field name="name">Packaging Materials</field>
+            <field name="res_model">sgr.packaging_material</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_packaging_material_tree"/>
+            <field name="search_view_id" ref="view_sgr_packaging_material_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Packaging Materials"
+            id="menu_packaging_materials"
+            sequence="15"
+            action="action_sgr_packaging_material_packaging_materials"
+            parent="menu_packagings"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_packaging_type_packaging_types" model="ir.actions.act_window">
+            <field name="name">Packaging Types</field>
+            <field name="res_model">sgr.packaging_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_packaging_type_tree"/>
+            <field name="search_view_id" ref="view_sgr_packaging_type_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Packaging Types"
+            id="menu_packaging_types"
+            sequence="20"
+            action="action_sgr_packaging_type_packaging_types"
+            parent="menu_packagings"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_physical_state_physical_states" model="ir.actions.act_window">
+            <field name="name">Physical States</field>
+            <field name="res_model">sgr.physical_state</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_physical_state_tree"/>
+            <field name="search_view_id" ref="view_sgr_physical_state_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Physical States"
+            id="menu_physical_states"
+            sequence="20"
+            action="action_sgr_physical_state_physical_states"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_publication_type_publications_types" model="ir.actions.act_window">
+            <field name="name">Publications Types</field>
+            <field name="res_model">sgr.publication_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_publication_type_tree"/>
+            <field name="search_view_id" ref="view_sgr_publication_type_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Publications Types"
+            id="menu_publications_types"
+            sequence="30"
+            action="action_sgr_publication_type_publications_types"
+            parent="menu_misc_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_registry_category_registry_category" model="ir.actions.act_window">
+            <field name="name">Registry Category</field>
+            <field name="res_model">sgr.registry_category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_registry_category_tree"/>
+            <field name="search_view_id" ref="view_sgr_registry_category_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Registry Category"
+            id="menu_registry_category"
+            sequence="100"
+            action="action_sgr_registry_category_registry_category"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_ret_phase_ret_phases" model="ir.actions.act_window">
+            <field name="name">RET Phases</field>
+            <field name="res_model">sgr.ret_phase</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ret_phase_tree"/>
+            <field name="search_view_id" ref="view_sgr_ret_phase_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="RET Phases"
+            id="menu_ret_phases"
+            sequence="10"
+            action="action_sgr_ret_phase_ret_phases"
+            parent="menu_ret_config"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_ret_purpose_ret_purposes" model="ir.actions.act_window">
+            <field name="name">RET Purposes</field>
+            <field name="res_model">sgr.ret_purpose</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_ret_purpose_tree"/>
+            <field name="search_view_id" ref="view_sgr_ret_purpose_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="RET Purposes"
+            id="menu_ret_purposes"
+            sequence="15"
+            action="action_sgr_ret_purpose_ret_purposes"
+            parent="menu_ret_config"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_shipping_method_shipping_methods" model="ir.actions.act_window">
+            <field name="name">Shipping Methods</field>
+            <field name="res_model">sgr.shipping_method</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_shipping_method_tree"/>
+            <field name="search_view_id" ref="view_sgr_shipping_method_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Shipping Methods"
+            id="menu_shipping_methods"
+            sequence="40"
+            action="action_sgr_shipping_method_shipping_methods"
+            parent="menu_misc_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_study_method_study_methods" model="ir.actions.act_window">
+            <field name="name">Study Methods</field>
+            <field name="res_model">sgr.study_method</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_study_method_tree"/>
+            <field name="search_view_id" ref="view_sgr_study_method_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Study Methods"
+            id="menu_study_methods"
+            sequence="10"
+            action="action_sgr_study_method_study_methods"
+            parent="menu_studies_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_study_purpose_study_purposes" model="ir.actions.act_window">
+            <field name="name">Study Purposes</field>
+            <field name="res_model">sgr.study_purpose</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_study_purpose_tree"/>
+            <field name="search_view_id" ref="view_sgr_study_purpose_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Study Purposes"
+            id="menu_study_purposes"
+            sequence="15"
+            action="action_sgr_study_purpose_study_purposes"
+            parent="menu_studies_conf"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_toxicological_class_toxicologial_classes" model="ir.actions.act_window">
+            <field name="name">Toxicologial Classes</field>
+            <field name="res_model">sgr.toxicological_class</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_toxicological_class_tree"/>
+            <field name="search_view_id" ref="view_sgr_toxicological_class_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Toxicologial Classes"
+            id="menu_toxicologial_classes"
+            sequence="40"
+            action="action_sgr_toxicological_class_toxicologial_classes"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+        <record id="action_sgr_trademark_type_trademark_types" model="ir.actions.act_window">
+            <field name="name">Trademark Types</field>
+            <field name="res_model">sgr.trademark_type</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_sgr_trademark_type_tree"/>
+            <field name="search_view_id" ref="view_sgr_trademark_type_filter"/>
+            <field name="domain">[]</field>
+        </record>
+
+        <menuitem
+            name="Trademark Types"
+            id="menu_trademark_types"
+            sequence="50"
+            action="action_sgr_trademark_type_trademark_types"
+            parent="menu_products___registries"
+            groups="group_manager"
+            />
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

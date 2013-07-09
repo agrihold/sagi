@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+    
+        <record id="view_sagi_x_agronomic_class_form" model="ir.ui.view">
+            <field name="name">sagi_x.agronomic_class.form</field>
+            <field name="model">sgr.agronomic_class</field>
+            <field name="inherit_id" ref="sgr.view_sgr_agronomic_class_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="name" position="after">
+                        <field name="code"/>
+                        <field name="sequence_id" readonly="1"/>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+	</data>
+</openerp>

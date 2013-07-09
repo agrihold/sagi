@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.publication -->
+<!-- sgr.publication -->
+<!-- sgr.publication -->
+<openerp>
+    <data>
+
+        <!-- SEARCHVIEW 
+        <record id="view_sgr_publication_filter" model="ir.ui.view">
+            <field name="name">sgr.publication.select</field>
+            <field name="model">sgr.publication</field>
+            <field name="arch" type="xml">
+                <search string="Publications" version="7.0">
+                        <field name="name"
+                            />
+                        <field name="number"
+                            />
+                </search>
+            </field>
+        </record>
+-->
+        <!-- FORMVIEW -->
+        <record id="view_sgr_publication_form" model="ir.ui.view">
+            <field name="name">sgr.publication.form</field>
+            <field name="model">sgr.publication</field>
+            <field name="inherit_id" ref="sgr.view_sgr_publication_form"/> 
+            <field name="arch" type="xml">
+                <sheet string="Publications" position="replace"/>
+                    <header position="after">
+                    <sheet string="Publications">
+                     <group colspan="4" col="4">
+                        <field name="publication_type_id"/>                     
+                        <field name="number"/>
+                        <field name="name" colspan="4"/>
+                        <field name="publication_date"/>
+                        <field name="published_on_page"/>
+                        <field name="act_date"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                        <newline/>
+                        <field name="description" colspan="4"/>
+                     </group>
+                    </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="sgr.view_sgr_publication_tree" model="ir.ui.view">
+            <field name="name">sgr.publication.tree</field>
+            <field name="model">sgr.publication</field>
+            <field name="arch" type="xml">
+                <tree string="Publications"
+                    >
+                    <field name="publication_type_id"/>
+                    <field name="number"/>
+                    <field name="publication_date"/>
+                    <field name="act_date"/>
+                    <field name="act"/>                    
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

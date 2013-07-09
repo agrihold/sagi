@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.npp_closure -->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<openerp>
+    <data>
+
+        <!-- INHERITED SEARCH -->
+        <record id="view_sagi_npp_closure_filter" model="ir.ui.view">
+            <field name="name">sagi.npp_closure.select</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="view_sagi_new_product_project_filter"/>
+            <field name="arch" type="xml">
+                <search position="inside">
+                </search>
+            </field>
+        </record>
+ 
+        <!-- INHERITED FORM -->
+        <record id="view_sagi_npp_closure_form" model="ir.ui.view">
+            <field name="name">sagi.npp_closure.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="view_sagi_new_product_project_form"/>
+            <field name="arch" type="xml">
+                <group position="inside">
+                        <field name="closure_date_to_start"
+                            />
+                        <field name="closure_date_to_end"
+                            />
+                        <field name="closure_started_date"
+                            />
+                        <field name="closure_end_date"
+                            />
+                        <field name="closing_report_file"
+                            />
+                </group>
+            </field>
+        </record>
+
+        <!-- INHERITED TREE -->
+        <record id="view_sagi_npp_closure_tree" model="ir.ui.view">
+            <field name="name">sagi.npp_closure.tree</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="inherit_id" ref="view_sagi_new_product_project_tree"/>
+            <field name="arch" type="xml">
+                <tree position="inside">
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

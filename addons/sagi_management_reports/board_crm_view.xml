@@ -1,0 +1,211 @@
+<?xml version="1.0"?>
+<openerp>
+     <data>
+
+<!-- Dashboard Developement -->
+        <!--Projects x phase-->
+        <record id="view_act_projects_x_phase_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.projects_x_phase.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="bar">
+                    <field name="operative_id" />
+                    <field name="nbr" operator="+"/>                
+                    <field name="phase" group="True" />             
+                </graph>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_projects_x_phase">
+            <field name="name">Projects x Phase</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="view_act_projects_x_phase_graph"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--Proposals x month-->
+        <record id="view_act_proposals_x_month_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.act_proposals_x_month.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="bar">
+                    <field name="creation_started_month" />
+                    <field name="nbr" operator="+"/>                
+                    <field name="agronomic_class" group="True" />             
+                </graph>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_proposals_x_month">
+            <field name="name">Proposals x Month</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="view_act_proposals_x_month_graph"/>
+            <field name="domain">[]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--Rejected Projects x Stage-->
+        <record id="view_rejected_projects_x_stage_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.rejected_projects_x_stage.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="pie">
+                    <field name="state" />
+                    <field name="nbr" operator="+"/>                           
+                </graph>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_rejected_projects_x_stage">
+            <field name="name">Rejected Projects x Stage</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="view_rejected_projects_x_stage_graph"/>
+            <field name="domain">[('snp_status','in',('aborted','rejected'))]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.ui.view" id="board_npp_form">
+            <field name="name">Developement</field>
+            <field name="model">board.board</field>
+            <field name="arch" type="xml">
+                <form string="Developement Dashboard" version="7.0">
+                    <board style="1">
+                        <column>
+                            <action string="Proposals x month" name="%(act_proposals_x_month)d"/>
+                            <action string="Projects x Phase" name="%(act_projects_x_phase)d"/>
+                            <action string="Rejected Projects x Stage" name="%(act_rejected_projects_x_stage)d"/>
+                            <action string="Ongoing Projects Delay x Operative (days)" name="%(action_report_sagi_npp_delay_x_proj)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_board_npp_dash">
+            <field name="name">Developement</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="board_npp_form"/>
+        </record>
+
+        <menuitem
+            id="menu_board_npp_dash"
+            parent="base.menu_reporting_dashboard"
+            action="open_board_npp_dash"
+            sequence="45"
+            groups="group_reports_developement"/>
+
+
+<!-- Dashboard Registries -->
+        <!--Formulated Registries x Operative-->
+        <record id="view_formulated_registries_x_operative_graph" model="ir.ui.view">
+             <field name="name">formulated_product_registries_x_operative.graph</field>
+            <field name="model">sgr.formulated_product_registry</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Formulated Registries x Operative" type="bar">
+                    <field name="operative_id" />
+                    <field name="number" operator="+"/>                
+                    <field name="state" group="True" />             
+                </graph>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_formulated_registries_x_operative">
+            <field name="name">Formulated Registries x Operative</field>
+            <field name="res_model">sgr.formulated_product_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="view_formulated_registries_x_operative_graph"/>
+            <field name="domain">[('state', 'in', ('requested','approved','rejected'))]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <!--Technical Registries x Operative-->
+        <record id="view_technical_registries_x_operative_graph" model="ir.ui.view">
+             <field name="name">technical_product_registries_x_operative.graph</field>
+            <field name="model">sgr.technical_product_registry</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Technical Registries x Operative" type="bar">
+                    <field name="operative_id" />
+                    <field name="number" operator="+"/>                
+                    <field name="state" group="True" />             
+                </graph>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="act_technical_registries_x_operative">
+            <field name="name">Technical Registries x Operative</field>
+            <field name="res_model">sgr.technical_product_registry</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree,form</field>
+            <field name="view_id" ref="view_technical_registries_x_operative_graph"/>
+            <field name="domain">[('state', 'in', ('requested','approved','rejected'))]</field>
+            <field name="context">{}</field>
+        </record>
+
+        <record model="ir.ui.view" id="board_sgr_form">
+            <field name="name">Registries</field>
+            <field name="model">board.board</field>
+            <field name="arch" type="xml">
+                <form string="Registries Dashboard" version="7.0">
+                    <board style="1">
+                        <column>
+                            <action string="Formulated Registries x Operative" name="%(act_formulated_registries_x_operative)d"/>
+                            <action string="Technical Registries x Operative" name="%(act_technical_registries_x_operative)d"/>
+                        </column>
+                    </board>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="open_board_sgr_dash">
+            <field name="name">Registries</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="board_sgr_form"/>
+        </record>
+
+        <menuitem
+            id="menu_board_sgr_dash"
+            parent="base.menu_reporting_dashboard"
+            action="open_board_sgr_dash"
+            sequence="55"
+            groups="group_reports_registries"/>
+
+<!-- Dashboard Competitiveness -->
+        <record model="ir.ui.view" id="board_comp_mana_form">
+            <field name="name">Price Management</field>
+            <field name="model">board.board</field>
+            <field name="arch" type="xml">
+                <form string="Registries Dashboard" version="7.0">
+                    <board style="1-1-1">
+                        <column/>
+                        <column/>
+                    </board>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="open_board_comp_mana_dash">
+            <field name="name">Price Management</field>
+            <field name="res_model">board.board</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="usage">menu</field>
+            <field name="view_id" ref="board_comp_mana_form"/>
+        </record>
+
+        <menuitem
+            id="menu_board_comp_mana_dash"
+            parent="base.menu_reporting_dashboard"
+            action="open_board_comp_mana_dash"
+            sequence="60"
+            groups="group_reports_compe_management"/>
+
+    </data>
+</openerp>

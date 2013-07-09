@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_sagi_npp_gantt_view_form" model="ir.ui.view">
+            <field name="name">sagi.npp_gantt_view.form</field>
+            <field name="model">sagi.npp_gantt_view</field>
+            <field name="arch" type="xml">
+                <form string="Gantt View" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Gantt View">
+                     <group>
+                        <field name="name" readonly="1"/>
+                        <field name="date_start" readonly="1"/>
+                        <field name="date_stop" readonly="1"/>
+                        <field name="sequence" readonly="1"/>
+                        <field name="new_product_project_id" readonly="1"/>
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+	</data>
+</openerp>

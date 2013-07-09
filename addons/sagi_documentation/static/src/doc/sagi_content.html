@@ -1,0 +1,731 @@
+﻿<!DOCTYPE HTML>
+<html><head>
+   <title>Documentación SAGI</title>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />   
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <!-- This line includes the general project style sheet (not required) -->
+   <link type="text/css" href="styles.css" rel="stylesheet" />
+
+   <!-- This block defines the styles of the TOC headings, change them as needed -->
+   <style type="text/css">
+       body { }
+       .heading1 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading2 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading3 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading4 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading5 { font-size: 10pt; color: #000000; text-decoration: none; }
+       .heading6 { font-size: 10pt; color: #000000; text-decoration: none; }
+
+       .hilight1 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight2 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight3 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight4 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight5 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+       .hilight6 { font-size: 10pt; color: #FFFFFF; background: #194E84; text-decoration: none; }
+
+       /* TOC LIST CSS */
+       #toc    { padding:0; margin:0 }
+       #toc li { margin-top:2px; margin-left:0; padding:1px }
+       #toc ul { padding-left:0; margin-left:0px }       
+       /* TOC LIST CSS */
+   </style>
+   <script type="text/javascript" src="jquery.js"></script>
+   <script type="text/javascript" src="helpman_settings.js"></script>
+   <script type="text/javascript">
+     var parentScope = (parent.hmNavigationFrame);
+     if (!parentScope) {
+		      var s = document.createElement("script");
+		      s.setAttribute("type","text/javascript");
+		      s.setAttribute("src", "helpman_navigation.js");
+		      document.getElementsByTagName("head")[0].appendChild(s);
+	    }
+     else {
+       if (initialtocstate != "expandall") parent.hmAddCss(document, "#toc li ul { display: none }");
+     }
+     function loadicons() { var icons = new Array(); for (i=0; i<arguments.length; i++) { icons[i] = new Image(); icons[i].src = arguments[i]; } }
+     function loadtoc() { if (parentScope) parent.loadstate(document.getElementById("toc")); else loadstate(document.getElementById("toc")); }
+     function savetoc() { if (parentScope) parent.savestate(document.getElementById("toc")); else savestate(document.getElementById("toc")); }
+     function clicked(node, event) { deselect(); if (parentScope) parent.hmNodeClicked(node, event); else hmNodeClicked(node, event); }
+     function dblclicked(node) { if (parentScope) parent.hmNodeDblclicked(node); else hmNodeDblclicked(node); }
+     function deselect() { if (window.getSelection) window.getSelection().removeAllRanges(); else if (document.selection) document.selection.empty(); }
+     $(document).ready(function(){
+       loadtoc();
+       $(window).onunload = savetoc;
+     });
+   </script>
+</head>
+<body>
+<ul id="toc" style="list-style-type:none;display:block;padding-left:0">
+<li class="heading1" id="i1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a1" href="dh_acerca_de_este_manual.html" target="hmcontent"><span class="heading1" id="s1">Bienvenido a SAGI</span></a>
+</li>
+<li class="heading1" id="i2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a2" href="dh_acerca_de_este_manual2.html" target="hmcontent"><span class="heading1" id="s2">Acerca de este Tutorial</span></a>
+</li>
+<li class="heading1" id="i3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a3" href="dh_introduccion_a_sagi.html" target="hmcontent"><span class="heading1" id="s3" ondblclick="return dblclicked(this)">Introducción a SAGI</span></a>
+<ul id="ul3" style="list-style-type:none">
+<li class="heading2" id="i3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.1" href="dh_metodologia_sagi.html" target="hmcontent"><span class="heading2" id="s3.1">Metodología SAGI</span></a>
+</li>
+<li class="heading2" id="i3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a3.2" href="dh_software_sagi.html" target="hmcontent"><span class="heading2" id="s3.2">Software SAGI</span></a>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a4" href="dh_software.html" target="hmcontent"><span class="heading1" id="s4" ondblclick="return dblclicked(this)">Software</span></a>
+<ul id="ul4" style="list-style-type:none">
+<li class="heading2" id="i4.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.1" href="dh_ingresar_al_sistema.html" target="hmcontent"><span class="heading2" id="s4.1" ondblclick="return dblclicked(this)">Ingreso al Sistema</span></a>
+<ul id="ul4.1" style="list-style-type:none">
+<li class="heading3" id="i4.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.1" href="dh_bienvenido.html" target="hmcontent"><span class="heading3" id="s4.1.1">Pantalla de inicio</span></a>
+</li>
+<li class="heading3" id="i4.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.1.2" href="dh_como_empezar_.html" target="hmcontent"><span class="heading3" id="s4.1.2">Inicio de sesion</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.2" href="dh_interfaz.html" target="hmcontent"><span class="heading2" id="s4.2" ondblclick="return dblclicked(this)">Introducción a la Interfaz</span></a>
+<ul id="ul4.2" style="list-style-type:none">
+<li class="heading3" id="i4.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.1" href="dh_menus.html" target="hmcontent"><span class="heading3" id="s4.2.1">Menús</span></a>
+</li>
+<li class="heading3" id="i4.2.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.2" href="dh_preferencias.html" target="hmcontent"><span class="heading3" id="s4.2.2" ondblclick="return dblclicked(this)">Preferencias de Usuario</span></a>
+<ul id="ul4.2.2" style="list-style-type:none">
+<li class="heading4" id="i4.2.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.2.1" href="dh_multi_empresa.html" target="hmcontent"><span class="heading4" id="s4.2.2.1">Multi Compañía</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.3" href="dh_area_de_trabajo.html" target="hmcontent"><span class="heading3" id="s4.2.3">Área de Trabajo</span></a>
+</li>
+<li class="heading3" id="i4.2.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.4" href="dh_vistas.html" target="hmcontent"><span class="heading3" id="s4.2.4" ondblclick="return dblclicked(this)">Vistas</span></a>
+<ul id="ul4.2.4" style="list-style-type:none">
+<li class="heading4" id="i4.2.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.1" href="dh_lista.html" target="hmcontent"><span class="heading4" id="s4.2.4.1">Lista</span></a>
+</li>
+<li class="heading4" id="i4.2.4.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.2" href="dh_formulario.html" target="hmcontent"><span class="heading4" id="s4.2.4.2" ondblclick="return dblclicked(this)">Formulario</span></a>
+<ul id="ul4.2.4.2" style="list-style-type:none">
+<li class="heading5" id="i4.2.4.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.4.2.1" href="dh_tipos_de_campos.html" target="hmcontent"><span class="heading5" id="s4.2.4.2.1" ondblclick="return dblclicked(this)">Tipos de campos</span></a>
+<ul id="ul4.2.4.2.1" style="list-style-type:none">
+<li class="heading6" id="i4.2.4.2.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.2.4.2.1.1" href="dh_campos_obligatorios.html" target="hmcontent"><span class="heading6" id="s4.2.4.2.1.1">Campos obligatorios</span></a>
+</li>
+<li class="heading6" id="i4.2.4.2.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.2.4.2.1.2" href="dh_campos_referencia2.html" target="hmcontent"><span class="heading6" id="s4.2.4.2.1.2">Campos referencia</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.2.4.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.3" href="dh_calendario.html" target="hmcontent"><span class="heading4" id="s4.2.4.3" ondblclick="return dblclicked(this)">Calendario</span></a>
+<ul id="ul4.2.4.3" style="list-style-type:none">
+<li class="heading5" id="i4.2.4.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.4.3.1" href="dh_asignado_a.html" target="hmcontent"><span class="heading5" id="s4.2.4.3.1">Asignado a</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.2.4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.4" href="dh_gantt.html" target="hmcontent"><span class="heading4" id="s4.2.4.4">Gantt</span></a>
+</li>
+<li class="heading4" id="i4.2.4.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.5" href="dh_graficos.html" target="hmcontent"><span class="heading4" id="s4.2.4.5" ondblclick="return dblclicked(this)">Gráfico</span></a>
+<ul id="ul4.2.4.5" style="list-style-type:none">
+<li class="heading5" id="i4.2.4.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.4.5.1" href="dh_opciones_del_grafico.html" target="hmcontent"><span class="heading5" id="s4.2.4.5.1">Opciones del gráfico</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.2.4.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.4.6" href="dh_kan_ban.html" target="hmcontent"><span class="heading4" id="s4.2.4.6">Kanban</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.5" href="dh_busqueda.html" target="hmcontent"><span class="heading3" id="s4.2.5" ondblclick="return dblclicked(this)">Filtros</span></a>
+<ul id="ul4.2.5" style="list-style-type:none">
+<li class="heading4" id="i4.2.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.5.1" href="dh_filtros_personalizados.html" target="hmcontent"><span class="heading4" id="s4.2.5.1">Filtros personalizados</span></a>
+</li>
+<li class="heading4" id="i4.2.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.5.2" href="dh_busqueda_avanzada.html" target="hmcontent"><span class="heading4" id="s4.2.5.2">Búsqueda avanzada</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.6" href="dh_agrupar_por2.html" target="hmcontent"><span class="heading3" id="s4.2.6">Agrupar por</span></a>
+</li>
+<li class="heading3" id="i4.2.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.7" href="dh_workflow.html" target="hmcontent"><span class="heading3" id="s4.2.7">Workflow</span></a>
+</li>
+<li class="heading3" id="i4.2.8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.8" href="dh_botones_de_openerp.html" target="hmcontent"><span class="heading3" id="s4.2.8" ondblclick="return dblclicked(this)">Botones de OpenERP</span></a>
+<ul id="ul4.2.8" style="list-style-type:none">
+<li class="heading4" id="i4.2.8.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.8.1" href="dh_panel_de_opciones4.html" target="hmcontent"><span class="heading4" id="s4.2.8.1" ondblclick="return dblclicked(this)">Panel de opciones</span></a>
+<ul id="ul4.2.8.1" style="list-style-type:none">
+<li class="heading5" id="i4.2.8.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.8.1.1" href="dh_imprimir2.html" target="hmcontent"><span class="heading5" id="s4.2.8.1.1">Imprimir</span></a>
+</li>
+<li class="heading5" id="i4.2.8.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.8.1.2" href="dh_adjuntos2.html" target="hmcontent"><span class="heading5" id="s4.2.8.1.2">Adjunto(s)</span></a>
+</li>
+<li class="heading5" id="i4.2.8.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.2.8.1.3" href="dh_mas2.html" target="hmcontent"><span class="heading5" id="s4.2.8.1.3">Más</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.2.8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.8.2" href="dh_boton_crear.html" target="hmcontent"><span class="heading4" id="s4.2.8.2">Crear</span></a>
+</li>
+<li class="heading4" id="i4.2.8.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.8.3" href="dh_editar__guardar_y_descartar.html" target="hmcontent"><span class="heading4" id="s4.2.8.3">Editar, Guardar y Descartar</span></a>
+</li>
+<li class="heading4" id="i4.2.8.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.8.4" href="dh_editar__guardar_y_descarta2.html" target="hmcontent"><span class="heading4" id="s4.2.8.4">Adelante y Atrás</span></a>
+</li>
+<li class="heading4" id="i4.2.8.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.8.5" href="dh_proximos_pasos.html" target="hmcontent"><span class="heading4" id="s4.2.8.5">Próximos pasos</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.2.9" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.2.9" href="dh_importar_y_exportar.html" target="hmcontent"><span class="heading3" id="s4.2.9" ondblclick="return dblclicked(this)">Importar y Exportar</span></a>
+<ul id="ul4.2.9" style="list-style-type:none">
+<li class="heading4" id="i4.2.9.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.9.1" href="dh_importar.html" target="hmcontent"><span class="heading4" id="s4.2.9.1">Importar</span></a>
+</li>
+<li class="heading4" id="i4.2.9.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.2.9.2" href="dh_exportar.html" target="hmcontent"><span class="heading4" id="s4.2.9.2">Exportar</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.3" href="dh_mensageria.html" target="hmcontent"><span class="heading2" id="s4.3" ondblclick="return dblclicked(this)">Mensajeria</span></a>
+<ul id="ul4.3" style="list-style-type:none">
+<li class="heading3" id="i4.3.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.1" href="dh_mensajeria.html" target="hmcontent"><span class="heading3" id="s4.3.1" ondblclick="return dblclicked(this)">Mensajería</span></a>
+<ul id="ul4.3.1" style="list-style-type:none">
+<li class="heading4" id="i4.3.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.1" href="dh_redactar_un_nuevo_mensaje.html" target="hmcontent"><span class="heading4" id="s4.3.1.1">Redactar un nuevo mensaje</span></a>
+</li>
+<li class="heading4" id="i4.3.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.2" href="dh_escribir_a_mis_seguidores.html" target="hmcontent"><span class="heading4" id="s4.3.1.2">Escribir a mis seguidores</span></a>
+</li>
+<li class="heading4" id="i4.3.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.3" href="dh_mensajeria_para_mi.html" target="hmcontent"><span class="heading4" id="s4.3.1.3">Para: mí</span></a>
+</li>
+<li class="heading4" id="i4.3.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.4" href="dh_por_realizar.html" target="hmcontent"><span class="heading4" id="s4.3.1.4">Por realizar</span></a>
+</li>
+<li class="heading4" id="i4.3.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.5" href="dh_archivados.html" target="hmcontent"><span class="heading4" id="s4.3.1.5">Archivados</span></a>
+</li>
+<li class="heading4" id="i4.3.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.6" href="dh_suscribirse_a_una_entidad.html" target="hmcontent"><span class="heading4" id="s4.3.1.6">Suscribirse a un objeto</span></a>
+</li>
+<li class="heading4" id="i4.3.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.7" href="dh_bandeja_de_entrada.html" target="hmcontent"><span class="heading4" id="s4.3.1.7">Bandeja de Entrada</span></a>
+</li>
+<li class="heading4" id="i4.3.1.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.1.8" href="dh_necesita_accion.html" target="hmcontent"><span class="heading4" id="s4.3.1.8">Acción requerida</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.3.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.2" href="dh_organizador.html" target="hmcontent"><span class="heading3" id="s4.3.2" ondblclick="return dblclicked(this)">Organizador</span></a>
+<ul id="ul4.3.2" style="list-style-type:none">
+<li class="heading4" id="i4.3.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.2.1" href="dh_calendario2.html" target="hmcontent"><span class="heading4" id="s4.3.2.1" ondblclick="return dblclicked(this)">Calendario</span></a>
+<ul id="ul4.3.2.1" style="list-style-type:none">
+<li class="heading5" id="i4.3.2.1.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.3.2.1.1" href="dh_crear_una_reunion.html" target="hmcontent"><span class="heading5" id="s4.3.2.1.1" ondblclick="return dblclicked(this)">Crear una reunión</span></a>
+<ul id="ul4.3.2.1.1" style="list-style-type:none">
+<li class="heading6" id="i4.3.2.1.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.1.1.1" href="dh_detalles_de_la_reunion.html" target="hmcontent"><span class="heading6" id="s4.3.2.1.1.1">Detalles de la reunión</span></a>
+</li>
+<li class="heading6" id="i4.3.2.1.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.1.1.2" href="dh_opciones.html" target="hmcontent"><span class="heading6" id="s4.3.2.1.1.2">Opciones</span></a>
+</li>
+<li class="heading6" id="i4.3.2.1.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.1.1.3" href="dh_invitaciones.html" target="hmcontent"><span class="heading6" id="s4.3.2.1.1.3">Invitaciones</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.3.2.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.2.2" href="dh_contactos___empresas.html" target="hmcontent"><span class="heading4" id="s4.3.2.2" ondblclick="return dblclicked(this)">Contactos / Empresas</span></a>
+<ul id="ul4.3.2.2" style="list-style-type:none">
+<li class="heading5" id="i4.3.2.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.3.2.2.1" href="dh_crear_un_contacto.html" target="hmcontent"><span class="heading5" id="s4.3.2.2.1" ondblclick="return dblclicked(this)">Crear un contacto</span></a>
+<ul id="ul4.3.2.2.1" style="list-style-type:none">
+<li class="heading6" id="i4.3.2.2.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.2.1.1" href="dh_notas_internas.html" target="hmcontent"><span class="heading6" id="s4.3.2.2.1.1">Notas internas</span></a>
+</li>
+<li class="heading6" id="i4.3.2.2.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.2.1.2" href="dh_ventas_y_compras.html" target="hmcontent"><span class="heading6" id="s4.3.2.2.1.2">Ventas y Compras</span></a>
+</li>
+<li class="heading6" id="i4.3.2.2.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.2.1.3" href="dh_contabilidad.html" target="hmcontent"><span class="heading6" id="s4.3.2.2.1.3">Contabilidad</span></a>
+</li>
+<li class="heading6" id="i4.3.2.2.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading6" id="a4.3.2.2.1.4" href="dh_historial.html" target="hmcontent"><span class="heading6" id="s4.3.2.2.1.4">Historial</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.3.2.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.2.3" href="dh_notas.html" target="hmcontent"><span class="heading4" id="s4.3.2.3" ondblclick="return dblclicked(this)">Notas</span></a>
+<ul id="ul4.3.2.3" style="list-style-type:none">
+<li class="heading5" id="i4.3.2.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.3.2.3.1" href="dh_crear_una_nota.html" target="hmcontent"><span class="heading5" id="s4.3.2.3.1">Crear una nota</span></a>
+</li>
+<li class="heading5" id="i4.3.2.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.3.2.3.2" href="dh_panel_de_opciones3.html" target="hmcontent"><span class="heading5" id="s4.3.2.3.2">Panel de opciones</span></a>
+</li>
+<li class="heading5" id="i4.3.2.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.3.2.3.3" href="dh_crear_una_columna.html" target="hmcontent"><span class="heading5" id="s4.3.2.3.3">Crear una etapa</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.3.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.3.3" href="dh_grupos.html" target="hmcontent"><span class="heading3" id="s4.3.3" ondblclick="return dblclicked(this)">Grupos</span></a>
+<ul id="ul4.3.3" style="list-style-type:none">
+<li class="heading4" id="i4.3.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.3.3.1" href="dh_crear_un_grupo.html" target="hmcontent"><span class="heading4" id="s4.3.3.1">Crear un grupo</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.4" href="dh_metodologia_de_gestion_de_proy.html" target="hmcontent"><span class="heading2" id="s4.4" ondblclick="return dblclicked(this)">Proyectos de Nuevos Productos</span></a>
+<ul id="ul4.4" style="list-style-type:none">
+<li class="heading3" id="i4.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.1" href="dh_crear_una_nueva_gestion_de_pro.html" target="hmcontent"><span class="heading3" id="s4.4.1">Propuesta de Nuevo Producto</span></a>
+</li>
+<li class="heading3" id="i4.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.2" href="dh_pasar_a_la_siguiente_etapa.html" target="hmcontent"><span class="heading3" id="s4.4.2">Pasar a la siguiente etapa</span></a>
+</li>
+<li class="heading3" id="i4.4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.3" href="dh_descargar_templates.html" target="hmcontent"><span class="heading3" id="s4.4.3">Descargar Templates</span></a>
+</li>
+<li class="heading3" id="i4.4.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.4" href="dh_control_macro.html" target="hmcontent"><span class="heading3" id="s4.4.4">Control</span></a>
+</li>
+<li class="heading3" id="i4.4.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.4.5" href="dh_fases2.html" target="hmcontent"><span class="heading3" id="s4.4.5" ondblclick="return dblclicked(this)">Fases</span></a>
+<ul id="ul4.4.5" style="list-style-type:none">
+<li class="heading4" id="i4.4.5.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.4.5.1" href="dh_creacion.html" target="hmcontent"><span class="heading4" id="s4.4.5.1" ondblclick="return dblclicked(this)">Creacion</span></a>
+<ul id="ul4.4.5.1" style="list-style-type:none">
+<li class="heading5" id="i4.4.5.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.1" href="dh_draft_snp.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.1">Draft SNP</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.2" href="dh_snp_presented.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.2">SNP Presented</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.3" href="dh_snp_presented2.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.3">Approved by QNP</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.4" href="dh_approved_by_cio.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.4">Approved by CIO</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.5" href="dh_sumary_ready.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.5">Sumary Ready</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.6" href="dh_approved_by_co.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.6">Approved by CO</span></a>
+</li>
+<li class="heading5" id="i4.4.5.1.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.1.7" href="dh_presentation_ready.html" target="hmcontent"><span class="heading5" id="s4.4.5.1.7">Presentation Ready</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.4.5.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.4.5.2" href="dh_iniciacion.html" target="hmcontent"><span class="heading4" id="s4.4.5.2" ondblclick="return dblclicked(this)">Iniciacion</span></a>
+<ul id="ul4.4.5.2" style="list-style-type:none">
+<li class="heading5" id="i4.4.5.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.1" href="dh_project_charter_draft.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.1">Project charter draft</span></a>
+</li>
+<li class="heading5" id="i4.4.5.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.2" href="dh_preliminary_project_planning.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.2">Preliminary Project Planning</span></a>
+</li>
+<li class="heading5" id="i4.4.5.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.3" href="dh_supply_chain_ca_ongoing.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.3">Supply Chain CA ongoing</span></a>
+</li>
+<li class="heading5" id="i4.4.5.2.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.4" href="dh_marketing_ca_ongoing.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.4">Marketing CA ongoing</span></a>
+</li>
+<li class="heading5" id="i4.4.5.2.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.5" href="dh_dr_ca_ongoing.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.5">DR CA ongoing</span></a>
+</li>
+<li class="heading5" id="i4.4.5.2.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.4.5.2.6" href="dh_ca_evaluation.html" target="hmcontent"><span class="heading5" id="s4.4.5.2.6">CA Evaluation</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.4.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.4.5.3" href="dh_planificacion.html" target="hmcontent"><span class="heading4" id="s4.4.5.3">Planificacion</span></a>
+</li>
+<li class="heading4" id="i4.4.5.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.4.5.4" href="dh_ejecucion.html" target="hmcontent"><span class="heading4" id="s4.4.5.4">Ejecucion y Control</span></a>
+</li>
+<li class="heading4" id="i4.4.5.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.4.5.5" href="dh_cierre.html" target="hmcontent"><span class="heading4" id="s4.4.5.5">Cierre</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.5" href="dh_proyectos_sagi.html" target="hmcontent"><span class="heading2" id="s4.5" ondblclick="return dblclicked(this)">Proyectos</span></a>
+<ul id="ul4.5" style="list-style-type:none">
+<li class="heading3" id="i4.5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.1" href="dh_workflow2.html" target="hmcontent"><span class="heading3" id="s4.5.1">Workflow</span></a>
+</li>
+<li class="heading3" id="i4.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.2" href="dh_views.html" target="hmcontent"><span class="heading3" id="s4.5.2">Views</span></a>
+</li>
+<li class="heading3" id="i4.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.3" href="dh_camino_critico.html" target="hmcontent"><span class="heading3" id="s4.5.3">Camino Critico</span></a>
+</li>
+<li class="heading3" id="i4.5.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.4" href="dh_programacion.html" target="hmcontent"><span class="heading3" id="s4.5.4">Programacion</span></a>
+</li>
+<li class="heading3" id="i4.5.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.5" href="dh_crear_un_proyecto_2.html" target="hmcontent"><span class="heading3" id="s4.5.5">Crear un proyecto</span></a>
+</li>
+<li class="heading3" id="i4.5.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.6" href="dh_project_templates.html" target="hmcontent"><span class="heading3" id="s4.5.6">Project Templates</span></a>
+</li>
+<li class="heading3" id="i4.5.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.7" href="dh_common_buttons.html" target="hmcontent"><span class="heading3" id="s4.5.7">Common Buttons</span></a>
+</li>
+<li class="heading3" id="i4.5.8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.8" href="dh_tipo_proyecto.html" target="hmcontent"><span class="heading3" id="s4.5.8" ondblclick="return dblclicked(this)">Proyect class: Proyecto</span></a>
+<ul id="ul4.5.8" style="list-style-type:none">
+<li class="heading4" id="i4.5.8.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.8.1" href="dh_equipo_2.html" target="hmcontent"><span class="heading4" id="s4.5.8.1">Solapa Team</span></a>
+</li>
+<li class="heading4" id="i4.5.8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.8.2" href="dh_otra_informacion_2.html" target="hmcontent"><span class="heading4" id="s4.5.8.2">Solapa Other info</span></a>
+</li>
+<li class="heading4" id="i4.5.8.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.8.3" href="dh_wbs_components.html" target="hmcontent"><span class="heading4" id="s4.5.8.3">Solapa WBS Components</span></a>
+</li>
+<li class="heading4" id="i4.5.8.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.8.4" href="dh_solapa_control.html" target="hmcontent"><span class="heading4" id="s4.5.8.4">Solapa Control</span></a>
+</li>
+<li class="heading4" id="i4.5.8.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.8.5" href="dh_buttons.html" target="hmcontent"><span class="heading4" id="s4.5.8.5">Botones</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.5.9" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.9" href="dh_proyect_class_entregable.html" target="hmcontent"><span class="heading3" id="s4.5.9" ondblclick="return dblclicked(this)">Proyect class: Entregable</span></a>
+<ul id="ul4.5.9" style="list-style-type:none">
+<li class="heading4" id="i4.5.9.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.1" href="dh_equipo_2_2.html" target="hmcontent"><span class="heading4" id="s4.5.9.1">Solapa Team 2</span></a>
+</li>
+<li class="heading4" id="i4.5.9.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.2" href="dh_other_info.html" target="hmcontent"><span class="heading4" id="s4.5.9.2">Solapa Other info</span></a>
+</li>
+<li class="heading4" id="i4.5.9.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.3" href="dh_tasks.html" target="hmcontent"><span class="heading4" id="s4.5.9.3">SolapaTasks</span></a>
+</li>
+<li class="heading4" id="i4.5.9.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.4" href="dh_relationships.html" target="hmcontent"><span class="heading4" id="s4.5.9.4">Relationships</span></a>
+</li>
+<li class="heading4" id="i4.5.9.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.5" href="dh_solapa_de_control.html" target="hmcontent"><span class="heading4" id="s4.5.9.5">Solapa de Control</span></a>
+</li>
+<li class="heading4" id="i4.5.9.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.9.6" href="dh_buttons_2.html" target="hmcontent"><span class="heading4" id="s4.5.9.6">Botones</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.5.10" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.10" href="dh_tareas2.html" target="hmcontent"><span class="heading3" id="s4.5.10" ondblclick="return dblclicked(this)">Tareas</span></a>
+<ul id="ul4.5.10" style="list-style-type:none">
+<li class="heading4" id="i4.5.10.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.10.1" href="dh_solapa_descripcion.html" target="hmcontent"><span class="heading4" id="s4.5.10.1">Solapa Descripcion</span></a>
+</li>
+<li class="heading4" id="i4.5.10.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.10.2" href="dh_solapa_relationship.html" target="hmcontent"><span class="heading4" id="s4.5.10.2">Solapa Relationship</span></a>
+</li>
+<li class="heading4" id="i4.5.10.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.10.3" href="dh_solapa_extra_info.html" target="hmcontent"><span class="heading4" id="s4.5.10.3">Solapa Extra Info</span></a>
+</li>
+<li class="heading4" id="i4.5.10.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.10.4" href="dh_solapa_control2.html" target="hmcontent"><span class="heading4" id="s4.5.10.4">Solapa Control</span></a>
+</li>
+<li class="heading4" id="i4.5.10.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.10.5" href="dh_items_de_tareas.html" target="hmcontent"><span class="heading4" id="s4.5.10.5">Items de tareas</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.5.11" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.5.11" href="dh_control.html" target="hmcontent"><span class="heading3" id="s4.5.11" ondblclick="return dblclicked(this)">Control</span></a>
+<ul id="ul4.5.11" style="list-style-type:none">
+<li class="heading4" id="i4.5.11.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.11.1" href="dh_solapa_control_proyecto.html" target="hmcontent"><span class="heading4" id="s4.5.11.1">Control de Proyectos</span></a>
+</li>
+<li class="heading4" id="i4.5.11.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.11.2" href="dh_solapa_control_entregables.html" target="hmcontent"><span class="heading4" id="s4.5.11.2">Control de Entregables</span></a>
+</li>
+<li class="heading4" id="i4.5.11.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.11.3" href="dh_solapa_control_tareas.html" target="hmcontent"><span class="heading4" id="s4.5.11.3">Control de Tareas</span></a>
+</li>
+<li class="heading4" id="i4.5.11.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.5.11.4" href="dh_control_de_recursos.html" target="hmcontent"><span class="heading4" id="s4.5.11.4">Control de recursos</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.6" href="dh_reportes.html" target="hmcontent"><span class="heading2" id="s4.6" ondblclick="return dblclicked(this)">Reportes</span></a>
+<ul id="ul4.6" style="list-style-type:none">
+<li class="heading3" id="i4.6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.1" href="dh_tablero_de_control.html" target="hmcontent"><span class="heading3" id="s4.6.1">Tablero de control</span></a>
+</li>
+<li class="heading3" id="i4.6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.6.2" href="dh_imprir_reportes.html" target="hmcontent"><span class="heading3" id="s4.6.2">Reportes</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.7" href="dh_sgr.html" target="hmcontent"><span class="heading2" id="s4.7" ondblclick="return dblclicked(this)">SGR</span></a>
+<ul id="ul4.7" style="list-style-type:none">
+<li class="heading3" id="i4.7.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.1" href="dh_registros.html" target="hmcontent"><span class="heading3" id="s4.7.1" ondblclick="return dblclicked(this)">Registros</span></a>
+<ul id="ul4.7.1" style="list-style-type:none">
+<li class="heading4" id="i4.7.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.1.1" href="dh_registros_o_productos.html" target="hmcontent"><span class="heading4" id="s4.7.1.1">Registros o Productos</span></a>
+</li>
+<li class="heading4" id="i4.7.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.1.2" href="dh_caracteristicas_comunes.html" target="hmcontent"><span class="heading4" id="s4.7.1.2">Características comunes</span></a>
+</li>
+<li class="heading4" id="i4.7.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.1.3" href="dh_caracteristicas_particulares.html" target="hmcontent"><span class="heading4" id="s4.7.1.3">Características particulares</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.7.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.2" href="dh_laboratorios.html" target="hmcontent"><span class="heading3" id="s4.7.2" ondblclick="return dblclicked(this)">Laboratorios</span></a>
+<ul id="ul4.7.2" style="list-style-type:none">
+<li class="heading4" id="i4.7.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.2.1" href="dh_contratos.html" target="hmcontent"><span class="heading4" id="s4.7.2.1">Contratos</span></a>
+</li>
+<li class="heading4" id="i4.7.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.2.2" href="dh_propuestas.html" target="hmcontent"><span class="heading4" id="s4.7.2.2">Propuestas</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.7.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.3" href="dh_documentos.html" target="hmcontent"><span class="heading3" id="s4.7.3" ondblclick="return dblclicked(this)">Documentos</span></a>
+<ul id="ul4.7.3" style="list-style-type:none">
+<li class="heading4" id="i4.7.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.3.1" href="dh_caraceteristicascomunes.html" target="hmcontent"><span class="heading4" id="s4.7.3.1">Caraceterísticas comunes</span></a>
+</li>
+<li class="heading4" id="i4.7.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.7.3.2" href="dh_caracteristicas_particulares_docs.html" target="hmcontent"><span class="heading4" id="s4.7.3.2">Características particulares</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.7.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.4" href="dh_archivos_files.html" target="hmcontent"><span class="heading3" id="s4.7.4">Archivos (Files)</span></a>
+</li>
+<li class="heading3" id="i4.7.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.5" href="dh_informaciones.html" target="hmcontent"><span class="heading3" id="s4.7.5">Informaciones</span></a>
+</li>
+<li class="heading3" id="i4.7.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.6" href="dh_comunicaciones.html" target="hmcontent"><span class="heading3" id="s4.7.6">Comunicaciones</span></a>
+</li>
+<li class="heading3" id="i4.7.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.7" href="dh_official_letters_y_comunicacio.html" target="hmcontent"><span class="heading3" id="s4.7.7">Official Letters</span></a>
+</li>
+<li class="heading3" id="i4.7.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.7.8" href="dh_configuraciones_varias.html" target="hmcontent"><span class="heading3" id="s4.7.8">Configuraciones varias</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.8" href="dh_price_management.html" target="hmcontent"><span class="heading2" id="s4.8" ondblclick="return dblclicked(this)">Gestión de Precios</span></a>
+<ul id="ul4.8" style="list-style-type:none">
+<li class="heading3" id="i4.8.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.8.1" href="dh_introduccion.html" target="hmcontent"><span class="heading3" id="s4.8.1" ondblclick="return dblclicked(this)">Introduccion</span></a>
+<ul id="ul4.8.1" style="list-style-type:none">
+<li class="heading4" id="i4.8.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.8.1.1" href="dh_users.html" target="hmcontent"><span class="heading4" id="s4.8.1.1">Users</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.8.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.8.2" href="dh_competitiveness_management.html" target="hmcontent"><span class="heading3" id="s4.8.2" ondblclick="return dblclicked(this)">Competitiveness Management</span></a>
+<ul id="ul4.8.2" style="list-style-type:none">
+<li class="heading4" id="i4.8.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.8.2.1" href="dh_price_records.html" target="hmcontent"><span class="heading4" id="s4.8.2.1" ondblclick="return dblclicked(this)">Price Records</span></a>
+<ul id="ul4.8.2.1" style="list-style-type:none">
+<li class="heading5" id="i4.8.2.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.1.1" href="dh_crear.html" target="hmcontent"><span class="heading5" id="s4.8.2.1.1">Crear registros</span></a>
+</li>
+<li class="heading5" id="i4.8.2.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.1.2" href="dh_adjuntar_archivos.html" target="hmcontent"><span class="heading5" id="s4.8.2.1.2">Adjuntar archivos</span></a>
+</li>
+<li class="heading5" id="i4.8.2.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.1.3" href="dh_eliminar_un_registro.html" target="hmcontent"><span class="heading5" id="s4.8.2.1.3">Eliminar un registro</span></a>
+</li>
+<li class="heading5" id="i4.8.2.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.1.4" href="dh_comercial_name.html" target="hmcontent"><span class="heading5" id="s4.8.2.1.4">Comercial name</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.8.2.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.8.2.2" href="dh_reportes2.html" target="hmcontent"><span class="heading4" id="s4.8.2.2" ondblclick="return dblclicked(this)">Reportes</span></a>
+<ul id="ul4.8.2.2" style="list-style-type:none">
+<li class="heading5" id="i4.8.2.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.2.1" href="dh_price_analysis.html" target="hmcontent"><span class="heading5" id="s4.8.2.2.1">Price Analysis</span></a>
+</li>
+<li class="heading5" id="i4.8.2.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.2.2" href="dh_evolucion_precios-grafica.html" target="hmcontent"><span class="heading5" id="s4.8.2.2.2">Evolucion Precios-Grafica</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.8.2.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.8.2.3" href="dh_configuracion3.html" target="hmcontent"><span class="heading4" id="s4.8.2.3" ondblclick="return dblclicked(this)">Configuracion</span></a>
+<ul id="ul4.8.2.3" style="list-style-type:none">
+<li class="heading5" id="i4.8.2.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.3.1" href="dh_payments_terms.html" target="hmcontent"><span class="heading5" id="s4.8.2.3.1">Payments terms</span></a>
+</li>
+<li class="heading5" id="i4.8.2.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.3.2" href="dh_price_types.html" target="hmcontent"><span class="heading5" id="s4.8.2.3.2">Price Types</span></a>
+</li>
+<li class="heading5" id="i4.8.2.3.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.8.2.3.3" href="dh_responsabilities.html" target="hmcontent"><span class="heading5" id="s4.8.2.3.3">Responsabilities</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.9" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.9" href="dh_almacenes.html" target="hmcontent"><span class="heading2" id="s4.9" ondblclick="return dblclicked(this)">Almacen</span></a>
+<ul id="ul4.9" style="list-style-type:none">
+<li class="heading3" id="i4.9.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.1" href="dh_envio_de_mercaderia.html" target="hmcontent"><span class="heading3" id="s4.9.1" ondblclick="return dblclicked(this)">Ordenes de entrega</span></a>
+<ul id="ul4.9.1" style="list-style-type:none">
+<li class="heading4" id="i4.9.1.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.1.1" href="dh_crear_una_orden_de_entrega.html" target="hmcontent"><span class="heading4" id="s4.9.1.1" ondblclick="return dblclicked(this)">Crear una órden de entrega</span></a>
+<ul id="ul4.9.1.1" style="list-style-type:none">
+<li class="heading5" id="i4.9.1.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.1.1.1" href="dh_productos.html" target="hmcontent"><span class="heading5" id="s4.9.1.1.1">Productos</span></a>
+</li>
+<li class="heading5" id="i4.9.1.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.1.1.2" href="dh_informacion_adicional.html" target="hmcontent"><span class="heading5" id="s4.9.1.1.2">Información adicional</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.9.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.1.2" href="dh_devolver_productos.html" target="hmcontent"><span class="heading4" id="s4.9.1.2">Devolver productos</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.2" href="dh_orden_de_recepcion.html" target="hmcontent"><span class="heading3" id="s4.9.2" ondblclick="return dblclicked(this)">Ordenes de recepción</span></a>
+<ul id="ul4.9.2" style="list-style-type:none">
+<li class="heading4" id="i4.9.2.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.2.1" href="dh_crear_una_orden_de_recepcion.html" target="hmcontent"><span class="heading4" id="s4.9.2.1" ondblclick="return dblclicked(this)">Crear una órden de recepción</span></a>
+<ul id="ul4.9.2.1" style="list-style-type:none">
+<li class="heading5" id="i4.9.2.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.2.1.1" href="dh_productos2.html" target="hmcontent"><span class="heading5" id="s4.9.2.1.1">Productos</span></a>
+</li>
+<li class="heading5" id="i4.9.2.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.2.1.2" href="dh_informacion_adicional2.html" target="hmcontent"><span class="heading5" id="s4.9.2.1.2">Información adicional</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.9.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.2.2" href="dh_devolver_productos2.html" target="hmcontent"><span class="heading4" id="s4.9.2.2">Devolver productos</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.3" href="dh_moviemientos_internos.html" target="hmcontent"><span class="heading3" id="s4.9.3" ondblclick="return dblclicked(this)">Movimientos internos</span></a>
+<ul id="ul4.9.3" style="list-style-type:none">
+<li class="heading4" id="i4.9.3.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.3.1" href="dh_crear_un_movimiento_interno.html" target="hmcontent"><span class="heading4" id="s4.9.3.1" ondblclick="return dblclicked(this)">Crear un movimiento interno</span></a>
+<ul id="ul4.9.3.1" style="list-style-type:none">
+<li class="heading5" id="i4.9.3.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.3.1.1" href="dh_productos3.html" target="hmcontent"><span class="heading5" id="s4.9.3.1.1">Productos</span></a>
+</li>
+<li class="heading5" id="i4.9.3.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.3.1.2" href="dh_informacion_adicional3.html" target="hmcontent"><span class="heading5" id="s4.9.3.1.2">Información adicional</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i4.9.3.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.3.2" href="dh_revertir_movimiento_interno.html" target="hmcontent"><span class="heading4" id="s4.9.3.2">Revertir movimiento interno</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.4" href="dh_trazabilidad_movimientos_de_st.html" target="hmcontent"><span class="heading3" id="s4.9.4" ondblclick="return dblclicked(this)">Control de inventario/Estructura de ubicación</span></a>
+<ul id="ul4.9.4" style="list-style-type:none">
+<li class="heading4" id="i4.9.4.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.4.1" href="dh_crear_una_estructura_de_ubicac.html" target="hmcontent"><span class="heading4" id="s4.9.4.1">Crear una ubicación</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.5" href="dh_inventarios_fisicos.html" target="hmcontent"><span class="heading3" id="s4.9.5" ondblclick="return dblclicked(this)">Control de inventario/Inventarios físicos</span></a>
+<ul id="ul4.9.5" style="list-style-type:none">
+<li class="heading4" id="i4.9.5.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.5.1" href="dh_crear_un_inventario.html" target="hmcontent"><span class="heading4" id="s4.9.5.1" ondblclick="return dblclicked(this)">Crear un inventario</span></a>
+<ul id="ul4.9.5.1" style="list-style-type:none">
+<li class="heading5" id="i4.9.5.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.5.1.1" href="dh_informacion_general.html" target="hmcontent"><span class="heading5" id="s4.9.5.1.1">Información general</span></a>
+</li>
+<li class="heading5" id="i4.9.5.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.5.1.2" href="dh_informacion_general2.html" target="hmcontent"><span class="heading5" id="s4.9.5.1.2">Inventario publicado</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.6" href="dh_productos4.html" target="hmcontent"><span class="heading3" id="s4.9.6" ondblclick="return dblclicked(this)">Productos por categoría</span></a>
+<ul id="ul4.9.6" style="list-style-type:none">
+<li class="heading4" id="i4.9.6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.6.1" href="dh_crear_una_categoria.html" target="hmcontent"><span class="heading4" id="s4.9.6.1">Crear una categoría</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.7" href="dh_productos5.html" target="hmcontent"><span class="heading3" id="s4.9.7" ondblclick="return dblclicked(this)">Productos</span></a>
+<ul id="ul4.9.7" style="list-style-type:none">
+<li class="heading4" id="i4.9.7.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.9.7.1" href="dh_crear_un_producto.html" target="hmcontent"><span class="heading4" id="s4.9.7.1" ondblclick="return dblclicked(this)">Crear un producto</span></a>
+<ul id="ul4.9.7.1" style="list-style-type:none">
+<li class="heading5" id="i4.9.7.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.7.1.1" href="dh_informacion.html" target="hmcontent"><span class="heading5" id="s4.9.7.1.1">Información</span></a>
+</li>
+<li class="heading5" id="i4.9.7.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.7.1.2" href="dh_categoria.html" target="hmcontent"><span class="heading5" id="s4.9.7.1.2">Adquisiciones</span></a>
+</li>
+<li class="heading5" id="i4.9.7.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.7.1.3" href="dh_inventario.html" target="hmcontent"><span class="heading5" id="s4.9.7.1.3">Inventario</span></a>
+</li>
+<li class="heading5" id="i4.9.7.1.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.7.1.4" href="dh_ventas2.html" target="hmcontent"><span class="heading5" id="s4.9.7.1.4">Ventas</span></a>
+</li>
+<li class="heading5" id="i4.9.7.1.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.9.7.1.5" href="dh_contabilidad3.html" target="hmcontent"><span class="heading5" id="s4.9.7.1.5">Contabilidad</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i4.9.8" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.8" href="dh_solicitud_de_adquisicion_.html" target="hmcontent"><span class="heading3" id="s4.9.8">Solicitud de adquisición&nbsp;</span></a>
+</li>
+<li class="heading3" id="i4.9.9" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.9" href="dh_puntos_de_pedido.html" target="hmcontent"><span class="heading3" id="s4.9.9">Puntos de pedido</span></a>
+</li>
+<li class="heading3" id="i4.9.10" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.9.10" href="dh_configuracion2.html" target="hmcontent"><span class="heading3" id="s4.9.10">Configuración/Ubicaciones</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.10" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.10" href="dh_tips_de_usabilidad.html" target="hmcontent"><span class="heading2" id="s4.10" ondblclick="return dblclicked(this)">Tips de usabilidad</span></a>
+<ul id="ul4.10" style="list-style-type:none">
+<li class="heading3" id="i4.10.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.1" href="dh_adudas_contextuales.html" target="hmcontent"><span class="heading3" id="s4.10.1">Ayudas Contextuales</span></a>
+</li>
+<li class="heading3" id="i4.10.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.2" href="dh_accesos_directos.html" target="hmcontent"><span class="heading3" id="s4.10.2">Atajos del Teclado</span></a>
+</li>
+<li class="heading3" id="i4.10.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.3" href="dh_varias_pestanas.html" target="hmcontent"><span class="heading3" id="s4.10.3">Varias pestañas</span></a>
+</li>
+<li class="heading3" id="i4.10.4" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.4" href="dh_accesos_directos2.html" target="hmcontent"><span class="heading3" id="s4.10.4">Accesos Directos</span></a>
+</li>
+<li class="heading3" id="i4.10.5" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.5" href="dh_valores_predeterminados.html" target="hmcontent"><span class="heading3" id="s4.10.5">Valores Predeterminados</span></a>
+</li>
+<li class="heading3" id="i4.10.6" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.6" href="dh_breadcrumbs.html" target="hmcontent"><span class="heading3" id="s4.10.6">Breadcrumbs</span></a>
+</li>
+<li class="heading3" id="i4.10.7" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.10.7" href="dh_imprimir_vistas2.html" target="hmcontent"><span class="heading3" id="s4.10.7">Imprimir Vistas</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i4.11" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a4.11" href="dh_otras_herramientas.html" target="hmcontent"><span class="heading2" id="s4.11" ondblclick="return dblclicked(this)">Configuración</span></a>
+<ul id="ul4.11" style="list-style-type:none">
+<li class="heading3" id="i4.11.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a4.11.1" href="dh_usuarios_y_permisos.html" target="hmcontent"><span class="heading3" id="s4.11.1" ondblclick="return dblclicked(this)">Usuarios&nbsp;</span></a>
+<ul id="ul4.11.1" style="list-style-type:none">
+<li class="heading4" id="i4.11.1.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a4.11.1.1" href="dh_crear_un_usuario.html" target="hmcontent"><span class="heading4" id="s4.11.1.1" ondblclick="return dblclicked(this)">Crear un Usuario</span></a>
+<ul id="ul4.11.1.1" style="list-style-type:none">
+<li class="heading5" id="i4.11.1.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.11.1.1.1" href="dh_preferencias2.html" target="hmcontent"><span class="heading5" id="s4.11.1.1.1">Preferencias</span></a>
+</li>
+<li class="heading5" id="i4.11.1.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.11.1.1.2" href="dh_permisos_de_acceso.html" target="hmcontent"><span class="heading5" id="s4.11.1.1.2">Permisos de acceso</span></a>
+</li>
+<li class="heading5" id="i4.11.1.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a4.11.1.1.3" href="dh_restablecer_contrasena3.html" target="hmcontent"><span class="heading5" id="s4.11.1.1.3">Restablecer contraseña</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a5" href="dh_reclamaciones.html" target="hmcontent"><span class="heading1" id="s5" ondblclick="return dblclicked(this)">Soporte al cliente</span></a>
+<ul id="ul5" style="list-style-type:none">
+<li class="heading2" id="i5.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.1" href="dh_modulos.html" target="hmcontent"><span class="heading2" id="s5.1">Modulos</span></a>
+</li>
+<li class="heading2" id="i5.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a5.2" href="dh_gestion_de_reclamaciones.html" target="hmcontent"><span class="heading2" id="s5.2" ondblclick="return dblclicked(this)">Gestion de reclamaciones</span></a>
+<ul id="ul5.2" style="list-style-type:none">
+<li class="heading3" id="i5.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.2.1" href="dh_usuario.html" target="hmcontent"><span class="heading3" id="s5.2.1">Usuarios</span></a>
+</li>
+<li class="heading3" id="i5.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a5.2.2" href="dh_workflow3.html" target="hmcontent"><span class="heading3" id="s5.2.2">Workflow</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading1" id="i6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading1" id="a6" href="dh_metodologia.html" target="hmcontent"><span class="heading1" id="s6" ondblclick="return dblclicked(this)">Metodología</span></a>
+<ul id="ul6" style="list-style-type:none">
+<li class="heading2" id="i6.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.1" href="a_quem_se_destina_este_documento.html" target="hmcontent"><span class="heading2" id="s6.1">A quem se destina este documento</span></a>
+</li>
+<li class="heading2" id="i6.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.2" href="do_ciclo_de_vida_do_projeto_de_gestao_de_projetos_.html" target="hmcontent"><span class="heading2" id="s6.2" ondblclick="return dblclicked(this)">Do Ciclo de Vida do Projeto de Gestão de Projetos de Inovação</span></a>
+<ul id="ul6.2" style="list-style-type:none">
+<li class="heading3" id="i6.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.2.1" href="introducao.html" target="hmcontent"><span class="heading3" id="s6.2.1">Introdução</span></a>
+</li>
+<li class="heading3" id="i6.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.2.2" href="figura_do_ciclo_de_vida_de_gestao_de_projetos_de_i.html" target="hmcontent"><span class="heading3" id="s6.2.2">Figura do Ciclo de vida de Gestão de Projetos de Inovação</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.3" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.3" href="papeis_e_responsabilidades_no_projeto.html" target="hmcontent"><span class="heading2" id="s6.3" ondblclick="return dblclicked(this)">Papéis e responsabilidades no Projeto</span></a>
+<ul id="ul6.3" style="list-style-type:none">
+<li class="heading3" id="i6.3.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.3.1" href="organograma.html" target="hmcontent"><span class="heading3" id="s6.3.1">Organograma</span></a>
+</li>
+<li class="heading3" id="i6.3.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.3.2" href="exemplo.html" target="hmcontent"><span class="heading3" id="s6.3.2" ondblclick="return dblclicked(this)">Exemplo</span></a>
+<ul id="ul6.3.2" style="list-style-type:none">
+<li class="heading4" id="i6.3.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.3.2.1" href="descricao_do_projeto_fipronil_alta_800_wg_registr.html" target="hmcontent"><span class="heading4" id="s6.3.2.1">Descrição do Projeto: FIPRONIL ALTA 800 WG registrado por equivalência para o mercado do Brasil.</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.4" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.4" href="etapa_de_criacao_do_projeto.html" target="hmcontent"><span class="heading2" id="s6.4" ondblclick="return dblclicked(this)">Etapa de Criação do Projeto</span></a>
+<ul id="ul6.4" style="list-style-type:none">
+<li class="heading3" id="i6.4.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.1" href="grupos_de_processos.html" target="hmcontent"><span class="heading3" id="s6.4.1" ondblclick="return dblclicked(this)">Grupos de processos</span></a>
+<ul id="ul6.4.1" style="list-style-type:none">
+<li class="heading4" id="i6.4.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.1.1" href="desenvolver_proposta_de_projeto_%96_sugestao_de_novo.html" target="hmcontent"><span class="heading4" id="s6.4.1.1">Desenvolver proposta de projeto – Sugestão de Novo Produto (SNP)</span></a>
+</li>
+<li class="heading4" id="i6.4.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.1.2" href="avaliar_e_indicar_sugestoes_de_novos_produtos_(snp.html" target="hmcontent"><span class="heading4" id="s6.4.1.2">Avaliar e Indicar Sugestões de Novos Produtos (SNP)</span></a>
+</li>
+<li class="heading4" id="i6.4.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.4.1.3" href="selecionar_projetos.html" target="hmcontent"><span class="heading4" id="s6.4.1.3">Selecionar projetos</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.4.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.2" href="fluxo_de_processos.html" target="hmcontent"><span class="heading3" id="s6.4.2">Fluxo de processos</span></a>
+</li>
+<li class="heading3" id="i6.4.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.4.3" href="medidas_de_sucesso.html" target="hmcontent"><span class="heading3" id="s6.4.3">Medidas de sucesso</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.5" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.5" href="etapa_de_iniciacao_do_projeto.html" target="hmcontent"><span class="heading2" id="s6.5" ondblclick="return dblclicked(this)">Etapa de Iniciação do Projeto</span></a>
+<ul id="ul6.5" style="list-style-type:none">
+<li class="heading3" id="i6.5.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.5.1" href="grupos_de_processos_1.html" target="hmcontent"><span class="heading3" id="s6.5.1" ondblclick="return dblclicked(this)">Grupos de processos</span></a>
+<ul id="ul6.5.1" style="list-style-type:none">
+<li class="heading4" id="i6.5.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.5.1.1" href="nomeacao_do_lider_de_projeto_e_kick_off_da_analise.html" target="hmcontent"><span class="heading4" id="s6.5.1.1">Nomeação do líder de Projeto e Kick Off da Análise Crítica</span></a>
+</li>
+<li class="heading4" id="i6.5.1.2" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.5.1.2" href="analise_critica_(ac).html" target="hmcontent"><span class="heading4" id="s6.5.1.2" ondblclick="return dblclicked(this)">Análise Crítica (AC)</span></a>
+<ul id="ul6.5.1.2" style="list-style-type:none">
+<li class="heading5" id="i6.5.1.2.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.5.1.2.1" href="supply_chain.html" target="hmcontent"><span class="heading5" id="s6.5.1.2.1">Supply Chain</span></a>
+</li>
+<li class="heading5" id="i6.5.1.2.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.5.1.2.2" href="marketing.html" target="hmcontent"><span class="heading5" id="s6.5.1.2.2">Marketing</span></a>
+</li>
+<li class="heading5" id="i6.5.1.2.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.5.1.2.3" href="desenvolvimento__registro.html" target="hmcontent"><span class="heading5" id="s6.5.1.2.3">Desenvolvimento &amp; Registro</span></a>
+</li>
+</ul>
+</li>
+<li class="heading4" id="i6.5.1.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.5.1.3" href="validacao_da_analise_critica_e_aprovacao_para_a_pr.html" target="hmcontent"><span class="heading4" id="s6.5.1.3">Validação da análise crítica e aprovação para a próxima fase</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.5.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.5.2" href="fluxo_de_processos_1.html" target="hmcontent"><span class="heading3" id="s6.5.2">Fluxo de processos</span></a>
+</li>
+<li class="heading3" id="i6.5.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.5.3" href="medidas_de_sucesso_1.html" target="hmcontent"><span class="heading3" id="s6.5.3">Medidas de sucesso</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.6" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.6" href="etapa_de_planejamento_do_projeto.html" target="hmcontent"><span class="heading2" id="s6.6" ondblclick="return dblclicked(this)">Etapa de Planejamento do Projeto</span></a>
+<ul id="ul6.6" style="list-style-type:none">
+<li class="heading3" id="i6.6.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.1" href="grupos_de_processos_2.html" target="hmcontent"><span class="heading3" id="s6.6.1" ondblclick="return dblclicked(this)">Grupos de processos</span></a>
+<ul id="ul6.6.1" style="list-style-type:none">
+<li class="heading4" id="i6.6.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.6.1.1" href="preparacao_e_negociacao.html" target="hmcontent"><span class="heading4" id="s6.6.1.1">Preparação e negociação</span></a>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.6.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.2" href="fluxo_de_processos_2.html" target="hmcontent"><span class="heading3" id="s6.6.2">Fluxo de processos</span></a>
+</li>
+<li class="heading3" id="i6.6.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.6.3" href="medidas_de_sucesso_2.html" target="hmcontent"><span class="heading3" id="s6.6.3">Medidas de sucesso</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.7" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.7" href="etapa_de_execucao_e_controle_do_projeto.html" target="hmcontent"><span class="heading2" id="s6.7" ondblclick="return dblclicked(this)">Etapa de Execução e Controle do Projeto</span></a>
+<ul id="ul6.7" style="list-style-type:none">
+<li class="heading3" id="i6.7.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.7.1" href="grupos_de_processos_3.html" target="hmcontent"><span class="heading3" id="s6.7.1" ondblclick="return dblclicked(this)">Grupos de processos</span></a>
+<ul id="ul6.7.1" style="list-style-type:none">
+<li class="heading4" id="i6.7.1.1" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading4" id="a6.7.1.1" href="kick_off_do_projeto.html" target="hmcontent"><span class="heading4" id="s6.7.1.1" ondblclick="return dblclicked(this)">Kick Off do Projeto</span></a>
+<ul id="ul6.7.1.1" style="list-style-type:none">
+<li class="heading5" id="i6.7.1.1.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.7.1.1.1" href="acompanhamento_do_situacao_do_projeto.html" target="hmcontent"><span class="heading5" id="s6.7.1.1.1">Acompanhamento do Situação do projeto</span></a>
+</li>
+<li class="heading5" id="i6.7.1.1.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading5" id="a6.7.1.1.2" href="aprovacao_dos_produtos_do_projeto.html" target="hmcontent"><span class="heading5" id="s6.7.1.1.2">Aprovação dos produtos do projeto</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="heading3" id="i6.7.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.7.2" href="fluxo_de_processos_3.html" target="hmcontent"><span class="heading3" id="s6.7.2">Fluxo de processos</span></a>
+</li>
+<li class="heading3" id="i6.7.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.7.3" href="medidas_de_sucesso_3.html" target="hmcontent"><span class="heading3" id="s6.7.3">Medidas de sucesso</span></a>
+</li>
+</ul>
+</li>
+<li class="heading2" id="i6.8" data-bg="cicon1.gif;cicon2.gif" style="background:url(cicon2.gif) no-repeat;cursor:pointer;padding-left:20px" onclick="return clicked(this,event)"><a class="heading2" id="a6.8" href="etapa_de_encerramento_do_projeto.html" target="hmcontent"><span class="heading2" id="s6.8" ondblclick="return dblclicked(this)">Etapa de Encerramento do Projeto</span></a>
+<ul id="ul6.8" style="list-style-type:none">
+<li class="heading3" id="i6.8.1" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.8.1" href="grupos_de_processos_4.html" target="hmcontent"><span class="heading3" id="s6.8.1">Grupos de processos</span></a>
+</li>
+<li class="heading3" id="i6.8.2" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.8.2" href="fluxo_de_processos_4.html" target="hmcontent"><span class="heading3" id="s6.8.2">Fluxo de processos</span></a>
+</li>
+<li class="heading3" id="i6.8.3" style="background:url(cicon9.gif) no-repeat;padding-left:20px" onclick="return clicked(this,event)"><a class="heading3" id="a6.8.3" href="medidas_de_sucesso_4.html" target="hmcontent"><span class="heading3" id="s6.8.3">Medidas de sucesso</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">loadicons('cicon9.gif','cicon2.gif','cicon1.gif');</script>
+</body>
+</html>

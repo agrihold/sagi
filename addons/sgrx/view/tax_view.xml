@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.communication -->
+<!-- sgr.communication -->
+<!-- sgr.communication -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_tax_filter" model="ir.ui.view">
+            <field name="name">sgr.tax.select</field>
+            <field name="model">sgr.tax</field>
+            <field name="arch" type="xml">
+                <search string="Taxes" version="7.0">
+                    <group string="By Attribute">
+                    <field name="government_agency_id" string="Government Agency"
+                            />
+                    <field name="payment_date" string="Payment Date"
+                            />
+                    <field name="is_urgent" string="Is Urgent?"
+                            />
+                    <field name="ticket_id" string="Ticket N"
+                            />
+                    <field name="voucher_id" string="Voucher N"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    <field name="registry_id" string="Registry"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    <!-- TAX Calendar -->
+    <record model="ir.ui.view" id="view_crm_meeting_calendar">
+        <field name="name">TAX Calendar</field>
+        <field name="model">sgr.tax</field>
+        <field name="priority" eval="2"/>
+        <field name="arch" type="xml">
+            <calendar string="Tax" date_start="approval_date" color="is_urgent"> <!-- date_stop="expiration_date" date_delay="duration">-->
+                <field name="name"/>
+                <field name="amount"/>                
+            </calendar>
+        </field>
+    </record>
+
+    
+<!-- TAXES DESDE MENU -->
+        <!-- FORMVIEW -->
+        <record id="view_sgr_tax_form" model="ir.ui.view">
+            <field name="name">sgr.tax.form</field>
+            <field name="model">sgr.tax</field>
+            <field name="priority" eval="90"/>              
+            <field name="inherit_id" ref="sgr.view_sgr_tax_form"/>             
+            <field name="arch" type="xml">
+                <sheet string="Taxes" position="replace"/>
+                <header position="after">
+                    <sheet string="Taxes">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/>
+                                <field name="document_category_id"
+                                    domain="[('type','=','tax')]"
+                                    context="{'default_type':'tax'}"/> 
+<!--                                <field name="package_file_id"/>-->
+                                  
+                            </group>               
+                            <group colspan="2" col="2"> 
+                                <field name="registry_id"/>                             
+                                <field name="reviser_id"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Gral Info">
+                                <group colspan="4" col="4">
+                                    <group colspan="2" col="2">
+                                        <field name="government_agency_id"/>
+                                        <field name="approval_date" string="To be Pay (deadline)"/>                                        
+                                        <field name="is_urgent"/>
+                                        <field name="ticket_id"/>
+                                        <field name="voucher_id"/>                                       
+                                    </group>                                
+                                    <group colspan="2" col="3">                                   
+                                        <field name="amount"/>
+                                        <field name="currency_id" nolabel="1"/>
+                                        <field name="currency_rate" colspan="3"/>
+                                        <field name="my_amount"/>
+                                        <field name="my_currency_id" nolabel="1"/> 
+                                        <field name="payment_date" colspan="3"/>                                         
+                                        <field name="expiration_date" colspan="3"/>
+                                    </group>
+                                </group> 
+                            </page>                          
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>           
+                                    <field name="communication_ids" readonly="1"/>                                               
+                                </group>                   
+                            </page>                                              
+                        </notebook>                        
+                    </sheet>
+                </header>
+>
+            </field>
+        </record>
+
+    <!-- add calendar to window action -->
+    <record id="sgr.action_sgr_tax_taxes" model="ir.actions.act_window">
+        <field name="view_mode">tree,form,calendar</field>
+        <field name="view_id" ref="view_sgr_tax_form"/>
+    </record> 
+    
+    <record id="act_window_view_tax" model="ir.actions.act_window.view">
+        <field name="act_window_id" ref="sgr.action_sgr_tax_taxes"/>
+        <!--<field name="sequence">sgr.dossier_document</field>-->
+        <field name="view_id" ref="sgr.view_sgr_tax_tree"/>
+        <field name="view_mode">tree</field>
+    </record>       
+
+<!-- TAXES DESDE REGISTRIES -->
+        <!-- FORMVIEW -->        
+        <record id="view_sgr_tax_official_letter_form" model="ir.ui.view">
+            <field name="name">sgr.tax.official.letter.form</field>
+            <field name="model">sgr.tax</field>  
+            <field name="priority" eval="00"/>                     
+            <field name="arch" type="xml">       
+                <form string="Taxes" version="7.0">
+                    <header>
+                        <button name="sgn_set_to_pay"
+                            states="draft"
+                            string="Set to Pay"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_set_pay"
+                            states="to_pay"
+                            string="Set Pay"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_expire"
+                            states="paid"
+                            string="Set Expire"
+                            />
+                        <button name="sgn_cancel"
+                            states="draft,expired,paid,to_pay"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="Taxes">
+                        <label for="name" class="oe_edit_only"/>                   
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <group colspan="4" col="4">
+                            <group colspan="2" col="2">
+                                <field name="reference"/>
+                                <field name="document_category_id"
+                                    domain="[('type','=','tax')]"
+                                    context="{'default_type':'tax'}"/> 
+                                <!--<field name="package_file_id"/>-->
+                            </group>               
+                            <group colspan="2" col="2">                           
+                                <field name="reviser_id"/>
+                            </group>               
+                        </group>                          
+                        <notebook>
+                            <page string="Gral Info">
+                                <group colspan="4" col="4">
+                                    <group colspan="2" col="2">
+                                        <field name="government_agency_id"/>
+                                        <field name="approval_date" string="To be Pay (deadline)"/>                                        
+                                        <field name="is_urgent"/>
+                                        <field name="ticket_id"/>
+                                        <field name="voucher_id"/>                                       
+                                    </group>                                
+                                    <group colspan="2" col="3">                                   
+                                        <field name="amount"/>
+                                        <field name="currency_id" nolabel="1"/>
+                                        <field name="currency_rate" colspan="3"/>
+                                        <field name="my_amount"/>
+                                        <field name="my_currency_id" nolabel="1"/> 
+                                        <field name="payment_date" colspan="3"/>                                         
+                                        <field name="expiration_date" colspan="3"/>
+                                    </group>
+                                </group> 
+                            </page>                          
+                            <page string="Other Info">
+                                <group colspan="4" col="4">                            
+                                    <field name="company_id" groups="base.group_multi_company"/> 
+                                </group>
+                                <group colspan="4" col="1">   
+                                    <field name="note"/>           
+                                    <field name="communication_ids" readonly="1"/>                                               
+                                </group>                   
+                            </page>                                              
+                        </notebook>                        
+                    </sheet>                    
+                           
+                </form>
+            </field>
+        </record>
+
+
+        <!-- TREEVIEW -->
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

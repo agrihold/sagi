@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="True">
+        <record model='sgr.document_category' id='sgr_document_category_2'>
+            <field name='company_id' eval='False'/>
+            <field name='parent_id' eval='False'/>
+            <field name='type'>study</field>
+            <field name='name'>Estudio de factibilidad técnica</field>
+        </record> 
+        <record model='sgr.document_category' id='sgr_document_category_3'>
+            <field name='company_id' eval='False'/>
+            <field name='parent_id' eval='False'/>
+            <field name='type'>partner_document</field>
+            <field name='name'>Autorización de venta</field>
+        </record> 
+        <record model='sgr.document_category' id='sgr_document_category_4'>
+            <field name='company_id' eval='False'/>
+            <field name='parent_id' eval='False'/>
+            <field name='type'>tax</field>
+            <field name='name'>Impuesto CIC IBAMA</field>
+        </record> 
+        <record model='sgr.document_category' id='sgr_document_category_5'>
+            <field name='company_id' eval='False'/>
+            <field name='parent_id' eval='False'/>
+            <field name='type'>dossier_document</field>
+            <field name='name'>Anexo I RET</field>
+        </record> 
+        <record model='sgr.document_category' id='sgr_document_category_6'>
+            <field name='company_id' eval='False'/>
+            <field name='parent_id' eval='False'/>
+            <field name='type'>partner_document</field>
+            <field name='name'>Inscripción en ANVISA</field>
+        </record> 
+    </data>
+</openerp>
+        
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

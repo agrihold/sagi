@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.partner_document_presentation -->
+<!-- sgr.partner_document_presentation -->
+<!-- sgr.partner_document_presentation -->
+<openerp>
+    <data>
+        <!-- Workflow -->
+
+        <record id="partner_document_presentation_partner_document_presentation_wkf" model="workflow">
+            <field name="name">sgr.partner_document_presentation.partner_document_presentation</field>
+            <field name="osv">sgr.partner_document_presentation</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <!-- Activities -->
+
+        <record id="a_12CF_23D9" model="workflow.activity">
+            <field name="wkf_id" ref="partner_document_presentation_partner_document_presentation_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">
+                write({'state':'draft'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_12CF_23DA" model="workflow.activity">
+            <field name="wkf_id" ref="partner_document_presentation_partner_document_presentation_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Approved</field>
+            <field name="action">
+                write({'state':'approved'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_12CF_23DB" model="workflow.activity">
+            <field name="wkf_id" ref="partner_document_presentation_partner_document_presentation_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">
+                write({'state':'cancelled'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+
+        <!-- Transitions -->
+
+        <record id="t_12CF_23E0" model="workflow.transition">
+            <field name="act_from" ref="a_12CF_23D9"/>
+            <field name="act_to" ref="a_12CF_23DA"/>
+            <field name="signal">sgn_approve</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_12CF_23E3" model="workflow.transition">
+            <field name="act_from" ref="a_12CF_23DA"/>
+            <field name="act_to" ref="a_12CF_23DB"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_12CF_23E4" model="workflow.transition">
+            <field name="act_from" ref="a_12CF_23DB"/>
+            <field name="act_to" ref="a_12CF_23D9"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_12CF_23E5" model="workflow.transition">
+            <field name="act_from" ref="a_12CF_23D9"/>
+            <field name="act_to" ref="a_12CF_23DB"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<openerp>
+    <data>
+        <!-- Workflow 
+
+        <record id="sagi.new_product_project_npp_workflow_wkf" model="workflow">
+            <field name="name">sagi.new_product_project.npp_workflow</field>
+            <field name="osv">sagi.new_product_project</field>
+            <field name="on_create">True</field>
+        </record>-->
+
+        <!-- Activities
+
+        <record id="sagi.a_0E93_0E0B" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft SNP</field>
+            <field name="action">write({'state':'draft_snp'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E0D" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">SNP Presented</field>
+            <field name="action">write({'state':'snp_presented'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E0F" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Approved by QNP</field>
+            <field name="action">write({'state':'approved_by_qnp'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E1D" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Approved by CIO</field>
+            <field name="action">write({'state':'approved_by_cio'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E22" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Summary Ready</field>
+            <field name="action">write({'state':'summary_ready'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E24" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Approved by CO</field>
+            <field name="action">write({'state':'approved_by_co'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E28" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Presentation Ready</field>
+            <field name="action">write({'state':'presentation_ready'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1201" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Project Charter Draft</field>
+            <field name="action">write({'state':'project_charter_draft'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1203" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Preliminary Project Planning</field>
+            <field name="action">write({'state':'preliminary_project_planning'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1207" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Supply Chain CA ongoing</field>
+            <field name="action">write({'state':'supply_chain_ca_ongoing'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1209" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Marketing CA ongoing</field>
+            <field name="action">write({'state':'marketing_ca_ongoing'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0DB3" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">DR CA ongoing</field>
+            <field name="action">write({'state':'dr_ca_ongoing'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_120E" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">CA Evaluation</field>
+            <field name="action">write({'state':'ca_evaluation'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1210" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Project Planning</field>
+            <field name="action">write({'state':'project_planning'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1214" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Project Ongoing</field>
+            <field name="action">write({'state':'project_ongoing'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1216" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Project Review Ongoing</field>
+            <field name="action">write({'state':'project_review_ongoing'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1218" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Project Closure</field>
+            <field name="action">write({'state':'project_closure'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_121A" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Project Closed</field>
+            <field name="action">write({'state':'project_closed'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E32" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="name">Revise</field>
+            <field name="action">write({'state':'revise'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E11" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">QNP Rejected</field>
+            <field name="action">write({'state':'qnp_rejected'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E15" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">write({'state':'cancelled'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E1F" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Rejected by CIO</field>
+            <field name="action">write({'state':'rejected_by_cio'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E25" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Rejected by CO</field>
+            <field name="action">write({'state':'rejected_by_co'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_0E2B" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Rejected by CIA</field>
+            <field name="action">write({'state':'rejected_by_cia'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1243" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Rejected by CA</field>
+            <field name="action">write({'state':'rejected_by_ca'})</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="sagi.a_0E93_1245" model="workflow.activity">
+            <field name="wkf_id" ref="new_product_project_npp_workflow_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Aborted</field>
+            <field name="action">write({'state':'aborted'})</field>
+            <field name="kind">function</field>
+        </record> -->
+
+        <!-- Transitions 
+
+        <record id="sagi.t_0E93_0E13" model="workflow.transition">
+            <field name="act_from" ref="a_0E93_0E11"/>
+            <field name="act_to" ref="a_0E93_0E0B"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E16" model="workflow.transition">
+            <field name="act_from" ref="a_0E93_0E0B"/>
+            <field name="act_to" ref="a_0E93_0E15"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E17" model="workflow.transition">
+            <field name="act_from" ref="a_0E93_0E15"/>
+            <field name="act_to" ref="a_0E93_0E0B"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>-->
+        <record id="sagi.t_0E93_0E1E" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cio_approval</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E20" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cio_rejection</field>
+            <field name="condition">True</field>
+        </record>
+
+        <record id="sagi.t_0E93_0E23" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_summary_ready</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E26" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_co_rejection</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E27" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_co_approval</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E29" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_presentation_ready</field>
+            <field name="condition">True</field>
+        </record>
+
+        <record id="sagi.t_0E93_0E2D" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cia_rejection</field>
+            <field name="condition">True</field>
+        </record>
+
+        <record id="sagi.t_0E93_0E31" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_to_revise</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E33" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cio_approval</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E35" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_to_revise</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E3C" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E3D" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E3E" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E3F" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E40" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E41" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E42" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E44" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E47" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E57" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E58" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1204" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_approve</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_120A" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_ready</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1211" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_approve</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1217" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_project_finished</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1219" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_ready</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_121B" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_close_project</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_121D" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cia_approval</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1221" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_approve_qnp</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1223" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_reject_by_qnp</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_122E" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_122F" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1231" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1232" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1234" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1235" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1238" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_123A" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_123B" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_123C" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1240" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_kick_off_ca</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1241" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_kick_off</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1244" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_reject</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1246" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_abort</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_1247" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_abort</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_124B" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_124D" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_124E" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_124F" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0DB2" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_ready</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0DB4" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_set_ready</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="sagi.t_0E93_0E42" model="workflow.transition">
+            <field name="group_id" ref="sagi.group_manager"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

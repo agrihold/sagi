@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+
+
+
+        <record id="view_report_sagi_npp_tree" model="ir.ui.view">
+            <field name="name">sagi.npp.report.tree</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <tree string="Projects by Agronomic Class" create="false">                 
+                    <field name="name"/>
+                    <field name="operative_id" invisible="1"/>
+                    <field name="agronomic_class" />
+                    <field name="project_leader" />
+                    <field name="project_sponsor" />
+                    <field name="creation_started_date"/>   
+                    <field name="date_to_end"/>
+                    <field name="delay"/>
+                    <field name="state" />
+                    <field name="closure_end_date"/>
+                    <field name="phase" invisible="1"/>
+                    <field name="nbr" sum="# of Projects" invisible="1"/>
+                    <field name="date_to_end_year" invisible="1" />
+                    <field name="date_to_end_month" invisible="1" />
+                    <field name="creation_started_year" invisible="1" />
+                    <field name="creation_started_month" invisible="1" />
+                    <field name="closure_date_to_end_year" invisible="1" />
+                    <field name="closure_date_to_end_month" invisible="1" />
+                    <field name="delay_status" invisible="1"/>
+                    <field name="closure_end_month" invisible="1" />
+                    <field name="closure_end_year" invisible="1" />
+                    <field name="snp_status" invisible="1" />
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="view_report_sagi_npp_filter" model="ir.ui.view">
+            <field name="name">sagi.npp.report.select</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <search string="Projects by Agronomic Class">
+                    <group expand="0" string="Proposal Status...">
+                        <filter name="draft" string="Draft" domain="[('snp_status', '=', 'draft')]"/>
+                        <filter name="rejected" string="Rejected" domain="[('snp_status', '=', 'rejected')]"/>
+                        <filter name="ongoing" string="Ongoing" domain="[('snp_status', '=', 'ongoing')]"/>
+                        <filter name="aborted" string="Aborted" domain="[('snp_status', '=', 'aborted')]"/>
+                        <filter name="closed" string="Closed" domain="[('snp_status', '=', 'closed')]"/>
+                        <filter name="cancelled" string="Cancelled" domain="[('snp_status', '=', 'cancelled')]"/> 
+                    </group>                   
+                    <group expand="0" string="Extended Filters...">
+                        <field name="project_leader" />
+                        <field name="project_sponsor" />
+                        <field name="operative_id" />
+                        <field name="agronomic_class" />
+                        <field name="state" />
+                        <field name="phase" />
+<!--                        <filter name="on_going" string="Ongoing" domain="[('state', 'not in', ['draft_snp','project_closed','qnp_rejected','cancelled','rejected_by_cio','rejected_by_co','rejected_by_cia','rejected_by_ca','aborted'])]"/>-->
+                        <filter name="delayed" string="Delayed" domain="[['delay', '>', 0]]" />
+                    </group>
+                    <group expand="1" string="Group By...">
+                        <filter string="Operative" domain="[]" context="{'group_by':'operative_id'}" />
+                        <filter string="Leader" domain="[]" context="{'group_by':'project_leader'}" />
+                        <filter string="Sponsor" domain="[]" context="{'group_by':'project_sponsor'}" />
+                        <filter string="Agronomic Class" domain="[]" context="{'group_by':'agronomic_class'}" />
+                        <filter string="Proposal Status" domain="[]" context="{'group_by':'snp_status'}" />
+                        <filter string="Phase" domain="[]" context="{'group_by':'phase'}" />
+                        <filter string="State" domain="[]" context="{'group_by':'state'}" />
+                        <separator />
+                        <filter string="Presented Year" domain="[]" context="{'group_by':'creation_started_year'}" />
+                        <filter string="Presented Month" domain="[]" context="{'group_by':'creation_started_month'}" />
+                        <separator />
+                        <filter string="Year to End" domain="[]" context="{'group_by':'date_to_end_year'}" />
+                        <filter string="Month to End" domain="[]" context="{'group_by':'date_to_end_month'}" />
+                    <!--                             <filter string="Closure Year to End" domain="[]" context="{'group_by':'closure_date_to_end_year'}" />
+                        <filter string="Closure Month to End" domain="[]" context="{'group_by':'closure_date_to_end_month'}" />
+                     -->
+                        <separator />
+                        <filter string="Year End" domain="[]" context="{'group_by':'closure_end_year'}" />
+                        <filter string="Month End" domain="[]" context="{'group_by':'closure_end_month'}" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+       <menuitem name="Developement" id="menu_sagi_npp"
+            parent="base.menu_reporting" groups="group_reports_developement" sequence="1"/>
+
+<!-- Project by Agronomic Class -->
+<!-- LO METEMOS EN PROYECT ANALYSIS
+        <record id="view_report_sagi_npp_project_agro_class_graph" model="ir.ui.view">
+            <field name="name">sagi.npp.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Projects by Agronomic Class" type="pie">
+                    <field name="agronomic_class" />
+                    <field name="nbr" operator="+"/>                
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_project_agro_class" model="ir.actions.act_window">
+            <field name="name">Projects by Agronomic Class</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_sagi_npp_project_agro_class_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Projects by Agronomic Class" id="menu_report_sagi_npp_project_agro_class"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_project_agro_class" sequence="10"/>
+-->
+<!-- Development Analysis -->
+
+        <record id="view_report_sagi_npp_dev_analysis_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Development Analysis" type="bar">
+                    <field name="creation_started_month" />
+                    <field name="nbr" operator="+"/>                
+                    <field name="agronomic_class" group="True" />             
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_dev_analysis" model="ir.actions.act_window">
+            <field name="name">Development Analysis</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_sagi_npp_tree"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Development Analysis" id="menu_report_sagi_npp_dev_analysis"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_dev_analysis" sequence="20"/>
+
+<!-- Presentations by Month -->
+<!-- LO METEMOS EN PROYECT ANALYSIS
+        <record id="view_report_sagi_npp_presentations_month_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Presentations by Month" type="bar">
+                    <field name="creation_started_month" />
+                    <field name="nbr" operator="+"/>                
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_presentations_month" model="ir.actions.act_window">
+            <field name="name">Presentations by Month</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,graph</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="view_report_sagi_npp_presentations_month_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Presentations by Month" id="menu_report_sagi_npp_presentations_month"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_presentations_month" sequence="30"/>
+-->
+
+<!-- Delay per Project by Operative -->
+
+        <record id="view_report_sagi_npp_delay_x_proj_graph" model="ir.ui.view">
+             <field name="name">sagi.npp.delay_x_proj.report.graph</field>
+            <field name="model">sagi.new_product_project.report</field>
+            <field name="arch" type="xml">
+                <graph orientation="vertical" string="Delay per Project by Operative" type="bar">
+                    <field name="operative_id" />
+                    <field name="delay" operator="+"/>
+                    <field name="name" group="True"/>                                
+                </graph>
+            </field>
+        </record>
+
+        <record id="action_report_sagi_npp_delay_x_proj" model="ir.actions.act_window">
+            <field name="name">Delay (days) per Project</field>
+            <field name="res_model">sagi.new_product_project.report</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">graph,tree</field>
+            <field name="context">{'search_default_delayed':1,'search_default_ongoing':1}</field>
+            <field name="view_id" ref="view_report_sagi_npp_delay_x_proj_graph"/>
+            <field name="help"></field>
+        </record>
+
+      <menuitem name="Projects Delay" id="menu_report_sagi_npp_delay_x_ongoing_proj"
+            parent="menu_sagi_npp" action="action_report_sagi_npp_delay_x_proj" sequence="30"/>
+
+
+    </data>
+</openerp>

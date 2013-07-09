@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>        
+        <!-- Sale-related subtypes for messaging / Chatter -->
+        <record id="mt_move_change" model="mail.message.subtype">
+            <field name="name">Status Change</field>
+            <field name="res_model">stock.move</field>
+            <field name="default" eval="True"/>
+            <field name="description">Stock Move Status Change</field>
+        </record>
+    </data>
+</openerp>        

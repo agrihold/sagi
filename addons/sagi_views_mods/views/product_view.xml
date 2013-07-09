@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.product -->
+<!-- product.product -->
+<!-- product.product -->
+<openerp>
+    <data>
+
+        <!-- INHERITED FORM -->
+        <record id="view_sgr_product_form" model="ir.ui.view">
+            <field name="name">sgr.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="sgr.view_sgr_product_form"/>
+            <field name="arch" type="xml">
+   
+                <field name="type" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </field>      
+                <field name="list_price" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </field>             
+                <page string="Procurements" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </page>      
+                <page string="Sales" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </page>        
+                <page string="Accounting" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </page>      
+                        <div name="buttons" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>                        
+                        </div>
+                                                                   
+            </field>
+        </record>
+
+        <record id="view_sgr_product_form2" model="ir.ui.view">
+            <field name="name">sgr.product.form2</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product_expiry.view_product_form_expiry"/>
+            <field name="arch" type="xml">
+                <group string="Dates" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </group>      
+           
+            </field>
+        </record>
+
+        <record id="view_sgr_product_form3" model="ir.ui.view">
+            <field name="name">sgr.product.form3</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.view_normal_procurement_locations_form"/>
+            <field name="arch" type="xml">
+                <group name="store" position="replace">
+                </group>      
+           
+            </field>
+        </record>
+
+
+        <record id="view_category_property_form" model="ir.ui.view">
+            <field name="name">product.category.stock.property.form.inherit</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="stock.view_category_property_form"/>
+            <field name="arch" type="xml">
+                <data>
+                        <group name="account_stock_property" position="replace"/>
+                </data>
+            </field>
+        </record>        
+        
+
+        <!-- INHERITED TREE
+        <record id="view_sgr_product_tree" model="ir.ui.view">
+            <field name="name">sgr.product.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <tree position="inside">
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+ -->
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

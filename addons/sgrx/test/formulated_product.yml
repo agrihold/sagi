@@ -1,0 +1,77 @@
+#
+#       Creo una registry_category del tipo "Formulated Product".
+#
+- !record {model: sgr.registry_category, id: reg_cat_form_prod_1}:
+        name: Formulado 1
+        type: formulated_product
+        information_category_ids:
+                - sgr_information_category_1
+                - sgr_information_category_3
+                - sgr_information_category_5
+        document_category_ids:
+                - sgr_document_category_2
+                - sgr_document_category_3
+                - sgr_document_category_4
+                - sgr_document_category_5
+        goverment_agency_ids:
+                - par_IBAMA
+                - par_MAPA
+
+#
+#       Verifico que se hayan creado las categorias 
+#
+- !assert {model: sgr.registry_category, id: reg_cat_form_prod_1, string: Check registry result}:
+        - len(information_category_ids) == 3
+        - len(document_category_ids) == 4
+        - len(goverment_agency_ids) == 2
+
+#
+#       Creo un physical_state
+#
+- !record {model: sgr.physical_state, id: physical_state_1}:
+        name: Testing state
+
+#
+#       Creo un product.product
+#
+- !record {model: product.product, id: test_product_1}:
+        name: Testing product
+
+#
+#       Creo un formulated_type
+#
+- !record {model: sgr.formulation_type, id: formulation_type_1}:
+        name: Test type
+        abbreviation: Test abbreviation
+
+#
+#       Creo un formulation agronomic_class
+#
+- !record {model: sgr.agronomic_class, id: agronomic_class_1}:
+        name: Testing agronomic class
+
+#
+#        Creo una formulated_product
+#
+- !record {model: sgr.formulated_product_registry, id: formulated_product_1}:
+        type: formulated_product
+        name: Component Registry 1 from Brasil
+        registry_category_id: reg_cat_form_prod_1
+        proxy_id: 1
+        physical_state_id: physical_state_1
+        formulated_product_id: test_product_1
+        formulation_type_id: formulation_type_1
+        agronomic_class_id: agronomic_class_1
+ 
+#
+#       Verifico que se hayan creado las categorias 
+#
+- !assert {model: sgr.formulated_product_registry, id: formulated_product_1, string: Check registry result}:
+        - state == 'draft'
+        - len(information_presentation_ids) == 3
+        - len(study_presentation_ids) == 1
+        - len(partner_document_presentation_ids) == 1
+        - len(tax_ids) == 1
+        - len(dossier_document_ids) == 1
+        - len(registry_process_ids) == 2
+

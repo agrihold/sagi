@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<openerp>
+    <data>
+        <record id="sgr.communication_draft" model="mail.message.subtype">
+	    <field name="name">Draft</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Draft</field>
+        </record>
+        <record id="sgr.communication_sent" model="mail.message.subtype">
+	    <field name="name">Sent</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Sent</field>
+        </record>
+        <record id="sgr.communication_received" model="mail.message.subtype">
+	    <field name="name">Received</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Received</field>
+        </record>
+        <record id="sgr.communication_resolving_request" model="mail.message.subtype">
+	    <field name="name">Resolving Request</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Resolving Request</field>
+        </record>
+        <record id="sgr.communication_resolved" model="mail.message.subtype">
+	    <field name="name">Resolved</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Resolved</field>
+        </record>
+        <record id="sgr.communication_cancelled" model="mail.message.subtype">
+	    <field name="name">Cancelled</field>
+	    <field name="res_model">sgr.communication</field>
+            <field name="default" eval="True"/>
+	    <field name="description">Cancelled</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

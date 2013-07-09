@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.sample_request -->
+<!-- sgr.sample_request -->
+<!-- sgr.sample_request -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_sample_request_filter" model="ir.ui.view">
+            <field name="name">sgr.sample_request.select</field>
+            <field name="model">sgr.sample_request</field>
+            <field name="arch" type="xml">
+                <search string="Sample Request" version="7.0">
+                    <group string="By Attribute">
+                    <field name="name" string="Reference"
+                            />
+                    <field name="concentration" string="Concentration"
+                            />
+                    <field name="concentration_uom_id" string="UOM"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_sample_request_form" model="ir.ui.view">
+            <field name="name">sgr.sample_request.form</field>
+            <field name="model">sgr.sample_request</field>
+            <field name="inherit_id" ref="sgr.view_sgr_sample_request_form"/>            
+            <field name="arch" type="xml">
+                <sheet string="Sample Request" position="replace"/>
+                <header position="after">
+                    <sheet string="Sample Request">
+                     <group colspan="4" col="4">
+                        <field name="name"/>
+                        <newline/>
+                        <field name="product_id"
+                            colspan="4"/>
+                        <field name="product_in_ret_id" colspan="4"
+                            domain="[('product_id','=',product_id)]"/>                            
+                        <field name="supplier_id"/>
+                        <field name="location_id"/>
+                        <field name="specific_batch"/>
+                        <field name="batch" attrs="{'required':[('specific_batch','=','yes')],'invisible':[('specific_batch','!=','yes')]}"/>
+                        <newline/>                  
+                        <group colspan="4" col="3">
+                            <field name="amount" colspan="2"/>
+                            <field name="amount_uom_id"
+                                nolabel="1"/>
+                            <field name="concentration"
+                                colspan="2"/>
+                            <field name="concentration_uom_id"
+                                nolabel="1"/>
+                        </group>
+                        <field name="import_license" colspan="4"/>
+                        <field name="date_of_import_license"/>
+                        <field name="expiration_date_of_import"/>
+                        <field name="deadline"/>
+                        <field name="departure"/>
+                    </group>
+                    <notebook>
+                        <page string="Stock Moves">
+                            <field name="move_ids" nolabel="1" widget="one2many"/>
+                        </page>
+                        <page string="Packaging">
+                            <field name="packaging_ids" nolabel="1"/>
+                        </page>
+                        <page string="Notes">
+                            <field name="note" nolabel="1"/>
+                        </page>                        
+                    </notebook>
+                    </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW 
+
+        <record id="view_sgr_sample_request_tree" model="ir.ui.view">
+            <field name="name">sgr.sample_request.tree</field>
+            <field name="model">sgr.sample_request</field>
+            <field name="arch" type="xml">
+                <tree string="Sample Request"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'done'); red:state in ()"
+                    >
+                    <field name="product_id"
+                        />
+                    <field name="amount"
+                        />
+                    <field name="amount_uom_id"
+                        />
+                    <field name="concentration"
+                        />
+                    <field name="concentration_uom_id"
+                        />
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+-->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

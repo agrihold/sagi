@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<!-- sgr.contract -->
+<openerp>
+    <data>
+        <!-- Workflow -->
+
+        <record id="contract_contract_wkf" model="workflow">
+            <field name="name">sgr.contract.contract</field>
+            <field name="osv">sgr.contract</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <!-- Activities -->
+
+        <record id="a_0AD2_0F37" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">
+                write({'state':'draft'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_0AD2_0F38" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="name">Requested</field>
+            <field name="action">
+                write({'state':'requested'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_0AD2_0F39" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="name">Received</field>
+            <field name="action">
+                write({'state':'received'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_0AD2_0F3A" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="name">Approved</field>
+            <field name="action">approve_contract()</field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_0AD2_0F3C" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="name">Solved</field>
+            <field name="action">
+                write({'state':'solved'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_0AD2_0F3B" model="workflow.activity">
+            <field name="wkf_id" ref="contract_contract_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">cancel_contract()</field>
+            <field name="kind">function</field>
+        </record>
+
+        <!-- Transitions -->
+
+        <record id="t_0AD2_0F3F" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F37"/>
+            <field name="act_to" ref="a_0AD2_0F38"/>
+            <field name="signal">sgn_request</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F40" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F38"/>
+            <field name="act_to" ref="a_0AD2_0F39"/>
+            <field name="signal">sgn_receive</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F41" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F39"/>
+            <field name="act_to" ref="a_0AD2_0F3A"/>
+            <field name="signal">sgn_approve</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F42" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F3A"/>
+            <field name="act_to" ref="a_0AD2_0F3C"/>
+            <field name="signal">sgn_close</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F45" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F38"/>
+            <field name="act_to" ref="a_0AD2_0F3B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F46" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F39"/>
+            <field name="act_to" ref="a_0AD2_0F3B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_0F4A" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F3B"/>
+            <field name="act_to" ref="a_0AD2_0F37"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_318B" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F37"/>
+            <field name="act_to" ref="a_0AD2_0F3B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_4BD0" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F3A"/>
+            <field name="act_to" ref="a_0AD2_0F3B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_0AD2_4BD1" model="workflow.transition">
+            <field name="act_from" ref="a_0AD2_0F3C"/>
+            <field name="act_to" ref="a_0AD2_0F3B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

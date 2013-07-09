@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR. Sistema de Gestion de Registros
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.product -->
+<!-- product.product -->
+<!-- product.product -->
+<openerp>
+    <data>
+        <!-- NORMAL ACTION  
+        <record id="product.product_normal_action" model="ir.actions.act_window">
+            <field name="view_mode">kanban,form,tree</field>
+        </record>
+-->
+
+        <!-- INHERITED SEARCH  -->
+        <record id="view_sgr_product_filter" model="ir.ui.view">
+            <field name="name">sgr.product.select</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+                <filter name="consumable" position="after">
+                    <separator/>
+                    <filter string="Formulated" name="function_type" icon="terp-accessories-archiver" domain="[('function_type','=','formulated')]" help="Formulated Products"/>
+                    <filter string="Technical" name="function_type" icon="terp-accessories-archiver" domain="[('function_type','=','technical')]" help="Technical Products"/>
+                    <filter string="Components" name="function_type" icon="terp-accessories-archiver" domain="[('function_type','=','component')]" help="Components"/>
+                    <field name="other_names"/>
+                </filter>
+            </field>
+        </record>
+
+        <!-- INHERITED FORM -->
+        <record id="sgr.view_sgr_product_form" model="ir.ui.view">
+            <field name="name">sgr.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="sale_ok" position="before">
+                    <label for="function_type" class="oe_inline"/>
+                    <field name="function_type" class="oe_inline" required="True"/>
+                </field>
+                <field name="sale_ok" position="attributes">
+                    <attribute name="invisible">"True"</attribute>
+                </field>       
+                <label for="sale_ok" position="attributes">        
+                    <attribute name="invisible">"True"</attribute>
+                </label>                  
+                <field name="description" position="before">
+                    <label for="other_names"/>
+                    <field name="other_names" placeholder="Other names/codes..."/>
+                </field>      
+                <field name="description" position="after">
+                    <label for="seller_ids"/>
+                    <field name="seller_ids"/>
+                </field>      
+                <page string="Information" position="before">
+                    <page string="Registries">
+                        <group colspan="4" col="1">
+                            <field name="technical_product_registry_ids" readonly="True" attrs="{'invisible':[('function_type','!=','technical')]}"/>
+                            <field name="formulated_product_registry_ids" readonly="True" attrs="{'invisible':[('function_type','!=','formulated')]}"/>
+                            <field name="component_registry_detail_ids" readonly="True" attrs="{'invisible':[('function_type','!=','component')]}">
+                                <tree>
+                                    <field name="component_registry_id"/>
+                                    <field name="component_id"
+                                        />
+                                    <field name="component_registry_finality_ids"
+                                        />
+                                    <field name="formulated_product_ids"
+                                        />
+                                    <field name="supplier_ids"
+                                        />
+                                    <field name="emergency_information_id"
+                                        />                                 
+                                </tree>
+                            </field>
+                            <field name="product_in_ret_ids" readonly="True">
+                                <tree>
+                                    <field name="ret_registry_id"/>                                
+                                    <field name="concentration"/>
+                                    <field name="concentration_uom_id"/>
+                                    <field name="amount_requested"/>
+                                    <field name="amount_uom_id"/>
+                                    <field name="amount_released"/>
+                                    <field name="remaining_amount"/>
+                                </tree>
+                            </field>                            
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+
+        <!-- INHERITED TREE -->
+        <record id="view_sgr_product_tree" model="ir.ui.view">
+            <field name="name">sgr.product.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="state" position="replace"/>              
+                <field name="default_code" position="before">
+                    <field name="function_type"/>
+                    <field name="state" invisible="True"/>                      
+                </field>
+<!--                <tree position="inside">
+
+                    <field name="uom_id" string="Unit of Measure" groups="product.group_uom"/>
+                    <field name="qty_available" position="replace"/>
+                    <field name="virtual_available" position="replace"/>
+                </tree>-->
+                <field name="lst_price" position="replace"/>
+            
+            </field>
+        </record>
+
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -1,0 +1,92 @@
+#        
+#        Creo el laboratorio
+#
+- !record {model: res.partner, id: lab_1 }:
+        name: Laboratorio 1
+        is_company: True
+        is_laboratory: True
+
+#        
+#        Creo el contrato con ese laboratorio
+#
+- !record {model: sgr.contract, id: sgr_contract_1 }:
+        name: Cristian S. Rocha 
+        laboratory_id: lab_1
+        amount: 1000
+        currency_id: base.BRL
+        payment_term_id: account.account_payment_term_immediate
+
+#
+#       Cambio a estado Requested
+#
+- !workflow {model: sgr.contract, action: sgn_request, ref: sgr_contract_1 }
+
+#
+#       Cambio a estado Received
+#
+- !workflow {model: sgr.contract, action: sgn_receive, ref: sgr_contract_1 }
+
+#
+#       Cambio a estado Approved
+#
+- !workflow {model: sgr.contract, action: sgn_approve, ref: sgr_contract_1 }
+
+#
+#       Verifico que exista la cuenta analítica, y que tenga un débito en la misma del monto indicado.
+#
+- !assert {model: sgr.contract, id: sgr_contract_1, string: Approved analytic account. }:
+        - state == "approved"
+        - analytic_account_id.parent_id.name == "Laboratory Contracts Analytic Account"
+        - analytic_account_id.name == name
+        - analytic_account_id.debit == 1000
+        - analytic_account_id.credit == 0
+
+#
+#       Cancelo 
+#
+- !workflow {model: sgr.contract, action: sgn_cancel, ref: sgr_contract_1 }
+
+#
+#       Verifico que exista la cuenta analítica, y que tenga el balance en cero.
+#
+- !assert {model: sgr.contract, id: sgr_contract_1, string: Canceled analytic account. }:
+        - state == "cancelled"
+        - not analytic_account_id
+
+#
+#       Lo envío a draft primero
+#
+- !python {model: sgr.contract}: |
+        self.action_wfk_set_draft(cr, uid, [ref("sgr_contract_1")])
+
+- !assert {model: sgr.contract, id: sgr_contract_1, string: In draft mode }:
+        - state == "draft"
+
+#
+#       Apruebo nuevamente el contrato pero con un costo de 500.
+#
+- !record {model: sgr.contract, id: sgr_contract_1 }:
+        amount: 500
+#
+#
+#       Cambio a estado Requested
+#
+- !workflow {model: sgr.contract, action: sgn_request, ref: sgr_contract_1 }
+
+#
+#       Cambio a estado Received
+#
+- !workflow {model: sgr.contract, action: sgn_receive, ref: sgr_contract_1 }
+
+#
+#       Cambio a estado Approved
+#
+- !workflow {model: sgr.contract, action: sgn_approve, ref: sgr_contract_1 }
+
+#
+#       Verifico que exista la cuenta analítica, y que tenga un débito en la misma del monto indicado.
+#
+- !assert {model: sgr.contract, id: sgr_contract_1, string: Approved analytic account after cancelled. }:
+        - state == "approved"
+        - analytic_account_id.balance == 500
+

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.product_study -->
+<!-- sgr.product_study -->
+<!-- sgr.product_study -->
+<openerp>
+    <data>
+
+        <menuitem id="stock.menu_stock_warehouse_mgmt" name="Receive/Deliver By Orders" parent="stock.menu_stock_root" groups="base.group_no_one" sequence="1"/>
+        <!--<menuitem id="procurement.menu_stock_sched" name="Schedulers" parent="stock.menu_stock_root" sequence="4" groups="False"/>-->
+
+        <!--<menuitem id="procurement.menu_stock_proc_schedulers" parent="procurement.menu_stock_sched" sequence="20" groups="base.group_no_one"/>        
+            <menuitem id="procurement.menu_stock_procurement_action" parent="procurement.menu_stock_sched" sequence="50" groups="base.group_no_one"/> -->
+
+        <menuitem
+            name="Samples"
+            id="menu_samples"
+            sequence="1"
+            parent="stock.menu_stock_root"
+            />
+               
+        <menuitem
+            name="Sample Request"
+            id="menu_sample_request"
+            sequence="30"
+            action="sgr.action_sgr_sample_request_sample_request"
+            parent="menu_samples"
+            />            
+        
+        <record id="view_move_form_expiry" model="ir.ui.view">
+            <field name="name">stock.production.lot.form</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="product_expiry.view_move_form_expiry"/> 
+            <field name="arch" type="xml">
+                <field name="use_date" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </field>                
+                <field name="removal_date" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </field>                
+                <field name="alert_date" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute>
+                </field>    
+            </field>                                            
+        </record>         
+        
+        <record id="view_move_form" model="ir.ui.view">
+            <field name="name">stock.move.form</field>
+            <field name="model">stock.move</field>
+            <field eval="1" name="priority"/>
+            <field name="inherit_id" ref="stock.view_move_form"/>             
+            <field name="arch" type="xml">
+                <field name="picking_id" position="replace"/>
+                <sheet position="after">
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+                <group string="Traceability" position="after">
+                    <group string="Notes">
+                        <field name="note"/>
+                    </group>
+                </group> 
+                <field name="type" position="attributes">
+                    <attribute name="invisible">True</attribute>        
+                </field>       
+                <field name="origin" position="attributes">
+                    <attribute name="invisible">True</attribute>        
+                </field>         
+<!--
+                <button name="308" position="attributes">
+                    <attribute name="groups">"base.group_no_one"</attribute> 
+                </button>     
+-->
+                <label for="tracking_id" position="attributes">
+                    <attribute name="invisible">True</attribute>        
+                </label>    
+                
+                <div groups="stock.group_tracking_lot" position="attributes">
+                    <attribute name="invisible">True</attribute>        
+                </div>           
+                                  
+                <field name="location_id" position="attributes">
+                    <attribute name="domain">"[('usage','!=','view')]"</attribute>               
+                </field>
+                <field name="location_dest_id" position="attributes">                
+                    <attribute name="domain">"[('usage','!=','view')]"</attribute>   
+                </field>
+                <field name="product_id" position="after">
+                    <field name="sample_request_id" required="True" domain="[('product_id','=',product_id)]"
+                    context="{'default_product_id': product_id}"/>
+                </field>
+                
+                
+            </field>
+        </record>                    
+            
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.study -->
+<!-- sgr.study -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_study_filter" model="ir.ui.view">
+            <field name="name">sgr.study.select</field>
+            <field name="model">sgr.study</field>
+            <field name="arch" type="xml">
+                <search string="Studies" version="7.0">
+                    <group string="By Attribute">
+                    <field name="product_id" string="Product"
+                            />
+                    <field name="laboratory_id" string="Laboratory"
+                            />
+                    <field name="supplier_id" string="Supplier"
+                            />
+                    <field name="glp" string="GLP"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="reference" string="Reference"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="document_category_id" string="Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_study_form" model="ir.ui.view">
+            <field name="name">sgr.study.form</field>
+            <field name="model">sgr.study</field>
+            <field name="arch" type="xml">
+                <form string="Studies" version="7.0">
+                    <header>
+                        <button name="sgn_contract"
+                            states="draft"
+                            string="Contract"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft"
+                            type="object"
+                            states="cancelled"
+                            string="To Draft"
+                            />
+                        <button name="sgn_request_to_supplier"
+                            states="draft"
+                            string="Request to Supplier"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_approve_study_plan"
+                            states="contracted"
+                            string="Approve Study Plan"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_receive"
+                            states="requested,sp_approved"
+                            string="Receive"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_approve"
+                            states="received"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_reject"
+                            states="received"
+                            string="Reject"
+                            />
+                        <button name="sgn_cancel"
+                            states="approved,contracted,draft,received,rejected,requested,sp_approved"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="Studies">
+                     <group>
+                        <field name="product_id"
+                            />
+                        <field name="source"
+                            />
+                        <field name="laboratory_id"
+                            />
+                        <field name="supplier_id"
+                            />
+                        <field name="start_date"
+                            />
+                        <field name="end_date"
+                            />
+                        <field name="concentration"
+                            />
+                        <field name="concentration_uom_id"
+                            />
+                        <field name="director_author_id"
+                            />
+                        <field name="summary"
+                            />
+                        <field name="result"
+                            />
+                        <field name="validation_method"
+                            />
+                        <field name="report_other_study"
+                            />
+                        <field name="glp"
+                            />
+                        <field name="summary_es"
+                            />
+                        <field name="summary_pt"
+                            />
+                        <field name="result_es"
+                            />
+                        <field name="result_pt"
+                            />
+                        <field name="validation_method_pt"
+                            />
+                        <field name="validation_method_es"
+                            />
+                        <field name="name"
+                            />
+                        <field name="reference"
+                            />
+                        <field name="reviser_id"
+                            />
+                        <field name="approval_date"
+                            />
+                        <field name="expiration_date"
+                            />
+                        <field name="note"
+                            />
+                        <field name="company_id"
+                            />
+                        <field name="number_of_pages"
+                            />
+                        <field name="consularization_date"
+                            />
+                        <field name="translation_date"
+                            />
+                        <field name="authentication_date"
+                            />
+                        <field name="issue_date"
+                            />
+                    <field name="study_purpose_ids"
+                            />
+                    <field name="study_method_ids"
+                            />
+                    <field name="experimental_result_ids"
+                            />
+                    <field name="document_category_id"
+                            />
+                    <field name="study_presentation_ids"
+                            />
+                    <field name="replace_ids"
+                            />
+                    <field name="replaced_by_id"
+                            />
+                    <field name="study_id"
+                            />
+                    <field name="lang_ids"
+                            />
+                    <field name="move_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_study_tree" model="ir.ui.view">
+            <field name="name">sgr.study.tree</field>
+            <field name="model">sgr.study</field>
+            <field name="arch" type="xml">
+                <tree string="Studies"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('requested', 'sp_approved', 'received', 'contracted', 'rejected', 'approved'); red:state in ()"
+                    >
+                    <field name="product_id"
+                        />
+                    <field name="source"
+                        />
+                    <field name="laboratory_id"
+                        />
+                    <field name="supplier_id"
+                        />
+                    <field name="name"
+                        />
+                    <field name="reference"
+                        />
+                    <field name="expiration_date"
+                        />
+                    <field name="number_of_pages"
+                        />
+                    <field name="document_category_id"
+                        />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

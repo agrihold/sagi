@@ -1,0 +1,17 @@
+#
+#        Creo un registro
+#
+- !record {model: sgr.component_registry, id: component_registry_1}:
+        name: Component Registry 1 from Brasil
+        reference: Testing
+        registry_category_id: sgr_registry_category_1
+        proxy_id: 1
+        
+#- !python {model: sgr.component_registry}: |
+#        obj = self.browse(cr, uid, ref('component_registry_1'))
+#        r = obj.onchange_registry_category(ref('sgr_registry_category_2'))
+#        import pdb; pdb.set_trace()
+#        r['value']['information_presentation_ids'] == []
+#        r['value']['document_presentation_ids'] == []
+
+        

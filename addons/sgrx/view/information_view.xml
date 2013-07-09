@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI Proyect. Sistema de Mantenimiento y Seguimiento de Documentos.
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.information -->
+<!-- sgr.information -->
+<!-- sgr.information -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="sgr.view_sgr_information_filter" model="ir.ui.view">
+            <field name="name">sgr.information.select</field>
+            <field name="model">sgr.information</field>
+            <field name="arch" type="xml">
+                <search string="Informations" version="7.0">
+                    <group string="By Attribute">
+                    <field name="partner_id" string="Partner"
+                            />
+                    <field name="product_id" string="Product"
+                            />
+                    <field name="state"/>
+                    </group>
+                    <group string="By object">
+                    <field name="information_category_id" string="Category"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_information_form" model="ir.ui.view">
+            <field name="name">sgr.information.form</field>
+            <field name="model">sgr.information</field>
+            <field name="inherit_id" ref="sgr.view_sgr_information_form"/>                
+            <field name="arch" type="xml">
+                <sheet string="Informations" position="replace"/>
+                    <header position="after">
+                    <sheet string="Informations">
+                     <group>
+                        <field name="information_category_id"
+                            />
+                        <field name="partner_id"
+                            />
+                        <field name="product_id"
+                            />
+                        <field name="company_id"
+                            groups="base.group_multi_company"/>                            
+                        <group colspan="4" col="1">
+                            <field name="text"
+                                />
+                        </group>
+                     </group>
+                    </sheet>
+                </header>
+            </field>
+        </record>
+
+        <!-- TREEVIEW
+
+        <record id="view_sgr_information_tree" model="ir.ui.view">
+            <field name="name">sgr.information.tree</field>
+            <field name="model">sgr.information</field>
+            <field name="arch" type="xml">
+                <tree string="Informations"
+                    colors="grey:state=='cancelled';blue:state in ('draft',);black:state in ('approved',); red:state in ()"
+                    >
+                    <field name="name"/>
+                    <field name="partner_id"/>
+                    <field name="product_id"/>
+                    <field name="information_category_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+ -->
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

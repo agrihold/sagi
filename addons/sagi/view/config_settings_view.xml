@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.config_settings -->
+<!-- sagi.config_settings -->
+<!-- res.config.settings -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sagi_config_settings_filter" model="ir.ui.view">
+            <field name="name">sagi.config_settings.select</field>
+            <field name="model">sagi.config_settings</field>
+            <field name="arch" type="xml">
+                <search string="SAGI" version="7.0">
+                    <group string="By Attribute">
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sagi_config_settings_form" model="ir.ui.view">
+            <field name="name">sagi.config_settings.form</field>
+            <field name="model">sagi.config_settings</field>
+            <field name="arch" type="xml">
+                <form string="SAGI" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="SAGI">
+                     <group>
+                        <field name="creation_duration"
+                            />
+                        <field name="snp_file"
+                            />
+                        <field name="qnp_file"
+                            />
+                        <field name="CIO_file"
+                            />
+                        <field name="summary_file"
+                            />
+                        <field name="CO_file"
+                            />
+                        <field name="presentation_file"
+                            />
+                        <field name="CIA_file"
+                            />
+                        <field name="charter_file"
+                            />
+                        <field name="kick_off_ac_file"
+                            />
+                        <field name="ca_sc_file"
+                            />
+                        <field name="ca_sc_pred_term"
+                            />
+                        <field name="ca_mkt_file"
+                            />
+                        <field name="ca_mkt_pred_term"
+                            />
+                        <field name="ca_dr_file"
+                            />
+                        <field name="ca_dr_pred_term"
+                            />
+                        <field name="ca_result_file"
+                            />
+                        <field name="ca_result_pred_term"
+                            />
+                        <field name="planning_pred_term"
+                            />
+                        <field name="kick_off_project_file"
+                            />
+                        <field name="closing_report_file"
+                            />
+                        <field name="closing_pred_term"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sagi_config_settings_tree" model="ir.ui.view">
+            <field name="name">sagi.config_settings.tree</field>
+            <field name="model">sagi.config_settings</field>
+            <field name="arch" type="xml">
+                <tree string="SAGI"
+                    >
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

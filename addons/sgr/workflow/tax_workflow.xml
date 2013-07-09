@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.tax -->
+<!-- sgr.tax -->
+<!-- sgr.document -->
+<openerp>
+    <data>
+        <!-- Workflow -->
+
+        <record id="tax_tax_wkf" model="workflow">
+            <field name="name">sgr.tax.tax</field>
+            <field name="osv">sgr.tax</field>
+            <field name="on_create">True</field>
+        </record>
+
+        <!-- Activities -->
+
+        <record id="a_1277_3033" model="workflow.activity">
+            <field name="wkf_id" ref="tax_tax_wkf"/>
+            <field name="flow_start">True</field>
+            <field name="name">Draft</field>
+            <field name="action">
+                write({'state':'draft'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1277_3035" model="workflow.activity">
+            <field name="wkf_id" ref="tax_tax_wkf"/>
+            <field name="name">To Pay</field>
+            <field name="action">
+                write({'state':'to_pay'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1277_3037" model="workflow.activity">
+            <field name="wkf_id" ref="tax_tax_wkf"/>
+            <field name="name">Paid</field>
+            <field name="action">
+                write({'state':'paid'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1277_3039" model="workflow.activity">
+            <field name="wkf_id" ref="tax_tax_wkf"/>
+            <field name="name">Expired</field>
+            <field name="action">
+                write({'state':'expired'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+        <record id="a_1277_303B" model="workflow.activity">
+            <field name="wkf_id" ref="tax_tax_wkf"/>
+            <field name="flow_stop">True</field>
+            <field name="name">Cancelled</field>
+            <field name="action">
+                write({'state':'cancelled'})
+            </field>
+            <field name="kind">function</field>
+        </record>
+
+        <!-- Transitions -->
+
+        <record id="t_1277_3036" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3033"/>
+            <field name="act_to" ref="a_1277_3035"/>
+            <field name="signal">sgn_set_to_pay</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_3038" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3035"/>
+            <field name="act_to" ref="a_1277_3037"/>
+            <field name="signal">sgn_set_pay</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_303A" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3037"/>
+            <field name="act_to" ref="a_1277_3039"/>
+            <field name="signal">sgn_set_expire</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_303C" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3033"/>
+            <field name="act_to" ref="a_1277_303B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_303D" model="workflow.transition">
+            <field name="act_from" ref="a_1277_303B"/>
+            <field name="act_to" ref="a_1277_3033"/>
+            <field name="signal">sgn_to_draft</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_303E" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3035"/>
+            <field name="act_to" ref="a_1277_303B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_303F" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3037"/>
+            <field name="act_to" ref="a_1277_303B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+        <record id="t_1277_3040" model="workflow.transition">
+            <field name="act_from" ref="a_1277_3039"/>
+            <field name="act_to" ref="a_1277_303B"/>
+            <field name="signal">sgn_cancel</field>
+            <field name="condition">True</field>
+        </record>
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

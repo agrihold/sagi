@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data noupdate="True">
+        <record model='sgr.registry_category' id='sgr_registry_category_1'>
+                <field name='name'>Component registry Brasil</field>
+                <field name='type'>component</field>
+                <field name='company_id' ref='com_ALTA'/>
+                <field name='goverment_agency_ids' eval="[(6,0,[ref('par_MAPA')])]"/>
+                <field name='document_category_ids' eval="[(6,0,[ref('sgr_document_category_2'),ref('sgr_document_category_3'),ref('sgr_document_category_4'),ref('sgr_document_category_5')])]"/>
+                <field name='information_category_ids' eval="[(6,0,[ref('sgr_information_category_1')])]"/>
+        </record> 
+        <record model='sgr.registry_category' id='sgr_registry_category_2'>
+                <field name='name'>Laboratory registry Paraguay</field>
+                <field name='type'>laboratory</field>
+                <field name='company_id' ref='com_AGROTEC'/>
+                <field name='goverment_agency_ids' eval="[(6,0,[ref('par_IPARA')])]"/>
+                <field name='document_category_ids' eval="[(6,0,[ref('sgr_document_category_6')])]"/>
+                <field name='information_category_ids' eval="[(6,0,[ref('sgr_information_category_2')])]"/>
+        </record> 
+    </data>
+</openerp>
+        
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

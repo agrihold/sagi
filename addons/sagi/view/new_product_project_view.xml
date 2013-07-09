@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SAGI
+#    Copyright (C) 2013 No author.
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<!-- sagi.new_product_project -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sagi_new_product_project_filter" model="ir.ui.view">
+            <field name="name">sagi.new_product_project.select</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <search string="New Products Projects" version="7.0">
+                    <group string="By Attribute">
+                    <field name="reference" string="Reference"
+                            />
+                    <field name="name" string="Name"
+                            />
+                    <field name="agronomic_class" string="Agronomic Class"
+                            />
+                    <field name="next_action_responsible" string="Responsible"
+                            />
+                    <field name="project" string="Project"
+                            />
+                    <field name="phase" string="Phase"
+                            />
+                    <field name="operative_id" string="Operative"
+                            />
+                    </group>
+                    <group string="By object">
+                    <field name="related_product_ids" string="Related Products"
+                            />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sagi_new_product_project_form" model="ir.ui.view">
+            <field name="name">sagi.new_product_project.form</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <form string="New Products Projects" version="7.0">
+                    <header>
+                        <button name="sgn_present"
+                            states="draft_snp"
+                            string="Present"
+                            class="oe_highlight"
+                            />
+                        <button name="action_wfk_set_draft_snp"
+                            type="object"
+                            states="aborted,cancelled,qnp_rejected,rejected_by_ca,rejected_by_cia,rejected_by_cio,rejected_by_co"
+                            string="To Draft"
+                            />
+                        <button name="sgn_approve_qnp"
+                            states="snp_presented"
+                            string="Approve QNP"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_summary_ready"
+                            states="approved_by_cio"
+                            string="Set Summary Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_reject_by_qnp"
+                            states="snp_presented"
+                            string="Reject by QNP"
+                            />
+                        <button name="sgn_co_approval"
+                            states="summary_ready"
+                            string="CO Approval"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_presentation_ready"
+                            states="approved_by_co"
+                            string="Set Presentation Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cio_rejection"
+                            states="approved_by_qnp"
+                            string="CIO Rejection"
+                            />
+                        <button name="sgn_cia_approval"
+                            states="presentation_ready"
+                            string="CIA Approval"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_cio_approval"
+                            states="approved_by_qnp,revise"
+                            string="CIO Approval"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_kick_off_ca"
+                            states="preliminary_project_planning"
+                            string="Kick Off CA"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_co_rejection"
+                            states="summary_ready"
+                            string="CO Rejection"
+                            />
+                        <button name="sgn_to_revise"
+                            states="presentation_ready,summary_ready"
+                            string="To Revise"
+                            />
+                        <button name="sgn_cia_rejection"
+                            states="presentation_ready"
+                            string="CIA Rejection"
+                            />
+                        <button name="sgn_approve"
+                            states="ca_evaluation,project_charter_draft"
+                            string="Approve"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_kick_off"
+                            states="project_planning"
+                            string="Kick Off"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_project_finished"
+                            states="project_ongoing"
+                            string="Project Finished"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_set_ready"
+                            states="dr_ca_ongoing,marketing_ca_ongoing,project_review_ongoing,supply_chain_ca_ongoing"
+                            string="Set Ready"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_close_project"
+                            states="project_closure"
+                            string="Close Project"
+                            class="oe_highlight"
+                            />
+                        <button name="sgn_reject"
+                            states="ca_evaluation"
+                            string="Reject"
+                            />
+                        <button name="sgn_abort"
+                            states="project_ongoing,project_planning"
+                            string="Abort"
+                            />
+                        <button name="sgn_cancel"
+                            states="aborted,approved_by_cio,approved_by_co,approved_by_qnp,ca_evaluation,dr_ca_ongoing,draft_snp,marketing_ca_ongoing,preliminary_project_planning,presentation_ready,project_charter_draft,project_closed,project_closure,project_ongoing,project_planning,project_review_ongoing,qnp_rejected,rejected_by_ca,rejected_by_cia,rejected_by_cio,rejected_by_co,snp_presented,summary_ready,supply_chain_ca_ongoing"
+                            string="Cancel"
+                            />
+                        <field name="state" widget="statusbar"
+                            statusbar_colors='{}'
+                            />
+                    </header>
+                    <sheet string="New Products Projects">
+                     <group>
+                        <field name="reference"
+                            />
+                        <field name="name"
+                            />
+                        <field name="agronomic_class"
+                            />
+                        <field name="next_action_description"
+                            />
+                        <field name="next_action_date"
+                            />
+                        <field name="next_action_responsible"
+                            />
+                        <field name="project"
+                            />
+                        <field name="phase"
+                            />
+                        <field name="abort_file"
+                            />
+                        <field name="privacy_visibility"
+                            />
+                        <field name="operative_id"
+                            />
+                    <field name="status_report_ids"
+                            />
+                    <field name="related_product_ids"
+                            />
+                     </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sagi_new_product_project_tree" model="ir.ui.view">
+            <field name="name">sagi.new_product_project.tree</field>
+            <field name="model">sagi.new_product_project</field>
+            <field name="arch" type="xml">
+                <tree string="New Products Projects"
+                    colors="grey:state=='cancelled';blue:state in ('draft_snp',);black:state in ('snp_presented', 'project_planning', 'preliminary_project_planning', 'ca_evaluation', 'approved_by_qnp', 'project_charter_draft', 'approved_by_cio', 'project_ongoing', 'summary_ready', 'project_closure', 'dr_ca_ongoing', 'presentation_ready', 'supply_chain_ca_ongoing', 'marketing_ca_ongoing', 'project_review_ongoing', 'approved_by_co', 'revise'); red:state in ()"
+                    >
+                    <field name="reference"
+                        />
+                    <field name="name"
+                        />
+                    <field name="agronomic_class"
+                        />
+                    <field name="next_action_responsible"
+                        />
+                    <field name="phase"
+                        />
+                    <field name="operative_id"
+                        />
+                    <field name="state" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->

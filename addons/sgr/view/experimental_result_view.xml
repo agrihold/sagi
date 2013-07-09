@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+##############################################################################
+#
+#    SGR
+#    Copyright (C) 2013 Grupo ADHOC
+#    No email
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+##############################################################################
+-->
+<!-- sgr.experimental_result -->
+<!-- sgr.experimental_result -->
+<!-- sgr.experimental_result -->
+<openerp>
+    <data>
+
+        <!-- SEARCH VIEW -->
+        <record id="view_sgr_experimental_result_filter" model="ir.ui.view">
+            <field name="name">sgr.experimental_result.select</field>
+            <field name="model">sgr.experimental_result</field>
+            <field name="arch" type="xml">
+                <search string="Experimental Results" version="7.0">
+                    <group string="By Attribute">
+                    <field name="city" string="City"
+                            />
+                    </group>
+                    <group string="By object">
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- FORMVIEW -->
+        <record id="view_sgr_experimental_result_form" model="ir.ui.view">
+            <field name="name">sgr.experimental_result.form</field>
+            <field name="model">sgr.experimental_result</field>
+            <field name="arch" type="xml">
+                <form string="Experimental Results" version="7.0">
+                    <header>
+                    </header>
+                    <sheet string="Experimental Results">
+                     <group>
+                        <field name="city"
+                            />
+                        <field name="volume"
+                            />
+                        <field name="volume_uom_id"
+                            />
+                        <field name="doses"
+                            />
+                        <field name="doses_uom_id"
+                            />
+                        <field name="number_of_applications"
+                            />
+                        <field name="result"
+                            />
+                        <field name="note"
+                            />
+                    <field name="crop_id"
+                            />
+                    <field name="target_pest_id"
+                            />
+                     </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- TREEVIEW -->
+
+        <record id="view_sgr_experimental_result_tree" model="ir.ui.view">
+            <field name="name">sgr.experimental_result.tree</field>
+            <field name="model">sgr.experimental_result</field>
+            <field name="arch" type="xml">
+                <tree string="Experimental Results"
+                    >
+                    <field name="city"
+                        />
+                    <field name="result"
+                        />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
+<!-- vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4
+     -->
