@@ -3769,3 +3769,6 @@ msgstr "Registros de componentes"
 #: model:ir.model,name:sgr.model_sgr_trademark_registry
 msgid "trademark_registry"
 msgstr "trademark_registry"
+
+msgid "Batch"
+msgstr "Lote"

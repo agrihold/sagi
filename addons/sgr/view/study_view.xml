@@ -120,8 +120,6 @@
                             />
                         <field name="concentration"
                             />
-                        <field name="concentration_uom_id"
-                            />
                         <field name="director_author_id"
                             />
                         <field name="summary"

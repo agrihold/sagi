@@ -1,19 +1,26 @@
 # Translation of OpenERP Server.
 # This file contains the translation of the following modules:
-#	* sgr_reports
+# 	* sgr_reports
+# Juan <scarafia.juanjose@gmail.com>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-27 17:31+0000\n"
-"PO-Revision-Date: 2013-05-27 17:31+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2013-08-02 20:13+0000\n"
+"PO-Revision-Date: 2013-08-02 17:18-0300\n"
+"Last-Translator: Juan <scarafia.juanjose@gmail.com>\n"
+"Language-Team: Español <>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.rtii_pf
+msgid "RTII-PF"
+msgstr "RTII-PF"
 
 #. module: sgr_reports
 #: model:ir.model,name:sgr_reports.model_sagi_sagi
@@ -23,7 +30,7 @@ msgstr "sagi"
 #. module: sgr_reports
 #: field:sagi.sagi,agronomic_class:0
 msgid "Agronomic Class"
-msgstr "Agronomic Class"
+msgstr "Clase Agronómica"
 
 #. module: sgr_reports
 #: field:sagi.sagi,next_action:0
@@ -31,19 +38,39 @@ msgid "next_action"
 msgstr "next_action"
 
 #. module: sgr_reports
-#: field:sagi.sagi,reference:0
-msgid "reference"
-msgstr "reference"
+#: selection:sagi.sagi,state:0
+msgid "On Initiation"
+msgstr "En Iniciación"
 
 #. module: sgr_reports
-#: model:ir.actions.report.xml,name:sgr_reports.msds_pf
-msgid "MSDS PF"
-msgstr "MSDS PF"
+#: selection:sagi.sagi,state:0
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pf_anvisa
+msgid "RequerimientoPF-ANVISA"
+msgstr "RequerimientoPF-ANVISA"
+
+#. module: sgr_reports
+#: model:ir.model,name:sgr_reports.model_formulated_product_registry_report_wizard
+msgid "formulated_product_registry_report_wizard"
+msgstr "formulated_product_registry_report_wizard"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.rti_pf
+msgid "RTI-PF"
+msgstr "RTI-PF"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xiii
+msgid "Anex XIII"
+msgstr "Anex XIII"
 
 #. module: sgr_reports
 #: field:sagi.sagi,state:0
 msgid "State"
-msgstr "State"
+msgstr "Estado"
 
 #. module: sgr_reports
 #: field:sagi.sagi,next_action_date:0
@@ -53,27 +80,47 @@ msgstr "next_action_date"
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "Draft"
-msgstr "Draft"
+msgstr "Borrador"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "On Creation"
-msgstr "On Creation"
+msgstr "En Creación"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "Closed"
-msgstr "Closed"
+msgstr "Cerrado"
 
 #. module: sgr_reports
-#: model:ir.actions.report.xml,name:sgr_reports.msds_pt
-msgid "MSDS PT"
-msgstr "MSDS PT"
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xvi
+msgid "Annex XVI"
+msgstr "Annex XVI"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.bula_mapa
+msgid "Bula-MAPA"
+msgstr "Bula-MAPA"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.requerimentocomp_anvisa
+msgid "RequerimentoComp-ANVISA"
+msgstr "RequerimentoComp-ANVISA"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "On Planning"
-msgstr "On Planning"
+msgstr "En Planificación"
+
+#. module: sgr_reports
+#: model:ir.ui.menu,name:sgr_reports.menu_sgr_report
+msgid "Registries"
+msgstr "Registros"
+
+#. module: sgr_reports
+#: model:ir.model,name:sgr_reports.model_technical_product_registry_report_wizard
+msgid "technical_product_registry_report_wizard"
+msgstr "technical_product_registry_report_wizard"
 
 #. module: sgr_reports
 #: field:sagi.sagi,sagi_stage_id:0
@@ -83,47 +130,109 @@ msgstr "<no label>"
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "On Closure"
-msgstr "On Closure"
+msgstr "En Cierre"
 
 #. module: sgr_reports
-#: field:sagi.sagi,message_unread:0
-msgid "Unread Messages"
-msgstr "Unread Messages"
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pf_mapa
+msgid "RequerimientoPF-MAPA"
+msgstr "RequerimientoPF-MAPA"
 
 #. module: sgr_reports
-#: model:ir.actions.report.xml,name:sgr_reports.official_letter_report
-msgid "Official Letter"
-msgstr "Official Letter"
+#: model:ir.actions.report.xml,name:sgr_reports.requerimentocomp_mapa
+msgid "RequerimentoComp-MAPA"
+msgstr "RequerimentoComp-MAPA"
 
 #. module: sgr_reports
 #: field:sagi.sagi,responsible:0
 msgid "responsible"
-msgstr "responsible"
+msgstr "responsable"
 
 #. module: sgr_reports
-#: selection:sagi.sagi,state:0
-msgid "Rejected"
-msgstr "Rejected"
+#: model:ir.actions.report.xml,name:sgr_reports.rtiii_pte
+msgid "RTIII-PTE"
+msgstr "RTIII-PTE"
 
 #. module: sgr_reports
-#: help:sagi.sagi,message_unread:0
-msgid "If checked new messages require your attention."
-msgstr "If checked new messages require your attention."
+#: help:sagi.sagi,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensajes e historial de comunicación"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xvii
+msgid "Annex XVII"
+msgstr "Annex XVII"
 
 #. module: sgr_reports
 #: field:sagi.sagi,message_is_follower:0
 msgid "Is a Follower"
-msgstr "Is a Follower"
+msgstr "Es un Seguidor"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xxii
+msgid "Anex XXII"
+msgstr "Anex XXII"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "Aborted"
-msgstr "Aborted"
+msgstr "Abortado"
+
+#. module: sgr_reports
+#: model:ir.actions.act_window,name:sgr_reports.action_formulated_product_registry_report_wizard
+#: model:ir.actions.report.xml,name:sgr_reports.formulated_product_registry_report
+#: model:ir.ui.menu,name:sgr_reports.menu_formulated_product_registry_report
+msgid "Formulated Product Report"
+msgstr "Reporte de Producto Formulado"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pf_ibama
+msgid "RequerimientoPF-IBAMA"
+msgstr "RequerimientoPF-IBAMA"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xv
+msgid "Annex XV"
+msgstr "Annex XV"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.bulapy
+msgid "BulaPy"
+msgstr "BulaPy"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pt_anvisa
+msgid "RequerimientoPT-ANVISA"
+msgstr "RequerimientoPT-ANVISA"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.requerimentocomp_ibama
+msgid "RequerimentoComp-IBAMA"
+msgstr "RequerimentoComp-IBAMA"
+
+#. module: sgr_reports
+#: field:technical_product_registry_report_wizard,technical_product_id:0
+msgid "Technical Product"
+msgstr "Producto Técnico"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xxiii
+msgid "Anex XXIII"
+msgstr "Anex XXIII"
 
 #. module: sgr_reports
 #: field:sagi.sagi,message_ids:0
 msgid "Messages"
-msgstr "Messages"
+msgstr "Mensajes"
+
+#. module: sgr_reports
+#: field:formulated_product_registry_report_wizard,formulated_product_id:0
+msgid "Formulated Product"
+msgstr "Producto Formulado"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.rti_pte
+msgid "RTI-PTE"
+msgstr "RTI-PTE"
 
 #. module: sgr_reports
 #: model:ir.actions.report.xml,name:sgr_reports.annex_iv
@@ -131,67 +240,140 @@ msgid "Annex IV"
 msgstr "Annex IV"
 
 #. module: sgr_reports
-#: field:sagi.sagi,created_by:0
-msgid "Created By"
-msgstr "Created By"
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pt_mapa
+msgid "RequerimientoPT-MAPA"
+msgstr "RequerimientoPT-MAPA"
 
 #. module: sgr_reports
-#: selection:sagi.sagi,state:0
-msgid "On Initiation"
-msgstr "On Initiation"
+#: model:ir.actions.report.xml,name:sgr_reports.requerimiento_pt_ibama
+msgid "RequerimientoPT-IBAMA"
+msgstr "RequerimientoPT-IBAMA"
+
+#. module: sgr_reports
+#: field:sagi.sagi,created_by:0
+msgid "Created By"
+msgstr "Creado Por"
+
+#. module: sgr_reports
+#: view:formulated_product_registry_report_wizard:0
+#: view:technical_product_registry_report_wizard:0
+msgid "Account Summary"
+msgstr "Account Summary"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "Cancelled"
-msgstr "Cancelled"
+msgstr "Cancelado"
 
 #. module: sgr_reports
 #: field:sagi.sagi,message_summary:0
 msgid "Summary"
-msgstr "Summary"
+msgstr "Sumario"
 
 #. module: sgr_reports
-#: help:sagi.sagi,message_ids:0
-msgid "Messages and communication history"
-msgstr "Messages and communication history"
+#: help:sagi.sagi,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
 
 #. module: sgr_reports
-#: model:ir.actions.report.xml,name:sgr_reports.annex_xi
-msgid "Annex XI"
-msgstr "Annex XI"
+#: field:sagi.sagi,reference:0
+msgid "reference"
+msgstr "reference"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.bula_anvisa
+msgid "Bula-ANVISA"
+msgstr "Bula-ANVISA"
 
 #. module: sgr_reports
 #: model:ir.actions.report.xml,name:sgr_reports.registry_request
 msgid "Registry Request"
-msgstr "Registry Request"
+msgstr "Requerimiento de Registro"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xi_t
+msgid "Annex XI-T"
+msgstr "Annex XI-T"
 
 #. module: sgr_reports
 #: model:ir.actions.report.xml,name:sgr_reports.tax_payment_request
 msgid "Tax Payment Request"
-msgstr "Tax Payment Request"
+msgstr "Requerimiento de pago de impuesto"
 
 #. module: sgr_reports
-#: model:ir.actions.report.xml,name:sgr_reports.msds_pf_sum
-msgid "MSDS PF Summarized"
-msgstr "MSDS PF Summarized"
+#: model:ir.actions.report.xml,name:sgr_reports.rtii_pte
+msgid "RTII-PTE"
+msgstr "RTII-PTE"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.rtiii_pf
+msgid "RTIII-PF"
+msgstr "RTIII-PF"
+
+#. module: sgr_reports
+#: model:ir.actions.act_window,name:sgr_reports.action_technical_product_registry_report_wizard
+#: model:ir.actions.report.xml,name:sgr_reports.technical_product_registry_report
+#: model:ir.ui.menu,name:sgr_reports.menu_technical_product_registry_report
+msgid "Technical Product Report"
+msgstr "Reporte de Producto Técnico"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xxi
+msgid "Anex XXI"
+msgstr "Anex XXI"
+
+#. module: sgr_reports
+#: field:sagi.sagi,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes sin leer"
 
 #. module: sgr_reports
 #: help:sagi.sagi,message_summary:0
-msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
-msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
 
 #. module: sgr_reports
 #: field:sagi.sagi,create_date:0
 msgid "Create Date"
-msgstr "Create Date"
+msgstr "Fecha de Creación"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.annex_xi_f
+msgid "Annex XI-F"
+msgstr "Annex XI-F"
 
 #. module: sgr_reports
 #: selection:sagi.sagi,state:0
 msgid "On Excecution and Control"
-msgstr "On Excecution and Control"
+msgstr "En Ejecución y Control"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.parecertecnico
+msgid "Parecer Tecnico"
+msgstr "Parecer Técnico"
+
+#. module: sgr_reports
+#: model:ir.actions.report.xml,name:sgr_reports.bula_ibama
+msgid "Bula-IBAMA"
+msgstr "Bula-IBAMA"
+
+#. module: sgr_reports
+#: view:formulated_product_registry_report_wizard:0
+#: view:technical_product_registry_report_wizard:0
+msgid "Cancel"
+msgstr "Cancelar"
 
 #. module: sgr_reports
 #: field:sagi.sagi,message_follower_ids:0
 msgid "Followers"
-msgstr "Followers"
+msgstr "Seguidores"
 
+#. module: sgr_reports
+#: view:formulated_product_registry_report_wizard:0
+#: view:technical_product_registry_report_wizard:0
+msgid "Generate Report"
+msgstr "Generar Reporte"

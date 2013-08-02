@@ -1,0 +1,522 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* sagi_management_reports
+# Juan <scarafia.juanjose@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-02 19:50+0000\n"
+"PO-Revision-Date: 2013-08-02 17:09-0300\n"
+"Last-Translator: Juan <scarafia.juanjose@gmail.com>\n"
+"Language-Team: Español <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,agronomic_class:0
+msgid "Agronomic Class"
+msgstr "Clase Agronómica"
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.open_board_comp_mana_dash
+#: model:ir.ui.menu,name:sagi_management_reports.menu_board_comp_mana_dash
+msgid "Price Management"
+msgstr "Gestión de Precios"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Draft SNP"
+msgstr "SNP en Borrador"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Closure"
+msgstr "Cierre del Proyecto"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.act_proposals_x_month
+msgid "Proposals x Month"
+msgstr "Propuestas x Mes"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "QNP Rejected"
+msgstr "QNP Rechazadas"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,creation_started_month:0
+msgid "Started Month"
+msgstr "Mes de Inicio"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+#: selection:sagi.new_product_project.report,state:0
+msgid "Aborted"
+msgstr "Abortadas"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "SNP Presented"
+msgstr "SNP Presentada"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,closure_end_year:0
+msgid "Year End"
+msgstr "Año de Fin"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+#: model:ir.actions.act_window,name:sagi_management_reports.act_projects_x_phase
+msgid "Projects x Phase"
+msgstr "Proyectos x Fase"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Delay per Project by Operative"
+msgstr "Demora por Proyecto por Operative"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+msgid "Ongoing"
+msgstr "En Curso"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+#: selection:sagi.new_product_project.report,state:0
+msgid "Cancelled"
+msgstr "Canceladas"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,reference:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,creation_started_year:0
+msgid "Started Year"
+msgstr "Año de Inicio"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Rejected by CIA"
+msgstr "Rechazadas por CIA"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,phase:0
+msgid "Planning"
+msgstr "Planificación"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,closure_date_to_end_year:0
+#: field:sagi.new_product_project.report,date_to_end_year:0
+msgid "Year to End"
+msgstr "Año a Finalizar"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Closed"
+msgstr "Proyecto Cerrado"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+#: model:ir.actions.act_window,name:sagi_management_reports.act_formulated_registries_x_operative
+#: view:sgr.formulated_product_registry:0
+msgid "Formulated Registries x Operative"
+msgstr "Registros Formulados x Operativa"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,closure_date_to_end_month:0
+msgid "Mont to End"
+msgstr "Mes a Finalizar"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,closure_started_date:0
+#: field:sagi.new_product_project.report,creation_started_date:0
+#: field:sagi.new_product_project.report,excecution_started_date:0
+#: field:sagi.new_product_project.report,initiation_started_date:0
+#: field:sagi.new_product_project.report,planning_started_date:0
+msgid "Started Date"
+msgstr "Fecha de Comienzo"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,phase:0
+msgid "Initiation"
+msgstr "Inicio"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,delay:0
+msgid "Project Delay"
+msgstr "Retraso del Proyecto"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Summary Ready"
+msgstr "Resumen Listo"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Ongoing"
+msgstr "Proyecto en Curso"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,project_sponsor:0
+msgid "Project Sponsor"
+msgstr "Patrocinador del Proyecto"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+msgid "Rejected"
+msgstr "Rechazado"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Preliminary Project Planning"
+msgstr "Planificación Preliminar de Proyectos"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,related_product_ids:0
+msgid "Related Products"
+msgstr "Productos Relacionados"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Presented Month"
+msgstr "Mes de Presentación"
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.open_board_sgr_dash
+#: model:ir.ui.menu,name:sagi_management_reports.menu_board_sgr_dash
+#: model:res.groups,name:sagi_management_reports.group_reports_registries
+msgid "Registries"
+msgstr "Registros"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Supply Chain CA ongoing"
+msgstr "CA de Supply Chain en Curso"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Proposal Status"
+msgstr "Estado de Propuesta"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+msgid "Ongoing Projects Delay x Operative (days)"
+msgstr "Demora de Proyectos en Curso x Operativa (días)"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Rejected by CA"
+msgstr "Rechazada por CA"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Rejected by CO"
+msgstr "Rechazada por CO"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Presented Year"
+msgstr "Año de Presentación"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,closure_end_month:0
+msgid "Month End"
+msgstr "Mes de Fin"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+msgid "Proposals x month"
+msgstr "Propuestas x mes"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Presentation Ready"
+msgstr "Presentación Lista"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "CA Evaluation"
+msgstr "Evulación de CA"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Approved by QNP"
+msgstr "Aprobado por QNP"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Planning"
+msgstr "Planificación de Proyecto"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,project_leader:0
+msgid "Project Leader"
+msgstr "Líder de Proyecto"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: selection:sagi.new_product_project.report,snp_status:0
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+#: model:ir.actions.act_window,name:sagi_management_reports.act_technical_registries_x_operative
+#: view:sgr.technical_product_registry:0
+msgid "Technical Registries x Operative"
+msgstr "Registros Técnicos x Operativa"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Leader"
+msgstr "Líder"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Marketing CA ongoing"
+msgstr "CA de Marketing en Curso"
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.action_report_sagi_npp_delay_x_proj
+msgid "Delay (days) per Project"
+msgstr "Demora (días) por Proyecto"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,date_to_end:0
+msgid "Expected End Date"
+msgstr "Fecha Esperada de Fin"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Rejected by CIO"
+msgstr "Rechazada por CIO"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Delayed"
+msgstr "Demorado"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Proposal Status..."
+msgstr "Estado de Propuesta..."
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,phase:0
+msgid "Execution"
+msgstr "Ejecución"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,phase:0
+msgid "Closure"
+msgstr "Cierre"
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.action_report_sagi_npp_dev_analysis
+#: model:ir.ui.menu,name:sagi_management_reports.menu_report_sagi_npp_dev_analysis
+#: view:sagi.new_product_project.report:0
+msgid "Development Analysis"
+msgstr "Análisis de Desarrollo"
+
+#. module: sagi_management_reports
+#: model:ir.actions.act_window,name:sagi_management_reports.open_board_npp_dash
+#: model:ir.ui.menu,name:sagi_management_reports.menu_board_npp_dash
+#: model:ir.ui.menu,name:sagi_management_reports.menu_sagi_npp
+#: model:res.groups,name:sagi_management_reports.group_reports_developement
+msgid "Developement"
+msgstr "Desarrollo"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Revise"
+msgstr "Revisar"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,nbr:0
+msgid "# of Projects"
+msgstr "# de Proyectos"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Extended Filters..."
+msgstr "Filtros Extendidos..."
+
+#. module: sagi_management_reports
+#: view:board.board:0
+msgid "Registries Dashboard"
+msgstr "Tablero de Registros"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Charter Draft"
+msgstr "Borrador de Acta de Proyecto"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Sponsor"
+msgstr "Patrocinador"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,date_to_end_month:0
+msgid "Month to End"
+msgstr "Mes a Finalizar"
+
+#. module: sagi_management_reports
+#: model:res.groups,name:sagi_management_reports.group_reports_compe_management
+msgid "Competitiveness Management"
+msgstr "Gestión de la competitividad"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,delay_status:0
+msgid "Delay Status"
+msgstr "Estado de Demora"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+msgid "Developement Dashboard"
+msgstr "Tablero de Desarrollo"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,interested_operative_ids:0
+msgid "Interested Operatives"
+msgstr "Operativas Interesadas"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Project Review Ongoing"
+msgstr "Revisión de Proyecto en Curso"
+
+#. module: sagi_management_reports
+#: view:board.board:0
+#: model:ir.actions.act_window,name:sagi_management_reports.act_rejected_projects_x_stage
+msgid "Rejected Projects x Stage"
+msgstr "Proyectos Rechazados x Etapa"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Approved by CIO"
+msgstr "Aprobada por CIO"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,snp_status:0
+msgid "SNP Status"
+msgstr "Estado de SNP"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,phase:0
+msgid "Phase"
+msgstr "Fase"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "Approved by CO"
+msgstr "Aprobada por CO"
+
+#. module: sagi_management_reports
+#: model:ir.model,name:sagi_management_reports.model_sagi_new_product_project_report
+msgid "New Product Project Report"
+msgstr "Reporte de Proyecto de Nuevo Producto"
+
+#. module: sagi_management_reports
+#: model:ir.ui.menu,name:sagi_management_reports.menu_report_sagi_npp_delay_x_ongoing_proj
+msgid "Projects Delay"
+msgstr "Demora de Proyectos"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,closure_end_date:0
+#: field:sagi.new_product_project.report,creation_end_date:0
+#: field:sagi.new_product_project.report,excecution_end_date:0
+#: field:sagi.new_product_project.report,initiation_end_date:0
+#: field:sagi.new_product_project.report,planning_end_date:0
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,budget:0
+msgid "Budjet (USD)"
+msgstr "Presupuesto (USD)"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: sagi_management_reports
+#: model:ir.module.category,description:sagi_management_reports.module_category_reports
+#: model:ir.module.category,name:sagi_management_reports.module_category_reports
+msgid "Reports"
+msgstr "Reportes"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,state:0
+msgid "DR CA ongoing"
+msgstr "CA DR en Curso"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+msgid "Projects by Agronomic Class"
+msgstr "Proyectos por Clase Agronómica"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,closure_date_to_start:0
+#: field:sagi.new_product_project.report,creation_date_to_start:0
+#: field:sagi.new_product_project.report,excecution_date_to_start:0
+#: field:sagi.new_product_project.report,initiation_date_to_start:0
+#: field:sagi.new_product_project.report,planning_date_to_start:0
+msgid "Date to Start"
+msgstr "Fecha para Inicio"
+
+#. module: sagi_management_reports
+#: selection:sagi.new_product_project.report,phase:0
+msgid "Creation"
+msgstr "Creación"
+
+#. module: sagi_management_reports
+#: view:sagi.new_product_project.report:0
+#: field:sagi.new_product_project.report,operative_id:0
+msgid "Operative"
+msgstr "Operativa"
+
+#. module: sagi_management_reports
+#: field:sagi.new_product_project.report,closure_date_to_end:0
+#: field:sagi.new_product_project.report,creation_date_to_end:0
+#: field:sagi.new_product_project.report,excecution_date_to_end:0
+#: field:sagi.new_product_project.report,initiation_date_to_end:0
+#: field:sagi.new_product_project.report,planning_date_to_end:0
+msgid "Date to End"
+msgstr "Fecha para Fin"
