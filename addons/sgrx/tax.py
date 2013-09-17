@@ -29,9 +29,21 @@ class tax(osv.osv):
     _inherit = 'sgr.tax'
     
     _columns = {
-        'document_category_id': fields.many2one('sgr.document_category', string='Category', required=True, context={'default_type':'tax'}, domain=[('type','=','tax')]),
+        # 'document_category_id': fields.many2one('sgr.document_category', string='Category', required=True, context={'default_type':'tax'}, domain=[('type','=','tax')]),
     }
+
+    def _get_currency(self, cr, uid, ctx):
+        comp = self.pool.get('res.users').browse(cr,uid,uid).company_id
+        if not comp:
+            comp_id = self.pool.get('res.company').search(cr, uid, [])[0]
+            comp = self.pool.get('res.company').browse(cr, uid, comp_id)
+        return comp.currency_id.id    
     
+    _defaults = {
+        # "currency_id": 'BRL'
+        "currency_id": _get_currency
+    }
+
 tax()
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

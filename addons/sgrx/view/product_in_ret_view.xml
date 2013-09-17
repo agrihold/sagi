@@ -40,6 +40,8 @@
                     >
                     <field name="name"
                         />
+                    <field name="scientific_name"
+                        />
 
                     <field name="ret_registry_id"
                         />

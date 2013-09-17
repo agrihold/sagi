@@ -34,6 +34,8 @@
             <field name="arch" type="xml">
                 <search string="Information Categories" version="7.0">
                     <group string="By Attribute">
+                    <field name="name" string="Name"
+                            />
                     <field name="hierachical_type" string="Type"
                             />
                     </group>

@@ -62,21 +62,26 @@
                         <newline/>
                         <field name="product_id"
                             colspan="4"/>
-                        <field name="product_in_ret_id" colspan="4"
+                        <field name="product_in_ret_id" on_change="onchange_ret(product_in_ret_id)" colspan="4"
                             domain="[('product_id','=',product_id)]"/>                            
                         <field name="supplier_id"/>
                         <field name="location_id"/>
                         <field name="specific_batch"/>
                         <field name="batch" attrs="{'required':[('specific_batch','=','yes')],'invisible':[('specific_batch','!=','yes')]}"/>
                         <newline/>                  
-                        <group colspan="4" col="3">
+                        <group colspan="4" col="4">
                             <field name="amount" colspan="2"/>
-                            <field name="amount_uom_id"
-                                nolabel="1"/>
+                            <!-- <field name="amount_uom_id" readonly="1"/> -->
+                            <field name="amount_uom_id" nolabel="1" attrs="{'invisible':[('product_in_ret_id','!=',False)]}"/>
+                            <field name="copy_amount_uom_id" nolabel="1" attrs="{'invisible':[('product_in_ret_id','=',False)]}"/>
+                            <!-- <field name="amount_uom_id" nolabel="1" attrs="{'readonly':[('product_in_ret_id','=',True)]}"/> -->
+                            <newline/>                           
+                            <field name="ret_remaining_amount" colspan="4"  attrs="{'invisible':[('product_in_ret_id','=',False)]}"/>
                             <field name="concentration"
                                 colspan="2"/>
                             <field name="concentration_uom_id"
                                 nolabel="1"/>
+                            <newline/>
                         </group>
                         <field name="import_license" colspan="4"/>
                         <field name="date_of_import_license"/>

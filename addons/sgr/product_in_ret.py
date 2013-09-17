@@ -36,6 +36,7 @@ class product_in_ret(osv.osv):
         raise NotImplementedError
 
     _columns = {
+        'scientific_name': fields.char(string='Scientific Name', required=True, size=256),
         'concentration': fields.float(string='Concentration'),
         'concentration_uom_id': fields.many2one('product.uom', string='Concentration UOM'),
         'amount_requested': fields.float(string='Requested', required=True),

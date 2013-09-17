@@ -51,7 +51,7 @@
                          <group>
                             <field name="information_category_id"
                                 />
-                            <field name="parent_information_id" domain="[('information_category_id','=',information_category_id),('state','not in',['cancelled', 'depreciated'])]" context="{'information_category_id': information_category_id}"/>
+                            <field name="parent_information_id" domain="[('information_category_id','=',information_category_id),('state','not in',['cancelled', 'depreciated'])]" context="{'default_information_category_id': information_category_id}"/>
                             <group colspan="4" col="1">
                                 <field name="text"
                                     attrs="{'invisible': [('parent_information_id', '!=', False)]}"/>                            

@@ -34,6 +34,8 @@
             <field name="arch" type="xml">
                 <search string="Products in RET" version="7.0">
                     <group string="By Attribute">
+                    <field name="scientific_name" string="Scientific Name"
+                            />
                     <field name="concentration" string="Concentration"
                             />
                     <field name="concentration_uom_id" string="Concentration UOM"
@@ -59,6 +61,8 @@
                     </header>
                     <sheet string="Products in RET">
                      <group>
+                        <field name="scientific_name"
+                            />
                         <field name="concentration"
                             />
                         <field name="concentration_uom_id"
@@ -89,6 +93,8 @@
             <field name="arch" type="xml">
                 <tree string="Products in RET"
                     >
+                    <field name="scientific_name"
+                        />
                     <field name="concentration"
                         />
                     <field name="concentration_uom_id"

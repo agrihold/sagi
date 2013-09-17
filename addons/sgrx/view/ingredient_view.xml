@@ -78,7 +78,9 @@
                                     <group colspan="4" col="2">
                                         <field name="cas"
                                             attrs="{'invisible': [('type', '=', 'biological')]}"/>
-                                        <field name="agronomic_class_id" attrs="{'required': [('type','in',['chemical','biological'])],'invisible': [('type', 'in', ['others','impurity'])]}"/>  
+                                        <field name="agronomic_class_id" attrs="{'invisible': [('type', 'in', ['others','impurity'])]}"/>  
+                                        <!-- Por pedido de Marcio se saco la obligatoriedad de este campo -->
+                                        <!-- <field name="agronomic_class_id" attrs="{'required': [('type','in',['chemical','biological'])],'invisible': [('type', 'in', ['others','impurity'])]}"/>   -->
                                      <field name="chemical_structure" widget="image"  img_height="150" attrs="{'invisible': [('type', '=', 'biological')]}"/>
                                     </group>                           
                                     <group colspan="2" col="3">

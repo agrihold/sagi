@@ -34,6 +34,8 @@
             <field name="arch" type="xml">
                 <search string="Component Registry Detail" version="7.0">
                     <group string="By Attribute">
+                    <field name="component_id" string="Component"
+                            />
                     </group>
                     <group string="By object">
                     <field name="formulated_product_ids" string="Formulated Products"

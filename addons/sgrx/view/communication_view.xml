@@ -65,7 +65,7 @@
                             <field name="government_agency_id" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="name" />
                             <field name="official_letter_id"
-                                readonly="1"/>
+                                readonly="0" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
                             <field name="registry_id" required="False" invisible="1"/>
                          </group>                                
                         <notebook>

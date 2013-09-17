@@ -116,9 +116,10 @@
                                     <group colspan="2" col="3">                                   
                                         <field name="amount"/>
                                         <field name="currency_id" nolabel="1"/>
-                                        <field name="currency_rate" colspan="3"/>
-                                        <field name="my_amount"/>
-                                        <field name="my_currency_id" nolabel="1"/> 
+                                        <!-- Por ahora se comentaron porque no serian utilizados -->
+                                        <!-- <field name="currency_rate" colspan="3"/> -->
+                                        <!-- <field name="my_amount"/> -->
+                                        <!-- <field name="my_currency_id" nolabel="1"/>  -->
                                         <field name="payment_date" colspan="3"/>                                         
                                         <field name="expiration_date" colspan="3"/>
                                     </group>
@@ -219,9 +220,10 @@
                                     <group colspan="2" col="3">                                   
                                         <field name="amount"/>
                                         <field name="currency_id" nolabel="1"/>
-                                        <field name="currency_rate" colspan="3"/>
-                                        <field name="my_amount"/>
-                                        <field name="my_currency_id" nolabel="1"/> 
+                                        <!-- Por ahora se comentaron porque no serian utilizados -->
+                                        <!-- <field name="currency_rate" colspan="3"/> -->
+                                        <!-- <field name="my_amount"/> -->
+                                        <!-- <field name="my_currency_id" nolabel="1"/>  -->
                                         <field name="payment_date" colspan="3"/>                                         
                                         <field name="expiration_date" colspan="3"/>
                                     </group>
@@ -238,7 +240,10 @@
                             </page>                                              
                         </notebook>                        
                     </sheet>                    
-                           
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>                           
                 </form>
             </field>
         </record>

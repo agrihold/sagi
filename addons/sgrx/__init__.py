@@ -42,4 +42,5 @@ import trademark_registry
 import ret_registry
 import component_registry
 import component_registry_detail
+import tax
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

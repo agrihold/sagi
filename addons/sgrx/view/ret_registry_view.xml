@@ -98,6 +98,7 @@
                                     <field name="product_in_ret_ids" nolabel="1">
                                         <tree editable="top">
                                             <field name="product_id" widget="many2one"/>
+                                            <field name="scientific_name" />
                                             <field name="concentration" />
                                             <field name="concentration_uom_id" />
                                             <field name="amount_requested" />
