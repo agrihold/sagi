@@ -56,7 +56,7 @@ class information(osv.osv):
         'name': fields.function(_get_name, type='char', arg=None, fnct_inv_arg=None, obj=None, string='Name', readonly=True, size=128, states={'draft': [('readonly', False)]}),
         'partner_id': fields.many2one('res.partner', string='Partner', readonly=True, states={'draft': [('readonly', False)]}),
         'product_id': fields.many2one('product.product', string='Product', readonly=True, states={'draft': [('readonly', False)]}),
-        'text': fields.html(string='Text', readonly=True, required=True, states={'draft': [('readonly', False)]}, translate=True),
+        'text': fields.html(string='Text', readonly=True, required=True, states={'draft': [('readonly', False)]}),
         'company_id': fields.many2one('res.company', string='Company'),
         'state': fields.selection(_states_, "State"),
         'document_id': fields.many2one('sgr.document', string='document_id', ondelete='cascade'), 

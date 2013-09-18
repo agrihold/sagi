@@ -38,7 +38,7 @@ class information_presentation(osv.osv):
         ('cancelled','Cancelled'),
     ]
     _columns = {
-        'text': fields.html(string='Text', readonly=True, states={'draft': [('readonly', False)]}, translate=True),
+        'text': fields.html(string='Text', readonly=True, states={'draft': [('readonly', False)]}),
         'state': fields.selection(_states_, "State"),
         'registry_id': fields.many2one('sgr.registry', string='registry_id', ondelete='cascade', required=True), 
         'parent_information_id': fields.many2one('sgr.information', string='Information', readonly=True, states={'draft': [('readonly', False)]}), 

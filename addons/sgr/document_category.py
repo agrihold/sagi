@@ -62,7 +62,7 @@ class document_category(osv.osv):
     _columns = {
         'complete_name': fields.function(_name_get_fnc, type="char", string='Name', store=True),
         'type': fields.selection([(u'partner_document', u'Partner Document'), (u'study', u'Study'), (u'dossier_document', u'Dossier Document'), (u'tax', u'Tax')], string='Document Type', required=True),
-        'name': fields.char(string='Name', required=True, size=64, translate=True),
+        'name': fields.char(string='Name', required=True, size=64),
         'hierachical_type': fields.selection([(u'view', u'View'), (u'normal', u'Normal')], string='Type', required=True),
         'company_id': fields.many2one('res.company', string='Company'),
         'experimental_results': fields.selection([(u'efficacy', u'Efficacy'), (u'residue', u'Residue')], string='Experimiental Results'),

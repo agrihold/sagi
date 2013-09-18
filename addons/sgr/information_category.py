@@ -61,7 +61,7 @@ class information_category(osv.osv):
 
     _columns = {
         'complete_name': fields.function(_name_get_fnc, type="char", string='Name', store=True),
-        'name': fields.char(string='Name', required=True, size=128, translate=True),
+        'name': fields.char(string='Name', required=True, size=128),
         'hierachical_type': fields.selection([(u'view', u'View'), (u'normal', u'Normal')], string='Type', required=True),
         'header': fields.html(string='Header', translate=True),
         'footer': fields.html(string='Footer', translate=True),
