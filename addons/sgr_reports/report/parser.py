@@ -39,6 +39,8 @@ from openerp import netsvc
 class Parser(report_sxw.rml_parse):
     def __init__(self, cr, uid, name, context):
         super(Parser, self).__init__(cr, uid, name, context)
+
+        self.localcontext.update({'report_name': name})
 #        self.lang = context.get('lang', 'es_ES')
         if not context:
             context = {}
@@ -91,11 +93,21 @@ class Parser(report_sxw.rml_parse):
         })
 
 # este no se termino de implementar, la idea es que concatene el separdor. 
-    def as_list(self, attr, field,separator=', '):
-        expr = "for o in objects:\n\tvalue_list.append(o.%s)" % field
-        localspace = {'objects':attr, 'value_list':[]}
-        exec expr in localspace
-        return localspace['value_list']
+    # def as_list(self, attr, field,separator=', '):
+    #     expr = "for o in objects:\n\tvalue_list.append(o.%s)" % field
+    #     localspace = {'objects':attr, 'value_list':[]}
+    #     exec expr in localspace
+    #     return localspace['value_list']
+    def as_list(self, field_ids, separator=', '):
+        string = ''
+        count = 0
+        for item in field_ids:
+            if count == 0:
+                string = string + str(item.name)
+            else:
+                string = string + separator + str(item.name)
+            count += 1
+        return string
 
     def custom(self, field, kind=0, date=False):
 #        field = obj.field
@@ -160,12 +172,12 @@ class Parser(report_sxw.rml_parse):
                     ret.append(cqq)
         return ret    
 
-    def cqq(self, obj, ing_type, context=None):
-        ret = self.cqqs(obj, ing_type, context=context)
+    def cqq(self, obj, ing_type, only_main_ing=True, context=None):
+        ret = self.cqqs(obj, ing_type, only_main_ing, context=context)
         if not ret:
             return False
         else:
-            return ret[0]
+            return [ret[0]]
 
 
     def ing_other_names(self, ingredient, other_name_type=False, context=None):
@@ -205,7 +217,7 @@ class Parser(report_sxw.rml_parse):
         if not ret:
             return False
         else:
-            return ret[0]
+            return [ret[0]]
 
    # Studies y study
     def studies(self, obj, category_name, state=False,
@@ -233,7 +245,7 @@ class Parser(report_sxw.rml_parse):
         if not ret:
             return False
         else:
-            return ret[0]
+            return [ret[0]]
 
 
    # Partner Documents y Partner document
@@ -252,6 +264,10 @@ class Parser(report_sxw.rml_parse):
         for partner_document_presentation in partner_document_presentation_ids:
             if partner_document_presentation.document_category_id.name == category_name or partner_document_presentation.document_category_id.reference == category_name:
                 if not state or partner_document_presentation.state == state:
+                    # print partner_document_presentation.partner_document_id
+                    # print partner_id
+                    # print partner_document_presentation.partner_document_id.partner_id
+                    # if partner_document_presentation.partner_document_id.partner_id:
                     if not partner_id or partner_document_presentation.partner_document_id.partner_id == partner_id:
                         ret.append(partner_document_presentation.partner_document_id)
         return ret    
@@ -262,7 +278,7 @@ class Parser(report_sxw.rml_parse):
         if not ret:
             return False
         else:
-            return ret[0]
+            return [ret[0]]
 
     # Informations e information
     def informations(self, obj, category_name, state=False, partner_id=False, product_id=False, context=None):
@@ -313,7 +329,7 @@ class Parser(report_sxw.rml_parse):
         if not ret:
             return False
         else:
-            return ret[0]
+            return [ret[0]]
 
     # Partner Role in Registry
     def partners(self, obj, reg_type, context=None):

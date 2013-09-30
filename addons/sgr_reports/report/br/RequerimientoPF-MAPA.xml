@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <openerp>
 <data noupdate="0">
-
+<!-- Importante no cambiar el nombre dle reporte porque en el reporte me fijo cual es el nombre -->
     <record id="requerimiento_pf_mapa" model="ir.actions.report.xml">
         <field name="name">RequerimientoPF-MAPA</field>
         <field name="type">ir.actions.report.xml</field>
@@ -11,7 +11,7 @@
         <field name="in_format">oo-odt</field>
         <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
         <field name="parser_loc">sgr_reports/report/parser.py</field>
-        <field name="report_rml">sgr_reports/report/br/RequerimientoPF-MAPA.odt</field>
+        <field name="report_rml">sgr_reports/report/br/RequerimientoPT-PF.odt</field>
         <field name="parser_state">loc</field>
         <field name="tml_source">file</field>
         <!--<field name="company_id" ref="res_company_1"/>        si queremos asignarle compania-->        
@@ -29,4 +29,3 @@
 
 </data>
 </openerp>
-
