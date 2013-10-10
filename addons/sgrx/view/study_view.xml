@@ -84,7 +84,7 @@
                                 <field name="reference"/> 
                                 <field name="document_category_id"
                                     context="{'default_type':'study'}"
-                                    domain="[('type','=','study')]"
+                                    domain="[('type','=','study'),('hierachical_type','=','normal')]"
                                     attrs="{'readonly': [('source', '=', 'own')]}"/> 
                                 <field name="study_purpose_ids" widget="many2many_tags"/>                                    
                                 <!--<field name="package_file_id"/>-->

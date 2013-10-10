@@ -37,7 +37,7 @@
                 <header position="after">
                     <sheet string="Partner Document presentation">
                      <group>
-                        <field name="document_category_id" domain="[('type','=','partner_document')]" context="{'default_type':'partner_document'}"/>
+                        <field name="document_category_id" domain="[('type','=','partner_document'), ('hierachical_type','=','normal')]" context="{'default_type':'partner_document'}"/>
                         <field name="partner_document_id" domain="[('document_category_id','=',document_category_id)]" context="{'default_document_category_id':document_category_id}"/>
                         <field name="communication_ids" widget="many2many_tags"/>
                      </group>

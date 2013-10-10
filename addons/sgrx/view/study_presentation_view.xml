@@ -49,7 +49,7 @@
                 <header position="after">
                     <sheet string="Study Presentation">
                      <group>
-                        <field name="document_category_id" domain="[('type','=','study')]" context="{'default_type':'study'}"/>
+                        <field name="document_category_id" domain="[('type','=','study'), ('hierachical_type','=','normal')]" context="{'default_type':'study'}"/>
                         <field name="study_id" domain="[('document_category_id','=',document_category_id)]" context="{'default_document_category_id':document_category_id}"/>
                         <field name="communication_ids" widget="many2many_tags"/>   
                      </group>

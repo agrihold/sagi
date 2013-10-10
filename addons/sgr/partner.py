@@ -48,6 +48,7 @@ class partner(osv.osv):
         'state_registration_agency': fields.many2one('res.partner', string='State Registration Agency', context={'default_is_gov_agency':'True','default_is_company':'True'}, domain=[('is_gov_agency','=',True)]),
         'vat': fields.char(string='VAT', size=64),
         'emergency_phone': fields.char(string='Emergency Phone', size=64),
+        'ddd': fields.char(string='DDD', size=8),
         'proposal_as_sponsor_ids': fields.many2many('sgr.proposal', 'sgr_sponsor_ids_proposal_as_sponsor_ids_rel', 'partner_id', 'proposal_id', string='proposal_as_sponsor_ids'), 
         'ret_registry_sup_ids': fields.many2many('sgr.ret_registry', 'sgr_ret_registry_sup_ids_supplier_ids_rel', 'partner_id', 'ret_registry_id', string='ret_registry_sup_ids'), 
         'analytic_account_id': fields.many2one('account.analytic.account', string='Account and Contracts', help=u"""Este campo debe ser solo para partners del tipo laboratorios. Se debe crear automáticamente al crear un laboratorio una cuenta analitica del tipo &quot;view&quot;. Si se destilda el campo &quot;laboratorio&quot; al partner, borramos la cuenta?""", readonly=True), 

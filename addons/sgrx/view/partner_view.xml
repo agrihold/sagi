@@ -82,9 +82,12 @@
 
                     </div>
                 </xpath>
-                    <field name="title" position="after">
+                <field name="title" position="after">
                     <field name="emergency_phone"/>
                     <field name="gov_type" attrs="{'invisible': [('is_gov_agency','=', False)]}" />
+                </field>
+                <field name="phone" position="before">
+                    <field name="ddd"/>
                 </field>
             </field>
         </record>

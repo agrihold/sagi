@@ -68,7 +68,7 @@
                         <group colspan="4" col="4">
                             <group colspan="2" col="2">
                                 <field name="reference"/>
-                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document')]"/> 
+                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document'), ('hierachical_type','=','normal')]"/> 
 <!--                                <field name="package_file_id"/>-->
                                 <field name="registry_id"/>                               
                             </group>               
@@ -147,7 +147,7 @@
                         <group colspan="4" col="4">
                             <group colspan="2" col="2">
                                 <field name="reference"/>
-                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document')]" /> 
+                                <field name="document_category_id" context="{'default_type':'dossier_document'}" domain="[('type','=','dossier_document'), ('hierachical_type','=','normal')]" /> 
                                 <!--<field name="package_file_id"/>-->                          
                             </group>               
                             <group colspan="2" col="2"> 
