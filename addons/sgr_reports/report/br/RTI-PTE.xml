@@ -11,7 +11,8 @@
         <field name="in_format">oo-odt</field>
         <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
         <field name="parser_loc">sgr_reports/report/parser.py</field>
-        <field name="report_rml">sgr_reports/report/br/RTI-PTE.odt</field>
+        <field name="report_rml">sgr_reports/report/br/RTI.odt</field>
+        <!-- <field name="report_rml">sgr_reports/report/br/RTI-PTE.odt</field> -->
         <field name="parser_state">loc</field>
         <field name="tml_source">file</field>
     </record>
