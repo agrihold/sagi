@@ -205,7 +205,9 @@ class Parser(report_sxw.rml_parse):
         
         for tax in tax_ids:
             if not category or tax.document_category_id.name == category or tax.document_category_id.ref == category:
-                if not state or tax.state == state:
+                # TOCHANGE: we disable state function  
+                if not state or state:                
+                # if not state or tax.state == state:
                     if not partner_ref or tax.government_agency_id.ref == partner_ref:
                         ret.append(tax)
         return ret    
@@ -231,7 +233,9 @@ class Parser(report_sxw.rml_parse):
         
         for study_presentation in study_presentation_ids:
             if study_presentation.document_category_id.reference == category_name or study_presentation.document_category_id.name == category_name:
-                if not state or study_presentation.state == state:
+                # TOCHANGE: we disable state function  
+                if not state or state:           
+                # if not state or study_presentation.state == state:
                     if not laboratory_id or study_presentation.study_id.laboratory_id == laboratory_id:
                         if not supplier_id or study_presentation.study_id.supplier_id == supplier_id:
                             if not product_id or study_presentation.study_id.product_id == product_id:
@@ -263,10 +267,9 @@ class Parser(report_sxw.rml_parse):
         
         for partner_document_presentation in partner_document_presentation_ids:
             if partner_document_presentation.document_category_id.name == category_name or partner_document_presentation.document_category_id.reference == category_name:
-                if not state or partner_document_presentation.state == state:
-                    # print partner_document_presentation.partner_document_id
-                    # print partner_id
-                    # print partner_document_presentation.partner_document_id.partner_id
+                # TOCHANGE: we disable state function  
+                if not state or state:
+                # if not state or partner_document_presentation.state == state:
                     # if partner_document_presentation.partner_document_id.partner_id:
                     if not partner_id or partner_document_presentation.partner_document_id.partner_id == partner_id:
                         ret.append(partner_document_presentation.partner_document_id)
@@ -291,7 +294,9 @@ class Parser(report_sxw.rml_parse):
         
         for information in information_presentation_ids:
             if information.information_category_id.name == category_name:
-                if not state or information.state == state:
+                # TOCHANGE: we disable state function  
+                if not state or state:
+                # if not state or information.state == state:
                     if not partner_id or information.parent_information_id.partner_id == partner_id:
                         if information.parent_information_id:
                             ret.append(information.parent_information_id.text)
@@ -320,7 +325,9 @@ class Parser(report_sxw.rml_parse):
                 if not state:
                     ret.append(registry)
                 else:
-                    if registry.state == state:
+                    # TOCHANGE: we disable state function
+                    if state_name:                    
+                    # if registry.state == state:
                         ret.append(registry)
         return ret
     
@@ -414,7 +421,9 @@ class Parser(report_sxw.rml_parse):
                 if not state_name:
                     ret.append(presentation)
                 else:
-                    if presentation.state == state_name:
+                    # TOCHANGE: we disable state function
+                    if state_name:                    
+                    # if presentation.state == state_name:
                         ret.append(presentation)
         return ret
     
@@ -438,7 +447,9 @@ class Parser(report_sxw.rml_parse):
                 if not state_name:
                     ret.append(presentation)
                 else:
-                    if presentation.state == state_name:
+                    # TOCHANGE: we disable state function
+                    if state_name:                    
+                    # if presentation.state == state_name:
                         ret.append(presentation)
         return ret
     
@@ -462,7 +473,9 @@ class Parser(report_sxw.rml_parse):
                 if not state_name:
                     ret.append(registry)
                 else:
-                    if registry.state == state_name:
+                    # TOCHANGE: we disable state function
+                    if state_name:
+                    # if registry.state == state_name:
                         ret.append(registry)
         return ret
     
