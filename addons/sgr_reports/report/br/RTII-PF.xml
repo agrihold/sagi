@@ -2,11 +2,11 @@
 <openerp>
 <data noupdate="0">
 
-    <record id="rtii_pf" model="ir.actions.report.xml">
+    <record id="rtii_pf_new" model="ir.actions.report.xml">
         <field name="name">RTII-PF</field>
         <field name="type">ir.actions.report.xml</field>
         <field name="model">sgr.formulated_product_registry</field>
-        <field name="report_name">rtii_pf</field>
+        <field name="report_name">rtii_pf_new</field>
         <field name="report_type">aeroo</field>
         <field name="in_format">oo-odt</field>
         <field name="out_format" ref="report_aeroo_ooo.report_mimetypes_doc_odt"/>
@@ -21,8 +21,8 @@
         <field eval="'action'" name="key"/>
         <field eval="'client_print_multi'" name="key2"/>
         <field eval="['sgr.formulated_product_registry']" name="models"/>
-        <field name="name">RTII-PF</field>
-        <field eval="'ir.actions.report.xml,'+str(rtii_pf)" name="value"/>
+        <field name="name">RTII-PF New</field>
+        <field eval="'ir.actions.report.xml,'+str(rtii_pf_new)" name="value"/>
         <field eval="True" name="isobject"/>
         <field eval="True" name="replace"/>
     </ir_set>

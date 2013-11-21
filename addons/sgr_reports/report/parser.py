@@ -298,9 +298,10 @@ class Parser(report_sxw.rml_parse):
                 if not state or state:
                 # if not state or information.state == state:
                     if not partner_id or information.parent_information_id.partner_id == partner_id:
-                        if information.parent_information_id:
+                        # The ".text" validation is to be sure of not appending a "false" if there is no text
+                        if information.parent_information_id and information.parent_information_id.text:
                             ret.append(information.parent_information_id.text)
-                        else:
+                        elif information.text:
                             ret.append(information.text)                        
         return ret
     
