@@ -158,7 +158,7 @@ class Parser(report_sxw.rml_parse):
 
 
    # Ingredients e ingredient, other name y other names
-    def cqqs(self, obj, ing_type=False, only_main_ing=True, context=None):
+    def cqqs(self, obj, ing_type=False, main_ing=True, not_main_ing=False, context=None):
         cqq_ids = obj.cqq_ids
         if not cqq_ids:
             return []
@@ -168,12 +168,14 @@ class Parser(report_sxw.rml_parse):
         
         for cqq in cqq_ids:
             if not ing_type or cqq.ingredient_id.type == ing_type:
-                if not only_main_ing or cqq.main_ingredient:                
+                if main_ing and cqq.main_ingredient:                
+                    ret.append(cqq)
+                elif not_main_ing and not cqq.main_ingredient:
                     ret.append(cqq)
         return ret    
 
-    def cqq(self, obj, ing_type, only_main_ing=True, context=None):
-        ret = self.cqqs(obj, ing_type, only_main_ing, context=context)
+    def cqq(self, obj, ing_type, main_ing=True, not_main_ing=False, context=None):
+        ret = self.cqqs(obj, ing_type, main_ing, not_main_ing, context=context)
         if not ret:
             return False
         else:
