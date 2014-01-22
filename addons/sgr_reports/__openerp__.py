@@ -42,6 +42,7 @@
                       'report/br/RequerimientoPF-MAPA.xml', 
                       'report/br/RTI-PTE.xml',
                       'report/br/RTII-PTE.xml',
+                      'report/br/RTII-PF-efficacy.xml',
                       'report/br/RTIII-PTE.xml',
                       'report/br/RTI-PF.xml',
                       'report/br/RTI-PF-efficacy.xml',
