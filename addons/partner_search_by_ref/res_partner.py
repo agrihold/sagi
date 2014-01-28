@@ -44,10 +44,13 @@ class res_partner(osv.osv):
         res = []
         for record in self.browse(cr, uid, ids, context=context):
             name = record.name
-            name =  "%s - %s" % (name, record.ref)
+            if record.ref:
+                name =  "%s - %s" % (name, record.ref)
             print record.parent_id
-            if record.parent_id and not record.is_company:
+            if record.parent_id and not record.is_company and record.ref:
                 name =  "%s, %s - %s" % (record.parent_id.name, name, record.ref)
+            if record.parent_id and not record.is_company and not record.ref:
+                    name =  "%s, %s" % (record.parent_id.name, name)
             if context.get('show_address'):
                 name = name + "\n" + self._display_address(cr, uid, record, without_company=True, context=context)
                 name = name.replace('\n\n','\n')
