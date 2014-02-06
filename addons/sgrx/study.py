@@ -36,6 +36,31 @@ class study(osv.osv):
         'document_category_experimental_results': fields.related('document_category_id', 'experimental_results', type='char', string='Experimental Results'),
     }
 
+    def name_get(self, cr, uid, ids, context=None):
+        # always return the full hierarchical name
+        res = {}
+        for line in self.browse(cr, uid, ids):
+            if line.name and line.reference:
+                sep = ' - '
+            else:
+                sep = ''
+            res[line.id] = (line.name or '')+ sep + (line.reference or '')
+        return res.items()     
+
+    def name_search(self, cr, user, name='', args=None, operator='ilike', context=None, limit=100):
+        if not args:
+            args = []    
+        ids = set()     
+        if name:
+            ids.update(self.search(cr, user, args + [('name',operator,name)], limit=(limit and (limit-len(ids)) or False) , context=context))
+            if not limit or len(ids) < limit:
+                ids.update(self.search(cr, user, args + [('reference',operator,name)], limit=limit, context=context))
+            ids = list(ids)
+        else:
+            ids = self.search(cr, user, args, limit=limit, context=context)
+        result = self.name_get(cr, user, ids, context=context)
+        return result
+        
     def onchange_document_category(self, cr, uid, ids, document_category_id, context=None):
         v = {}
         

@@ -22,6 +22,8 @@
 
 import registry
 import contract
+import partner_document
+import dossier_document
 import proposal
 import information
 import partner

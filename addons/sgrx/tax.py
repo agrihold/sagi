@@ -32,6 +32,31 @@ class tax(osv.osv):
         # 'document_category_id': fields.many2one('sgr.document_category', string='Category', required=True, context={'default_type':'tax'}, domain=[('type','=','tax')]),
     }
 
+    def name_get(self, cr, uid, ids, context=None):
+        # always return the full hierarchical name
+        res = {}
+        for line in self.browse(cr, uid, ids):
+            if line.name and line.reference:
+                sep = ' - '
+            else:
+                sep = ''
+            res[line.id] = (line.name or '')+ sep + (line.reference or '')
+        return res.items()     
+
+    def name_search(self, cr, user, name='', args=None, operator='ilike', context=None, limit=100):
+        if not args:
+            args = []    
+        ids = set()     
+        if name:
+            ids.update(self.search(cr, user, args + [('name',operator,name)], limit=(limit and (limit-len(ids)) or False) , context=context))
+            if not limit or len(ids) < limit:
+                ids.update(self.search(cr, user, args + [('reference',operator,name)], limit=limit, context=context))
+            ids = list(ids)
+        else:
+            ids = self.search(cr, user, args, limit=limit, context=context)
+        result = self.name_get(cr, user, ids, context=context)
+        return result    
+
     def _get_currency(self, cr, uid, ctx):
         comp = self.pool.get('res.users').browse(cr,uid,uid).company_id
         if not comp:
